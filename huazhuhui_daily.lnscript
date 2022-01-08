@@ -1,5 +1,5 @@
 #华住会签到
-http-request https:\/\/hweb-mbf\.huazhu\.com\/api\/signIn script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hzh/hzh.js, timeout=10, enabled=false, tag=华住会获取签到Cookie
+http-request https:\/\/hweb-mbf\.huazhu\.com\/api\/signIn script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hzh/hzh.js, timeout=10, enabled=true, tag=华住会获取签到Cookie
 cron "5 0 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/hzh/hzh.js, tag=华住会每日签到
 
 hostname = hweb-mbf.huazhu.com
