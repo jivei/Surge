@@ -1,5 +1,5 @@
 #IT之家签到
-#http-response ^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js, timeout=10, enabled=true, tag=ithome.cookie.js
+http-response ^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js, timeout=10, enabled=true, tag=IT之家获取cookie
 cron "10 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js, tag=ithome.js
 
 hostname = my.ruanmei.com
