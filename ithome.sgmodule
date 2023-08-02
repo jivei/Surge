@@ -1,0 +1,14 @@
+#!name = IT之家去广告
+#!desc = 需要在插件里开启对应功能去除轮播图或置顶，其他广告默认去除 @Key
+#!openUrl = 
+#!author =
+#!homepage = 
+#!icon = https://github.com/Keywos/rule/raw/main/tv/app/144px/ithome.png
+
+[URL Rewrite]
+^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao - reject
+^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ - reject
+[Script]
+ithomes = type=http-response, pattern=^https:\/\/napi\.ithome\.com\/api\/news\/index, script-path=https://github.com/Keywos/rule/raw/main/JS/ithomes.js, requires-body=true, max-size=3145728, timeout=30
+[MITM]
+hostname = %APPEND% napi.ithome.com,api.zuihuimai.com,dat.ruanmei.com
