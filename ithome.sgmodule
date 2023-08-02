@@ -1,5 +1,5 @@
 #!name = IT之家去广告
-#!desc = 需要在插件里开启对应功能去除轮播图或置顶，其他广告默认去除 @Key
+#!desc = 其他广告默认去除 @Key
 #!openUrl = 
 #!author =
 #!homepage = 
