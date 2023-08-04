@@ -1,0 +1,11 @@
+#!name=wyun
+#!desc=wyun
+
+[Script]
+
+# > 网易云解锁VIP
+wyun = type=http-request, pattern=^http[s]?:\/\/.+music.+(player\/url|playlist|entrance|\/eapi\/search\/).*$, script-path=http://script.hub/convert/_start_/https://raw.githubusercontent.com/WeiRen0/Scripts/main/wyun.js/_end_/wyun.js?type=qx-script&target=surge-script, timeout=60, script-update-interval=0
+
+[MITM]
+
+hostname = %APPEND% *.music.163.com
