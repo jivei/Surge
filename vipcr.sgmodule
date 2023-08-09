@@ -1,9 +1,14 @@
 #!name=自用解锁会员
-#!desc=Grow，一甜，B612解锁会员
+#!desc=Grow，一甜，B612，goodnote6解锁会员
 [Script]
 Grow=type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/(\$RCAnonymousID\%)?(\w)+$ ,requires-body=1,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Grow.js
 Grow1=type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/receipts$ ,requires-body=1,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Grow.js
 一言相机解锁会员=type=http-response, pattern=^https?:\/\/m2u-api\.getkwai\.com\/api-server\/api\/v2\/vip\/vipUserInfo, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/1TianCamVipCrack.js, requires-body=true, max-size=3145728, timeout=30
-B612咔叽=type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/612.js
+B612咔叽=type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/612.
+
+goodnotes6解锁1 = type=http-response, pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/goodnotes6.js, timeout=60, script-update-interval=0
+
+goodnotes6解锁2 = type=http-request, pattern=^https:\/\/isi\.csan\.goodnotes\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/goodnotes6.js, timeout=60, script-update-interval=0
+
 [MITM]
-hostname = %APPEND% m2u-api.getkwai.com , api.revenuecat.com, user-kaji-api.b612kaji.com
+hostname = %APPEND% m2u-api.getkwai.com , api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com
