@@ -1,0 +1,12 @@
+#!name=IT之家每日签到
+#!desc=打开APP->我->右上角金币，若提示获取cookie成功则可以使用签到
+
+[Script]
+
+IT之家过去cookie = type=http-response, pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js, timeout=30
+
+IT之家签到任务 = type=cron, cronexp="10 0 * * *", script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js, timeout=60, wake-system=1
+
+[MITM]
+
+hostname = %APPEND% my.ruanmei.com
