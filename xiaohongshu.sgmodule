@@ -1,10 +1,5 @@
 #!name = 小红书去广告
 #!desc=过滤信息流推广，移除图片及视频水印。
-#!openUrl = 
-#!author = chouchoui RuCu6
-#!homepage = https://gitlab.com/lodepuly/vpn_tool/-/tree/main/Tool/Loon/Plugin
-#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/RedPaper.png
-
 # 🔗 模块链接
 #SUBSCRIBED http://script.hub/file/_start_/https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Tool/Loon/Plugin/RedPaper_remove_ads.plugin/_end_/RedPaper_remove_ads.sgmodule?type=loon-plugin&target=surge-module
 
