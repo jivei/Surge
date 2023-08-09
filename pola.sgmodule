@@ -1,0 +1,10 @@
+#!name=泼辣修图解锁会员
+#!desc=如果没解锁请先登录再重新开启Js
+
+[Script]
+
+泼辣修图解锁会员 = type=http-response, pattern=^https?:\/\/.*\/v1\/payments\/(appleiap\/receipts\/confirmation|profiles\/@me\/subscription), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/pola.js, requires-body=true, max-size=3145728, timeout=30
+
+[MITM]
+
+hostname = %APPEND% api.polaxiong.com
