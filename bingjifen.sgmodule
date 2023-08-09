@@ -1,5 +1,5 @@
 #!name=Bing积分
-#!desc=Safari打开下面地址获取Cookie，若提示获取cookie成功则可以使用签到脚本
+#!desc=Safari打开https://rewards.bing.com/获取Cookie，若提示获取cookie成功则可以使用签到脚本
 #!openUrl=https://rewards.bing.com/
 
 [Script]
