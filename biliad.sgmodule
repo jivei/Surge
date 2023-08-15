@@ -1,6 +1,5 @@
 #!name = 哔哩哔哩每日签到
-#!desc = 需要手动添加脚本获取cookies 
-#!openUrl = 
+#!desc = 需要手动添加脚本获取cookies
 
 
 [Script]
