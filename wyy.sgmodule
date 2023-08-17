@@ -1,6 +1,5 @@
-#!name=网易云播放权限解锁
-#!desc=解锁黑胶vip播放权限，无会员标识
-#SUBSCRIBED http://script.hub/file/_start_/https://raw.githubusercontent.com/chxm1023/Rewrite/main/vsco.js/_end_/vsco.sgmodule?type=qx-rewrite&target=surge-module
+#!name=网易云音乐Vip播放
+#!desc=解锁vip播放权限，无会员标识
 
 [Script]
 
