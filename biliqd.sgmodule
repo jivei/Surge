@@ -5,7 +5,7 @@
 [Script]
 B站每日任务 = type=cron,cronexp=30 7 * * *,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
 
-#以下cookie获取方式二选其一即可
+#防止每次打开B站弹窗通知，以下cookie获取方式二选其一即可，手动复制其中一条然后删除井号，保存到色鸡本地配置文件[Script]下面否则不获取cookies 
 #B站获取Cookie(APP) = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
 #B站获取Cookie(网页) = type=http-request,pattern=^https:\/\/m.bilibili.com/$,script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js
 
