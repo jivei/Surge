@@ -1,5 +1,5 @@
-#!name=自用解锁会员
-#!desc=Grow，一甜，B612，notability，goodnote6解锁会员
+#!name=自用解锁会员，搜刮各位大佬的配置
+#!desc=Grow，一甜，B612，notability，goodnote6，西窗烛解锁会员
 [Script]
 Grow=type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/subscribers\/(\$RCAnonymousID\%)?(\w)+$ ,requires-body=1,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Grow.js
 Grow1=type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/v\d\/receipts$ ,requires-body=1,script-path=https://raw.githubusercontent.com/I-am-R-E/QuantumultX/main/JavaScript/Grow.js
