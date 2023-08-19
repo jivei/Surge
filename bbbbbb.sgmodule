@@ -91,3 +91,4 @@ bilibili_proto_beta_141 = type=http-response, pattern=^https?:\/\/(app\.bilibili
 [MITM]
 
 hostname = %APPEND% -broadcast.chat.bilibili.com,-*cdn*.biliapi.net,-*tracker*.biliapi.net,app.bilibili.com,api.live.bilibili.com,*.bilibili.com,*.bilibili.*,grpc.biliapi.net,*biliapi.net
+
