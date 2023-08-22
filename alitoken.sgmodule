@@ -1,0 +1,9 @@
+#!name=阿里云盘获取token
+#!desc=建议获取完毕以后关闭该模块以免引起不必要的重写
+
+[Script]
+# > 阿里云盘签到https://auth.alipan.com/v2/account/token
+阿里云盘签到cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
+
+[MITM]
+hostname = %APPEND% auth.alipan.com
