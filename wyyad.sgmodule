@@ -3,19 +3,58 @@
 #!author = RuCu6 Keywos
 #!update = 2023-06-13 19:00
 
-
-
 [Script]
 
-# > 网易云音乐解锁黑胶会员
-NeteaseMusicVipCrack_11 = type=http-request, pattern=^https?:\/\/.*\/eapi\/(music|s(ong|ingle|earch)|album|link|zone|content|p(laylist|rivilege|laymode|urchased)|r(esni|nca)che|vip(auth|pro|(new)?center)|music-vip-membership).+, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/NeteaseMusicVipCrack.js, timeout=60, script-update-interval=0
+# 评论页,插入广告,回复广告,星评馆
+replaceHeader_17 = type=http-request, pattern=^https:\/\/interface3\.music\.163\.com\/eapi\/batch\?, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-header.js, timeout=60, argument="appver%3D.%2B%3B->appver%3D2333%3B"
 
 [Map Local]
 
-^https?:\/\/.*\/api\/clientlog\/encrypt\/upload data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-array.json"
+# 开屏广告,首页顶部横幅广告
+^https?:\/\/interface3?\.music\.163.com\/eapi\/ad\/.* data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
-^https?:\/\/.*\/eapi\/ad\/.+ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-array.json"
+# 搜索页,填充词,排行榜
+^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart\/(detail|list)$|default\/keyword\/list\?|rcmd\/keyword\/get\/v2$|specialkeyword\/get\?) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 播放页,多余图标,各种小提示,高品质音乐试用弹窗
+^https:\/\/interface3\.music\.163\.com\/eapi\/content\/exposure\/vinyl\/comment\/entrance\/get\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https:\/\/interface3\.music\.163\.com\/eapi\/(link\/position\/show\/(resource|strategy)|music\/songshare\/text\/recommend\/get)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https:\/\/interface3\.music\.163\.com\/eapi\/(mlivestream\/entrance\/playpage\/v7|community\/friends\/fans-group\/artist\/group)\/get\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https:\/\/interface3\.music\.163\.com\/eapi\/mlog\/vinyl\/story\/list\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https:\/\/interface3\.music\.163\.com\/eapi\/(user\/sub\/artist\/exist|vipcenter\/tspopup\/get)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https:\/\/interface3\.music\.163\.com\/eapi\/zone\/songplay\/entry\/get\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https?:\/\/interface3\.music\.163\.com\/eapi\/resniche\/position\/play\/new\/get\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https?:\/\/interface3\.music\.163\.com\/eapi\/comment\/(hotcomment\/collect\/fetchmodelinfov2|feed\/inserted\/resources|tips\/v2\/get)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https?:\/\/interface3\.music\.163\.com\/eapi\/v1\/content\/exposure\/comment\/banner\/get\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 首页,右上角多余图标,会员续费弹窗,侧边栏推广
+^https:\/\/interface3\.music\.163\.com\/eapi\/event\/floating\/layer\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https:\/\/interface3\.music\.163\.com\/eapi\/(homepage\/banner\/ad\/get|link\/scene\/show\/resource)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https:\/\/interface3\.music\.163\.com\/eapi\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https:\/\/interface3\.music\.163\.com\/eapi\/(side-bar\/mini-program\/music-service\/account|delivery\/batch-deliver)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 我的页面,小部件红点
+^https:\/\/interface3\.music\.163\.com\/eapi\/mine\/applet\/redpoint\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 播客,弹出广告
+^https:\/\/interface3\.music\.163\.com\/eapi\/voice\/play\/page\/ad\/info\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+# 歌单页,横幅广告
+^https:\/\/interface\.music\.163\.com\/weapi\/middle\/clientcfg\/config\/list\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+^https:\/\/interface3?\.music\.163\.com\/w?eapi\/resource-exposure\/(activity\/config\/get|config)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 [MITM]
 
-hostname = %APPEND% *music.163.com,115.236.121.4,115.236.118.34,115.238.119.68,183.136.182.19
+hostname = %APPEND% interface*.music.163.com
