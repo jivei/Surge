@@ -1,4 +1,4 @@
-#!name=阿里云盘获取token
+#!name=签到 & 阿里云盘获取token
 #!desc=建议获取完毕以后关闭该模块以免引起不必要的重写
 
 [Script]
