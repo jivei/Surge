@@ -2,8 +2,8 @@
 #!desc=途虎优化，小程序直接获取cookie可同时签到app和小程序了，不需要在下载app了！
 
 [Script]
-途虎获取cookie = type=http-request,pattern=https://api.tuhu.cn/User/GetInternalCenterInfo,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js,timeout=60,script-update-interval=0,requires-body=0
-途虎签到 = type=cron,cronexp=23 9 * * *,script-path=https://raw.githubusercontent.com/Crazy-Z7/Task/main/Tuhyche.js,timeout=60,wake-system=1,script-update-interval=0
+途虎获取cookie = type=http-request,pattern=https://api.tuhu.cn/User/GetInternalCenterInfo,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Tuhyche.js,timeout=60,script-update-interval=0,requires-body=0
+途虎签到 = type=cron,cronexp=23 9 * * *,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Tuhyche.js,timeout=60,wake-system=1,script-update-interval=0
 [MITM]
 
 hostname = %APPEND% api.tuhu.cn
