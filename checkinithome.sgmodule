@@ -3,9 +3,9 @@
 
 [Script]
 
-IT之家过去cookie = type=http-response, pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?, script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.cookie.js, timeout=30
+IT之家过去cookie = type=http-response, pattern=^https:\/\/my\.ruanmei\.com\/api\/usersign\/getsigninfo?, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ithome.cookie.js, timeout=30
 
-IT之家签到任务 = type=cron, cronexp="10 0 * * *", script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/ithome/ithome.js, timeout=60, wake-system=1
+IT之家签到任务 = type=cron, cronexp="10 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ithome.js, timeout=60, wake-system=1
 
 [MITM]
 
