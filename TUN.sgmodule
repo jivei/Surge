@@ -1,5 +1,5 @@
 #!name=TunOnly
-#!desc=开启TunOnly兼容模式，解决某些APP不能正常连接的问题，请在适当的时候开启可能会降低一点儿性能
+#!desc=开启TunOnly兼容模式，解决某些脑瘫检测代理APP不能正常连接的问题
 #!system=ios
 
 [General]
