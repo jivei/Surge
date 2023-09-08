@@ -1,5 +1,5 @@
-#!name=破解 & 自用常用APP会员，不会写代码偷的配置
-#!desc=【一甜相机】【B612咔叽】【notability】【Nicegram】【泼辣修图】【VSCO】【彩云天气】【一言】【Emby】【扫描全能王】【Picsart美易】【Spotify】【傲软全家桶】【Wink】【美颜相机】【美图秀秀】【Xmind】【驾考宝典】【易截图】【WPS，WPS稻壳】
+#!name=破解Vip & 自用常用APP会员，不会写代码偷的配置
+#!desc=[一甜相机][PhotoShop][B612咔叽][notability][Nicegram][泼辣修图][VSCO][彩云天气][一言][Emby][扫描全能王][Picsart美易][Spotify][傲软全家桶][Wink][美颜相机][美图秀秀][Xmind][驾考宝典][易截图][WPS，WPS稻壳]
 
 [Script]
 
@@ -89,9 +89,14 @@ Xmind-思维导图 = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn|net|
 # 易截图去除水印（2023-08-02）@ddgksf2013
 YiJieTu2ProCrack_18 = type=http-response, pattern=^https?:\/\/.*jietu.*com/apiv\d/user, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/MoYu/raw/master/YiJieTu2ProCrack.js, timeout=60, script-update-interval=0
 #************************************#
-# WPS 稻壳 ,account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn
+# WPS 稻壳 account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn
 WPS会员 = type=http-response, pattern=^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/WPS.js, requires-body=true, max-size=3145728, timeout=30
 WPS稻壳 = type=http-response, pattern=^https?:\/\/account\.wps\.cn\/api\/v3\/mine\/vips, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/WPSDocerVIPuserCrack.js, requires-body=true, max-size=3145728, timeout=30
 WPS稻d壳 = type=http-request, pattern=^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v1\/vip|android\/mb\/buy|download\/v1\/ios|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail), script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/WPSDocerVIPuserCrack.jss, timeout=30
+#************************************#
+# 解锁PhotoshopExpress lcs-mobile-cops.adobe.io
+PhotoshopExpress订阅会员=type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/photoshop.js
+
+
 [MITM]
-hostname = %APPEND% m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com,*.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, app.yiyan.art, mb3admin.com, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn
+hostname = %APPEND% lcs-mobile-cops.adobe.io, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com,*.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, app.yiyan.art, mb3admin.com, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn
