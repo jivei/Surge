@@ -1,0 +1,10 @@
+#!name=Photoshop
+#!desc=Photoshop
+
+[Script]
+
+Photoshop_12 = type=http-response, pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/89996462/Quantumult-X/main/ycdz/Photoshop.js, timeout=60, script-update-interval=0
+
+[MITM]
+
+hostname = %APPEND% lcs-mobile-cops.adobe.io
