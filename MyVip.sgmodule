@@ -1,5 +1,23 @@
-#!name=破解Vip & 自用常用APP会员，不会写代码偷的配置
-#!desc=[一甜相机][PhotoShop][B612咔叽][notability][Nicegram][泼辣修图][VSCO][一言][Emby][扫描全能王][Picsart美易][Spotify][傲软全家桶][Wink][美颜相机][美图秀秀][Xmind][驾考宝典][易截图][WPS，WPS稻壳]
+#!name=自用破解Vip & 常用工具，不会写代码偷的配置
+#!desc=[百度首页][彩云天气][Emby][一甜相机][PhotoShop][B612咔叽][notability][Nicegram][泼辣修图][VSCO][一言][Emby][扫描全能王][Picsart美易][Spotify][傲软全家桶][Wink][美颜相机][美图秀秀][Xmind][驾考宝典][易截图][WPS，WPS稻壳]
+
+
+
+
+[Rule]
+URL-REGEX,^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$,REJECT-TINYGIF
+
+
+[Map Local]
+# 百度 纯净搜索
+^https?:\/\/(www|m)\.baidu\.com\/?($|\?(from=\w{8,9}|tn=&from=)) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/baidu.html" header="Content-Type: text/html; charset=utf-8"
+
+# 彩云天气 //biz.cyapi.cn, wrapper.cyapi.cn
+^https:\/\/api\.caiyunapp\.com\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
+
+
 
 [Script]
 
@@ -79,18 +97,70 @@ Xmind-思维导图 = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn|net|
 # 驾考宝典
 # hostname = *.kakamobi.cn
 驾考宝典 = type=http-response,pattern=^https?:\/\/.*\.kakamobi\.cn\/api\/open,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jiakaobaodian.js
+
 #************************************#
 # 易截图去除水印（2023-08-02）@ddgksf2013
 YiJieTu2ProCrack_18 = type=http-response, pattern=^https?:\/\/.*jietu.*com/apiv\d/user, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/MoYu/raw/master/YiJieTu2ProCrack.js, timeout=60, script-update-interval=0
+
 #************************************#
 # WPS 稻壳 account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn
 WPS会员 = type=http-response, pattern=^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/WPS.js, requires-body=true, max-size=3145728, timeout=30
 WPS稻壳 = type=http-response, pattern=^https?:\/\/account\.wps\.cn\/api\/v3\/mine\/vips, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/WPSDocerVIPuserCrack.js, requires-body=true, max-size=3145728, timeout=30
 WPS稻d壳 = type=http-request, pattern=^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v1\/vip|android\/mb\/buy|download\/v1\/ios|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail), script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/WPSDocerVIPuserCrack.jss, timeout=30
+
 #************************************#
 # 解锁PhotoshopExpress lcs-mobile-cops.adobe.io
 PhotoshopExpress订阅会员=type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/photoshop.js
 
+#************************************#
+# 百度文库解锁VIP文档阅读权限 //appwk.baidu.com
+百度文库 = type=http-request,pattern=^https:\/\/appwk\.baidu\.com\/naapi\/user\/getinfo,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduLib.js
+
+#************************************#
+# 百度网盘画质倍速 //pan.baidu.com
+百度网盘 = type=http-request,pattern=^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
+
+#************************************#
+# 彩云天气 //biz.cyapi.cn, wrapper.cyapi.cn
+彩云天气 = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
+
+#************************************#
+# Emby播放权限 mb3admin.com
+Emby = type=http-response,pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/emby/unlock2.js
+
+#************************************#
+# Enpass Password Manager解锁订阅 //license.enpass.io
+Enpass = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v1\/subscription\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/enpass.js
+
+#************************************#
+# 京东比价
+京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/Jdbj.js
+
+#************************************#
+# 简讯订阅 //api.tipsoon.com
+简讯订阅 = type=http-response,pattern=^https:\/\/api\.tipsoon\.com\/api\/v1\/user\/info$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/jianxun.js
+
+#************************************#
+# TF区域限制解除
+TF下载修正 = type=http-request,pattern=^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$,requires-body=1,script-update-interval=-1,max-size=0,script-path=https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js
+TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/TestFlightAccount.js,argument=false
+
+#************************************#
+# 奈飞评分
+奈飞评分 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+奈飞评分 = type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
+
+#************************************#
+# 跳过微信中转页面,解除被封禁链接
+微信解除 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
+
+#************************************#
+#YouTube字幕增强及双语模块
+DualSubs.YouTube.Player.response.json = type=http-response, pattern=^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player, requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/DualSubs.YouTube.Player.response.js, argument=
+DualSubs.YouTube.Player.response.proto = type=http-response, pattern=^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player, requires-body=1, binary-body-mode=1, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/DualSubs.YouTube.Player.response.js, argument=
+DualSubs.YouTube.TimedText.request = type=http-request, pattern=^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext, requires-body=0, script-path=https://raw.githubusercontent.com/DualSubs/YouTube/main/js/DualSubs.YouTube.TimedText.request.js, argument=
+DualSubs.Subtitles.Composite.response = type=http-response, pattern=^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External), requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/Universal/main/js/DualSubs.Subtitles.Composite.response.js, argument=
+DualSubs.Subtitles.Translate.response = type=http-response, pattern=^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate, requires-body=1, script-path=https://raw.githubusercontent.com/DualSubs/Universal/main/js/DualSubs.Subtitles.Translate.response.js, argument=
 
 [MITM]
-hostname = %APPEND% lcs-mobile-cops.adobe.io, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com, app.yiyan.art, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn
+hostname = %APPEND% lcs-mobile-cops.adobe.io, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com, app.yiyan.art, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn, testflight.apple.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, weixin110.qq.com, security.wechat.com, m.baidu.com,www.baidu.com, appwk.baidu.com, pan.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, mb3admin.com, license.enpass.io, www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
