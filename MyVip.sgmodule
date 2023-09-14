@@ -1,5 +1,5 @@
 #!name=破解Vip & 自用常用APP会员，不会写代码偷的配置
-#!desc=[一甜相机][PhotoShop][B612咔叽][notability][Nicegram][泼辣修图][VSCO][彩云天气][一言][Emby][扫描全能王][Picsart美易][Spotify][傲软全家桶][Wink][美颜相机][美图秀秀][Xmind][驾考宝典][易截图][WPS，WPS稻壳]
+#!desc=[一甜相机][PhotoShop][B612咔叽][notability][Nicegram][泼辣修图][VSCO][一言][Emby][扫描全能王][Picsart美易][Spotify][傲软全家桶][Wink][美颜相机][美图秀秀][Xmind][驾考宝典][易截图][WPS，WPS稻壳]
 
 [Script]
 
@@ -29,18 +29,12 @@ VSCO = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipt
 #************************************#
 # 彩云天气
 # hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
-彩云天气 = type=http-response,pattern=^https?:\/\/(biz|wrapper)\.cyapi\.cn\/(.+\/(user.+|visitors|activity)|p\/v\d\/vip_info),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun.js
+# 彩云天气 = type=http-response,pattern=^https?:\/\/(biz|wrapper)\.cyapi\.cn\/(.+\/(user.+|visitors|activity)|p\/v\d\/vip_info),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun.js
 
 #************************************#
 # 一言
 # hostname = app.yiyan.art
 一言 = type=http-response,pattern=^https?:\/\/app\.yiyan\.art\/yiyan,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/yiyan.js
-
-#************************************#
-# Emby(解锁播放权限)
-# hostname = mb3admin.com
-Emby解锁播放权限 = type=http-request,pattern=^https?:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/embycrack.js
-
 #************************************#
 # 扫描全能王
 # hostname = *.camscanner.com, *.intsig.net
@@ -99,4 +93,4 @@ PhotoshopExpress订阅会员=type=http-response,pattern=^https:\/\/lcs-mobile-co
 
 
 [MITM]
-hostname = %APPEND% lcs-mobile-cops.adobe.io, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com,*.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn, app.yiyan.art, mb3admin.com, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn
+hostname = %APPEND% lcs-mobile-cops.adobe.io, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com, app.yiyan.art, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn
