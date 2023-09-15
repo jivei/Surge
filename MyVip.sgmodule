@@ -9,7 +9,7 @@ URL-REGEX,^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$,REJE
 
 
 [Map Local]
-# 百度 纯净搜索
+# 百度 纯净搜索 测试更新
 ^https?:\/\/(www|m)\.baidu\.com\/?($|\?(from=\w{8,9}|tn=&from=)) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/baidu.html" header="Content-Type: text/html; charset=utf-8"
 
 # 彩云天气 //biz.cyapi.cn, wrapper.cyapi.cn
