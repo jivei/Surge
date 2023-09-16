@@ -19,6 +19,11 @@ skip-proxy = %APPEND% iosapps.itunes.apple.com
 ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
+# 招行掌上生活 (需卸载重装)
+开屏广告 az1mbasecc.bas.cmbchina.com
+^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject
+设置栏目内广告 intellicc.bas.cmbchina.com
+^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec url reject
 
 
 
@@ -159,4 +164,4 @@ TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\
 #************************************#
 
 [MITM]
-hostname = %APPEND% lcs-mobile-cops.adobe.io, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com, app.yiyan.art, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn, testflight.apple.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, weixin110.qq.com, security.wechat.com, m.baidu.com,www.baidu.com, appwk.baidu.com, pan.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, mb3admin.com, license.enpass.io
+hostname = %APPEND% lcs-mobile-cops.adobe.io, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com, app.yiyan.art, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn, testflight.apple.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, weixin110.qq.com, security.wechat.com, m.baidu.com,www.baidu.com, appwk.baidu.com, pan.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, mb3admin.com, license.enpass.io
