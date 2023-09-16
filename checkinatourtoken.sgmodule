@@ -3,7 +3,7 @@
 
   
 [Script]
-亚朵酒店app获取token_14 = type=http-request, pattern=^https:\/\/miniapp\.yaduo\.com\/atourlife\/signIn\/signIn.+, script-path=https://raw.githubusercontent.com/Sliverkiss/helloworld/master/Study/adjd.js, timeout=30
+亚朵酒店app获取token= type=http-request, pattern=^https:\/\/miniapp\.yaduo\.com\/atourlife\/signIn\/signIn.+, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=30
 
 [MITM]
 
