@@ -1,7 +1,7 @@
 #!name=签到 & 高德打车签到
 #!desc=获取Cookie方法 ，进入【高德地图/微信/支付宝 小程序[高德打车]，打车，福利中心】，任意一端获取成功即可3端签到
 [Script]
-高德打车签到 = type=cron, cronexp="1 0 * * *", script-path=   https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, wake-system=1
+高德打车签到 = type=cron, cronexp="5 0 * * *", script-path=   https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, wake-system=1
 
 
 高德打车签到获取Cookie = type=http-response, pattern=^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=), requires-body=true, max-size=3145728, script-path= https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, script-update-interval=0
