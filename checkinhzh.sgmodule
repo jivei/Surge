@@ -6,7 +6,7 @@
 
 华住会获取cookie = type=http-request, pattern=^https?:\/\/hweb-personalcenter\.huazhu\.com\/login\/autoLogin$, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/hzh.js, timeout=30
 
-华住会签到任务 = type=cron, cronexp="1 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/hzh.js, timeout=60, wake-system=1
+华住会签到任务 = type=cron, cronexp="6 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/hzh.js, timeout=60, wake-system=1
 
 [MITM]
 
