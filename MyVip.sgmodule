@@ -1,12 +1,12 @@
 #!name=自用破解Vip & 常用工具，不会写代码偷的配置
-#!desc=[TF限制解除账户管理][奈飞评分][微信解除][百度首页][百度文库][百度网盘][彩云天气][简讯订阅][Emby][一甜相机][PhotoShop][B612咔叽][notability][Nicegram][泼辣修图][VSCO][一言][Emby][扫描全能王][Picsart美易][Spotify][傲软全家桶][Wink][美颜相机][美图秀秀][Xmind][驾考宝典][易截图][WPS，WPS稻壳]
+#!desc=[奈飞评分][微信解除][百度首页][百度文库][百度网盘][彩云天气][简讯订阅][Emby][一甜相机][PhotoShop][B612咔叽][notability][Nicegram][泼辣修图][VSCO][一言][Emby][扫描全能王][Picsart美易][Spotify][傲软全家桶][Wink][美颜相机][美图秀秀][Xmind][驾考宝典][易截图][WPS，WPS稻壳]
 
 
 
 
 [Rule]
 URL-REGEX,^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$,REJECT-TINYGIF
-
+DOMAIN-SUFFIX,testflight.apple.com,Proxy
 
 [General]
 skip-proxy = %APPEND% iosapps.itunes.apple.com
@@ -150,7 +150,7 @@ Enpass = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v1\/sub
 
 #************************************#
 # TF区域限制解除多账户管理
-TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
+TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/TestFlightAccount.js,argument=false
 
 #************************************#
 # 奈飞评分
@@ -164,4 +164,4 @@ TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\
 #************************************#
 
 [MITM]
-hostname = %APPEND% lcs-mobile-cops.adobe.io, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com, app.yiyan.art, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn, testflight.apple.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, weixin110.qq.com, security.wechat.com, m.baidu.com,www.baidu.com, appwk.baidu.com, pan.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, mb3admin.com, license.enpass.io
+hostname = %APPEND% lcs-mobile-cops.adobe.io, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com, app.yiyan.art, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn,testflight.apple.com, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, weixin110.qq.com, security.wechat.com, m.baidu.com,www.baidu.com, appwk.baidu.com, pan.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, mb3admin.com, license.enpass.io
