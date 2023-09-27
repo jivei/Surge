@@ -53,6 +53,11 @@ skip-proxy = %APPEND% iosapps.itunes.apple.com
 
 [Script]
 
+#************************************#
+#12306去广告
+12306 = type=http-request, pattern=^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/Scripts/raw/master/12306.js, timeout=60, script-update-interval=0
+#************************************#
+
 # 一甜相机
 一甜相机=type=http-response, pattern=^https?:\/\/m2u-api\.getkwai\.com\/api-server\/api\/v2\/vip\/vipUserInfo, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/1TianCamVipCrack.js, requires-body=true, max-size=3145728, timeout=30
 
@@ -183,4 +188,4 @@ Enpass = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v1\/sub
 #************************************#
 
 [MITM]
-hostname = %APPEND% lcs-mobile-cops.adobe.io,www.google.cn, www.g.cn,minipro.95504.net,ocrifs.ejoy.sinopec.com,aiqicha.baidu.com,b2baifanfan.baidu.com, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com, app.yiyan.art, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, weixin110.qq.com, security.wechat.com, m.baidu.com,www.baidu.com, appwk.baidu.com, pan.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, mb3admin.com, license.enpass.io
+hostname = %APPEND% lcs-mobile-cops.adobe.io,www.google.cn, www.g.cn,ad.12306.cn, minipro.95504.net,ocrifs.ejoy.sinopec.com,aiqicha.baidu.com,b2baifanfan.baidu.com, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, api.revenuecat.com, app.yiyan.art, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, api.m.jd.com, weixin110.qq.com, security.wechat.com, m.baidu.com,www.baidu.com, appwk.baidu.com, pan.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, mb3admin.com, license.enpass.io
