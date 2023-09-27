@@ -65,9 +65,7 @@ Nicegram解锁会员 = type=http-response, pattern=^https?:\/\/restore-access\.i
 VSCO = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/vsco.js, timeout=60, script-update-interval=0
 
 #************************************#
-# 彩云天气
-# hostname = *.cyapi.cn, *.caiyunapp.com, adx.sogaha.cn
-# 彩云天气 = type=http-response,pattern=^https?:\/\/(biz|wrapper)\.cyapi\.cn\/(.+\/(user.+|visitors|activity)|p\/v\d\/vip_info),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/caiyun.js
+# 一言
 
 #************************************#
 爱企查解锁 = type=http-response, pattern=^https?:\/\/aiqicha\.baidu\.com\/usercenter\/getvipinfoajax, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Aiinquire/Aiinquire_crack.js, requires-body=true, max-size=3145728, timeout=30
