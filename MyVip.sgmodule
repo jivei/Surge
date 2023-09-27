@@ -4,8 +4,12 @@
 
 
 [URL Rewrite]
+
+#************************************#
+#Google重定向
 ^https?://(www.)?g.cn https://www.google.com 302
 ^https?://(www.)?google.cn https://www.google.com 302
+#************************************#
 
 [Rule]
 URL-REGEX,^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$,REJECT-TINYGIF
@@ -14,32 +18,37 @@ URL-REGEX,^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$,REJE
 skip-proxy = %APPEND% iosapps.itunes.apple.com
 
 [Map Local]
+
+#************************************#
 #易捷加油微信小程序底部横幅广告
 ^https:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
+
+#************************************#
 #中油好客e站小程序 #弹窗广告 #主机名minipro.95504.net
-
 ^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getPopAdData data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-
 #中油好客e站小程序 #底部横幅广告
-
 ^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getIndexAdData data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
+#************************************#
 #爱企查
 ^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
+#************************************#
 # 百度 纯净搜索 测试更新
 ^https?:\/\/(www|m)\.baidu\.com\/?($|\?(from=\w{8,9}|tn=&from=)) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/baidu.html" header="Content-Type: text/html; charset=utf-8"
 
+#************************************#
 # 彩云天气 //biz.cyapi.cn, wrapper.cyapi.cn
 ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
+#************************************#
 # 招行掌上生活 (需卸载重装)
 开屏广告 az1mbasecc.bas.cmbchina.com
 ^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject
 设置栏目内广告 intellicc.bas.cmbchina.com
 ^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec url reject
-
+#************************************#
 
 
 [Script]
@@ -69,9 +78,11 @@ VSCO = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipt
 
 #************************************#
 # 一言
+YiYanProCrack_16 = type=http-response, pattern=^https:\/\/app\.yiyan\.art\/yiyan\/, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/YiYanProCrack.js, timeout=60, script-update-interval=0
 
 #************************************#
 爱企查解锁 = type=http-response, pattern=^https?:\/\/aiqicha\.baidu\.com\/usercenter\/getvipinfoajax, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Aiinquire/Aiinquire_crack.js, requires-body=true, max-size=3145728, timeout=30
+
 #************************************#
 # 扫描全能王
 # hostname = *.camscanner.com, *.intsig.net
@@ -87,6 +98,7 @@ Picsart美易 = type=http-response,pattern=^https?:\/\/api\.meiease\.cn\/shop\/s
 # hostname = spclient.wg.spotify.com
 spotify-json = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
 spotify-proto = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
+
 #************************************#
 # 傲软抠图，傲软扫描，傲软PDF转换，傲软PDF编辑，傲软投屏，咖映，轻闪PDF，乃糖小组件，佐糖，佐糖照片修复
 # hostname = *.aoscdn.com, *.apsapp.cn
@@ -158,8 +170,6 @@ Enpass = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v1\/sub
 #************************************#
 # 简讯订阅 //api.tipsoon.com
 简讯订阅 = type=http-response,pattern=^https:\/\/api\.tipsoon\.com\/api\/v1\/user\/info$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/jianxun.js
-
-#************************************#
 
 #************************************#
 # 奈飞评分
