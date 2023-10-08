@@ -1,4 +1,4 @@
-#!name=签到8&阿里云盘token
+#!name=签到8&阿里云盘
 #!desc=配合获取token模块使用（如获取不到，等一段时间再打开），若提示获取cookie成功则可以使用签到
 [Script]
 阿里云盘签到 = type=cron,cronexp="0 10 0 * * ?",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
