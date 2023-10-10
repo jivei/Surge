@@ -401,7 +401,6 @@ acg.tv = server:syslib // BiliBili短网址
 # Hurricane Electric
 *.he.net = server:https://ordns.he.net/dns-query // HE.net
 
-[Rule]
 
 [Rule]
 # Alibaba
@@ -611,6 +610,15 @@ URL-REGEX,^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$,REJE
 # refer: https://github.com/lwd-temp/anti-ip-attribution/issues/24
 ^http:\/\/103\.41\.167\.237\/v2\/resolv - reject
 
+#哔哩哔哩
+^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
+^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+# b站动态红点、校园红点
+^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed - reject
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v2\.Dynamic\/CampusRedDot - reject
+^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v2\.Dynamic\/CampusRedDot - reject
+^https?:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed - reject
+
 
 [Header Rewrite]
 # 网易云音乐
@@ -668,6 +676,14 @@ URL-REGEX,^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$,REJE
 # ======= B ======= #
 # 百度文库去广告
 ^https:\/\/appwk\.baidu\.com\/(naapi\/(recommend\/recommenddoc|wkcircle\/messagetab|search\/wkhotwords|api\/wmadopt)|appapi\/(search\/hot|donate\/detail)|xpage\/interface\/wknaad) - reject
+# 可能的一些推广
+^https?:\/\/api\.bili(bili\.com|api\.net)\/pgc\/season\/app\/related\/recommend\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# 哔哩哔哔哩屏蔽直播间广告浮窗
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# 哔哩哔哔哩BiliBili漫画去广告
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# 哔哩哔哔哩屏蔽首页右上活动
+^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity data="https://github.com/Keywos/rule/raw/main/mocks/biliactivity.json"
 
 # ======= C ======= #
 # 车来了 //api.chelaile.net.cn, web.chelaile.net.cn
@@ -1049,6 +1065,16 @@ B612咔叽会员 = type=http-response,pattern=https://user-kaji-api.b612kaji.com
 百度网盘画质倍速 = type=http-request,pattern=^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js
 # 百度输入法净化
 百度输入法净化 = type=http-response,pattern=^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)),requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/bdsrf.js
+# 哔哩哔哩开屏广告 | 推荐页banner和广告 | 我的页面 | 1080P | 热搜 | 标签栏 | 下发皮肤
+bili-jsons = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index|account\/(mine(\/ipad)?|myinfo\?)|search\/square)|resource\/show\/(tab\/v2|skin\?)),requires-body=1,script-update-interval=-1,script-path=https://github.com/Keywos/rule/raw/main/JS/bjson.js
+# 哔哩哔哩直播间推广
+bili-lives = type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,requires-body=1,script-update-interval=-1,script-path=https://github.com/Keywos/rule/raw/main/JS/bjson.js
+# 哔哩哔哩番剧页 & 观影页广告
+bili-bangumis = type=http-response,pattern=^https?:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab\?),requires-body=1,script-update-interval=-1,script-path=https://github.com/Keywos/rule/raw/main/JS/bjson.js
+# 哔哩哔哩视频播放页 | 动态页 | 后台播放限制 | 青少年
+Blproto = type=http-response, pattern=^https?:\/\/grpc\.biliapi\.net\/bilibili\.app\.((view|viewunite)\.v1\.View\/(View|TFInfo)$|dynamic\.v2\.Dynamic\/Dyn(All|Video)$|playurl\.v1\.PlayURL\/PlayView$|interface\.v1\.Teenagers\/ModeStatus), requires-body=1, binary-body-mode=1, script-path=https://github.com/Keywos/rule/raw/main/JS/bproto.js
+# 哔哩哔哩弹幕 | 评论列表广告去除
+Blprotos = type=http-response, pattern=^https?:\/\/grpc\.biliapi\.net\/bilibili\.(community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile)|main\.community\.reply\.v1\.Reply\/MainList), requires-body=1, binary-body-mode=1, script-path=https://github.com/Keywos/rule/raw/main/JS/bproto.js
 
 # ======= C ====== #
 # 长相思会员
@@ -1220,4 +1246,4 @@ Script Hub: 规则集转换 = type=http-request, pattern=^https?:\/\/script\.hub
 Script Hub: 脚本转换 = type=http-request, pattern=^https?:\/\/script\.hub\/convert\/, requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js, timeout=120
 
 [MITM]
-hostname = %APPEND% script.hub, *.script.hub, 119.29.29.98, 119.29.29.99, amdc.alipay.com, amdc-sibling.alipay.com.cn, dns.jd.com, *.httpdns.pro, -gateway.icloud.com, -gateway.icloud.com.cn, -weather-data.apple.com, -buy.itunes.apple.com，www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com, 59.111.*, 112.13.119.52, 117.147.199.59, interface*.music.163.com:0, httpdns.n.netease.com, *.163jiasu.com, ipv4.music.163.com, -i.vip.iqiyi.com, *.iqiyi.com, *.mgtv.com, vv.video.qq.com, acs.youku.com, push.m.youku.com, un-acs.youku.com, cn-acs.m.cainiao.com, guide-acs.m.taobao.com, *.zhihu.com, imeres.baidu.com, mbd.baidu.com, mime.baidu.com, h2tcbox.baidu.com, *.weibo.cn, *.weibo.com, sinaurl.cn, t.cn weibo.cn, edith.xiaohongshu.com, www.xiaohongshu.com, api.gotokeep.com, kad.gotokeep.com, napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com, claritywallpaper.com, mobilead.kuwo.cn, rich.kuwo.cn, *.kwcdn.kuwo.cn, vip1.kuwo.cn, musicpay.kuwo.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, api.chelaile.net.cn, web.chelaile.net.cn, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, zj.haier.net, api.m.jd.com, gab.122.gov.cn, api.pinduoduo.com, api.yangkeduo.com, rescdn.qqmail.com, y.gtimg.cn, us.l.qq.com, wallet.95516.com, clientaccess.10086.cn, wap.js.10086.cn, acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, wxproj.seeyouyima.com, mxsa.mxbc.net, ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, api.maoyan.com, ehome.esgcc.com.cn, mp.weixin.qq.com, api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, client.app.coc.10086.cn, ad.12306.cn, api.alipan.com, member.alipan.com, list-app-m.i4.cn, search-app-m.i4.cn, pan.baidu.com, api.coolapk.com, tiebac.baidu.com ,lcs-mobile-cops.adobe.io,api*.faceu.mobi,api3-lq.faceu.mobi,commerce-api-lf.faceu.mobi,commerce-api-lq.faceu.mobi,lv-api-lq.ulikecam.com,lv-api-hl.ulikecam.com, minipro.95504.net,ocrifs.ejoy.sinopec.com,aiqicha.baidu.com,b2baifanfan.baidu.com, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, weixin110.qq.com, security.wechat.com, m.baidu.com,www.baidu.com, appwk.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, poetry.nanxiani.cn, mb3admin.com, i.weread.qq.com, license.enpass.io,www.google.cn, www.g.cn
+hostname = %APPEND% manga.bilibili.com, api.live.bilibili.com, api.vc.bilibili.com, app.bilibili.com, app.biliapi.net, api.bilibili.com, api.biliapi.net, grpc.biliapi.net, script.hub, *.script.hub, 119.29.29.98, 119.29.29.99, amdc.alipay.com, amdc-sibling.alipay.com.cn, dns.jd.com, *.httpdns.pro, -gateway.icloud.com, -gateway.icloud.com.cn, -weather-data.apple.com, -buy.itunes.apple.com，www.youtube.com, m.youtube.com, tv.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com, 59.111.*, 112.13.119.52, 117.147.199.59, interface*.music.163.com:0, httpdns.n.netease.com, *.163jiasu.com, ipv4.music.163.com, -i.vip.iqiyi.com, *.iqiyi.com, *.mgtv.com, vv.video.qq.com, acs.youku.com, push.m.youku.com, un-acs.youku.com, cn-acs.m.cainiao.com, guide-acs.m.taobao.com, *.zhihu.com, imeres.baidu.com, mbd.baidu.com, mime.baidu.com, h2tcbox.baidu.com, *.weibo.cn, *.weibo.com, sinaurl.cn, t.cn weibo.cn, edith.xiaohongshu.com, www.xiaohongshu.com, api.gotokeep.com, kad.gotokeep.com, napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com, claritywallpaper.com, mobilead.kuwo.cn, rich.kuwo.cn, *.kwcdn.kuwo.cn, vip1.kuwo.cn, musicpay.kuwo.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, api.chelaile.net.cn, web.chelaile.net.cn, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, zj.haier.net, api.m.jd.com, gab.122.gov.cn, api.pinduoduo.com, api.yangkeduo.com, rescdn.qqmail.com, y.gtimg.cn, us.l.qq.com, wallet.95516.com, clientaccess.10086.cn, wap.js.10086.cn, acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, wxproj.seeyouyima.com, mxsa.mxbc.net, ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, api.maoyan.com, ehome.esgcc.com.cn, mp.weixin.qq.com, api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, client.app.coc.10086.cn, ad.12306.cn, api.alipan.com, member.alipan.com, list-app-m.i4.cn, search-app-m.i4.cn, pan.baidu.com, api.coolapk.com, tiebac.baidu.com ,lcs-mobile-cops.adobe.io,api*.faceu.mobi,api3-lq.faceu.mobi,commerce-api-lf.faceu.mobi,commerce-api-lq.faceu.mobi,lv-api-lq.ulikecam.com,lv-api-hl.ulikecam.com, minipro.95504.net,ocrifs.ejoy.sinopec.com,aiqicha.baidu.com,b2baifanfan.baidu.com, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, weixin110.qq.com, security.wechat.com, m.baidu.com,www.baidu.com, appwk.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, poetry.nanxiani.cn, mb3admin.com, i.weread.qq.com, license.enpass.io,www.google.cn, www.g.cn
