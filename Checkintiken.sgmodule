@@ -1,0 +1,10 @@
+#!name=签到任务获取cookie
+#!desc=建议获取完毕关闭模块
+
+[Script]
+
+#以下cookie获取方式二选其一即可
+B站获取Cookie(APP) = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
+B站获取Cookie(网页) = type=http-request,pattern=^https:\/\/m.bilibili.com/$,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
+# > 阿里云盘签到 https://auth.alipan.com/v2/account/token
+阿里云盘签到cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
