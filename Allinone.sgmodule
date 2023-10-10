@@ -529,9 +529,6 @@ DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP
 # Surge 必须屏蔽 菜鸟
 AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amdc|\d).+\/amdc\/mobileDispatch$)),REJECT-DROP
 
-# 油管双语字幕
-URL-REGEX,^https?:\/\/([\w-]+)\.googlevideo\.com\/initplayback(\?.*oad=.+)$,REJECT-TINYGIF
-
 [URL Rewrite]
 
 # ========== 芒果视频 ==========
