@@ -1,6 +1,8 @@
 #!name = 破解 & 净化 & 工具 & 合集
 #!desc = All-in-one ，具体功能自行查看
 
+[General]
+force-http-engine-hosts = %APPEND% 59.111.*:0, iadmusicmatvideo.music.126.net
 
 [Rule]
 
@@ -23,6 +25,14 @@ DOMAIN,p.l.qq.com,REJECT
 DOMAIN,us.l.qq.com,REJECT
 DOMAIN,tangram.e.qq.com,REJECT
 
+#网易云音乐去广告
+DOMAIN,iadmusicmat.music.126.net,REJECT-NO-DROP
+DOMAIN,iadmat.nosdn.127.net,REJECT-NO-DROP
+DOMAIN,iadmatapk.nosdn.127.net,REJECT-NO-DROP
+DOMAIN,httpdns.n.netease.com,REJECT-NO-DROP
+DOMAIN,gdt.qq.com,REJECT-NO-DROP
+DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP
+
 # Surge 必须屏蔽 菜鸟
 AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amdc|\d).+\/amdc\/mobileDispatch$)),REJECT-DROP
 
@@ -37,6 +47,11 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ - reject
 ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
 ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
+
+[Header Rewrite]
+# 网易云音乐
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/batch header-replace-regex cookie appver=.+$ appver=2333
+
 
 [Map Local]
 
@@ -176,7 +191,9 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 ^http?:\/\/analytics\.163\.com\/ntes - reject
 # 微博开屏广告 //*.uve.weibo.com
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) - reject
-
+# 网易云音乐
+^https?:\/\/httpdns.n\.netease\.com - reject
+^https?:\/\/httpdns\.music\.163\.com - reject
 # ======= X ====== #
 # 闲鱼
 ^https:\/\/gw\.alicdn\.com\/mt\/ - reject
@@ -322,6 +339,19 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+^http:\/\/iadmusicmatvideo\.music\.126\.net data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank.mp4"
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist|music\/songshare\/text\/recommend\/get|mine\/applet\/redpoint|resniche\/position\/play\/new\/get) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
+# 网易云音乐 (评论区｜评论右上角热评馆｜播放页评论)｜回复
+^https?:\/\/interface3?\.music\.163.com\/eapi\/(comment\/(feed\/inserted|hotcomment\/collect|tips\/v2\/get)|v\d\/content\/exposure\/comment\/banner) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
+# 网易云音乐播放页live或直播｜(首页免或vip图标｜小提示)
+^https?:\/\/interface3?\.music\.163.com\/eapi\/(mlivestream\/entrance\/playpage|link\/(position\/show\/(strategy|resource)|scene\/show)) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
+# 网易云音乐黑胶弹窗｜会员试用
+^https?:\/\/interface3?\.music\.163.com\/eapi\/(vipcenter\/tspopup\/get|vipauth\/app\/auth|music-vip-membership\/client\/vip\/info|zone\/songplay\/entry\/get) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
+# 网易云音乐搜索页热搜卡片｜猜你喜欢｜我的应用下方提醒
+^https?:\/\/interface3?\.music\.163.com\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|(resource-exposure\/|middle\/clientcfg\/config)|activity\/bonus\/playpage\/time\/query) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
+# 网易云音乐侧边栏
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(side-bar\/mini-program\/music-service\/account|delivery\/batch-deliver) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
+^https?:\/\/(ipv4|interface3?)\.music\.163.com\/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
 
 # ======= X ====== #
 # 小米商城开屏广告 搜索框,热词,卡片 商品推荐信息流
@@ -614,4 +644,4 @@ Xmind-思维导图会员 = type=http-response,pattern=^https?:\/\/www\.xmind\.(c
 
 
 [MITM]
-hostname = %APPEND% -i.vip.iqiyi.com, *.iqiyi.com, *.mgtv.com, vv.video.qq.com, acs.youku.com, push.m.youku.com, un-acs.youku.com, cn-acs.m.cainiao.com, guide-acs.m.taobao.com, *.zhihu.com, imeres.baidu.com, mbd.baidu.com, mime.baidu.com, h2tcbox.baidu.com, *.weibo.cn, *.weibo.com, sinaurl.cn, t.cn weibo.cn, edith.xiaohongshu.com, www.xiaohongshu.com, api.gotokeep.com, kad.gotokeep.com, napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com, claritywallpaper.com, mobilead.kuwo.cn, rich.kuwo.cn, *.kwcdn.kuwo.cn, vip1.kuwo.cn, musicpay.kuwo.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, api.chelaile.net.cn, web.chelaile.net.cn, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, zj.haier.net, api.m.jd.com, gab.122.gov.cn, api.pinduoduo.com, api.yangkeduo.com, rescdn.qqmail.com, y.gtimg.cn, us.l.qq.com, wallet.95516.com, clientaccess.10086.cn, wap.js.10086.cn, acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, wxproj.seeyouyima.com, mxsa.mxbc.net, ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, api.maoyan.com, ehome.esgcc.com.cn, mp.weixin.qq.com, api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, client.app.coc.10086.cn, ad.12306.cn, api.alipan.com, member.alipan.com, list-app-m.i4.cn, search-app-m.i4.cn, pan.baidu.com, api.coolapk.com, tiebac.baidu.com ,lcs-mobile-cops.adobe.io,api*.faceu.mobi,api3-lq.faceu.mobi,commerce-api-lf.faceu.mobi,commerce-api-lq.faceu.mobi,lv-api-lq.ulikecam.com,lv-api-hl.ulikecam.com, minipro.95504.net,ocrifs.ejoy.sinopec.com,aiqicha.baidu.com,b2baifanfan.baidu.com, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, weixin110.qq.com, security.wechat.com, m.baidu.com,www.baidu.com, appwk.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, poetry.nanxiani.cn, mb3admin.com, i.weread.qq.com, license.enpass.io,www.google.cn, www.g.cn
+hostname = %APPEND% 59.111.*, 112.13.119.52, 117.147.199.59, interface*.music.163.com:0, httpdns.n.netease.com, *.163jiasu.com, ipv4.music.163.com, -i.vip.iqiyi.com, *.iqiyi.com, *.mgtv.com, vv.video.qq.com, acs.youku.com, push.m.youku.com, un-acs.youku.com, cn-acs.m.cainiao.com, guide-acs.m.taobao.com, *.zhihu.com, imeres.baidu.com, mbd.baidu.com, mime.baidu.com, h2tcbox.baidu.com, *.weibo.cn, *.weibo.com, sinaurl.cn, t.cn weibo.cn, edith.xiaohongshu.com, www.xiaohongshu.com, api.gotokeep.com, kad.gotokeep.com, napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com, claritywallpaper.com, mobilead.kuwo.cn, rich.kuwo.cn, *.kwcdn.kuwo.cn, vip1.kuwo.cn, musicpay.kuwo.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, api.chelaile.net.cn, web.chelaile.net.cn, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, zj.haier.net, api.m.jd.com, gab.122.gov.cn, api.pinduoduo.com, api.yangkeduo.com, rescdn.qqmail.com, y.gtimg.cn, us.l.qq.com, wallet.95516.com, clientaccess.10086.cn, wap.js.10086.cn, acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, wxproj.seeyouyima.com, mxsa.mxbc.net, ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, api.maoyan.com, ehome.esgcc.com.cn, mp.weixin.qq.com, api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, client.app.coc.10086.cn, ad.12306.cn, api.alipan.com, member.alipan.com, list-app-m.i4.cn, search-app-m.i4.cn, pan.baidu.com, api.coolapk.com, tiebac.baidu.com ,lcs-mobile-cops.adobe.io,api*.faceu.mobi,api3-lq.faceu.mobi,commerce-api-lf.faceu.mobi,commerce-api-lq.faceu.mobi,lv-api-lq.ulikecam.com,lv-api-hl.ulikecam.com, minipro.95504.net,ocrifs.ejoy.sinopec.com,aiqicha.baidu.com,b2baifanfan.baidu.com, m2u-api.getkwai.com, *jietu*, api.revenuecat.com, user-kaji-api.b612kaji.com, isi.csan.goodnotes.com, restore-access.indream.app, api.polaxiong.com, *.camscanner.com, *.intsig.net, api.meiease.cn, spclient.wg.spotify.com, *.aoscdn.com, *.apsapp.cn, api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com, *.meiyan.com, *.xiuxiu.meitu.com, api.posters.meitu.com, www.xmind.*, *.kakamobi.cn, account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn, ios-*.prod.ftl.netflix.com, ios.prod.ftl.netflix.com, weixin110.qq.com, security.wechat.com, m.baidu.com,www.baidu.com, appwk.baidu.com, api.tipsoon.com, biz.cyapi.cn, wrapper.cyapi.cn, poetry.nanxiani.cn, mb3admin.com, i.weread.qq.com, license.enpass.io,www.google.cn, www.g.cn
