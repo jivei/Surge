@@ -2,6 +2,9 @@
 #!desc=机场流量&流媒体解锁&今日油价&DNS清除
 #!auther= @RS0485 由 @keywos进行surge和Loon兼容性修改。复制到本地后argument=后面接本省/城市 名称拼音，或者去http://m.qiyoujiage.com/shanxi-3.shtml 查看自己省份拼音（陕西和山西比较特殊）
 
+[General]
+skip-proxy = %APPEND% iosapps.itunes.apple.com
+
 [Panel]
 Sub_info = script-name=Sub_info9,update-interval=3600
 Stream-All-Lite = script-name=Stream-All-Lite,update-interval=7200
@@ -13,3 +16,7 @@ Sub_info9 = type=generic,timeout=10,script-path=https://raw.githubusercontent.co
 Stream-All-Lite = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Stream-All.js,script-update-interval=0,argument=title=流媒体解锁检测&icon=play.tv.fill&color=#D22F28
 YJ = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/script/youjia.js,argument=guangxi/guilin
 FlushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Flush-DNS/Moore/Flush-DNS.js,argument=title=DNS FLush&icon=cube&color=#afe59a&server=false
+TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
+
+[MITM]
+hostname = %APPEND% testflight.apple.com
