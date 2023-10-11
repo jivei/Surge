@@ -1146,6 +1146,9 @@ PS订阅会员=type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\
 # Spotify (不能超高音质) spclient.wg.spotify.com
 spotify会员 1 = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
 spotify会员 2 = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
+# serverbee订阅
+serverbee订阅 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/serverbee.js, timeout=60, script-update-interval=0
+serverbee订阅 = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/serverbee.js, timeout=60, script-update-interval=0
 
 # ======= T ====== #
 # 贴吧全面去广告 //tiebac.baidu.com
