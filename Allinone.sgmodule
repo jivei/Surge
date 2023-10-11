@@ -659,7 +659,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
 
-# ======= 0 ======= #
+# --------- 0 ---------
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
 ^https:\/\/app\.58\.com\/api\/home\/(advertising|appadv) - reject
 ^https:\/\/app\.58\.com\/api\/home\/invite\/popupAdv - reject
@@ -667,13 +667,13 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 ^https:\/\/pic\d\.ajkimg\.com\/mat\/\w+\?imageMogr\d\/format\/jpg\/thumbnail\/\d{3}x\d{4}$ - reject
 ^https:\/\/.+\.58cdn\.com\.cn\/brandads - reject
 
-# ======= A ======= #
+# --------- A --------- 
 # 爱回收 //gw.aihuishou.com
 ^https:\/\/gw\.aihuishou\.com\/app-portal\/home\/getadvertisement - reject
 # 爱思助手
 ^https:\/\/list-app-m\.i4\.cn\/(adclickcb|getHotSearchList|getopfstadinfo)\.xhtml - reject
 
-# ======= B ======= #
+# --------- B --------- 
 # 百度文库去广告
 ^https:\/\/appwk\.baidu\.com\/(naapi\/(recommend\/recommenddoc|wkcircle\/messagetab|search\/wkhotwords|api\/wmadopt)|appapi\/(search\/hot|donate\/detail)|xpage\/interface\/wknaad) - reject
 # 可能的一些推广
@@ -685,7 +685,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 哔哩哔哔哩屏蔽首页右上活动
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity data="https://github.com/Keywos/rule/raw/main/mocks/biliactivity.json"
 
-# ======= C ======= #
+# --------- C --------- 
 # 车来了 //api.chelaile.net.cn, web.chelaile.net.cn
 ^https:\/\/api\.chelaile\.net\.cn\/adpub - reject
 ^https:\/\/api\.chelaile\.net\.cn\/goocity\/advert - reject
@@ -695,12 +695,12 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 菜鸟
 ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ - reject
 
-# ======= D ======= #
+# --------- D --------- 
 # 豆瓣 //api.douban.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject
 ^https:\/\/api\.douban\.com\b.*\/common_ads\? - reject
 
-# ======= E ======= #
+# --------- E --------- 
 # 饿了么 //elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com
 ^https:\/\/elemecdn.com\/.+\/sitemap - reject
 ^https:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} - reject
@@ -708,7 +708,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 ^https:\/\/fuss10.elemecdn.com\/.+\.mp4 - reject
 ^https:\/\/www1.elecfans.com\/www\/delivery - reject
 
-# ======= G ====== #
+# --------- G --------- 
 # 高德地图导航详情页,路线规划,地点详情页,搜索详情页,导航结束页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(car-end|route-plan)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
@@ -724,12 +724,12 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(car\/order\/content_info|order\/car\/king_toolbox_car_bubble)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(order_web\/friendly_information|tips\/onscene_visual_optimization)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 
-# ======= H ====== #
+# --------- H --------- 
 # 海尔智家 //zj.haier.net
 ^https:\/\/zj\.haier\.net\/api-gw\/shpmResource\/waterfall\/recommend\/list\? - reject
 ^https:\/\/zj\.haier\.net\/omsappapi\/ad\/v1\/rotation - reject
 
-# ======= J ====== #
+# --------- J --------- 
 # 建设银行
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/nf\/newfin\/activity\/xjr_\w+\.png$ - reject
 ^http:\/\/imageadv\.ccb\.com\/adpic\/(nctm\/ad|sszserver\/upload\/activity)\/\d{8}\/\w+\.(gif|png|jpg)$ - reject
@@ -740,7 +740,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 交管12123 //gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
 
-# ======= K ====== #
+# --------- K --------- 
 # 酷我音乐去开屏广告
 ^https?:\/\/rich\.kuwo\.cn\/AdService\/kaiping\/.+ _ reject
 ^https?:\/\/.+\.kwcdn\.kuwo\.cn\/star\/upload\/.+ _ reject
@@ -756,16 +756,16 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 动态相册
 ^https:\/\/api\.gotokeep\.com\/athena\/v1\/people\/my\/entry _ reject
 
-# ======= I ======= #
+# --------- I --------- 
 # it之家 api.zuihuimai.com, dat.ruanmei.com
 ^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao - reject
 ^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ - reject
 
-# ======= P ====== #
+# --------- P --------- 
 # 拼多多 //api.pinduoduo.com, api.yangkeduo.com
 ^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
 
-# ======= Q ====== #
+# --------- Q --------- 
 # qq邮箱开屏 //rescdn.qqmail.com
 ^https:\/\/rescdn\.qqmail\.com\/qqmail\/images\/.+\.(png|jpg)$ - reject
 # QQ //y.gtimg.cn, us.l.qq.com
@@ -773,7 +773,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
 ^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/ - reject
 
-# ======= W ====== #
+# --------- W --------- 
 # 网上国网
 ^https:\/\/(csc|osg)-static\.sgcc\.com\.cn(:28888)?\/omg-static\/(?=(98110|99101|99105|99106|99107|99111)) - reject
 ^https:\/\/ehome\.esgcc\.com\.cn\/mobile\/ - reject
@@ -785,7 +785,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 网易云音乐
 ^https?:\/\/httpdns.n\.netease\.com - reject
 ^https?:\/\/httpdns\.music\.163\.com - reject
-# ======= X ====== #
+# --------- X --------- 
 # 闲鱼
 ^https:\/\/gw\.alicdn\.com\/mt\/ - reject
 ^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} - reject
@@ -803,11 +803,11 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 小红书信息流
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v[23]\/note\/(feed|redtube|videofeed)\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 
-# ======= Y ====== #
+# --------- Y --------- 
 # 云闪付 //wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 - reject
 
-# ======= Z ====== #
+# --------- Z --------- 
 # 中国移动 //clientaccess.10086.cn, wap.js.10086.cn
 ^https:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject
 ^https:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query - reject
@@ -827,13 +827,13 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 
 [Map Local]
 
-# ======= A ======= #
+# --------- A --------- 
 # 阿里云盘 
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 爱企查去广告
 ^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 
-# ======= B ====== #
+# --------- B --------- 
 # 百度云
 ^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|rest\/2\.0\/pcs\/adx)\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https?:\/\/update\.pan\.baidu\.com\/statistics\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
@@ -850,7 +850,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 百度输入法log
 ^https:\/\/mime\.baidu\.com\/v5\/(fb\/st\?logtype|(notiv3|cellloc_noti|noti_cloudswitch_noti)\/info) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/mime.json"
 
-# ======= C ====== #
+# --------- C --------- 
 # 彩云天气去广告//biz.cyapi.cn, wrapper.cyapi.cn
 ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
@@ -868,19 +868,19 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 菜鸟支付宝 菜鸟小程序
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 
-# ======= D ====== #
+# --------- D --------- 
 # 大师兄 //sdk.alibaba.com.ailbaba.me
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|app_config|search_hot|version|advert\?position=[^2]+) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
-# ======= F ======= #
+# --------- F --------- 
 # 飞猪
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
-# ======= K ======= #
+# --------- K --------- 
 # 酷安
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
-# ======= M ====== #
+# --------- M --------- 
 # 美团 & 美团外卖//flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/flowplus\.meituan\.net\/v1\/mss_\w+\/linglong\/\d+\.jpg data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
@@ -902,7 +902,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 ^https:\/\/api\.maoyan\.com\/sns\/common\/feed\/channel\/v2\/list\.json data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/ad\/detail data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
-# ======= W ====== #
+# --------- W --------- 
 # 网上国网 //ehome.esgcc.com.cn
 ^https:\/\/(csc-service|osg-base)\.sgcc\.com\.cn:\d+\/dtportal-app\/app_api\/selectExhibition data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 网易邮箱大师开屏 //analytics.163.com, appconf.mail.163.com
@@ -944,7 +944,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 ^https?:\/\/interface3?\.music\.163\.com\/eapi\/(side-bar\/mini-program\/music-service\/account|delivery\/batch-deliver) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
 ^https?:\/\/(ipv4|interface3?)\.music\.163.com\/eapi\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/blank_dict.json"
 
-# ======= X ====== #
+# --------- X --------- 
 # 小米商城开屏广告 搜索框,热词,卡片 商品推荐信息流
 ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/skywheel\/mishop\/splash data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/api\.m\.mi\.com\/v1\/app\/popup_info$ data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
@@ -954,11 +954,11 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 小米米家
 ^https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/(banner|myTab|openingBanner) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
-# ======= Y ====== #
+# --------- Y --------- 
 # 易捷加油微信小程序底部横幅广告
 ^https:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 
-# ======= Z ====== #
+# --------- Z --------- 
 # 中国移动开屏 //client.app.coc.10086.cn
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks//reject-200.txt"
 # 招行掌上生活 (需卸载重装)
@@ -995,7 +995,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 
 [Script]
 
-# ========== 爱奇艺 ========== #
+# --------- 爱奇艺 --------- 
 # 首页信息流广告
 爱奇艺 = type=http-response,pattern=^http:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 爱奇艺 = type=http-response,pattern=^http:\/\/access\.if\.iqiyi\.com\/3f1\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
@@ -1020,7 +1020,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 开屏广告,播放广告
 爱奇艺 = type=http-response,pattern=^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
-# ========== 芒果视频 ========== #
+# --------- 芒果视频 --------- 
 # 我的页面
 芒果视频 = type=http-response,pattern=^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 首页信息流,顶部tab
@@ -1034,7 +1034,7 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 搜索框填充词
 芒果视频 = type=http-response,pattern=^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
-# ========== 优酷视频 ========== #
+# --------- 优酷视频 --------- 
 # 播放详情页,首页信息流,顶部tab,我的页面,评论区
 优酷视频 = type=http-response,pattern=^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 # 底部tab
@@ -1048,11 +1048,11 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 开屏广告
 优酷视频 = type=http-response,pattern=^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js
 
-# ======= 0 ======= #
+# --------- 0 --------- 
 # 12306 开屏广告 //ad.12306.cn
 12306 = type=http-response,pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js
 
-# ======= A ======= #
+# --------- A ---------
 # amdc
 amdc = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
 # 阿里云盘 //api.alipan.com, member.alipan.com
@@ -1063,7 +1063,7 @@ amdc = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDi
 # 傲软抠图，傲软扫描，傲软PDF转换，傲软PDF编辑，傲软投屏，咖映，轻闪PDF，乃糖小组件，佐糖，佐糖照片修复 *.aoscdn.com, *.apsapp.cn
 傲软全家桶会员 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/arqjt.js
 
-# ======= B ====== #
+# --------- B --------- 
 # Boxjs
 BoxJs = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 # 百度云 //pan.baidu.com
@@ -1087,7 +1087,7 @@ Blproto = type=http-response, pattern=^https?:\/\/grpc\.biliapi\.net\/bilibili\.
 # 哔哩哔哩弹幕 | 评论列表广告去除
 Blprotos = type=http-response, pattern=^https?:\/\/grpc\.biliapi\.net\/bilibili\.(community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile)|main\.community\.reply\.v1\.Reply\/MainList), requires-body=1, binary-body-mode=1, script-path=https://github.com/Keywos/rule/raw/main/JS/bproto.js
 
-# ======= C ====== #
+# --------- C --------- 
 # 长相思会员
 长相思会员 = type=http-response, pattern=https://poetry.nanxiani.cn/api/User/loginUserInfo, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/changxiangsi.js, timeout=60, script-update-interval=0
 # 彩云天气 //biz.cyapi.cn, wrapper.cyapi.cn
@@ -1102,13 +1102,13 @@ Blprotos = type=http-response, pattern=^https?:\/\/grpc\.biliapi\.net\/bilibili\
 # 菜鸟支付宝 菜鸟小程序
 菜鸟裹裹 = type=http-response,pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow,requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
 
-# ======= E ====== #
+# --------- E --------- 
 # Emby播放权限 mb3admin.com
 Emby会员 = type=http-response,pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/emby/unlock2.js
 # Enpass Password Manager解锁订阅 //license.enpass.io
 Enpass会员 = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v1\/subscription\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/enpass.js
 
-# ======= G ====== #
+# --------- G --------- 
 高德地图 = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
 # 导航详情页,路线规划,地点详情页,搜索详情页,导航结束页
 高德地图 = type=http-response,pattern=^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/routePlan\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
@@ -1127,7 +1127,7 @@ Enpass会员 = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v
 高德地图 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 高德地图 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 
-# ======= M ====== #
+# --------- M --------- 
 # Wink，蛋啵，潮自拍，海报工厂，Chic api-*.meitu.com
 美图系列会员 = type=http-response,pattern=^https?:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxl.js
 #************************************#
@@ -1137,7 +1137,7 @@ Enpass会员 = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v
 # 美图秀秀 *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
 美图秀秀会员 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
 
-# ======= N ====== #
+# --------- N --------- 
 # Notability会员
 Notability会员 = type=http-response, pattern=^https?:\/\/notability\.com\/(global|subscriptions), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/notability.js, timeout=60, script-update-interval=0
 # Nicegram会员
@@ -1146,7 +1146,7 @@ Nicegram解锁会员 = type=http-response, pattern=^https?:\/\/restore-access\.i
 奈飞评分 1 = type=http-request,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 奈飞评分 2= type=http-response,requires-body=1,pattern=^https?:\/\/ios(-.*)?\.prod\.ftl\.netflix\.com\/iosui\/user/.+path=%5B%22videos%22%2C%\d+%22%2C%22summary%22%5D,script-path=https://raw.githubusercontent.com/yichahucha/surge/master/nf_rating.js
 
-# ======= J ====== #
+# --------- J --------- 
 剪映会员 = type=http-request, pattern=^https?:\/\/commerce-api-.*\.faceu\.mobi\/commerce\/v1\/(subscription\/user_info|purchase\/draft_unlock|effect\/check_effects), script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/VideoFusionVipCrack.js, timeout=60, script-update-interval=0
 # 驾考宝典 *.kakamobi.cn
 驾考宝典会员 = type=http-response,pattern=^https?:\/\/.*\.kakamobi\.cn\/api\/open,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/jiakaobaodian.js
@@ -1155,7 +1155,7 @@ Nicegram解锁会员 = type=http-response, pattern=^https?:\/\/restore-access\.i
 # 简讯订阅 //api.tipsoon.com
 简讯会员 = type=http-response,pattern=^https:\/\/api\.tipsoon\.com\/api\/v1\/user\/info$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/jianxun.js
 
-# ======= K ======= #
+# --------- K --------- 
 # 酷安 //api.coolapk.com
 酷安 = type=http-response,pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
 酷安 = type=http-response,pattern=^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
@@ -1170,11 +1170,11 @@ Keep-Basic = type=http-response,pattern=https:\/\/api\.gotokeep\.com\/config\/v3
 Keep-Ad = type= http-response,pattern=https:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v1\/ad,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Keep/kad.js
 Keep-Course = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/athena\/v7\/people\/course\/(practiced|general),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Keep/course.js
 
-# ======= I ====== #
+# --------- I --------- 
 # IT之家 首页,轮播图,置顶文章,信息流广告
 IT之家 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
 
-# ======= P ====== #
+# --------- P --------- 
 # 泼辣修图
 泼辣修图解锁会员 = type=http-response, pattern=^https?:\/\/.*\/v1\/payments\/(appleiap\/receipts\/confirmation|profiles\/@me\/subscription), script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/pola.js, requires-body=true, max-size=3145728, timeout=30
 # Picsart美易 图片视频编辑 api.meiease.cn
@@ -1182,7 +1182,7 @@ Picsart美易会员 = type=http-response,pattern=^https?:\/\/api\.meiease\.cn\/s
 # 解锁PhotoshopExpress lcs-mobile-cops.adobe.io
 PS订阅会员=type=http-response,pattern=^https:\/\/lcs-mobile-cops\.adobe\.io\/mobile_profile,requires-body=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/photoshop.js
 
-# ======= S ====== #
+# --------- S --------- 
 # Spotify (不能超高音质) spclient.wg.spotify.com
 spotify会员 1 = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
 spotify会员 2 = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
@@ -1201,31 +1201,32 @@ Script Hub: Surge 模块控制器 = type=http-request, pattern=^https?:\/\/scrip
 Script Hub: 规则集转换 = type=http-request, pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set, requires-body=0, max-size=0, script-path=https://github.com/Script-Hub-Org/Script-Hub/raw/main/rule-parser.js, timeout=120
 Script Hub: 脚本转换 = type=http-request, pattern=^https?:\/\/script\.hub\/convert\/, requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js, timeout=120
 
-# ======= T ====== #
+# --------- T --------- 
 # 贴吧全面去广告 //tiebac.baidu.com
 贴吧 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
 贴吧 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)\?cmd,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js
 贴吧 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/s\/sync$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
 贴吧 = type=http-response,pattern=^https:\/\/tiebac\.baidu\.com\/tiebaads\/commonbatch\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
 
-# ======= V ====== #
+# --------- V --------- 
 # VSCO
 VSCO会员 = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/vsco.js, timeout=60, script-update-interval=0
 # 跳过微信中转页面,解除被封禁链接
 微信解除 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
 
-# ======= W ====== #
+# --------- X --------- 
+# 小米商城 开屏广告  //api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com
+小米商城 = type=http-response,pattern=^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView|product\/productView),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+# Xmind-思维导图 www.xmind.*
+Xmind-思维导图会员 = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn|net|app)\/.+\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js
+
+# --------- W --------- 
 # WPS 稻壳 account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn
 WPS会员 = type=http-response, pattern=^https?:\/\/.*?account\.wps\.(com|cn)(:\d+)?\/api\/users\/\w+\/overview$, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/WPS.js, requires-body=true, max-size=3145728, timeout=30
 WPS稻壳 = type=http-response, pattern=^https?:\/\/account\.wps\.cn\/api\/v3\/mine\/vips, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/WPSDocerVIPuserCrack.js, requires-body=true, max-size=3145728, timeout=30
 WPS稻d壳 = type=http-request, pattern=^https?:\/\/.+\.(docer.)?wps.cn\/(user\/v1\/vip|android\/mb\/buy|download\/v1\/ios|partner\/invoke\/usable|(api|rank)\/v1(\/mobile\/mb)?\/detail), script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/WPSDocerVIPuserCrack.jss, timeout=30
 # 微信阅读去广告
 微信阅读去广告 = type=http-response,pattern=https:\/\/i\.weread\.qq\.com\/(book\/(reading[sS]tat|chapterReview)|user\/profile|groups\/readerEntrance|review\/list|mobileSync),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/WeRead/weread.js
-# ======= X ====== #
-# 小米商城 开屏广告  //api.m.mi.com, api-mifit.huami.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com
-小米商城 = type=http-response,pattern=^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView|product\/productView),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
-# Xmind-思维导图 www.xmind.*
-Xmind-思维导图会员 = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn|net|app)\/.+\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js
 # 微博首页 签到,发布按钮,侧边栏,右上角红包,侧边栏提醒,超话tab悬浮,顶部直播
 微博 = type=http-response,pattern=^https:\/\/api\.weibo\.cn\/2\/(checkin\/show|client\/publisher_list|push\/active)\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js
 # 微博详情页 超话,评论区,看图界面,个人主页,我的页面,信息流,商品橱窗,视频流,视频号,视频调查,话题卡片
@@ -1254,14 +1255,14 @@ Xmind-思维导图会员 = type=http-response,pattern=^https?:\/\/www\.xmind\.(c
 微博 = type=http-response,pattern=^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url=,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
 微博 = type=http-response,pattern=^https:\/\/(sinaurl|t)\.cn\/,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js
 
-# ======= Y ====== #
+# --------- Y --------- 
 # 一甜相机会员
 一甜相机会员 = type=http-response, pattern=^https?:\/\/m2u-api\.getkwai\.com\/api-server\/api\/v2\/vip\/vipUserInfo, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/1TianCamVipCrack.js, requires-body=true, max-size=3145728, timeout=30
 # 易截图去除水印（2023-08-02）@ddgksf2013
 易截图去水印 = type=http-response, pattern=^https?:\/\/.*jietu.*com/apiv\d/user, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/MoYu/raw/master/YiJieTu2ProCrack.js, timeout=60, script-update-interval=0
 
 
-# ======= Z ====== #
+# --------- Z --------- 
 # 首页 悬浮图标,顶部横幅,开屏广告,关注页推荐,推荐信息流,热榜信息流,热榜直播,回答底部卡片
 知乎 = type=http-response,pattern=^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
 知乎 = type=http-response,pattern=^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/recommend),requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
