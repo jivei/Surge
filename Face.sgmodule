@@ -1,5 +1,5 @@
 #!name=面板
-#!desc=机场流量&流媒体解锁&今日油价
+#!desc=机场流量&流媒体解锁&今日油价&DNS清除
 #!auther= @RS0485 由 @keywos进行surge和Loon兼容性修改。复制到本地后argument=后面接本省/城市 名称拼音，或者去http://m.qiyoujiage.com/shanxi-3.shtml 查看自己省份拼音（陕西和山西比较特殊）
 
 [Panel]
