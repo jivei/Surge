@@ -16,7 +16,7 @@
 # APP签到一次即可获取
 亚朵酒店获取cookie  = type=http-request, pattern=^https:\/\/miniapp\.yaduo\.com\/atourlife\/signIn\/signIn.+, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=30
 
-# APP签到一次即可获取
+# 小程序签到一次即可获取
 霸王茶姬获取cookie  = type=http-request,pattern=^https?:\/\/webapi\.qmai\.cn\/web\/catering\/integral\/sign\/signIn,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/bwcj_token.js
 
 # APP签到一次即可获取，新用户需要住一晚方可
