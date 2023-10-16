@@ -1,0 +1,9 @@
+
+[URL Rewrite]
+
+# 无用请求
+
+https://limbopro.com/Adblock4limbo.svg - reject
+
+[MITM]
+hostname = %APPEND% limbopro.com
