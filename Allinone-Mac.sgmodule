@@ -1,6 +1,8 @@
 #!name = Mac
 #!desc = Mac自用
 
+[General]
+
 # 跳过代理
 # 跳过某个域名或者 IP 段，这些目标主机将不会由 Surge Proxy 处理。
 # (macOS 版本中，如果启用了 Set as System Proxy, 这些值会被写入到系统网络代理设置.)
