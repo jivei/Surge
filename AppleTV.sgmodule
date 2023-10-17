@@ -1,5 +1,5 @@
 #!name = AppleTV
-#!desc = 仅适用于 Apple TV
+#!desc = 因TV端大多数APP禁止Mitm，所以此模块仅适用于 Apple TV
 
 [General]
 
