@@ -19,9 +19,6 @@ use-local-host-item-for-proxy=true
 # 使加密DNS请求通过代理策略执行
 encrypted-dns-follow-outbound-mode = true
 
-# 投屏
-tun-excluded-routes = 239.255.255.250/32
-
 [Host]
 
 # --------- CUSTOM HOSTS ---------
