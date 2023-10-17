@@ -20,7 +20,6 @@ Sub_info9 = type=generic,timeout=10,script-path=https://raw.githubusercontent.co
 Stream-All-Lite = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Stream-All.js,script-update-interval=0,argument=title=流媒体解锁检测&icon=play.tv.fill&color=#D22F28
 YJ = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/script/youjia.js,argument=guangxi/guilin
 FlushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Flush-DNS/Moore/Flush-DNS.js,argument=title=DNS FLush&icon=cube&color=#afe59a&server=false
-TestFlight账户管理 = type=http-request,pattern=^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/,requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js
 # 请求体
 youtube.request = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\?,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube-request.js
 # 响应体
@@ -28,4 +27,4 @@ youtube.response = type=http-response,pattern=^https:\/\/youtubei\.googleapis\.c
 
 
 [MITM]
-hostname = %APPEND% rr*.googlevideo.com, youtubei.googleapis.com,testflight.apple.com
+hostname = %APPEND% rr*.googlevideo.com, youtubei.googleapis.com
