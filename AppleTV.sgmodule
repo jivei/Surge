@@ -1,0 +1,7 @@
+#!name = AppleTV专用模块
+#!desc = All-in-one,具体功能自行查看
+
+[General]
+
+# 投屏
+tun-excluded-routes = 239.255.255.250/32
