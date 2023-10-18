@@ -565,7 +565,7 @@ amdc = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDi
 # Boxjs
 Rewrite: BoxJs = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 # 百度云 //pan.baidu.com
-百度云 = type=http-response,pattern=^https:\/\/pan\.baidu\.com\/api\/getsyscfg\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
+百度云倍速 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/BaiDuCloudProCrack.js, timeout=60, script-update-interval=0
 # B612咔叽会员
 B612咔叽会员 = type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/612.js
 # 百度文库解锁VIP文档阅读权限 //appwk.baidu.com
