@@ -14,7 +14,7 @@
 # ------------------
 
 # 强制 HTTP 引擎处理请求
-force-http-engine-hosts = %APPEND% 59.111.*:0, iadmusicmatvideo.music.126.net,script.hub, *.script.hub,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, 119.29.29.29:80, dns.weixin.qq.com:80, dns.weixin.qq.com:8080, dns.weixin.qq.com:443, 203.107.1.65:80, 203.107.1.66:80
+force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me,*.cp31.ott.cibntv.net,59.111.*:0, iadmusicmatvideo.music.126.net,script.hub, *.script.hub,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, 119.29.29.29:80, dns.weixin.qq.com:80, dns.weixin.qq.com:8080, dns.weixin.qq.com:443, 203.107.1.65:80, 203.107.1.66:80
 
 # Always Real IP Hosts
 # 当 Surge VIF 处理 DNS 问题时，此选项要求 Surge 返回一个真正的 IP 地址，而不是一个假 IP 地址。
@@ -205,19 +205,28 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 
 [URL Rewrite]
 
-# 无用请求
-https://limbopro.com/Adblock4limbo.svg - reject
-^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes - reject
-# Google 
-^https?://(www.)?g.cn https://www.google.com 302
-^https?://(www.)?google.cn https://www.google.com 302
+# --------- 0 ---------
+# 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
+^https:\/\/app\.58\.com\/api\/home\/(advertising|appadv) - reject
+^https:\/\/app\.58\.com\/api\/home\/invite\/popupAdv - reject
+^https:\/\/app\.58\.com\/api\/log\/ - reject
+^https:\/\/pic\d\.ajkimg\.com\/mat\/\w+\?imageMogr\d\/format\/jpg\/thumbnail\/\d{3}x\d{4}$ - reject
+^https:\/\/.+\.58cdn\.com\.cn\/brandads - reject
 
-# 腾讯视频 //vv.video.qq.com
-^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ - reject
-^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
-^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
-
-# Alipay
+# --------- A ---------
+# 爱回收 //gw.aihuishou.com
+^https:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement - reject
+# 爱思助手 //list-app-m.i4.cn
+^https:\/\/list-app-m\.i4\.cn\/(adclickcb|getHotSearchList|getopfstadinfo)\.xhtml - reject
+# 阿里巴巴 //acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv - reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise - reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit - reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash - reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise - reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get - reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources - reject
 ^https?:\/\/amdc\.alipay\.com\/s?query - reject
 ^https?:\/\/amdc-sibling\.alipay\.com\.cn\/s?query - reject
 ^https?:\/\/110\.76\.8\.150\/squery - reject
@@ -233,56 +242,7 @@ https://limbopro.com/Adblock4limbo.svg - reject
 ^https?:\/\/2400:B200:1005:3000::1D3\/squery - reject
 ^https?:\/\/2400:B200:5000:B000::C8\/squery - reject
 
-# Baidu
-^http:\/\/180\.76\.76\.112\/v4\/resolve - reject
-^http:\/\/180\.76\.76\.220\/v4\/resolve - reject
-
-# Bilibili
-^http:\/\/203\.107\.1\.65\/\d+\/resolve - reject
-^http:\/\/203\.107\.1\.66\/\d+\/resolve - reject
-
-# JD
-^https:\/\/dns\.jd\.com\/v6\/b - reject
-
-# Meituan
-^http:\/\/103\.37\.155\.60\/fetch - reject
-
-# Pinduoduo
-^http:\/\/101\.35\.204\.35\/d - reject
-^http:\/\/101\.35\.212\.35\/d - reject
-^http:\/\/114\.110\.96\.26\/d - reject
-^http:\/\/114\.110\.97\.97\/d - reject
-
-# QCloud
-# refer: https://mc.qcloudimg.com/static/qc_doc/d39d48b733835af8a2e223115ac67da7/doc-HttpDNS-Getting+Started.pdf
-# refer: https://main.qcloudimg.com/raw/document/product/pdf/379_3513_cn.pdf
-# refer: https://cloud.tencent.com/document/product/379/61200
-^https?:\/\/119\.29\.29\.29\/d - reject
-
-# QQmusic
-^http:\/\/182\.256\.116\.116\/d - reject
-
-# Weibo
-# refer: https://github.com/CNSRE/HTTPDNSLib-for-iOS
-^http:\/\/api\.weibo\.cn\/2\/httpdns\/config - reject
-^http:\/\/api\.weibo\.cn\/httpdns\/config - reject
-
-# Weixin
-# 注意: 以下域名HTTPS无法MitM，如通过此链接查询，无法处理
-^https?:\/\/dns\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/newgetdns - reject
-^https?:\/\/dns\.weixin\.qq\.com\.cn\/cgi-bin\/micromsg-bin\/newgetdns - reject
-^https?:\/\/short\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/getcdndns - reject
-^https?:\/\/hkextshort\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/getcdndns - reject
-
-# Wework
-# refer: https://res.mail.qq.com/zh_CN/wework_ip/latest.html
-^http:\/\/182\.254\.116\.117\/d - reject
-^http:\/\/182\.254\.118\.119\/d - reject
-
-# Zhihu
-# refer: https://github.com/lwd-temp/anti-ip-attribution/issues/24
-^http:\/\/103\.41\.167\.237\/v2\/resolv - reject
-
+# --------- B ---------
 # 哔哩哔哩
 ^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
@@ -291,9 +251,153 @@ https://limbopro.com/Adblock4limbo.svg - reject
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v2\.Dynamic\/CampusRedDot - reject
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v2\.Dynamic\/CampusRedDot - reject
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed - reject
+# Baidu
+^http:\/\/180\.76\.76\.112\/v4\/resolve - reject
+^http:\/\/180\.76\.76\.220\/v4\/resolve - reject
+# Bilibili
+^http:\/\/203\.107\.1\.65\/\d+\/resolve - reject
+^http:\/\/203\.107\.1\.66\/\d+\/resolve - reject
+
+# --------- C ---------
+# 车来了 //api.chelaile.net.cn, web.chelaile.net.cn
+^https:\/\/api\.chelaile\.net\.cn\/adpub - reject
+^https:\/\/api\.chelaile\.net\.cn\/goocity\/advert - reject
+^https:\/\/web\.chelaile\.net\.cn\/api\/adpub - reject
+# CSDN //app-gw.csdn.net
+^https:\/\/app-gw\.csdn\.net\/cms-app\/v\d\/home_page\/open_advertisement - reject
+
+# --------- D ---------
+# 豆瓣 //api.douban.com
+^https:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject
+^https:\/\/api\.douban\.com\b.*\/common_ads\? - reject
+# 毒奶无用请求
+https://limbopro.com/Adblock4limbo.svg - reject
+^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes - reject
+
+# --------- E ---------
+# 饿了么 //elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com
+^https:\/\/elemecdn.com\/.+\/sitemap - reject
+^https:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} - reject
+^https:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} - reject
+^https:\/\/fuss10.elemecdn.com\/.+\.mp4 - reject
+^https:\/\/www1.elecfans.com\/www\/delivery - reject
+
+# --------- G ---------
 # 高德地图
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ - reject
 ^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ - reject
+# Google重定向
+^https?://(www.)?g.cn https://www.google.com 302
+^https?://(www.)?google.cn https://www.google.com 302
+
+# --------- H ---------
+# 海尔智家 //zj.haier.net
+^https:\/\/zj\.haier\.net\/api-gw\/shpmResource\/waterfall\/recommend\/list\? - reject
+^https:\/\/zj\.haier\.net\/omsappapi\/ad\/v1\/rotation - reject
+
+# --------- J ---------
+# 建设银行 //image1.ccb.com
+^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png - reject
+# 京东 //api.m.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=start - reject
+# 京东极速版 //api.m.jd.com
+^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising - reject
+# 交管12123 //gab.122.gov.cn
+^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
+# JD
+^https:\/\/dns\.jd\.com\/v6\/b - reject
+
+# --------- M ---------
+# Meituan
+^http:\/\/103\.37\.155\.60\/fetch - reject
+
+# --------- P ---------
+# 拼多多 //api.pinduoduo.com, api.yangkeduo.com
+^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
+# Pinduoduo
+^http:\/\/101\.35\.204\.35\/d - reject
+^http:\/\/101\.35\.212\.35\/d - reject
+^http:\/\/114\.110\.96\.26\/d - reject
+^http:\/\/114\.110\.97\.97\/d - reject
+
+# --------- Q ---------
+# qq邮箱开屏 //rescdn.qqmail.com
+^https:\/\/rescdn\.qqmail\.com\/qqmail\/images\/.+\.(png|jpg)$ - reject
+# QCloud
+# refer: https://mc.qcloudimg.com/static/qc_doc/d39d48b733835af8a2e223115ac67da7/doc-HttpDNS-Getting+Started.pdf
+# refer: https://main.qcloudimg.com/raw/document/product/pdf/379_3513_cn.pdf
+# refer: https://cloud.tencent.com/document/product/379/61200
+^https?:\/\/119\.29\.29\.29\/d - reject
+# QQmusic
+^http:\/\/182\.256\.116\.116\/d - reject
+
+# --------- W ---------
+# Wework
+# refer: https://res.mail.qq.com/zh_CN/wework_ip/latest.html
+^http:\/\/182\.254\.116\.117\/d - reject
+^http:\/\/182\.254\.118\.119\/d - reject
+# Weibo
+# refer: https://github.com/CNSRE/HTTPDNSLib-for-iOS
+^http:\/\/api\.weibo\.cn\/2\/httpdns\/config - reject
+^http:\/\/api\.weibo\.cn\/httpdns\/config - reject
+# Weixin
+# 注意: 以下域名HTTPS无法MitM，如通过此链接查询，无法处理
+^https?:\/\/dns\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/newgetdns - reject
+^https?:\/\/dns\.weixin\.qq\.com\.cn\/cgi-bin\/micromsg-bin\/newgetdns - reject
+^https?:\/\/short\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/getcdndns - reject
+^https?:\/\/hkextshort\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/getcdndns - reject
+
+# --------- T ---------
+# 腾讯视频 //vv.video.qq.com
+^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ - reject
+^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
+^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
+
+# --------- X ---------
+# 闲鱼 //gw.alicdn.com, acs.m.taobao.com
+^https:\/\/gw\.alicdn\.com\/mt\/ - reject
+^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} - reject
+^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} - reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
+# 小米金融 //api.jr.mi.com
+^https:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen - reject
+^https:\/\/api\.jr\.mi\.com\/v\d\/adv - reject
+# --------- Y ---------
+# 云闪付 //wallet.95516.com
+^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 - reject
+
+# --------- Z --------- 
+# 中国移动 //clientaccess.10086.cn, wap.js.10086.cn
+^https:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit - reject
+^https:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query - reject
+# 知乎
+# refer: https://github.com/lwd-temp/anti-ip-attribution/issues/24
+^http:\/\/103\.41\.167\.237\/v2\/resolv - reject
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 [Header Rewrite]
 
