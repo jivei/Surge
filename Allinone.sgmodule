@@ -5,7 +5,8 @@
 [General]
 # ------------------
 # 10.20 增加用药助手会员 下载地址：https://apps.apple.com/us/app/id540999305?l=zh-Hans-CN
-# 10.19 更新Youtube去广告适配TF版Surge
+# 10.19 更新Youtube净化适配TF版Surge
+# 10.19 更新爱优腾芒净化，腾讯视频和优酷上尚未完美支持
 # ------------------
 # 功能列表，根据首字母排序
 # 所有功能随着版本更替非永久具有时效性且用且珍惜
@@ -47,9 +48,7 @@ ip6-allhosts = ff02::3 // IPv6 All Hosts
 
 # Router Admin Panel
 *.id.ui.direct = server:syslib // Ubiquiti Unifi Network App
-# unifi.ui.com = server:syslib // Ubiquiti Unifi Portal
 unifi.local = server:syslib // Ubiquiti Unifi OS
-# network.unifi.ui.com = server:syslib // Ubiquiti Unifi Controller
 amplifi.lan = server:syslib // Ubiquiti Amplifi Router
 router.synology.com = server:syslib // Synology Router
 sila.razer.com = server:syslib // Razer Sila Router
