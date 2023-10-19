@@ -22,7 +22,7 @@
 # ------------------
 
 # 强制 HTTP 引擎处理请求
-force-http-engine-hosts = %APPEND% sdk.alibaba.com.ailbaba.me,*.cp31.ott.cibntv.net,59.111.*:0, iadmusicmatvideo.music.126.net,script.hub, *.script.hub,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, 119.29.29.29:80, dns.weixin.qq.com:80, dns.weixin.qq.com:8080, dns.weixin.qq.com:443, 203.107.1.65:80, 203.107.1.66:80
+force-http-engine-hosts = %APPEND% <ip-address>,<ip-address>:49155,*.tc.qq.com,kjp.cupid.iqiyi.com,t7z.cupid.iqiyi.com,*.smtcdns.com,sdk.alibaba.com.ailbaba.me,*.cp31.ott.cibntv.net,59.111.*:0, iadmusicmatvideo.music.126.net,script.hub, *.script.hub,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, 119.29.29.29:80, dns.weixin.qq.com:80, dns.weixin.qq.com:8080, dns.weixin.qq.com:443, 203.107.1.65:80, 203.107.1.66:80
 
 # Always Real IP Hosts
 # 当 Surge VIF 处理 DNS 问题时，此选项要求 Surge 返回一个真正的 IP 地址，而不是一个假 IP 地址。
@@ -165,6 +165,8 @@ DOMAIN-SUFFIX, trace.qq.com,REJECT
 URL-REGEX, ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+,REJECT
 URL-REGEX, ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+,REJECT
 URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+,REJECT
+URL-REGEX, ^http:\/\/[0-9.]+(\:80)?\/amdc\/mobileDispatch$,REJECT
+
 # 腾讯视频 去开屏
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
 # 腾讯视频视频
