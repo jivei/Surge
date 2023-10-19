@@ -9,7 +9,7 @@
 # 10.19 增加MIX滤镜大师会员，下载地址：👇
 # https://apps.apple.com/zh/app/id913947918
 # 10.18 更新Youtube净化适配TF版Surge
-# 10.18 更新爱优腾芒净化，腾讯视频和优酷上尚未完美支持
+# 10.18 更新爱优腾芒净化，需要卸载重装，开启surge后再启动APP否则失效
 # ------------------
 # 功能列表，根据首字母排序
 # 所有功能随着版本更替非永久具有时效性且用且珍惜
@@ -197,6 +197,24 @@ IP-CIDR6,240e:928:1400:10::25/128,REJECT,no-resolve
 # refer: https://res.mail.qq.com/zh_CN/wework_ip/latest.html
 IP-CIDR,182.254.116.117/32,REJECT,no-resolve
 IP-CIDR,182.254.118.119/32,REJECT,no-resolve
+
+# 优酷
+DOMAIN, push.m.youku.com, DIRECT
+DOMAIN, un-acs.youku.com, DIRECT
+DOMAIN, dorangesource.alicdn.com, DIRECT
+DOMAIN, adsmind.ugdtimg.com,REJECT
+DOMAIN, amdc.m.youku.com,REJECT
+DOMAIN, apiv4-iyes.youku.com,REJECT
+DOMAIN, httpdns.alicdn.com,REJECT
+DOMAIN, huichuan-mc.sm.cn,REJECT
+DOMAIN, huichuan.sm.cn,REJECT
+DOMAIN, iyes.youku.com,REJECT
+DOMAIN, m-vali.cp31.ott.cibntv.net,REJECT
+DOMAIN, mc.atm.youku.com,REJECT
+DOMAIN, vali-g1.cp31.ott.cibntv.net,REJECT
+DOMAIN, vali-ugc.cp31.ott.cibntv.net,REJECT
+DOMAIN, yk-ssp.ad.youku.com,REJECT
+DOMAIN, ykad-data.youku.com,REJECT
 
 # Zhihu
 # refer: https://github.com/lwd-temp/anti-ip-attribution/issues/24
@@ -601,8 +619,7 @@ https://limbopro.com/Adblock4limbo.svg - reject
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/blank.txt"
 # 优酷视频
 # 播放页弹窗动图
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # --------- Z --------- 
 # 中国移动 //clientaccess.10086.cn, wap.js.10086.cn
 ^https:\/\/clientaccess\.10086\.cn\/biz-orange\/DN\/init\/startInit url reject
