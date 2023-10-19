@@ -8,7 +8,7 @@
 # 功能列表，根据首字母排序
 # 所有功能随着版本更替非永久具有时效性且用且珍惜
 # --------- 净化广告 ---------
-# 常用APP小程序开屏，12306，阿里巴巴，阿里云盘，爱优腾芒，爱思，爱企查，百度搜索，百度网盘，百度输入法，哔哩哔哩，彩云天气，菜鸟，毒奶推广，大师兄影视，飞猪，高德地图，EMS，Keep，酷安，IT之家，米家，美团，美团外卖，美柚，蜜雪冰城，猫眼电影，网上国网，网易邮箱大师，四川电信，微信公众号，微信阅读，微博，网易云音乐，QQ音乐，贴吧，小红书，小米商城，易捷加油，油管，中国移动，掌上生活，中油好客，知乎
+# 常用APP小程序开屏，12306，阿里巴巴，阿里云盘，爱优腾芒，爱思，爱企查，百度地图，百度搜索，百度网盘，百度输入法，哔哩哔哩，彩云天气，菜鸟，毒奶推广，大师兄影视，飞猪，高德地图，EMS，肯德基，Keep，酷安，IT之家，米家，美团，美团外卖，美柚，蜜雪冰城，猫眼电影，网上国网，网易邮箱大师，四川电信，微信公众号，微信阅读，微博，网易云音乐，QQ音乐，贴吧，小红书，小米商城，易捷加油，油管，中国移动，掌上生活，中油好客，知乎
 # --------- 破解会员 ---------
 # 傲软全家桶，B612咔叽，百度网盘倍速，百度文库，长相思，彩云天气，Emby，EnpassPasswordManager，Wink，蛋啵，潮自拍，海报工厂，美颜相机，美图系列，美图秀秀，Notability，Nicegram，奈飞评分，剪映，驾考宝典，京东比价，酷我音乐，克拉壁纸，泼辣修图，Picsart美易，Spotify，Serverbee，扫描全能王，VSCO，微信跳转限制，Xmind思维导图，西窗烛，WPS，WPS稻壳，一言，一甜相机，易截图水印
 # --------- 系统增强 ---------
@@ -330,6 +330,10 @@ https://limbopro.com/Adblock4limbo.svg - reject
 # JD
 ^https:\/\/dns\.jd\.com\/v6\/b - reject
 
+# --------- K ---------
+# 肯德基 //res.kfc.com.cn
+^https:\/\/res\.kfc\.com\.cn\/advertisement - reject
+
 # --------- M ---------
 # Meituan
 ^http:\/\/103\.37\.155\.60\/fetch - reject
@@ -433,6 +437,21 @@ https://limbopro.com/Adblock4limbo.svg - reject
 ^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/bd.json"
 # 百度输入法log
 ^https:\/\/mime\.baidu\.com\/v5\/(fb\/st\?logtype|(notiv3|cellloc_noti|noti_cloudswitch_noti)\/info) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/mime.json"
+# 百度地图
+# 组件包
+^https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?container=du_aide_module data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?container=du_card_ugc data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?container=du_trip_route_tab data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/newclient\.map\.baidu\.com\/client\/crossmarketing\/\?oem= data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# 首页 小横条,左上角动图
+^https:\/\/newclient\.map\.baidu\.com\/client\/noticebar\/get\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/newclient\.map\.baidu\.com\/grow-engine\/api\/common\/userHome\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# 打车页
+^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/notice data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/yongche\.baidu\.com\/gomarketing\/api\/activity\/talos\/activitycard\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/yongche\.baidu\.com\/gomarketing\/api\/popup\/getentrancecordovaurl data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/baseinfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 # --------- C --------- 
 # 彩云天气去广告//biz.cyapi.cn, wrapper.cyapi.cn
@@ -702,6 +721,10 @@ bili-bangumis = type=http-response,pattern=^https?:\/\/api\.bilibili\.com\/pgc\/
 Blproto = type=http-response, pattern=^https?:\/\/grpc\.biliapi\.net\/bilibili\.app\.((view|viewunite)\.v1\.View\/(View|TFInfo)$|dynamic\.v2\.Dynamic\/Dyn(All|Video)$|playurl\.v1\.PlayURL\/PlayView$|interface\.v1\.Teenagers\/ModeStatus), requires-body=1, binary-body-mode=1, script-path=https://github.com/Keywos/rule/raw/main/JS/bproto.js
 # 哔哩哔哩弹幕 | 评论列表广告去除
 Blprotos = type=http-response, pattern=^https?:\/\/grpc\.biliapi\.net\/bilibili\.(community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile)|main\.community\.reply\.v1\.Reply\/MainList), requires-body=1, binary-body-mode=1, script-path=https://github.com/Keywos/rule/raw/main/JS/bproto.js
+# 百度地图净化
+百度地图净化 = type=http-response, pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/imap\/dl\/s\/UpdateInfo\.php\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/map.js, timeout=60, script-update-interval=0
+# 我的页面
+百度地图净化 = type=http-response, pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/usersystem\/mine\/page\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/map.js, timeout=60, script-update-interval=0
 
 # --------- C --------- 
 # 长相思会员
@@ -785,6 +808,8 @@ Keep-My = type=http-response,pattern=https:\/\/api\.gotokeep\.com\/athena\/v\d\/
 Keep-Basic = type=http-response,pattern=https:\/\/api\.gotokeep\.com\/config\/v3/basic,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Keep/basic.js
 Keep-Ad = type= http-response,pattern=https:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v1\/ad,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Keep/kad.js
 Keep-Course = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/athena\/v7\/people\/course\/(practiced|general),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Keep/course.js
+## 开屏广告
+开屏 = type=http-response, pattern=^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, timeout=60, script-update-interval=0
 
 # --------- I --------- 
 # IT之家 首页,轮播图,置顶文章,信息流广告
@@ -917,4 +942,4 @@ youtube.beta = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/y
 
 
 [MITM]
-hostname = %APPEND% edith.xiaohongshu.com,www.xiaohongshu.com,sctel10000.cn,acs.m.taobao.com,gw.alicdn.com,heic.alicdn.com,ump.ems.com.cn,ap*.intsig.net,lchttpapi.xczim.com,app.yiyan.art,*wps*,*.googlevideo.com, youtubei.googleapis.com,www.google.cn,www.g.cn,-google.com,testflight.apple.com,limbopro.com,m5.amap.com,m5-zb.amap.com,oss.amap.com,sns.amap.com, sub.store,boxjs.com,boxjs.net,*.boxjs.com, *.boxjs.net,manga.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,app.bilibili.com,app.biliapi.net,api.bilibili.com, api.biliapi.net,grpc.biliapi.net,script.hub,*.script.hub,119.29.29.98,119.29.29.99, amdc.alipay.com,amdc-sibling.alipay.com.cn,dns.jd.com,*.httpdns.pro,-gateway.icloud.com,-gateway.icloud.com.cn,-weather-data.apple.com,-buy.itunes.apple.com, 59.111.*,112.13.119.52,117.147.199.59, interface*.music.163.com:0, httpdns.n.netease.com,*.163jiasu.com,ipv4.music.163.com,-i.vip.iqiyi.com,*.iqiyi.com,*.mgtv.com,vv.video.qq.com,acs.youku.com,push.m.youku.com,un-acs.youku.com,cn-acs.m.cainiao.com,guide-acs.m.taobao.com,*.zhihu.com,imeres.baidu.com,mbd.baidu.com,mime.baidu.com,h2tcbox.baidu.com,*.weibo.cn,*.weibo.com,sinaurl.cn,t.cn,weibo.cn,edith.xiaohongshu.com,www.xiaohongshu.com,api.gotokeep.com,kad.gotokeep.com,napi.ithome.com,api.zuihuimai.com,dat.ruanmei.com,claritywallpaper.com,mobilead.kuwo.cn,rich.kuwo.cn,*.kwcdn.kuwo.cn,vip1.kuwo.cn,musicpay.kuwo.cn,*.58cdn.com.cn,app.58.com,*.ajkimg.com,gw.aihuishou.com,api.chelaile.net.cn,web.chelaile.net.cn,api.douban.com,elemecdn.com,fuss10.elemecdn.com,www1.elecfans.com,zj.haier.net,api.m.jd.com,gab.122.gov.cn,api.pinduoduo.com,api.yangkeduo.com,rescdn.qqmail.com,y.gtimg.cn,us.l.qq.com,wallet.95516.com,clientaccess.10086.cn,wap.js.10086.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,wxproj.seeyouyima.com,mxsa.mxbc.net,ad.maoyan.com,wx.maoyan.com,vod-movie.maoyan.com,api.maoyan.com,ehome.esgcc.com.cn,mp.weixin.qq.com,api.m.mi.com,api-mifit.huami.com,api.jr.mi.com,home.mi.com,shop-api.retail.mi.com,client.app.coc.10086.cn,ad.12306.cn,list-app-m.i4.cn,search-app-m.i4.cn,pan.baidu.com,api.coolapk.com,tiebac.baidu.com,api*.faceu.mobi,api3-lq.faceu.mobi,commerce-api-lf.faceu.mobi,commerce-api-lq.faceu.mobi,lv-api-lq.ulikecam.com,lv-api-hl.ulikecam.com,minipro.95504.net,ocrifs.ejoy.sinopec.com,b2baifanfan.baidu.com,m2u-api.getkwai.com,*jietu*,api.revenuecat.com,user-kaji-api.b612kaji.com,isi.csan.goodnotes.com,restore-access.indream.app,api.polaxiong.com,api.meiease.cn,spclient.wg.spotify.com,*.aoscdn.com,*.apsapp.cn,api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com,*.meiyan.com,*.xiuxiu.meitu.com,api.posters.meitu.com,www.xmind.*,*.kakamobi.cn,account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn,ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com,weixin110.qq.com,security.wechat.com,m.baidu.com,www.baidu.com,appwk.baidu.com,biz.cyapi.cn,wrapper.cyapi.cn,poetry.nanxiani.cn,mb3admin.com,i.weread.qq.com,license.enpass.io
+hostname = %APPEND% res.kfc.com.cn,newclient.map.baidu.com,yongche.baidu.com,edith.xiaohongshu.com,www.xiaohongshu.com,sctel10000.cn,acs.m.taobao.com,gw.alicdn.com,heic.alicdn.com,ump.ems.com.cn,ap*.intsig.net,lchttpapi.xczim.com,app.yiyan.art,*wps*,*.googlevideo.com, youtubei.googleapis.com,www.google.cn,www.g.cn,-google.com,testflight.apple.com,limbopro.com,m5.amap.com,m5-zb.amap.com,oss.amap.com,sns.amap.com, sub.store,boxjs.com,boxjs.net,*.boxjs.com, *.boxjs.net,manga.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,app.bilibili.com,app.biliapi.net,api.bilibili.com, api.biliapi.net,grpc.biliapi.net,script.hub,*.script.hub,119.29.29.98,119.29.29.99, amdc.alipay.com,amdc-sibling.alipay.com.cn,dns.jd.com,*.httpdns.pro,-gateway.icloud.com,-gateway.icloud.com.cn,-weather-data.apple.com,-buy.itunes.apple.com, 59.111.*,112.13.119.52,117.147.199.59, interface*.music.163.com:0, httpdns.n.netease.com,*.163jiasu.com,ipv4.music.163.com,-i.vip.iqiyi.com,*.iqiyi.com,*.mgtv.com,vv.video.qq.com,acs.youku.com,push.m.youku.com,un-acs.youku.com,cn-acs.m.cainiao.com,guide-acs.m.taobao.com,*.zhihu.com,imeres.baidu.com,mbd.baidu.com,mime.baidu.com,h2tcbox.baidu.com,*.weibo.cn,*.weibo.com,sinaurl.cn,t.cn,weibo.cn,edith.xiaohongshu.com,www.xiaohongshu.com,api.gotokeep.com,kad.gotokeep.com,napi.ithome.com,api.zuihuimai.com,dat.ruanmei.com,claritywallpaper.com,mobilead.kuwo.cn,rich.kuwo.cn,*.kwcdn.kuwo.cn,vip1.kuwo.cn,musicpay.kuwo.cn,*.58cdn.com.cn,app.58.com,*.ajkimg.com,gw.aihuishou.com,api.chelaile.net.cn,web.chelaile.net.cn,api.douban.com,elemecdn.com,fuss10.elemecdn.com,www1.elecfans.com,zj.haier.net,api.m.jd.com,gab.122.gov.cn,api.pinduoduo.com,api.yangkeduo.com,rescdn.qqmail.com,y.gtimg.cn,us.l.qq.com,wallet.95516.com,clientaccess.10086.cn,wap.js.10086.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,wxproj.seeyouyima.com,mxsa.mxbc.net,ad.maoyan.com,wx.maoyan.com,vod-movie.maoyan.com,api.maoyan.com,ehome.esgcc.com.cn,mp.weixin.qq.com,api.m.mi.com,api-mifit.huami.com,api.jr.mi.com,home.mi.com,shop-api.retail.mi.com,client.app.coc.10086.cn,ad.12306.cn,list-app-m.i4.cn,search-app-m.i4.cn,pan.baidu.com,api.coolapk.com,tiebac.baidu.com,api*.faceu.mobi,api3-lq.faceu.mobi,commerce-api-lf.faceu.mobi,commerce-api-lq.faceu.mobi,lv-api-lq.ulikecam.com,lv-api-hl.ulikecam.com,minipro.95504.net,ocrifs.ejoy.sinopec.com,b2baifanfan.baidu.com,m2u-api.getkwai.com,*jietu*,api.revenuecat.com,user-kaji-api.b612kaji.com,isi.csan.goodnotes.com,restore-access.indream.app,api.polaxiong.com,api.meiease.cn,spclient.wg.spotify.com,*.aoscdn.com,*.apsapp.cn,api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com,*.meiyan.com,*.xiuxiu.meitu.com,api.posters.meitu.com,www.xmind.*,*.kakamobi.cn,account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn,ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com,weixin110.qq.com,security.wechat.com,m.baidu.com,www.baidu.com,appwk.baidu.com,biz.cyapi.cn,wrapper.cyapi.cn,poetry.nanxiani.cn,mb3admin.com,i.weread.qq.com,license.enpass.io
