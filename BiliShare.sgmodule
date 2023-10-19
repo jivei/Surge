@@ -4,9 +4,9 @@
 
 [Script]
 
-iPhone端共享会员 = type=http-request, pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.playerunite\.v1\.Player\/PlayViewUnite(\?.+)?$, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/menggushangdan.js, timeout=30
+iPhone端共享会员 = type=http-request, pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.playerunite\.v1\.Player\/PlayViewUnite(\?.+)?$, script-path=https://www.dropbox.com/scl/fi/p19ut4b1jonmbjiuczi8j/bilibi.js?rlkey=hrbe7hab4pzy19n3jw2no58qb&dl=1, timeout=30
 
-iPad端共享会员 = type=http-request, pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.pgc\.gateway\.player\.v2\.PlayURL\/PlayView$, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/menggushangdan.js, timeout=30
+iPad端共享会员 = type=http-request, pattern=^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.pgc\.gateway\.player\.v2\.PlayURL\/PlayView$, script-path=https://www.dropbox.com/scl/fi/p19ut4b1jonmbjiuczi8j/bilibi.js?rlkey=hrbe7hab4pzy19n3jw2no58qb&dl=1, timeout=30
 
 [MITM]
 
