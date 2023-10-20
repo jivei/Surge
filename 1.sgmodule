@@ -5,4 +5,5 @@
 # 盯盯拍开屏
 ^http:\/\/apphw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
+[MITM]
 hostname = %INSERT% apphw.ddpai.com:18080
