@@ -504,23 +504,7 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 ^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi - reject
 ^https:\/\/heic\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0\.jpg_\.heic$ - reject
 # > 淘票票
-^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ - reject
-# > 淘淘阅读 感谢#Baby分享
-^https?:\/\/bid\.adview\.cn\/agent\/getAd - reject
-^https:\/\/client\.tujia\.com\/bnbapp-node\/app\/(promotion\/popup\/getpopupups\/bnb|portal\/getStartPictureAdvertising) - reject
-^https?:\/\/agent-count\.pconline\.com\.cn\/counter\/adAnalyse\/ - reject
-^https?:\/\/mrobot\.(pcauto|pconline)\.com\.cn\/v\d\/ad\dp - reject
-^https?:\/\/mrobot\.pcauto\.com\.cn\/xsp\/s\/auto\/info\/(ad|preload) - reject
-^https?:\/\/gw\.kaola\.com\/gw\/dgmobile\/newOpenAd - reject
-^https?:\/\/interface(\d)?.music.163.com\/eapi\/ad\/ - reject
-^https?:\/\/iadmusicmat\.music\.126\.net\/.+\.jpg - reject
-^http:\/\/interface\.music\.163\.com\/eapi\/ad\/config\/get - reject
-^https?:\//m\.ads\.8le8le\.com\/adShow - reject
-https:\/\/appconf\.mail\.163\.com\/mmad\/get\.do - reject
-http:\/\/analytics\.163\.com\/ntes - reject
-^https?:\/\/p\.c\.music\.126.net\/.*?jpg$ - reject
-^https?:\/\/img1.126.net\/.+dpi=\w{7,8} - reject
-^https?:\/\/img1.126.net\/channel14\/ - reject
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ - ^https?:\/\/img1.126.net\/channel14\/ - reject
 ^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$ - reject
 ^https?:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ - reject
 ^https?:\/\/nex.163.com\/q - reject
@@ -836,8 +820,6 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 ^https:\/\/api\.gameplus\.qq\.com\/community\.OnloadSrv\/GetPreloadScreenInfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # > SOUL
 ^https:\/\/ssp\.soulapp\.cn\/api\/q\?bi data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"# --------- T --------- 
-
-
 # --------- T ---------
 # > 腾讯地图
 ^https?:\/\/4gimg\.map\.qq\.com\/mwaSplash\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
@@ -946,19 +928,11 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 ^https?:\/\/p\.du\.163\.com\/ad\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # > 网易考拉
 ^https?:\/\/kaola-haitao\.oss\.kaolacdn.com\/.+?_\d{3,4}_\d{4}\.jpg\?x-oss-process=image\/resize,m_mfit,w_\d{3,4},h_\d{4}\/format,webp\/quality,Q_85 data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-^https?:\/\/sp\.kaola\.com\/api\/openad data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# > 网易云音乐
-^https?:\/\/.+?\/eapi\/(?>ad|log)\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/sp\.kaola\.com\/api\/openad data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.
 # 会员续费弹窗提醒
 ^https:\/\/interface3\.music\.163\.com\/eapi\/vipauth\/app\/auth\/recycle\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # > 网易邮箱
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# > 网易
-^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
-^https?:\/\/www.icourse163.org\/.*?(Advertisement) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
-^https?:\/\/www\.icourse163\.org\/mob\/j\/v1\/mobRecommendRPCBean\.getMaxWeightAdvertisement\.rpc data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|mlog|search/(specialkeyword|defaultkeyword|hot)) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
-^https?:\/\/ok\.166\.net\/reunionpub\/202[2-9]{1}-[0-9]{2}-[0-9]{2}\/ntesgod_cms\/.*.jpg$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # > 无他相机
 ^https?:\/\/api-release\.wuta-cam\.com\/ad_tree data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
