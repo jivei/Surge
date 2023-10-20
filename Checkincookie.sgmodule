@@ -4,8 +4,8 @@
 [Script]
 
 # APP，网页任意其一登录即可获取
-哔哩哔哩获取Cookie = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
-哔哩哔哩获取Cookie = type=http-request,pattern=^https:\/\/m.bilibili.com/$,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
+# 哔哩哔哩获取Cookie = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
+# 哔哩哔哩获取Cookie = type=http-request,pattern=^https:\/\/m.bilibili.com/$,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
 
 # APP登录即可获取
 阿里云盘APP获取cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
