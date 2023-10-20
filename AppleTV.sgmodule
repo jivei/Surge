@@ -1,5 +1,5 @@
-#!name = AppleTV
-#!desc = 因TV端大多数APP禁止Mitm，所以此模块仅适用于 Apple TV
+#!name = AppleTV投屏
+#!desc = 在建立虚拟网卡时，Surge会根据该选项加入额外的路由表
 
 [General]
 
