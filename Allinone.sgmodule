@@ -1040,7 +1040,8 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 ^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 # > 中国广电
-^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"# 招行掌上生活 (需卸载重装)
+^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# 招行掌上生活 (需卸载重装)
 # 开屏广告 az1mbasecc.bas.cmbchina.com
 ^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject
 # 设置栏目内广告 intellicc.bas.cmbchina.com
