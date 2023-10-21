@@ -18,7 +18,7 @@
 # 功能列表，根据首字母排序
 # 所有功能随着版本更替非永久具有时效性且用且珍惜
 # --------- 净化(APP,小程序,开屏) ---------
-# 常用APP小程序开屏，12306，阿里巴巴，阿里云盘，爱优腾芒，爱思，爱企查，百度地图，百度搜索，百度网盘，百度输入法，哔哩哔哩，彩云天气，菜鸟，毒奶推广，大师兄影视，飞猪，光大系列，工商系列，国家地理系列，高德地图，EMS，京东系列，今日头条，肯德基，Keep，酷安，IT之家，米家，美团系列，美柚，马卡龙玩图，脉脉，麦当劳，蜜雪冰城，猫眼电影，农业银行，浦发银行，平安银行，起哪儿，腾讯系列，票根，起点读书，汽车之家，全民K歌，瑞幸咖啡，苏e行，苏周到，四川航空，搜狐搜狗系列，顺丰系列，识货，SOUL，腾讯系列，淘宝天猫系列，网上国网，网易邮箱大师，四川电信，微信公众号，微信阅读，微博，网易系列，WPS，蜗牛睡眠，无他相机，贴吧，小红书，小米米家系列，下厨房，希尔顿，携程，新浪系列，咸鱼，印象笔记，央视系列，易捷加油，油管，中国移动联通电信，掌上生活，作业帮，浙里办，指点天下，掌上英雄联盟，中油好客，知乎
+# 常用APP小程序开屏，12306，爱思助手，阿里云盘，爱优腾芒，爱思，爱企查，百度地图，百度搜索，百度网盘，百度输入法，哔哩哔哩，彩云天气，菜鸟，毒奶推广，大师兄影视，飞猪，光大系列，工商系列，国家地理系列，高德地图，EMS，京东系列，今日头条，肯德基，Keep，酷安，IT之家，米家，美团系列，美柚，马卡龙玩图，脉脉，麦当劳，蜜雪冰城，猫眼电影，农业银行，浦发银行，平安银行，起哪儿，腾讯系列，票根，起点读书，汽车之家，全民K歌，瑞幸咖啡，苏e行，苏周到，四川航空，搜狐搜狗系列，顺丰系列，识货，SOUL，腾讯系列，淘宝天猫系列，网上国网，网易邮箱大师，四川电信，微信公众号，微信阅读，微博，网易系列，WPS，蜗牛睡眠，无他相机，贴吧，小红书，小米米家系列，下厨房，希尔顿，携程，新浪系列，咸鱼，印象笔记，央视系列，易捷加油，油管，中国移动联通电信，掌上生活，作业帮，浙里办，指点天下，掌上英雄联盟，中油好客，知乎
 # --------- 破解会员 ---------
 # 傲软全家桶，B612咔叽，百度网盘倍速，百度文库，长相思，彩云天气，Emby，EnpassPasswordManager，Wink，蛋啵，潮自拍，海报工厂，美颜相机，美图系列，美图秀秀，Notability，Nicegram，奈飞评分，剪映，驾考宝典，京东比价，酷我音乐，克拉壁纸，泼辣修图，Picsart美易，Spotify，Serverbee，扫描全能王，VSCO，微信跳转限制，Xmind思维导图，西窗烛，WPS，WPS稻壳，一言，一甜相机，易截图水印
 # --------- 系统增强 ---------
@@ -243,29 +243,6 @@ AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT-DROP
 ^https:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement - reject
 # 爱思助手 //list-app-m.i4.cn
 ^https:\/\/list-app-m\.i4\.cn\/(adclickcb|getHotSearchList|getopfstadinfo)\.xhtml - reject
-# 阿里巴巴 //acs.m.taobao.com, gw.alicdn.com, heic.alicdn.com
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv - reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise - reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit - reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash - reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise - reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get - reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources - reject
-^https?:\/\/amdc\.alipay\.com\/s?query - reject
-^https?:\/\/amdc-sibling\.alipay\.com\.cn\/s?query - reject
-^https?:\/\/110\.76\.8\.150\/squery - reject
-^https?:\/\/203\.209\.230\.39\/squery - reject
-^https?:\/\/203\.209\.245\.102\/squery - reject
-^https?:\/\/203\.209\.245\.158\/squery - reject
-^https?:\/\/203\.209\.247\.95\/squery - reject
-^https?:\/\/203\.209\.250\.41\/squery - reject
-^https?:\/\/203\.209\.250\.114\/squery - reject
-^https?:\/\/203\.209\.251\.147\/squery - reject
-^https?:\/\/2400:B180:6001::18F\/squery - reject
-^https?:\/\/2400:B200:1005:3000::155\/squery - reject
-^https?:\/\/2400:B200:1005:3000::1D3\/squery - reject
-^https?:\/\/2400:B200:5000:B000::C8\/squery - reject
 # --------- B ---------
 # 哔哩哔哩
 ^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
@@ -275,10 +252,10 @@ AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT-DROP
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v2\.Dynamic\/CampusRedDot - reject
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v2\.Dynamic\/CampusRedDot - reject
 ^https?:\/\/app\.bilibili\.com\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed - reject
-# Baidu
+# 百度
 ^http:\/\/180\.76\.76\.112\/v4\/resolve - reject
 ^http:\/\/180\.76\.76\.220\/v4\/resolve - reject
-# Bilibili
+# 哔哩哔哩
 ^http:\/\/203\.107\.1\.65\/\d+\/resolve - reject
 ^http:\/\/203\.107\.1\.66\/\d+\/resolve - reject
 # --------- C ---------
@@ -292,22 +269,19 @@ AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT-DROP
 # 豆瓣 //api.douban.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash - reject
 ^https:\/\/api\.douban\.com\b.*\/common_ads\? - reject
-# 得物开屏广告 @Runestoner分享
+# 得物
 ^https:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement - reject
 # 毒奶无用请求
 https://limbopro.com/Adblock4limbo.svg - reject
 ^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes - reject
-#叮咚买菜 #开屏广告 #主机名maicai.api.ddxq.mobi
+#叮咚买菜 #开屏广告 maicai.api.ddxq.mobi
 ^https:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd\?ad_id data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 #叮咚买菜 #新人弹窗
 ^https:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # --------- E ---------
-# 饿了么 //elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com
+# 饿了么 //elemecdn.com,fuss10.elemecdn.com
 ^https:\/\/elemecdn.com\/.+\/sitemap - reject
-^https:\/\/fuss10.elemecdn.com\/.+\/w\/640\/h\/\d{3,4} - reject
-^https:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} - reject
 ^https:\/\/fuss10.elemecdn.com\/.+\.mp4 - reject
-^https:\/\/www1.elecfans.com\/www\/delivery - reject
 # --------- G ---------
 # 高德地图
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ - reject
@@ -315,8 +289,6 @@ https://limbopro.com/Adblock4limbo.svg - reject
 # Google重定向
 ^https?://(www.)?g.cn https://www.google.com 302
 ^https?://(www.)?google.cn https://www.google.com 302
-# 国家地理杂志
-^https?:\/\/dili\.bdatu\.com\/jiekou\/ad\/ - reject
 # --------- H ---------
 # 海尔智家 //zj.haier.net
 ^https:\/\/zj\.haier\.net\/api-gw\/shpmResource\/waterfall\/recommend\/list\? - reject
@@ -324,7 +296,7 @@ https://limbopro.com/Adblock4limbo.svg - reject
 # --------- J ---------
 # 建设银行 //image1.ccb.com
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png - reject
-# > 京东
+# 京东
 ^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202220\/24\/21575\/134711\/625b821bE5d642d73\/77636692989bd2be\.jpg - reject
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/96405\/17\/28473\/168578\/625cd144E7997a990\/8233ce8a10c4e463\.jpg - reject
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s1125x2436_jfs\/t1\/182114\/23\/23904\/121433\/62593c9cEd77c4519\/2e3f4c518b771094\.jpg - reject
@@ -348,17 +320,16 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture - reject
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ - reject
 ^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json - reject
-# 禁京东DNS解析 感谢@Eula分享
+# 禁京东DNS解析 
 ^https?:\/\/dns\.jd\.com\/ - reject
+^https:\/\/dns\.jd\.com\/v6\/b - reject
 # 禁京东直播小窗
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 - reject
 # 禁京东直播(慎用！店铺页面无活动弹窗、无关注按钮、无法观看直播)
-#^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(live｜getShopHomeExtendInfo|getImmediatePlayV910) - reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(live｜getShopHomeExtendInfo|getImmediatePlayV910) - reject
 # 交管12123 //gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
-# JD
-^https:\/\/dns\.jd\.com\/v6\/b - reject
-# > 今日头条 感谢@Jörgen Frecht分享
+# 今日头条 
 ^https:\/\/p\d.pstatp.com\/origin - reject
 ^https:\/\/pb\d.pstatp.com\/origin - reject
 ^https?:\/\/s3plus\.meituan\.net\/.+?\/linglong\/ - reject
@@ -374,24 +345,24 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 # 肯德基 //res.kfc.com.cn
 ^https:\/\/res\.kfc\.com\.cn\/advertisement - reject
 # --------- M ---------
-# Meituan
+# 美团
 ^http:\/\/103\.37\.155\.60\/fetch - reject
-# > 秒拍
+# 秒拍
 ^https?:\/\/b-api\.ins\.miaopai\.com\/\d\/ad/ - reject
-# > 美图秀秀
+# 美图秀秀
 ^https?:\/\/mea\.meitudata\.com\/kaiping - reject
-# > 蘑菇租房
+# 蘑菇租房
 ^https?:\/\/api\.mgzf\.com\/renter-operation\/home\/startHomePage - reject
-# > 美味不用等
+# 美味不用等
 ^https?:\/\/capi\.mwee\.cn\/app-api\/V\d{2}\/app\/(ad|getstartad) - reject
-# > 漫画人
+# 漫画人
 ^https?:\/\/mangaapi\.manhuaren\.com\/v\d\/public\/getStartPageAds - reject
 ^https?:\/\/mob\.mddcloud\.com\.cn\/api\/(ad|advert)\/ - reject
-# > 脉脉
+# 脉脉
 ^https?:\/\/open\.taou\.com\/maimai\/(launch_ad|ad?) - reject
 ^https?:\/\/api\.taou\.com\/sdk\/global\/splash_ad - reject
 ^https?:\/\/track\.mm\.taou\.com/v\d\/track - reject
-# > 浦发银行
+# 浦发银行
 ^https:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/getAdvList\.ah$ - reject
 ^https:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/getAdvertisementList\.ah - reject
 ^https:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/prefetchAdvList\.ah - reject
@@ -399,65 +370,45 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 # --------- P ---------
 # 拼多多 //api.pinduoduo.com, api.yangkeduo.com
 ^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash - reject
-# Pinduoduo
 ^http:\/\/101\.35\.204\.35\/d - reject
 ^http:\/\/101\.35\.212\.35\/d - reject
 ^http:\/\/114\.110\.96\.26\/d - reject
 ^http:\/\/114\.110\.97\.97\/d - reject
-# > 澎湃新闻
+# 澎湃新闻
 ^https?:\/\/adpai\.thepaper\.cn\/.+&ad= - reject
-# --------- Q ---------
-# qq邮箱开屏 //rescdn.qqmail.com
-^https:\/\/rescdn\.qqmail\.com\/qqmail\/images\/.+\.(png|jpg)$ - reject
-# QCloud
-# refer: https://mc.qcloudimg.com/static/qc_doc/d39d48b733835af8a2e223115ac67da7/doc-HttpDNS-Getting+Started.pdf
-# refer: https://main.qcloudimg.com/raw/document/product/pdf/379_3513_cn.pdf
-# refer: https://cloud.tencent.com/document/product/379/61200
-^https?:\/\/119\.29\.29\.29\/d - reject
-# QQmusic
-^http:\/\/182\.256\.116\.116\/d - reject
-# > QQ钱包净化
-^https?:\/\/m\.qianbao\.qq\.com\/pages\/walletHome\?invisible - reject
-^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen - reject
-^https://magev6.if.qidian.com/argus/api/v1/client/iosad - reject
-^https://magev6.if.qidian.com/argus/api/v1/bookshelf/getad - reject
-^https://magev6.if.qidian.com/argus/api/v4/client/getsplashscreen? - reject
-^https?:\/\/open\.qyer\.com\/qyer\/config\/get - reject
-^https?:\/\/media\.qyer\.com\/ad\/ - reject
-# > 球迷报
+# 球迷报
 ^https?:\/\/a\.qiumibao\.com\/activities\/config\.php - reject
-# > 亲宝宝
+# 亲宝宝
 ^https?:\/\/api\.qbb6\.com\/ad\/ - reject
-# > 全家便利店
+# 全家便利店
 ^https?:\/\/fmapp\.chinafamilymart\.com\.cn\/api\/app\/biz\/base\/appversion\/latest - reject
-# > 瑞幸咖啡 倒计时可能还在 感谢@豆豆分享
+# 瑞幸咖啡 倒计时可能还在 感谢@豆豆分享
 ^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew - reject
 ^https:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList - reject
 ^https?:\/\/(api|api-bk\d+)\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap - reject
 ^https?:\/\/pic\.k\.sohu\.com\/img\d\/wb\/tj\/ - reject
-# > 盛趣游戏
+# 盛趣游戏
 ^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd - reject
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/ - reject
 ^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen - reject
-# > 顺丰优选
+# 顺丰优选
 ^https://mapi.sfbest.com\/brokerservice-server\/cms\/getPositionById.* - reject
 # --------- T ---------
-# > 同程旅行 开屏广告 @豆豆分享
+# 同程旅行
 ^https:\/\/wx\.17u\.cn\/xcxhomeapi\/((aggregator\/index)|(home\/(screen|banner|converge)))$ - reject
-# > 如果想拦截1234567890-1234?wx类的长连接就加长规则,不加结尾符,只要前面的匹配了都会拦截。
-^https?:\/\/static\.gameplus\.qq\.com\/img\/\d{10}-\d{4}$ - reject
 # > 腾讯游戏
+^https?:\/\/static\.gameplus\.qq\.com\/img\/\d{10}-\d{4}$ - reject
 ^https?:\/\/ssl\.kohsocialapp\.qq\.com:\d+\/game\/buttons - reject
 ^https?:\/\/qt\.qq\.com\/lua\/mengyou\/get_splash_screen_info - reject
-# > 腾讯手机管家
+# 腾讯手机管家
 ^https://otheve.beacon.qq.com\/analytics\/upload\?sid=.* - reject
 ^https?:\/\/4gimg\.map\.qq\.com\/mwaSplash\/ - reject
-# > 腾讯新闻
+# 腾讯新闻
 ^https?:\/\/r\.inews\.qq\.com\/(adsBlacklist|getFullScreenPic|getQQNewsRemoteConfig) - reject
-# > 腾讯体育
+# 腾讯体育
 ^https?:\/\/news\.ssp\.qq\.com\/app - reject
 ^https?:\/\/sports3\.gtimg\.com\/community\/20cf93884470434eaf38b2e77ab7796a\.png - reject
-# > 腾讯QQ音乐
+# 腾讯QQ音乐
 ^https:\/\/us\.l\.qq\.com\/exapp - reject
 ^https?:\/\/y\.gtimg\.cn\/music\/common\/upload\/t_splash_info\/ - reject
 ^https?:\/\/.+?\/music\/common\/upload\/t_splash_info\/ - reject
@@ -466,17 +417,26 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 ^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg - reject
 ^https?:\/\/.+?\.l\.qq\.com - reject
 ^https?:\/\/\w+\.gdt\.qq\.com - reject
+^http:\/\/182\.256\.116\.116\/d - reject
+# 腾讯QQ邮箱开屏 //rescdn.qqmail.com
+^https:\/\/rescdn\.qqmail\.com\/qqmail\/images\/.+\.(png|jpg)$ - reject
+^https?:\/\/119\.29\.29\.29\/d - reject
+# 腾讯QQ钱包
+^https?:\/\/m\.qianbao\.qq\.com\/pages\/walletHome\?invisible - reject
+^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen - reject
+^https://magev6.if.qidian.com/argus/api/v1/client/iosad - reject
+^https://magev6.if.qidian.com/argus/api/v1/bookshelf/getad - reject
+^https://magev6.if.qidian.com/argus/api/v4/client/getsplashscreen? - reject
+^https?:\/\/open\.qyer\.com\/qyer\/config\/get - reject
+^https?:\/\/media\.qyer\.com\/ad\/ - reject
 # --------- W ---------
 # Wework
-# refer: https://res.mail.qq.com/zh_CN/wework_ip/latest.html
 ^http:\/\/182\.254\.116\.117\/d - reject
 ^http:\/\/182\.254\.118\.119\/d - reject
-# Weibo
-# refer: https://github.com/CNSRE/HTTPDNSLib-for-iOS
+# 微博
 ^http:\/\/api\.weibo\.cn\/2\/httpdns\/config - reject
 ^http:\/\/api\.weibo\.cn\/httpdns\/config - reject
-# Weixin
-# 注意: 以下域名HTTPS无法MitM，如通过此链接查询，无法处理
+# 微信 //注意: 以下域名HTTPS无法MitM，如通过此链接查询，无法处理
 ^https?:\/\/dns\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/newgetdns - reject
 ^https?:\/\/dns\.weixin\.qq\.com\.cn\/cgi-bin\/micromsg-bin\/newgetdns - reject
 ^https?:\/\/short\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/getcdndns - reject
@@ -490,6 +450,12 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 # 小米金融 //api.jr.mi.com
 ^https:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen - reject
 ^https:\/\/api\.jr\.mi\.com\/v\d\/adv - reject
+# 小米运动
+^https:\/\/api-mifit-cn2\.huami\.com\/discovery\/mi\/cards\/startpage_ad - reject
+# 米读
+^https:\/\/apiwz\.midukanshu\.com\/advert\/getPopup$ - reject
+^https:\/\/apiwz\.midukanshu\.com\/advert\/treasureInfo$ - reject
+^https:\/\/apiwz\.midukanshu\.com\/config\/getAds$ - reject
 #喜马拉雅
 ^http[s]?:\/\/openapi\.mysteel\.com/v5/getAdv.htm - reject
 ^http[s]?.+ulogs.umeng.com - reject
@@ -501,10 +467,10 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 ^http[s]?.+adbehavior.ximalaya.com - reject
 ^http[s]?.+ad.ximalaya.com - reject
 ^http[s]?.+audid-api.taobao.com - reject
-# > 微信 腾讯乘车码小程序 由@jinlvei分享
+# 微信乘车码小程序 //ccmsupport-sz.tenpay.com,heic.alicdn.com,
 ^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi - reject
 ^https:\/\/heic\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0\.jpg_\.heic$ - reject
-# > 淘票票
+# 淘票票
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ - ^https?:\/\/img1.126.net\/channel14\/ - reject
 ^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$ - reject
 ^https?:\/\/p\d\.music\.126\.net\/\w+==\/\d+\.jpg$ - reject
@@ -512,72 +478,60 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 ^https?:\/\/g1.163.com\/madfeedback - reject
 ^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/searchMultiAds - reject
 ^https?:\/\/c\.m\.163\.com\/nc\/gl\/ - reject
-# > 网易大神
+# > 网易大神//god.gameyw.netease.com,
 ^https?:\/\/god\.gameyw\.netease\.com\/v\d\/ad\/serving\/app-start - reject
-# > 威锋
+# > 威锋 //api.wfdata.club,*-release.wuta-cam.com
 ^https:\/\/api\.wfdata\.club\/v2\/yesfeng\/(infoCenterAd|yesList) - reject
 ^https?:\/\/res-release\.wuta-cam\.com\/json\/ads_component_cache\.json - reject
 # > WPS
 ^https?:\/\/ios\.wps\.cn\/ad-statistics-service - reject
-# > 蜗牛睡眠
+# 蜗牛睡眠
 ^https?:\/\/snailsleep\.net\/snail\/v\d\/adTask\/ - reject
 ^https?:\/\/snailsleep\.net\/snail\/v\d\/screen\/qn\/get\? - reject
 ^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/recommendation\/banner - reject
 ^https?:\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? - reject
-# > 小米运动
-^https:\/\/api-mifit-cn2\.huami\.com\/discovery\/mi\/cards\/startpage_ad - reject
-# > 米读
-^https:\/\/apiwz\.midukanshu\.com\/advert\/getPopup$ - reject
-^https:\/\/apiwz\.midukanshu\.com\/advert\/treasureInfo$ - reject
-^https:\/\/apiwz\.midukanshu\.com\/config\/getAds$ - reject
-# > 雪球 开屏广告 @Runestoner分享
+# 雪球
 ^https:\/\/api\.xueqiu\.com\/brand\/search\/v1\.json\? - reject
-# > 下厨房
+# 下厨房
 ^https?:\/\/api\.xiachufang\.com\/v\d\/ad/ - reject
-# 开屏广告 @豆豆
-^https:\/\/api\d\.sparke\.cn\/admodel\/list\?adspace=spgg&flag=\d$ - reject
-^https:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare - reject
-# > 虾米音乐
+# 虾米音乐
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ - reject
-# > 小利生活
+# 小利生活
 ^https?:\/\/mpos-pic\.helipay\.com\/upload\/images\/advertisment\/image - reject
 ^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) - reject
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q\d0\.jpg_\.(heic|webp)$ - reject
 ^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}) - reject
 ^https:\/\/gw.alicdn.com\/mt\/ - reject
 ^https:\/\/gw.alicdn.com\/tfs\/.+\d{3,4}-\d{4} - reject
-# > 小牛
+# 小牛
 ^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\/ - reject
 # > 新片场
 ^https?:\/\/app\.xinpianchang\.com\/open_screen\? - reject
-# > 小桔科技
+# 小桔科技
 ^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds - reject
 ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) - reject
 ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget - reject
 # --------- Y ---------
 # 云闪付 //wallet.95516.com
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 - reject
-# > 雅虎
-^https?:\/\/m\.yap\.yahoo\.com\/v\d{2}\/getAds\.do - reject
-# > 有道词典
+# 有道词典
 ^https?:\/\/oimage([a-z])([0-9])\.ydstatic\.com\/.+adpublish - reject
-# > 萤石
+# 萤石
 ^https?:\/\/i\.ys7\.com\/api\/ads - reject
-# > 云宝宝大数据
+# 云宝宝大数据
 ^https?:\/\/nnapp\.cloudbae\.cn:\d+\/mc\/api\/advert/ - reject
 ^https?:\/\/nnapp\.cloudbae\.cn\/mc\/api\/advert/ - reject
-# > 友邻优课
+# 友邻优课
 https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
-# > 医考帮
+# 医考帮
 ^https?:\/\/api\.yikaobang\.com\.cn\/client\/main\/homePageSmallAd - reject
 ^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/Client\/main\/startPage - reject
-# 去强制更新 感谢@SH DDDDD分享
 ^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/version\/version\/check - reject
 ^https?:\/\/webboot\.zhangyue\.com\/zycl\/api\/ad\/ - reject
 ^https?:\/\/saad\.ms\.zhangyue\.net\/ad - reject
-# > 最右
+# 最右
 ^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
-# > 指点天下 开屏广告 感谢@豆豆分享
+# 指点天下
 ^https:\/\/zua\.zhidiantianxia\.cn\/api\/adverts - reject
 # --------- Z --------- 
 # 知乎
@@ -659,7 +613,7 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 # --------- D --------- 
 # 大师兄 //sdk.alibaba.com.ailbaba.me
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|app_config|search_hot|version|advert\?position=[^2]+) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-#盯盯拍开屏
+# 盯盯拍
 ^http:\/\/apphw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 得物
 ^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
@@ -667,26 +621,22 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 # 飞猪
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # --------- G --------- 
-# > 光大银行
+# 光大银行 阳光惠生活
 ^https?:\/\/mobile\.cebbank\.com\/cebclient\/ClientNoticeList data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# > 光大银行 阳光惠生活
 ^https?:\/\/yghsh\.cebbank\.com\/static\/picture\/.*.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# > 工商银行
+# 工商银行 工银e生活
 #^https?:\/\/v\.icbc\.com\.cn\/userfiles\/Resources\/WAP\/advertisement\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# > 工银E生活
 ^https?:\/\/pv\.elife\.icbc\.com\.cn\/OFSTPV\/utm\.gif data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# > 工银e生活小程序 有需要自己添加主机名：elife.icbc.com.cn
 ^https?:\/\/elife\.icbc\.com\.cn\/OFSTNEWBASE\/floorinfo\/getMantlePages\.do data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# > 国家地理
+# 国家地理
 ^https?:\/\/wap\.ngchina\.cn\/news\/adverts\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# --------- J --------- 
+# 京东系列
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-array.json"
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/storage\.360buyimg\.com\/kepler-app data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/m\.360buyimg\.com\/mobilecms\/s640x1136_jfs\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
-# --------- J --------- 
-# > 京东极速版
 ^https:\/\/img11.360buyimg.com\/dl\/jfs\/t1\/195304\/29\/12317\/268480\/60e6fd21E02a8fb2a\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# > 京东健康
 ^https?:\/\/m\.360buyimg\.com\/babel\/jfs\/t1\/[0-9]{6}\/[0-9]{2}\/[0-9]{5}\/[0-9]{6}\/.*.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # > 京喜
 ^https:\/\/img14.360buyimg.com\/mcoss\/jfs\/t1\/183719\/8\/13358\/190450\/60e82bedE10b64e23\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
@@ -1356,4 +1306,4 @@ youtube.beta = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/y
 知乎净化 = type=http-response,pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\?,requires-body=1,script-update-interval=1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js
 
 [MITM]
-hostname = %APPEND% apphw.ddpai.com:18080,3g.csair.com,lban.spdb.com.cn, wap.spdb.com,image.spdbccc.com.cn,j1.pupuapi.com,pacdn.m.stock.pingan.com,mobile.1qianbao.com,pss.txffp.com,adpai.thepaper.cn,m.qianbao.qq.com,qde.qunar.com,mage.if.qidian.com,magev6.if.qidian.com,adproxy.autohome.com,app2.autoimg.cn,open.qyer.com, a.qiumibao.com,api.qbb6.com,fmapp.chinafamilymart.com.cn,mi.gdt.qq.com,ecapi.lkcoffee.com, capi.lkcoffee.com, m.lkcoffee.com,api.bwton.com,szdmobile.suzhou.gov.cn,service.4gtv.tv,mapi.sichuanair.com,*.k.sohu.com,cdn.shouji.sogou.com,ecard.shenzhentong.com,ucmp.sf-express.com,ccsp-egmas.sf-express.com,shopic.sf-express.com,static.shihuocdn.cn,ssp.soulapp.cn,api.gameplus.qq.com,ssl.kohsocialapp.qq.com,r.inews.qq.com,news.ssp.qq.com,news.l.qq.com,mi.gdt.qq.com,api.gameplus.qq.com,bgw.xinyue.qq.com,djcapp.game.qq.com,4gimg.map.qq.com,api.ncarzone.com,m.tuniu.com,client.tujia.com,mrobot.pconline.com.cn,p.du.163.com, support.you.163.com,appconf.mail.163.com,interface*.music.163.com,gw.kaola.com,home.mi.com,shopapi.io.mi.com,api.m.mi.com,api.jr.mi.com,upload-bbs.mihoyo.com,api.xiachufang.com,app.dewu.com,dili.bdatu.com,m.360buyimg.com,p*.pstatp.com,peisongapi.meituan.com,flowplus.meituan.net,wmapi.meituan.com,img.meituan.net,v?-api.miaopai.com,mea.meitudata.com,open.taou.com, api.taou.com, track.mm.taou.com,adpai.thepaper.cn,mapi.sfbest.com,cdn.poizon.com,elife.icbc.com.cn,v.icbc.com.cn,mobile.cebbank.com, yghsh.cebbank.com,api.mcd.cn,cloud.189.cn,*-release.wuta-cam.com,edit.sinaapp.com,wcprd.hilton.com.cn,portal-xunyou.qingcdn.com,images.client.vip.xunlei.com,api-shoulei-ssl.xunlei.com,api-mifit.huami.com,app.yinxiang.com,impservice.dictapp.youdao.com,xyst.yuanfudao.com,middle.yun.139.com, mcmm.caiyun.feixin.10086.cn,app.10086.cn, *.app.coc.10086.cn,m.sd.10086.cn,client.app.coc.10086.cn,m.client.10010.com,ossweb-img.qq.com,portal.zjzwfw.gov.cn,z.onewo.com,180.153.*.*,*xima*,*xmcdn*,*.ximalaya.com,*.xmcdn.com,180.153.255.*,180.153.140.*,180.153.250.*,114.80.99.*,114.80.139.237,114.80.161.29,1.62.62.64,51*.com*.ximalaya.com,maicai.api.ddxq.mobi,cdn-bm.camera360.com,newdrugs.dxy.cn,res.kfc.com.cn,newclient.map.baidu.com,yongche.baidu.com,edith.xiaohongshu.com,www.xiaohongshu.com,sctel10000.cn,acs.m.taobao.com,gw.alicdn.com,heic.alicdn.com,ump.ems.com.cn,ap*.intsig.net,lchttpapi.xczim.com,app.yiyan.art,*wps*,*.googlevideo.com, youtubei.googleapis.com,www.google.cn,www.g.cn,-google.com,testflight.apple.com,limbopro.com,m5.amap.com,m5-zb.amap.com,oss.amap.com,sns.amap.com, sub.store,boxjs.com,boxjs.net,*.boxjs.com, *.boxjs.net,manga.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,app.bilibili.com,app.biliapi.net,api.bilibili.com, api.biliapi.net,grpc.biliapi.net,script.hub,*.script.hub,119.29.29.98,119.29.29.99, amdc.alipay.com,amdc-sibling.alipay.com.cn,dns.jd.com,*.httpdns.pro,-gateway.icloud.com,-gateway.icloud.com.cn,-weather-data.apple.com,-buy.itunes.apple.com, 59.111.*,112.13.119.52,117.147.199.59, interface*.music.163.com:0, httpdns.n.netease.com,*.163jiasu.com,ipv4.music.163.com,-i.vip.iqiyi.com,*.iqiyi.com,*.mgtv.com,vv.video.qq.com,acs.youku.com,push.m.youku.com,un-acs.youku.com,cn-acs.m.cainiao.com,guide-acs.m.taobao.com,*.zhihu.com,imeres.baidu.com,mbd.baidu.com,mime.baidu.com,h2tcbox.baidu.com,*.weibo.cn,*.weibo.com,sinaurl.cn,t.cn,weibo.cn,edith.xiaohongshu.com,www.xiaohongshu.com,api.gotokeep.com,kad.gotokeep.com,napi.ithome.com,api.zuihuimai.com,dat.ruanmei.com,claritywallpaper.com,mobilead.kuwo.cn,rich.kuwo.cn,*.kwcdn.kuwo.cn,vip1.kuwo.cn,musicpay.kuwo.cn,*.58cdn.com.cn,app.58.com,*.ajkimg.com,gw.aihuishou.com,api.chelaile.net.cn,web.chelaile.net.cn,api.douban.com,elemecdn.com,fuss10.elemecdn.com,www1.elecfans.com,zj.haier.net,api.m.jd.com,gab.122.gov.cn,api.pinduoduo.com,api.yangkeduo.com,rescdn.qqmail.com,y.gtimg.cn,us.l.qq.com,wallet.95516.com,clientaccess.10086.cn,wap.js.10086.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,wxproj.seeyouyima.com,mxsa.mxbc.net,ad.maoyan.com,wx.maoyan.com,vod-movie.maoyan.com,api.maoyan.com,ehome.esgcc.com.cn,mp.weixin.qq.com,api.m.mi.com,api-mifit.huami.com,api.jr.mi.com,home.mi.com,shop-api.retail.mi.com,client.app.coc.10086.cn,ad.12306.cn,list-app-m.i4.cn,search-app-m.i4.cn,pan.baidu.com,api.coolapk.com,tiebac.baidu.com,api*.faceu.mobi,api3-lq.faceu.mobi,commerce-api-lf.faceu.mobi,commerce-api-lq.faceu.mobi,lv-api-lq.ulikecam.com,lv-api-hl.ulikecam.com,minipro.95504.net,ocrifs.ejoy.sinopec.com,b2baifanfan.baidu.com,m2u-api.getkwai.com,*jietu*,api.revenuecat.com,user-kaji-api.b612kaji.com,isi.csan.goodnotes.com,restore-access.indream.app,api.polaxiong.com,api.meiease.cn,spclient.wg.spotify.com,*.aoscdn.com,*.apsapp.cn,api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com,*.meiyan.com,*.xiuxiu.meitu.com,api.posters.meitu.com,www.xmind.*,*.kakamobi.cn,account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn,ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com,weixin110.qq.com,security.wechat.com,m.baidu.com,www.baidu.com,appwk.baidu.com,biz.cyapi.cn,wrapper.cyapi.cn,poetry.nanxiani.cn,mb3admin.com,i.weread.qq.com,license.enpass.io
+hostname = %APPEND% zua.zhidiantianxia.cn,api.izuiyou.com,*.xiaojukeji.com,api.xueqiu.com,*.snailsleep.net,api.wfdata.club,*-release.wuta-cam.com,god.gameyw.netease.com,ccmsupport-sz.tenpay.com,heic.alicdn.com,apiwz.midukanshu.com,apphw.ddpai.com:18080,3g.csair.com,lban.spdb.com.cn, wap.spdb.com,image.spdbccc.com.cn,j1.pupuapi.com,pacdn.m.stock.pingan.com,mobile.1qianbao.com,pss.txffp.com,adpai.thepaper.cn,m.qianbao.qq.com,qde.qunar.com,mage.if.qidian.com,magev6.if.qidian.com,adproxy.autohome.com,app2.autoimg.cn,open.qyer.com, a.qiumibao.com,api.qbb6.com,fmapp.chinafamilymart.com.cn,mi.gdt.qq.com,ecapi.lkcoffee.com, capi.lkcoffee.com, m.lkcoffee.com,api.bwton.com,szdmobile.suzhou.gov.cn,service.4gtv.tv,mapi.sichuanair.com,*.k.sohu.com,cdn.shouji.sogou.com,ecard.shenzhentong.com,ucmp.sf-express.com,ccsp-egmas.sf-express.com,shopic.sf-express.com,static.shihuocdn.cn,ssp.soulapp.cn,api.gameplus.qq.com,ssl.kohsocialapp.qq.com,r.inews.qq.com,news.ssp.qq.com,news.l.qq.com,mi.gdt.qq.com,api.gameplus.qq.com,bgw.xinyue.qq.com,djcapp.game.qq.com,4gimg.map.qq.com,api.ncarzone.com,m.tuniu.com,client.tujia.com,mrobot.pconline.com.cn,p.du.163.com, support.you.163.com,appconf.mail.163.com,interface*.music.163.com,gw.kaola.com,home.api.m.mi.com,api-mifit.huami.com,api.jr.mi.com,home.mi.com,shop-api.retail.mi.com,upload-bbs.mihoyo.com,api.xiachufang.com,app.dewu.com,m.360buyimg.com,p*.pstatp.com,peisongapi.meituan.com,flowplus.meituan.net,wmapi.meituan.com,img.meituan.net,v?-api.miaopai.com,mea.meitudata.com,open.taou.com, api.taou.com, track.mm.taou.com,adpai.thepaper.cn,mapi.sfbest.com,cdn.poizon.com,elife.icbc.com.cn,v.icbc.com.cn,mobile.cebbank.com, yghsh.cebbank.com,api.mcd.cn,cloud.189.cn,*-release.wuta-cam.com,edit.sinaapp.com,wcprd.hilton.com.cn,portal-xunyou.qingcdn.com,images.client.vip.xunlei.com,api-shoulei-ssl.xunlei.com,api-mifit.huami.com,app.yinxiang.com,impservice.dictapp.youdao.com,xyst.yuanfudao.com,middle.yun.139.com, mcmm.caiyun.feixin.10086.cn,app.10086.cn, *.app.coc.10086.cn,m.sd.10086.cn,client.app.coc.10086.cn,m.client.10010.com,ossweb-img.qq.com,portal.zjzwfw.gov.cn,z.onewo.com,180.153.*.*,*xima*,*xmcdn*,*.ximalaya.com,*.xmcdn.com,180.153.255.*,180.153.140.*,180.153.250.*,114.80.99.*,114.80.139.237,114.80.161.29,1.62.62.64,51*.com*.ximalaya.com,maicai.api.ddxq.mobi,cdn-bm.camera360.com,newdrugs.dxy.cn,res.kfc.com.cn,newclient.map.baidu.com,yongche.baidu.com,edith.xiaohongshu.com,www.xiaohongshu.com,sctel10000.cn,acs.m.taobao.com,gw.alicdn.com,heic.alicdn.com,ump.ems.com.cn,ap*.intsig.net,lchttpapi.xczim.com,app.yiyan.art,*wps*,*.googlevideo.com, youtubei.googleapis.com,www.google.cn,www.g.cn,-google.com,testflight.apple.com,limbopro.com,m5.amap.com,m5-zb.amap.com,oss.amap.com,sns.amap.com, sub.store,boxjs.com,boxjs.net,*.boxjs.com, *.boxjs.net,manga.bilibili.com,api.live.bilibili.com,api.vc.bilibili.com,app.bilibili.com,app.biliapi.net,api.bilibili.com, api.biliapi.net,grpc.biliapi.net,script.hub,*.script.hub,119.29.29.98,119.29.29.99, amdc.alipay.com,amdc-sibling.alipay.com.cn,dns.jd.com,*.httpdns.pro,-gateway.icloud.com,-gateway.icloud.com.cn,-weather-data.apple.com,-buy.itunes.apple.com, 59.111.*,112.13.119.52,117.147.199.59, interface*.music.163.com:0, httpdns.n.netease.com,*.163jiasu.com,ipv4.music.163.com,-i.vip.iqiyi.com,*.iqiyi.com,*.mgtv.com,vv.video.qq.com,acs.youku.com,push.m.youku.com,un-acs.youku.com,cn-acs.m.cainiao.com,guide-acs.m.taobao.com,*.zhihu.com,imeres.baidu.com,mbd.baidu.com,mime.baidu.com,h2tcbox.baidu.com,*.weibo.cn,*.weibo.com,sinaurl.cn,t.cn,weibo.cn,edith.xiaohongshu.com,www.xiaohongshu.com,api.gotokeep.com,kad.gotokeep.com,napi.ithome.com,api.zuihuimai.com,dat.ruanmei.com,claritywallpaper.com,mobilead.kuwo.cn,rich.kuwo.cn,*.kwcdn.kuwo.cn,vip1.kuwo.cn,musicpay.kuwo.cn,*.58cdn.com.cn,app.58.com,*.ajkimg.com,gw.aihuishou.com,api.chelaile.net.cn,web.chelaile.net.cn,api.douban.com,elemecdn.com,fuss10.elemecdn.com,zj.haier.net,api.m.jd.com,gab.122.gov.cn,api.pinduoduo.com,api.yangkeduo.com,rescdn.qqmail.com,y.gtimg.cn,us.l.qq.com,wallet.95516.com,clientaccess.10086.cn,wap.js.10086.cn,flowplus.meituan.net,img.meituan.net,s3plus.meituan.net,wxproj.seeyouyima.com,mxsa.mxbc.net,ad.maoyan.com,wx.maoyan.com,vod-movie.maoyan.com,api.maoyan.com,ehome.esgcc.com.cn,mp.weixin.qq.com,api.m.mi.com,api-mifit.huami.com,api.jr.mi.com,home.mi.com,shop-api.retail.mi.com,client.app.coc.10086.cn,ad.12306.cn,list-app-m.i4.cn,search-app-m.i4.cn,pan.baidu.com,api.coolapk.com,tiebac.baidu.com,api*.faceu.mobi,api3-lq.faceu.mobi,commerce-api-lf.faceu.mobi,commerce-api-lq.faceu.mobi,lv-api-lq.ulikecam.com,lv-api-hl.ulikecam.com,minipro.95504.net,ocrifs.ejoy.sinopec.com,b2baifanfan.baidu.com,m2u-api.getkwai.com,*jietu*,api.revenuecat.com,user-kaji-api.b612kaji.com,isi.csan.goodnotes.com,restore-access.indream.app,api.polaxiong.com,api.meiease.cn,spclient.wg.spotify.com,*.aoscdn.com,*.apsapp.cn,api-*.meitu.com,az1mbasecc.bas.cmbchina.com,intellicc.bas.cmbchina.com,*.meiyan.com,*.xiuxiu.meitu.com,api.posters.meitu.com,www.xmind.*,*.kakamobi.cn,account.wps.cn,*account.wps.com,*.docer.wps.cn,vipapi.wps.cn,ios-*.prod.ftl.netflix.com,ios.prod.ftl.netflix.com,weixin110.qq.com,security.wechat.com,m.baidu.com,www.baidu.com,appwk.baidu.com,biz.cyapi.cn,wrapper.cyapi.cn,poetry.nanxiani.cn,mb3admin.com,i.weread.qq.com,license.enpass.io
