@@ -576,18 +576,11 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https?:\/\/saad\.ms\.zhangyue\.net\/ad - reject
 # > 中国电信
 ^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
-^https?:\/\/[\w-]+\.amemv\.com\/aweme\/v\d\/ad\/ - reject
-^https?:\/\/[\w-]+\.snssdk\.com\/.+_ad\/ - reject
-^https?:\/\/.+?\/img\/ad\.union\.api\/ - reject
 # > 最右
 ^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
 # > 指点天下 开屏广告 感谢@豆豆分享
 ^https:\/\/zua\.zhidiantianxia\.cn\/api\/adverts - reject
 # --------- Z --------- 
-# 中国移动 //clientaccess.10086.cn, wap.js.10086.cn
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/explorePage\/getAdverList - reject
-# 多个悬浮窗 感谢#热心网友分享
-^https:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket - reject
 # 知乎
 # refer: https://github.com/lwd-temp/anti-ip-attribution/issues/24
 ^http:\/\/103\.41\.167\.237\/v2\/resolv - reject
@@ -1040,6 +1033,8 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 ^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 # > 中国广电
 ^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# > 中国电信
+^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 # 招行掌上生活 (需卸载重装)
 # 开屏广告 az1mbasecc.bas.cmbchina.com
 ^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject
