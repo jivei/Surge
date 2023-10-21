@@ -6,6 +6,7 @@
 # 破解会员建议使用流程:关模块下载APP-注册或登录-启动模块-恢复购买
 # 更新日志：
 # 10.22 更新喜马拉雅净化+会员
+# 10.21 经测试，中国移动中国电信开屏无法有效去除已删除
 # 10.21 更新叮咚买菜净化
 # 10.20 更新爱优腾芒净化，目前完美，需要卸载重装，切记开启surge后再启动APP否则失效
 # 10.20 增加用药助手会员，下载地址：👇
@@ -574,8 +575,6 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/version\/version\/check - reject
 ^https?:\/\/webboot\.zhangyue\.com\/zycl\/api\/ad\/ - reject
 ^https?:\/\/saad\.ms\.zhangyue\.net\/ad - reject
-# > 中国电信
-^https?:\/\/cloud\.189\.cn\/include\/splash\/ - reject
 # > 最右
 ^https?:\/\/api\.izuiyou\.com\/ad\/ - reject
 # > 指点天下 开屏广告 感谢@豆豆分享
@@ -1016,12 +1015,6 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 # > 猿辅导
 ^https?:\/\/xyst\.yuanfudao\.com\/iphone\/splashesV\d data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # --------- Z --------- 
-# > 中国移动
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# > 中国移动云盘
-^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/IAdvert data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-^https?:\/\/mcmm\.caiyun\.feixin\.10086\.cn:80\/mcmm\/api\/v\d\/getAdverts data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-^https?:\/\/middle\.yun\.139\.com\/openapi\/cardConfig\/queryCardInfoV3 data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # > 中国联通
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
@@ -1030,10 +1023,6 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 ^https?:\/\/[^(apple|10010)]+\.(com|cn)\/(a|A)d(s|v)?(\/|\.js) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/m1\.ad\.10010\.com\/noticeMag\/images\/imageUpload\/2\d{3} data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/res\.mall\.10010\.cn\/mall\/common\/js\/fa\.js?referer= data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
-^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
-# > 中国广电
-^https?:\/\/app\.10099\.com\.cn\/contact-web\/api\/version\/getFlashScreenPage data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# > 中国电信
 ^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 # 招行掌上生活 (需卸载重装)
 # 开屏广告 az1mbasecc.bas.cmbchina.com
