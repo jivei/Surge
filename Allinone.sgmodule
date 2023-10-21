@@ -592,6 +592,8 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 # 知乎
 # refer: https://github.com/lwd-temp/anti-ip-attribution/issues/24
 ^http:\/\/103\.41\.167\.237\/v2\/resolv - reject
+^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec - reject
+^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec - reject
 
 [Header Rewrite]
 # 网易云音乐
