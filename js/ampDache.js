@@ -78,15 +78,15 @@ var node='', channel, adiu='', userId='', actID='', playID='',Cookie='',sessioni
         $.msg($.name, '', '❌请先获取sessionid🎉');
         return;
     }
-    message += `----------微信小程序签到----------\n`;
+    message += `高德打车微信小程序签到\n`;
     node = 'wechatMP',channel = 'h5_common',actID = '4zRzeQUM8eb',playID = '4zRA5kwg75G';
     await checkIn(); isOk && (await signIn());
 
-    message += `----------高德地图APP签到----------\n`;
+    message += `高德地图APP签到\n`;
     node = 'Amap',channel = 'h5_common',actID = '4yQc1Mt8nzJ',playID = '4yQcyzXdkYU';
     await checkIn(); isOk && (await signIn());
 
-    message += `----------支付宝小程序签到----------\n`;
+    message += `支付宝小程序签到\n`;
     node = 'alipayMini',channel = 'alipay_mini',actID = '4zRAarAdbrf',playID = '4zRANYHwdgJ';
     await checkIn(); isOk && (await signIn());
 
