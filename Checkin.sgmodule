@@ -2,7 +2,7 @@
 #!desc=自动签到
 
 [Script]
-天翼云盘签到 = type=cron, cronexp="1 0 * * *", script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/ty.js, timeout=60, wake-system=1
+天翼云盘签到 = type=cron, cronexp="1 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ty.js, timeout=60, wake-system=1
 阿里云盘签到 = type=cron, cronexp="2 0 * * *", script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,wake-system=1,
 高德打车签到 = type=cron, cronexp="3 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, wake-system=1
 亚朵酒店签到 = type=cron, cronexp="4 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=60, wake-system=1
