@@ -1,5 +1,5 @@
 #!name = AppleTV投屏
-#!desc = 用于解决开启网络调试工具无法DLNA投屏
+#!desc = 用于解决开启Surge无法DLNA投屏
 
 [General]
 
