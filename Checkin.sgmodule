@@ -2,16 +2,17 @@
 #!desc=自动签到
 
 [Script]
-# app.bilibili.com,m.bilibili.com
-# 哔哩每日任务 = type=cron, cronexp="1 0 * * *",script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
-阿里云盘签到 = type=cron, cronexp="2 0 * * *",wake-system=1,script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js
-高德打车签到 = type=cron, cronexp="3 0 * * *", script-path=   https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, wake-system=1
+天翼云盘签到 = type=cron, cronexp="1 0 * * *", script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/ty.js, timeout=60, wake-system=1
+阿里云盘签到 = type=cron, cronexp="2 0 * * *", script-path=https://raw.githubusercontent.com/lowking/Scripts/master/ali/aliYunPanCheckIn.js,wake-system=1,
+高德打车签到 = type=cron, cronexp="3 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, wake-system=1
 亚朵酒店签到 = type=cron, cronexp="4 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=60, wake-system=1
-霸王茶姬签到 = type=cron, cronexp="5 0 * * *",script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/bwcj.js,script-update-interval=0
+霸王茶姬签到 = type=cron, cronexp="5 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/bwcj.js,timeout=60, wake-system=1
 华住签到任务 = type=cron, cronexp="6 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/hzh.js, timeout=60, wake-system=1
 之家签到任务 = type=cron, cronexp="7 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ithome.js, timeout=60, wake-system=1
-贴吧每日签到 = type=cron, cronexp="8 0 * * *",timeout=60,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js
-途虎养车签到 = type=cron, cronexp="9 0 * * *",script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Tuhyche.js,timeout=60,wake-system=1,script-update-interval=0
+贴吧每日签到 = type=cron, cronexp="8 0 * * *", script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js,timeout=60,wake-system=1
+途虎养车签到 = type=cron, cronexp="9 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Tuhyche.js,timeout=60,wake-system=1
 
 [MITM]
-hostname= %APPEND% api.tuhu.cn,auth.alipan.com,*.amap.com,miniapp.yaduo.com,webapi.qmai.cn,*.huazhu.com,my.ruanmei.com,c.tieba.baidu.com,tiebac.baidu.com
+hostname= %APPEND% api.cloud.189.cn,api.tuhu.cn,auth.alipan.com,*.amap.com,miniapp.yaduo.com,webapi.qmai.cn,*.huazhu.com,my.ruanmei.com,c.tieba.baidu.com,tiebac.baidu.com
+
+# 哔哩每日任务 = type=cron, cronexp="1 0 * * *",script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js //app.bilibili.com,m.bilibili.com
