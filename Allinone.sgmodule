@@ -83,40 +83,23 @@ _hotspot_.m2m = server:syslib // M2M routers at MiFi Hotspot
 hotspot.cslwifi.com = server:syslib // csl Wi-Fi
 # ---------------------------
 [Rule]
-# Alibaba
-DOMAIN,httpdns.alicdn.com,REJECT
-# Aliyun
-# refer: https://static-aliyun-doc.oss-cn-hangzhou.aliyuncs.com/download%2Fpdf%2F30114%2F%25E7%2594%25A8%25E6%2588%25B7%25E6%258C%2587%25E5%258D%2597_cn_zh-CN.pdf
+DOMAIN-SUFFIX,m1.ad.10010.com,REJECT // 中国联通去广告
+DOMAIN,www.themoviedb.org,DIRECT // TMDB
+DOMAIN,httpdns.alicdn.com,REJECT //阿里巴巴
 DOMAIN,httpdns-api.aliyuncs.com,REJECT
 DOMAIN,httpdns-sc.aliyuncs.com,REJECT
-# refer: http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/pdf/httpdns-api-reference-cn-zh-2016-05-12.pdf
-# refer: http://docs-aliyun.cn-hangzhou.oss.aliyun-inc.com/pdf/httpdns-product-introduction-cn-zh-2017-05-24.pdf
-# refer: https://help.aliyun.com/document_detail/435282.html
-# refer: https://alidocs.dingtalk.com/i/p/Y7kmbokZp3pgGLq2/docs/lo1YvX0prG98kvEewqNyJPw7xzbmLdEZ
 IP-CIDR,203.107.1.0/24,REJECT,no-resolve
-# Baidu
 DOMAIN,httpsdns.baidu.com,REJECT
 DOMAIN,httpdns.baidu.com,REJECT
-# BaiduBCE
-# refer: https://bce-cdn.bj.bcebos.com/p3m/pdf/bce-doc/online/HTTPDNS/HTTPDNS.pdf
 DOMAIN,httpdns.baidubce.com,REJECT
 IP-CIDR,186.76.76.200/32,REJECT,no-resolve
-# Bilibili
 DOMAIN,httpdns.bilivideo.com,REJECT
-# Huawei
-DOMAIN,httpdns.c.cdnhwc2.com,REJECT
-# JD
+DOMAIN,httpdns.c.cdnhwc2.com,REJECT //华为
 DOMAIN,dns.jd.com,REJECT
 IP-CIDR,101.124.19.122/32,REJECT,no-resolve
 IP-CIDR6,2402:db40:5100:1011::5/128,REJECT,no-resolve
-# JD Cloud
-# refer: https://docs.jdcloud.com/cn/jd-cloud-dns/HTTPDNS
-# refer: https://docs.jdcloud.com/cn/httpdns/interface-specification
 IP-CIDR,103.224.222.208/32,REJECT,no-resolve
-# Meituan
 DOMAIN,httpdns.meituan.com,REJECT
-# NetEase
-# refer: https://lbs.netease.im/lbs/conf.jsp
 DOMAIN,httpdns.n.netease.com,REJECT
 DOMAIN,httpdns.music.163.com,REJECT
 DOMAIN,music.httpdns.c.163.com,REJECT
@@ -125,12 +108,7 @@ IP-CIDR,59.111.239.61/32,REJECT,no-resolve
 IP-CIDR,59.111.239.62/32,REJECT,no-resolve
 IP-CIDR,115.236.121.51/32,REJECT,no-resolve
 IP-CIDR,115.236.121.195/32,REJECT,no-resolve
-# Oppo
 DOMAIN,httpdns.push.oppomobile.com,REJECT
-# Sina
-# refer: https://github.com/CNSRE/HTTPDNSLib
-# Tencent Cloud
-# refer：https://cloud.tencent.com/document/product/379/95497
 DOMAIN-SUFFIX,httpdns.pro,REJECT
 IP-CIDR,119.29.29.98/32,REJECT,no-resolve
 IP-CIDR,119.29.29.99/32,REJECT,no-resolve
@@ -159,16 +137,11 @@ OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0
 # 腾讯视频视频
 AND,((PROTOCOL,HTTPS), (DOMAIN,iacc.qq.com)),REJECT-NO-DROP
 DOMAIN,config.ab.qq.com,REJECT
-# Volcengine
-# refer: https://www.volcengine.com/docs/6758/174756
 DOMAIN,httpdns.volcengineapi.com,REJECT
 # Weibo
 DOMAIN,dns.weibo.cn,REJECT
 IP-CIDR,39.97.128.148/32,REJECT,no-resolve
 IP-CIDR,39.97.130.51/32,REJECT,no-resolve
-# Weixin
-# refer: http://dns.weixin.qq.com/cgi-bin/micromsg-bin/newgetdns
-# refer: https://developers.weixin.qq.com/doc/oplatform/Third-party_Platforms/Mini_Programs/HTTPDNS.html
 DOMAIN,dns.weixin.qq.com,REJECT
 DOMAIN,dns.weixin.qq.com.cn,REJECT
 IP-CIDR,42.81.232.18/32,REJECT,no-resolve
