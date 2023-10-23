@@ -7,6 +7,8 @@
 # 净化功能大多数APP需要在Surge启动时打开否则大概率需要重装
 # 破解会员需要登录自己账户或恢复订阅或两者都需要
 # 更新日志：
+# 网抑云黑胶Vip请长按复制链接自行添加在线模块👇
+# https://raw.githubusercontent.com/jivei/Surge/main/netease.sgmodule
 # 10.24 增加中国广电移动联通电信净化
 # 10.23 更新喜马拉雅净化+会员
 # 10.22 增加RainViewer天气预报会员 下载地址：👇
@@ -414,6 +416,9 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 # Wework
 ^http:\/\/182\.254\.116\.117\/d - reject
 ^http:\/\/182\.254\.118\.119\/d - reject
+# 网易云音乐
+^https?:\/\/httpdns.n\.netease\.com - reject
+^https?:\/\/httpdns\.music\.163\.com - reject
 # 微博
 ^http:\/\/api\.weibo\.cn\/2\/httpdns\/config - reject
 ^http:\/\/api\.weibo\.cn\/httpdns\/config - reject
