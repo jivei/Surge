@@ -431,6 +431,10 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 ^https://magev6.if.qidian.com/argus/api/v4/client/getsplashscreen? - reject
 ^https?:\/\/open\.qyer\.com\/qyer\/config\/get - reject
 ^https?:\/\/media\.qyer\.com\/ad\/ - reject
+# 腾讯视频 //vv.video.qq.com
+^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ - reject
+^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ - reject
+^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ - reject
 # --------- W ---------
 # Wework
 ^http:\/\/182\.254\.116\.117\/d - reject
