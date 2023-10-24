@@ -7,7 +7,8 @@
 # 净化功能大多数APP需要在Surge启动时打开否则大概率需要重装
 # 破解会员需要登录自己账户或恢复订阅或两者都需要
 # 更新日志：
-# 网抑云黑胶Vip请长按复制链接自行添加在线模块👇
+# 10.24 删除Youtube净化与TF版Surge冲突
+# 10.24 网抑云黑胶Vip请长按复制链接自行添加在线模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/netease.sgmodule
 # 10.24 增加中国广电移动联通电信净化
 # 10.23 更新喜马拉雅净化+会员
@@ -207,8 +208,7 @@ DOMAIN,gdt.qq.com,REJECT-NO-DROP
 DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP
 # Surge 必须屏蔽 菜鸟
 AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amdc|\d).+\/amdc\/mobileDispatch$)),REJECT-DROP
-# 油管
-AND,((DOMAIN-SUFFIX,googlevideo.com), (PROTOCOL,UDP)),REJECT-DROP
+
 # ---------------------------
 [URL Rewrite]
 # --------- 0 ---------
@@ -919,8 +919,6 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 # --------- Y --------- 
 # 易捷加油微信小程序底部横幅广告
 ^https:\/\/ocrifs\.ejoy\.sinopec\.com\/advertitfs\/advert\/findAdvertInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-# 油管播放页广告
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad data="https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/blank.txt"
 # 优酷视频
 # 播放页弹窗动图
 ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
@@ -1263,8 +1261,6 @@ WPS国区 = type=http-response, pattern=^https:\/\/(vas|account)\.wps\.cn\/(quer
 一甜相机会员 = type=http-response, pattern=^https?:\/\/m2u-api\.getkwai\.com\/api-server\/api\/v2\/vip\/vipUserInfo, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/1TianCamVipCrack.js, requires-body=true, max-size=3145728, timeout=30
 # 易截图去除水印（2023-08-02）@ddgksf2013
 易截图去水印 = type=http-response, pattern=^https?:\/\/.*jietu.*com/apiv\d/user, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/MoYu/raw/master/YiJieTu2ProCrack.js, timeout=60, script-update-interval=0
-# 油管请求体
-youtube.beta = type=http-request,pattern=^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\?,requires-body=1,max-size=-1,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.beta.js
 用药助手 = type=http-response,pattern=https://newdrugs.dxy.cn/app/user/pro/stat?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/yyzs2.js
 用药助手2 = type=http-request,pattern=^https://newdrugs.dxy.cn,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Yu9191/Script/main/yyzscook.js
 # --------- Z --------- 
