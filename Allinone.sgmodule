@@ -344,10 +344,8 @@ https://limbopro.com/Adblock4limbo.svg - reject
 # 海尔智家 //zj.haier.net
 ^https:\/\/zj\.haier\.net\/api-gw\/shpmResource\/waterfall\/recommend\/list\? - reject
 ^https:\/\/zj\.haier\.net\/omsappapi\/ad\/v1\/rotation - reject
-# 航旅纵横首页悬浮标签
-^http:\/\/home\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
-# 我的页面轮播图
-^http:\/\/umerp\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
+# 航旅纵横
+^http:\/\/oss\.umetrip\.com\/fs\/advert\/polite\/ - reject
 # --------- J ---------
 # 建设银行 //image1.ccb.com
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png - reject
