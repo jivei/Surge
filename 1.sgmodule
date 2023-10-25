@@ -1,9 +1,81 @@
-#!name=本地净化测试
-#!desc=test他
+#!name = 番茄小说去广告
+#!desc = 过滤番茄小说底部和章末广告
+#!openUrl = 
+#!author = zqzess
 
-[Map Local]
-# 盯盯拍开屏
-^http:\/\/apphw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+
+[Rule]
+
+DOMAIN, p6-ad-sign.byteimg.com,REJECT
+DOMAIN, p9-ad-sign.byteimg.com,REJECT
+DOMAIN-SUFFIX, byteimg.com, DIRECT
+DOMAIN, i.snssdk.com,REJECT
+DOMAIN, i-lq.snssdk.com,REJECT
+DOMAIN, dig.bdurl.net,REJECT
+DOMAIN-KEYWORD, zijieapi,REJECT
+DOMAIN, activity-ag.awemeughun.com,REJECT
+DOMAIN, mcs.snssdk.com,REJECT
+DOMAIN, tnc3-alisc1.snssdk.com,REJECT
+DOMAIN, security-lq.snssdk.com,REJECT
+DOMAIN, tnc3-aliec2.snssdk.com,REJECT
+DOMAIN, is.snssdk.com,REJECT
+DOMAIN, i.snssdk.com,REJECT
+DOMAIN, v6-novelapp.ixigua.com,REJECT
+DOMAIN, *novelapp.ixigua.com,REJECT
+DOMAIN, *default.ixigua.com,REJECT
+DOMAIN, msync-im1-vip6-std.easemob.com,REJECT
+DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT
+DOMAIN, api.iegadp.qq.com,REJECT
+DOMAIN, sf3-ttcdn-tos.pstatp.com,REJECT
+DOMAIN-SUFFIX, pglstatp-toutiao.com,REJECT
+DOMAIN-SUFFIX, byteorge.com,REJECT
+DOMAIN-SUFFIX, bytegoofy.com,REJECT
+DOMAIN-SUFFIX, bytedance.com,REJECT
+IP-CIDR, 49.71.37.101/32,REJECT
+IP-CIDR, 117.71.105.23/32,REJECT
+IP-CIDR, 218.94.207.205/32,REJECT
+IP-CIDR, 117.92.229.188/32,REJECT
+IP-CIDR, 101.36.166.16/32,REJECT
+IP-CIDR, 180.96.2.114/32,REJECT
+
+
+
+URL-REGEX, ^https:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ,REJECT
+URL-REGEX, ^https:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads,REJECT
+URL-REGEX, ^https:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad,REJECT
+URL-REGEX, ^https:\/\/dsp\-x\.jd\.com\/adx\/sdk,REJECT
+URL-REGEX, ^https:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation),REJECT
+URL-REGEX, ^https:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo,REJECT
+URL-REGEX, ^https:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad,REJECT
+DOMAIN, cdn-new-ad.wtzw.com,REJECT
+DOMAIN, a-remad.qm989.com,REJECT
+DOMAIN, mobads.baidu.com,REJECT
+DOMAIN-SUFFIX, pglstatp-toutiao.com,REJECT
+DOMAIN-SUFFIX, gdt.qq.com,REJECT
+DOMAIN, qzs.gdtimg.com,REJECT
+DOMAIN, mobads-pre-config.cdn.bcebos.com,REJECT
+DOMAIN, pgdt.ugdtimg.com,REJECT
+
+[URL Rewrite]
+
+# 番茄小说去章末广告
+^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
+^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ - reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer - reject
+^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package - reject
+^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg - reject
+^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad - reject
+^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track_log\/src\/.+ - reject
+^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 - reject
+^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject
+^http:\/\/.+\.byteimg\.com\/ad-app-package - reject
+^http:\/\/.+\.byteimg\.com\/web\.business\.image - reject
+# - reject
+# 下面两条来自他人，暂不知是哪个app
+^https?:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
 
 [MITM]
-hostname = %INSERT% apphw.ddpai.com:18080
+
+hostname = %APPEND% *.pangolin-sdk-toutiao,*.pangolin-sdk-toutiao.*,*.pstatp.com,*.pstatp.com.*,*.pglstatp-toutiao.com.*,*.pglstatp-toutiao.com,gurd.snssdk.com,gurd.snssdk.com.*,*default.ixigua.com,open.e.kuaishou.cn,api-access.pangolin-sdk-toutiao-b.com,api-access.pangolin-sdk-toutiao.com,api-access.pangolin-sdk-toutiao1.com,dsp-x.jd.com,api-cfg.wtzw.com,p1-lm.adukwai.com,lf-cdn-tos.bytescm.com
