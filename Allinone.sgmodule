@@ -537,7 +537,6 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 ^http[s]?.+audid-api.taobao.com - reject
 # 微信乘车码小程序 //ccmsupport-sz.tenpay.com,heic.alicdn.com,
 ^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi - reject
-^https:\/\/heic\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0\.jpg_\.heic$ - reject
 # 淘票票
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise\/ - ^https?:\/\/img1.126.net\/channel14\/ - reject
 ^https?:\/\/iadmusicmat\.music.126.net\/.*?jpg$ - reject
