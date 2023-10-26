@@ -511,9 +511,6 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 ^https?:\/\/hkextshort\.weixin\.qq\.com\/cgi-bin\/micromsg-bin\/getcdndns - reject
 # --------- X ---------
 # 闲鱼 //gw.alicdn.com, acs.m.taobao.com
-^https:\/\/gw\.alicdn\.com\/mt\/ - reject
-^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} - reject
-^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} - reject
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
 # 小米金融 //api.jr.mi.com
 ^https:\/\/api\.jr\.mi\.com\/jr\/api\/playScreen - reject
