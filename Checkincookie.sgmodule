@@ -22,6 +22,13 @@ IT之家获取cookie   = type=http-response, pattern=^https:\/\/my\.ruanmei\.com
 贴吧_获取cookie  = type=http-request,pattern=^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/tieba_signin.js
 # APP，小程序任意其一登录即可获取
 途虎养车获取cookie  = type=http-request,pattern=https://api.tuhu.cn/User/GetInternalCenterInfo,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Tuhyche.js,timeout=60,script-update-interval=0,requires-body=0
+# 打开达乐美披萨公众号->优惠｜咨询->有奖游戏->手动完成一次游戏
+# 达美乐获取Cookie = type=http-request,pattern=^^https:\/\/game\.dominos\.com\.cn\/gold\/game\/gameDone,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/dlm.js,requires-body=true, timeout=10
+
+
+
+
 # APP，网页任意其一登录即可获取
 # 哔哩哔哩获取Cookie = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
 # 哔哩哔哩获取Cookie = type=http-request,pattern=^https:\/\/m.bilibili.com/$,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
+
