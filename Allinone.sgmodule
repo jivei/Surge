@@ -263,7 +263,8 @@ DOMAIN,gdt.qq.com,REJECT-NO-DROP
 DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP
 # Surge 必须屏蔽 菜鸟
 AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amdc|\d).+\/amdc\/mobileDispatch$)),REJECT-DROP
-
+# 航旅纵横
+URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native,REJECT
 # ---------------------------
 [URL Rewrite]
 # --------- 0 ---------
@@ -350,9 +351,6 @@ https://limbopro.com/Adblock4limbo.svg - reject
 # 海尔智家 //zj.haier.net
 ^https:\/\/zj\.haier\.net\/api-gw\/shpmResource\/waterfall\/recommend\/list\? - reject
 ^https:\/\/zj\.haier\.net\/omsappapi\/ad\/v1\/rotation - reject
-# 航旅纵横
-^http:\/\/oss\.umetrip\.com\/fs\/advert\/polite\/ - reject
-^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
 # 华住会
 ^https?:\/\/appapi\.huazhu\.com:\d{4}\/client\/app\/getAppStartPage\/ - reject
 ^https?:\/\/goblin\.hupu\.com\/.+\/interfaceAd\/getOther - reject
@@ -1210,7 +1208,7 @@ EMS = type=http-response,pattern=^https:\/\/ump\.ems\.com\.cn\/new-generation-ex
 高德地图 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 高德地图 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 # --------- H ---------
-航旅纵横首页我的 = type=http-response, pattern=^https?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, script-path=https://github.com/ddgksf2013/Scripts/raw/master/hanglvzongheng.js, timeout=60, script-update-interval=0
+航旅纵横移除首页广告 = type=http-response, pattern=^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Umetrip/Umetrip_remove_ads.js, timeout=30
 # --------- M --------- 
 # Wink，蛋啵，潮自拍，海报工厂，Chic api-*.meitu.com
 美图系列会员 = type=http-response,pattern=^https?:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxl.js
