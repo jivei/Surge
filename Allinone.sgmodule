@@ -265,9 +265,6 @@ URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/
 ^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo - reject
 # 得物
 ^https:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement - reject
-# 毒奶无用请求
-https://limbopro.com/Adblock4limbo.svg - reject
-^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes - reject
 # 叮咚买菜 //maicai.api.ddxq.mobi
 ^https:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd\?ad_id data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
@@ -650,6 +647,8 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 # 菜鸟支付宝 菜鸟小程序
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 # --------- D --------- 
+# 干掉毒奶导航
+^https:\/\/limbopro\.com\/Adguard\/Adblock4limbo\.function\.js data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 大师兄 //sdk.alibaba.com.ailbaba.me
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|app_config|search_hot|version|advert\?position=[^2]+) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 盯盯拍
