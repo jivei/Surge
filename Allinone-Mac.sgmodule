@@ -1,13 +1,13 @@
-#!name = Mac
-#!desc = Mac自用
+#!name = Mac自用模块
+#!desc = 五千年授权
 
 [General]
 
 
-[URL Rewrite]
 
-# 无用请求
-https://limbopro.com/Adblock4limbo.svg - reject
+[Map Local]
+
+^https:\/\/limbopro\.com\/Adguard\/Adblock4limbo\.function\.js data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 [Script]
 Paddle1 = type=http-request,pattern=^https://v3.paddleapi.com/3.2/license/verify,requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/paddle_act.js
