@@ -702,6 +702,7 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https?:\/\/p\d.meituan.net\/movie\/.*?\?may_covertWebp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/wmapi\.meituan\.com\/api\/v7\/startpicture data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/img\.meituan\.net\/bizad\/.*.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+
 # 美柚 微信小程序净化 //wxproj.seeyouyima.com
 ^https:\/\/wxproj\.seeyouyima\.com\/data\/today_tips data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 蜜雪冰城 微信小程序净化 //mxsa.mxbc.net
