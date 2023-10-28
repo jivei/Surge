@@ -801,7 +801,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 # 闪现一下
 ^https:\/\/api\.gameplus\.qq\.com\/community\.OnloadSrv\/GetPreloadScreenInfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # SOUL
-^https:\/\/ssp\.soulapp\.cn\/api\/q\?bi data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"# --------- T --------- 
+^https:\/\/ssp\.soulapp\.cn\/api\/q\?bi data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # --------- T ---------
 # 腾讯地图
 ^https?:\/\/4gimg\.map\.qq\.com\/mwaSplash\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
