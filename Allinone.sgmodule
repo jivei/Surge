@@ -1,8 +1,5 @@
 #!name = 华为官方唯一指定模块2023.10.29更新
 #!desc = 所有内容来自互联网,具体功能逐条查看
-
-
-
 [General]
 # 所有功能测试可用但随着版本更替非永久具有时效性且用且珍惜
 # 净化功能大多数APP需要先启动Surge或卸载重装或两者都需要
@@ -44,7 +41,6 @@ force-http-engine-hosts = %APPEND% <ip-address>,<ip-address>:49155,*.tc.qq.com,k
 # 当 Surge VIF 处理 DNS 问题时，此选项要求 Surge 返回一个真正的 IP 地址，而不是一个假 IP 地址。
 # DNS 数据包将被转发到上游 DNS 服务器。
 always-real-ip = %INSERT% *.lan, *.direct, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.*, global.turn.twilio.com, global.stun.twilio.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, localhost.*.qq.com, localhost.*.weixin.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, music.163.com, *.music.163.com, *.126.net, musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, *.xiami.com, *.music.migu.cn, music.migu.cn, proxy.golang.org, *.mcdn.bilivideo.cn, *.cmpassport.com, id6.me, open.e.189.cn, mdn.open.wo.cn, opencloud.wostore.cn, auth.wosms.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, pool.ntp.org, *.pool.ntp.org, ntp.*.com, time.*.com, ntp?.*.com, time?.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*
-
 # ---------------------------
 [Rule]
 # 番茄小说
@@ -79,7 +75,6 @@ IP-CIDR, 218.94.207.205/32,REJECT
 IP-CIDR, 117.92.229.188/32,REJECT
 IP-CIDR, 101.36.166.16/32,REJECT
 IP-CIDR, 180.96.2.114/32,REJECT
-
 # 七猫小说
 URL-REGEX, ^https:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ,REJECT
 URL-REGEX, ^https:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads,REJECT
@@ -96,7 +91,7 @@ DOMAIN-SUFFIX, gdt.qq.com,REJECT
 DOMAIN, qzs.gdtimg.com,REJECT
 DOMAIN, mobads-pre-config.cdn.bcebos.com,REJECT
 DOMAIN, pgdt.ugdtimg.com,REJECT
-
+# 常用请求
 DOMAIN-SUFFIX,m1.ad.10010.com,REJECT // 中国联通去广告
 DOMAIN,www.themoviedb.org,DIRECT // TMDB
 DOMAIN,httpdns.alicdn.com,REJECT //阿里巴巴
@@ -141,17 +136,15 @@ DOMAIN, rpt.gdt.qq.com,REJECT
 DOMAIN, tpns.qq.com,REJECT
 DOMAIN, tytx.m.cn.miaozhen.com,REJECT
 DOMAIN, vv6.video.qq.com,REJECT
+AND,((PROTOCOL,HTTPS), (DOMAIN,iacc.qq.com)),REJECT-NO-DROP
+DOMAIN, config.ab.qq.com,REJECT
+DOMAIN, httpdns.volcengineapi.com,REJECT
 DOMAIN-SUFFIX, trace.qq.com,REJECT
 URL-REGEX, ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+,REJECT
 URL-REGEX, ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+,REJECT
 URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+,REJECT
 URL-REGEX, ^http:\/\/[0-9.]+(\:80)?\/amdc\/mobileDispatch$,REJECT
-# 腾讯视频 去开屏
 OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
-# 腾讯视频视频
-AND,((PROTOCOL,HTTPS), (DOMAIN,iacc.qq.com)),REJECT-NO-DROP
-DOMAIN,config.ab.qq.com,REJECT
-DOMAIN,httpdns.volcengineapi.com,REJECT
 #京东
 DOMAIN, blackhole.m.jd.com,REJECT
 DOMAIN, policy.jd.com,REJECT
@@ -219,11 +212,10 @@ DOMAIN,iadmatapk.nosdn.127.net,REJECT-NO-DROP
 DOMAIN,httpdns.n.netease.com,REJECT-NO-DROP
 DOMAIN,gdt.qq.com,REJECT-NO-DROP
 DOMAIN-SUFFIX,163jiasu.com,REJECT-NO-DROP
-# Surge 必须屏蔽 菜鸟
+# 菜鸟
 AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amdc|\d).+\/amdc\/mobileDispatch$)),REJECT-DROP
 # 航旅纵横
 URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native,REJECT
-# ---------------------------
 [URL Rewrite]
 # --------- 0 ---------
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
@@ -331,7 +323,7 @@ URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/
 ^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/197429\/22\/22400\/119193\/62562ef0Eff59b4d4 - reject
 ^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/220846\/5\/16214\/41327 - reject
 ^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202818 - reject
-https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
+^https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 ^https?:\/\/m\.360buyimg\.com\/babel\/jfs\/t1\/180291\/5\/23800\/294871\/625f5da2E13ac0ba3\/230238c767c61b6d\.jpg - reject
 ^https?:\/\/ms\.jr\.jd\.com\/gw\/generic\/aladdin\/(new)?na\/m\/getLoadingPicture - reject
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ - reject
@@ -704,7 +696,6 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https?:\/\/p\d.meituan.net\/movie\/.*?\?may_covertWebp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/wmapi\.meituan\.com\/api\/v7\/startpicture data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/img\.meituan\.net\/bizad\/.*.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-
 # 美柚 微信小程序净化 //wxproj.seeyouyima.com
 ^https:\/\/wxproj\.seeyouyima\.com\/data\/today_tips data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 蜜雪冰城 微信小程序净化 //mxsa.mxbc.net
