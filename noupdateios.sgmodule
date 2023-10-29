@@ -1,5 +1,5 @@
 #!name = 库克克星
-#!desc = 库克求你更新一下系统
+#!desc = 库克给你发送了一个消息但被你拉黑了
 
 # > 屏蔽苹果系统更新
 host, ns.itunes.apple.com, reject
