@@ -1080,9 +1080,6 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 ^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberGoods\/pointMallService\/goodsList data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberManage\/memberEquity\/queryRecommendEquity data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/ucmp\.sf-express\.com\/proxy\/esgcempcore\/memberActLengthy\/fullGiveActivityService\/fullGiveInfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-# 顺丰速运小程序 旧版首页上方推广
-^https:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-# 顺丰速运小程序 旧版直播悬浮窗
 ^https:\/\/ucmp\.sf-express\.com\/proxy\/operation-platform\/info-flow-adver\/query data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 识货
 ^https?:\/\/static\.shihuocdn\.cn\/admin\/imgs/202[0-9]{5}\/[a-z0-9]{32}_513x777\.png data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
