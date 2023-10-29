@@ -5,6 +5,7 @@
 # 净化功能大多数APP需要先启动Surge或卸载重装或两者都需要
 # 破解会员大多数APP需要登录自己账户或恢复订阅或两者都需要
 # 更新日志：
+# 10.29 更新哔哩哔哩净化
 # 10.28 更新滴滴净化
 # 10.27 更新淘宝京东净化
 # 10.26 增加七猫小说番茄小说净化
@@ -230,8 +231,9 @@ URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/
 # 爱思助手 //list-app-m.i4.cn
 ^https:\/\/list-app-m\.i4\.cn\/(adclickcb|getHotSearchList|getopfstadinfo)\.xhtml - reject
 # --------- B ---------
-# 哔哩哔哩
-^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
+# 哔哩哔哩移除搜索中的默认关键词
+^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ - reject
+# IP请求、地理位置请求 //api.bilibili.com
 ^https?:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
 # 哔哩哔哩动态红点、校园红点
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.dynamic\.v1\.Dynamic\/DynRed - reject
@@ -593,6 +595,14 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 # 青少年弹窗
 ^https:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # --------- B --------- 
+# 哔哩哔哩可能的一些推广
+^https?:\/\/api\.bili(bili\.com|api\.net)\/pgc\/season\/app\/related\/recommend\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# 屏蔽直播间广告浮窗
+^https?:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# BiliBili漫画去广告
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Flash|ListFlash|GetActivityTab) data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
+# 屏蔽首页右上活动
+^https?:\/\/app\.bilibili\.com\/x\/resource\/top\/activity data="https://github.com/Keywos/rule/raw/main/mocks/biliactivity.json"
 # 百度云
 ^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|rest\/2\.0\/pcs\/adx)\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https?:\/\/update\.pan\.baidu\.com\/statistics\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
