@@ -1,6 +1,0 @@
-#!name=TunOnly
-#!desc=开启TunOnly兼容模式，解决某些脑瘫APP检测代理不能正常连接的问题
-#!system=ios
-
-[General]
-compatibility-mode = 3
