@@ -2,7 +2,7 @@
 #!desc = 一条来自库克的消息已被拒绝，“请打开麦克风交流”
 
 [filter_local]
-# > 屏蔽苹果系统更新
+# 屏蔽苹果系统更新
 host, ns.itunes.apple.com, reject
 host, appldnld.apple.com, reject
 host, mesu.apple.com, reject
