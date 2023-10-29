@@ -6,13 +6,11 @@
 skip-proxy = %APPEND% iosapps.itunes.apple.com
 
 [Panel]
-Sub_info = script-name=Sub_info9,update-interval=3600
 Stream-All-Lite = script-name=Stream-All-Lite,update-interval=7200
 YJ = script-name=YJ,update-interval=43200
 FlushDNS = script-name=FlushDNS,update-interval=600
 
 [Script]
-Sub_info9 = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Sub-info/Moore/Sub-info.js,script-update-interval=0,argument=url=https%3A%2F%2Fapi.flowercloud.xyz%2Fosubscribe.php%3Fsid%3D72774%26token%3DMDFhRtU4gmDZ&title=Flower&icon=link.icloud.fill&color=#FF0000&reset_day=3
 Stream-All-Lite = type=generic,timeout=30,script-path=https://raw.githubusercontent.com/githubdulong/Script/master/Stream-All.js,script-update-interval=0,argument=title=流媒体解锁检测&icon=play.tv.fill&color=#D22F28
 YJ = type=generic,timeout=5,script-path=https://raw.githubusercontent.com/getsomecat/GetSomeCats/Surge/script/youjia.js,argument=guangxi/guilin
 FlushDNS = type=generic,timeout=10,script-path=https://raw.githubusercontent.com/Rabbit-Spec/Surge/Master/Module/Panel/Flush-DNS/Moore/Flush-DNS.js,argument=title=DNS FLush&icon=cube&color=#afe59a&server=false
