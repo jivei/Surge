@@ -5,7 +5,7 @@
 # 净化功能大多数APP需要先启动Surge或卸载重装或两者都需要
 # 破解会员大多数APP需要登录自己账户或恢复订阅或两者都需要
 # 更新日志：
-# 10.29 更新喜马拉雅净化
+# 10.29 更新喜马拉雅净化删除已失效的鸡神会员
 # 10.29 更新哔哩哔哩净化
 # 10.28 更新滴滴净化
 # 10.27 更新淘宝京东净化
@@ -477,17 +477,6 @@ URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/
 ^https:\/\/apiwz\.midukanshu\.com\/advert\/getPopup$ - reject
 ^https:\/\/apiwz\.midukanshu\.com\/advert\/treasureInfo$ - reject
 ^https:\/\/apiwz\.midukanshu\.com\/config\/getAds$ - reject
-#喜马拉雅
-^http[s]?:\/\/openapi\.mysteel\.com/v5/getAdv.htm - reject
-^http[s]?.+ulogs.umeng.com - reject
-^http[s]?.+gslbali.ximalaya.com - reject
-^http[s]?.+adse.ximalaya.com - reject
-^http[s]?.+gslbtx.ximalaya.com - reject
-^http[s]?.+location.ximalaya.com - reject
-^http[s]?.+passport.ximalaya.com - reject
-^http[s]?.+adbehavior.ximalaya.com - reject
-^http[s]?.+ad.ximalaya.com - reject
-^http[s]?.+audid-api.taobao.com - reject
 # 墨鱼喜马拉雅
 ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF - reject
 ^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ - reject
@@ -1308,8 +1297,6 @@ Xmind思维导图会员 = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn
 小红书净化 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/followfeed\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
 小红书净化 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
 #喜马拉雅 
-喜马拉雅会员净化 = type=http-request, pattern=^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+))\/mobile-playpage\/track\/v3\/baseInfo\/ts, script-path=https://raw.githubusercontent.com/gjwj666/qx/main/ximalayatk.js, timeout=60, script-update-interval=0
-喜马拉雅净化会员 = type=http-response, pattern=^http[s]?:\/\/((.+ximalaya.+)|(.+xmcdn.+)).*\/(playpage\/tabs\/v2|v1\/album\/track\/ts|v1\/album\/price|v2\/homePage|business-vip-presale-mobile-web\/page\/ts|vip\/v1\/recommand|track\/v3\/baseInfo|v1\/module\/data\/dynamic|basicInfo\/dynamic\/ts).*$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/gjwj666/qx/main/ximalayabd.js, timeout=60, script-update-interval=0
 喜马拉雅首页直播 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories, script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js, requires-body=true, max-size=3145728, timeout=30
 喜马拉雅首页横幅 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic, script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js, requires-body=true, max-size=3145728, timeout=30
 喜马拉雅首页动态 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix, script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js, requires-body=true, max-size=3145728, timeout=30
