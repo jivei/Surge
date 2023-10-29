@@ -1,6 +1,7 @@
 #!name = 库克克星
 #!desc = 库克给你发送了一个消息但被你拉黑了
-[rule]
+
+[filter_local]
 # > 屏蔽苹果系统更新
 host, ns.itunes.apple.com, reject
 host, appldnld.apple.com, reject
