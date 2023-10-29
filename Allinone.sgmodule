@@ -294,8 +294,6 @@ URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/
 ^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject
 ^http:\/\/.+\.byteimg\.com\/ad-app-package - reject
 ^http:\/\/.+\.byteimg\.com\/web\.business\.image - reject
-# - reject
-# 下面两条来自他人，暂不知是哪个app
 ^https?:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
 # --------- G ---------
 # 高德地图
@@ -343,8 +341,6 @@ https://api.m.jd.com/client.action\?functionId=lite_advertising - reject
 ^https:\/\/dns\.jd\.com\/v6\/b - reject
 # 禁京东直播小窗
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=getWidgetV1052 - reject
-# 禁京东直播(慎用！店铺页面无活动弹窗、无关注按钮、无法观看直播)
-^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(live｜getShopHomeExtendInfo|getImmediatePlayV910) - reject
 # 交管12123 //gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver$ - reject
 # 今日头条 
