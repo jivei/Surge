@@ -673,6 +673,15 @@ https://support.you.163.com/appversync/check.do - reject
 # 微博
 ^http:\/\/api\.weibo\.cn\/2\/httpdns\/config - reject
 ^http:\/\/api\.weibo\.cn\/httpdns\/config - reject
+# 微信乘车码小程序 //ccmsupport-sz.tenpay.com,heic.alicdn.com,
+^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi - reject
+# WPS
+^https?:\/\/ios\.wps\.cn\/ad-statistics-service - reject
+# 蜗牛睡眠
+^https?:\/\/snailsleep\.net\/snail\/v\d\/adTask\/ - reject
+^https?:\/\/snailsleep\.net\/snail\/v\d\/screen\/qn\/get\? - reject
+^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/recommendation\/banner - reject
+^https?:\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? - reject
 # --------- X ---------
 # 闲鱼 //gw.alicdn.com, acs.m.taobao.com
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome - reject
@@ -704,16 +713,6 @@ https://support.you.163.com/appversync/check.do - reject
 ^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord - reject
 ^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime - reject
 ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? - reject
-# 微信乘车码小程序 //ccmsupport-sz.tenpay.com,heic.alicdn.com,
-^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi - reject
-# WPS
-^https?:\/\/ios\.wps\.cn\/ad-statistics-service - reject
-# 蜗牛睡眠
-^https?:\/\/snailsleep\.net\/snail\/v\d\/adTask\/ - reject
-^https?:\/\/snailsleep\.net\/snail\/v\d\/screen\/qn\/get\? - reject
-^https?:\/\/home\.mi\.com\/cgi-op\/api\/v\d\/recommendation\/banner - reject
-^https?:\/\/(api-mifit|api-mifit-\w+)\.huami\.com\/discovery\/mi\/discovery\/\w+_ad\? - reject
-# --------- X ---------
 # 心悦会
 ^https?:\/\/bgw\.xinyue\.qq\.com\/xyapi\.PageService\/GetIndexPopFlash - reject
 # 希尔顿
@@ -723,7 +722,7 @@ https://support.you.163.com/appversync/check.do - reject
 # 携程
 ^https:\/\/ma-adx\.ctrip\.com\/_ma\.gif - reject
 ^https:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare - reject
-#西窗烛
+# 西窗烛
 ^https?:\/\/lchttpapi\.xczim\.com\/1\.1\/functions\/getLaunchImageForIOS - reject
 # 小一
 ^https://api.xiaoyi.com\/v5\/app\/mobile\/ads - reject
@@ -1480,10 +1479,8 @@ EMS = type=http-response,pattern=^https:\/\/ump\.ems\.com\.cn\/new-generation-ex
 美图系列会员 = type=http-response,pattern=^https?:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxl.js
 # 慢慢买
 慢慢买净化 = type=http-response, pattern=^https?:\/\/apapia-sqk\.manmanbuy\.com\/index_json\.ashx, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument="splashAD->ddgksf2013"
-#************************************#
 # 美颜相机 *.meiyan.com
 美颜相机会员 = type=http-response,pattern=^https?:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/myxj.js
-#************************************#
 # 美图秀秀 *.xiuxiu.meitu.com, api.posters.meitu.com, api-*.meitu.com
 美图秀秀会员 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxx.js
 MIX滤镜大师会员 = type=http-response, pattern=^https?:\/\/cdn-bm\.camera360\.com\/api\/(mix\/(getinfo|purchase|recovery)|iap\/check-receipt), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mix.js, timeout=60, script-update-interval=
