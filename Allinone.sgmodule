@@ -152,7 +152,13 @@ OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0
 AND,((PROTOCOL,HTTPS), (DOMAIN,iacc.qq.com)),REJECT-NO-DROP
 DOMAIN,config.ab.qq.com,REJECT
 DOMAIN,httpdns.volcengineapi.com,REJECT
-# Weibo
+#京东
+DOMAIN, blackhole.m.jd.com,REJECT
+DOMAIN, policy.jd.com,REJECT
+DOMAIN, dns.jd.com,REJECT
+IP-CIDR, 101.124.19.122/32,REJECT
+IP-CIDR6, 2402:db40:5100:1011::5/128,REJECT
+# 微博
 DOMAIN,dns.weibo.cn,REJECT
 IP-CIDR,39.97.128.148/32,REJECT,no-resolve
 IP-CIDR,39.97.130.51/32,REJECT,no-resolve
@@ -166,7 +172,6 @@ IP-CIDR,123.151.54.50/32,REJECT,no-resolve
 IP-CIDR6,2402:4e00:1900:1700:0:9554:1ad9:c3a/128,REJECT,no-resolve
 IP-CIDR6,240e:928:1400:10::25/128,REJECT,no-resolve
 # Wework
-# refer: https://res.mail.qq.com/zh_CN/wework_ip/latest.html
 IP-CIDR,182.254.116.117/32,REJECT,no-resolve
 IP-CIDR,182.254.118.119/32,REJECT,no-resolve
 # 优酷
@@ -186,8 +191,7 @@ DOMAIN, vali-g1.cp31.ott.cibntv.net,REJECT
 DOMAIN, vali-ugc.cp31.ott.cibntv.net,REJECT
 DOMAIN, yk-ssp.ad.youku.com,REJECT
 DOMAIN, ykad-data.youku.com,REJECT
-# Zhihu
-# refer: https://github.com/lwd-temp/anti-ip-attribution/issues/24
+# 知乎
 IP-CIDR,118.89.204.198/23,REJECT,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,REJECT,no-resolve
 # QQ音乐去广告
@@ -1199,7 +1203,6 @@ Nicegram会员 = type=http-response, pattern=^https?:\/\/restore-access\.indream
 # 京东比价
 京东比价 = type=http-response,requires-body=1,pattern=^https?://api\.m\.jd\.com/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig),script-path=https://raw.githubusercontent.com/Keywos/Rule/main/JS/Jdbj.js
 移除京东广告 = type=http-response, pattern=^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=personinfoBusiness, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/JD/JD_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
-
 # --------- K --------- 
 # 酷安 //api.coolapk.com
 酷安净化 = type=http-response,pattern=^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js
