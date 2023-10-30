@@ -3,4 +3,4 @@
 
 [Script]
 
-解锁黑椒音乐 = type=http-request, pattern=^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/), script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/heijiao.js, timeout=30
+解锁黑椒音乐 = type=http-request, pattern=^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/), script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/w.js, timeout=30
