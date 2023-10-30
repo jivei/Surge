@@ -37,5 +37,5 @@ IT之家获取cookie   = type=http-response, pattern=^https:\/\/my\.ruanmei\.com
 # ---------------------------
 # 建行生活APP -> 首页 -> 会员有礼 -> 签到
 # 连续签到领优惠券礼包（打车、外卖优惠券），配置重写手动签到一次即可获取签到数据，默认领取外卖券，可在 BoxJS 配置奖品。
-# BoxJS订阅地址https://raw.githubusercontent.com/FoKit/Scripts/main/boxjs/fokit.boxjs.json
+# BoxJS订阅地址长按复制：https://raw.githubusercontent.com/FoKit/Scripts/main/boxjs/fokit.boxjs.json
 建行数据 = type=http-request,pattern=^https:\/\/yunbusiness\.ccb\.com\/(clp_coupon|clp_service)\/txCtrl\?txcode=(A3341A038|autoLogin),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/jhsh_checkIn.js
