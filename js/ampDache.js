@@ -48,7 +48,7 @@ function RSA_Public_Encrypt(t){var public_key="MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBi
 
 
 //~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-const $ = new Env("高德地图签到");
+const $ = new Env("高德打车签到");
 const _key = 'GD_Val';
 var gdVal = $.getdata(_key) || ($.isNode() ? process.env.GD_Val : '');
 
@@ -78,7 +78,7 @@ var node='', channel, adiu='', userId='', actID='', playID='',Cookie='',sessioni
         $.msg($.name, '', '❌请先获取sessionid🎉');
         return;
     }
-    message += `高德打车微信小程序签到\n`;
+    message += `微信小程序签到\n`;
     node = 'wechatMP',channel = 'h5_common',actID = '4zRzeQUM8eb',playID = '4zRA5kwg75G';
     await checkIn(); isOk && (await signIn());
 
@@ -259,7 +259,6 @@ function checkIn() {
                         }
                     })
                 }else{
-                    message += `查询:${obj?.message}\n`;
                     return isOk = false;//查询结果
                 }
             } catch (e) {
