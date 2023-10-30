@@ -3,6 +3,7 @@
 
 [General]
 # 更新日志每周清空添加至下方功能列表，注意事项常驻：
+# 10.31 增加美图秀秀AI会员
 # 10.29 增加慢慢买净化
 # 所有功能测试可用但随着版本更替非永久具有时效性且用且珍惜
 # 净化功能大多数APP需要先启动Surge或卸载重装或两者都需要
@@ -21,7 +22,7 @@
 # --------- 系统增强 ---------
 # Boxjs，Sub-Store，Script Hub，薯条模块：阻止常见的 HTTPDNS 服务器，域名按所属DNS进行分流解析，路由器地址使用系统DNS进行解析，特殊地址使用规范DNS进行解析，添加跳过代理部分段内容，添加返回真实IP段内容，添加不可MitM的域名，防止打断
 # 强制 HTTP 引擎处理请求
-force-http-engine-hosts = %APPEND% <ip-address>,<ip-address>:49155,*.tc.qq.com,kjp.cupid.iqiyi.com,t7z.cupid.iqiyi.com,*.smtcdns.com,sdk.alibaba.com.ailbaba.me,*.cp31.ott.cibntv.net,59.111.*:0, iadmusicmatvideo.music.126.net,script.hub, *.script.hub,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, 119.29.29.29:80, dns.weixin.qq.com:80, dns.weixin.qq.com:8080, dns.weixin.qq.com:443, 203.107.1.65:80, 203.107.1.66:80
+force-http-engine-hosts = %APPEND% <ip-address>,<ip-address>:49155,*.tc.qq.com,api.posters.meitu.com,kjp.cupid.iqiyi.com,t7z.cupid.iqiyi.com,*.smtcdns.com,sdk.alibaba.com.ailbaba.me,*.cp31.ott.cibntv.net,59.111.*:0, iadmusicmatvideo.music.126.net,script.hub, *.script.hub,boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net, 119.29.29.29:80, dns.weixin.qq.com:80, dns.weixin.qq.com:8080, dns.weixin.qq.com:443, 203.107.1.65:80, 203.107.1.66:80
 # Always Real IP Hosts
 # 当 Surge VIF 处理 DNS 问题时，此选项要求 Surge 返回一个真正的 IP 地址，而不是一个假 IP 地址。
 # DNS 数据包将被转发到上游 DNS 服务器。
@@ -1469,6 +1470,7 @@ EMS = type=http-response,pattern=^https:\/\/ump\.ems\.com\.cn\/new-generation-ex
 # --------- M --------- 
 # Wink，蛋啵，潮自拍，海报工厂，Chic api-*.meitu.com
 美图系列会员 = type=http-response,pattern=^https?:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/mtxl.js
+美图秀秀AI会员 = type=http-response,pattern=^https?:\/\/api\.posters\.meitu\.com\/matting\/znxc\.json,requires-body=1,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/meituxiuxiu.js
 # 慢慢买
 慢慢买净化 = type=http-response, pattern=^https?:\/\/apapia-sqk\.manmanbuy\.com\/index_json\.ashx, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument="splashAD->ddgksf2013"
 # 美颜相机 *.meiyan.com
