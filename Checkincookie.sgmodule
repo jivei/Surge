@@ -1,5 +1,5 @@
 #!name=签到任务获取cookie
-#!desc=建议获取完毕关闭模块以免进行不必要的请求，待cookie过期再次开启获取即可
+#!desc=建议全部获取完毕之后关闭此模块避免不必要的请求，待cookie过期再次开启获取即可
 
 [Script]
 # APP签到一次即可获取
@@ -8,16 +8,16 @@
 # APP登录即可获取
 阿里云盘APP获取cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/aliYunPanCheckIn.js
 # ---------------------------
-# APP，小程序，支付宝任意其一登录即可获取
+# APP，微信小程序，支付宝任意其一登录即可获取
 高德打车APP获取cookie = type=http-response, pattern=^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=), requires-body=true, max-size=3145728, script-path= https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, script-update-interval=0
 # ---------------------------
 # APP签到一次即可获取
 亚朵酒店获取cookie  = type=http-request, pattern=^https:\/\/miniapp\.yaduo\.com\/atourlife\/signIn\/signIn.+, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=30
 # ---------------------------
-# 小程序签到一次即可获取
+# 微信小程序签到一次即可获取
 霸王茶姬获取cookie  = type=http-request,pattern=^https?:\/\/webapi\.qmai\.cn\/web\/catering\/integral\/sign\/signIn,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/bwcj_token.js
 # ---------------------------
-# APP签到一次即可获取，新用户需要住一晚方可
+# APP签到一次即可获取，新用户需要住一晚方可签到
 华住会获取cookie   = type=http-request, pattern=^https?:\/\/hweb-personalcenter\.huazhu\.com\/login\/autoLogin$, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/hzh.js, timeout=30
 # ---------------------------
 # APP签到一次即可获取
@@ -28,7 +28,7 @@ IT之家获取cookie   = type=http-response, pattern=^https:\/\/my\.ruanmei\.com
 贴吧_获取cookie  = type=http-request,pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/tieba_signin.js
 贴吧_获取cookie  = type=http-request,pattern=^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/tieba_signin.js
 # ---------------------------
-# APP，小程序任意其一登录即可获取
+# APP，微信小程序任意其一登录即可获取
 途虎养车获取cookie  = type=http-request,pattern=https://api.tuhu.cn/User/GetInternalCenterInfo,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Tuhyche.js,timeout=60,script-update-interval=0,requires-body=0
 # ---------------------------
 # APP，网页任意其一登录即可获取
