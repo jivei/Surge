@@ -4,6 +4,8 @@
 #!author = RuCu6 Keywos
 
 
+DOMAIN-SUFFIX,tank99.top,DIRECT // Emby
+
 # ======= A ======= #
 # 阿里云盘
 IP-CIDR,203.107.1.1/24,no-resolve
