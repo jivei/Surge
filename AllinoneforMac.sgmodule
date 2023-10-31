@@ -1,5 +1,6 @@
 #!name = Mac OS专用模块
 #!desc = 五千年授权，在App中随意输入序列号和邮箱，点击激活后秒激活。
+#!system=mac
 
 [General]
 # 已测试支持以下App:
@@ -19,7 +20,7 @@
 
 
 [Map Local]
-
+# 再见毒奶
 ^https:\/\/limbopro\.com\/Adguard\/Adblock4limbo\.function\.js data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 [Script]
