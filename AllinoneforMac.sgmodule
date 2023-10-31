@@ -1,7 +1,16 @@
 #!name = Mac自用模块
-#!desc = 五千年授权
+#!desc = 五千年授权，在App中随意输入序列号和邮箱，点击激活后秒激活。
 
 [General]
+# 已测试支持以下App:
+# AlDente Pro	
+# AirBuddy
+# Downie 4	序列号：B7EE3D3C-B7EE3D3C-B7EE3D3C-B7EE3D3C-B7EE3D3C
+# One Switch	
+# Rectangle Pro
+# Swish	
+# TG Pro	
+# Timemator	
 
 
 
