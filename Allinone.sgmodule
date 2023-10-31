@@ -2,6 +2,12 @@
 #!desc = 所有内容来自互联网,请认真逐条查看注释
 
 [General]
+# 此模块建议搭配配置文件一起食用请长按复制链接👇
+# https://raw.githubusercontent.com/jivei/Surge/main/nssurge.conf
+# 每日自动签到模块请长按复制链接自行添加在线模块👇
+# https://raw.githubusercontent.com/jivei/Surge/main/Checkin.sgmodule
+# 每日自动签到获取cookie模块请长按复制链接自行添加在线模块👇
+# https://raw.githubusercontent.com/jivei/Surge/main/Checkincookie.sgmodule
 # 更新日志每周清空添加至下方功能列表，注意事项常驻：
 # 10.31 增加美图秀秀AI会员
 # 10.30 更新百度贴吧净化
