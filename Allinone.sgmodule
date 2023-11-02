@@ -2,6 +2,7 @@
 #!desc=所有内容来自互联网,请认真逐条查看注释
 
 [General]
+# 测试模拟自动更新
 #此模块建议搭配配置文件一起食用请长按复制链接👇
 #https://raw.githubusercontent.com/jivei/Surge/main/nssurge.conf
 #每日自动签到模块请长按复制链接自行添加在线模块👇
