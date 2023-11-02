@@ -40,6 +40,16 @@ force-http-engine-hosts = %APPEND% <ip-address>,<ip-address>:49155,*.tc.qq.com,a
 always-real-ip = %INSERT% *.lan, *.direct, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.*, global.turn.twilio.com, global.stun.twilio.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, localhost.*.qq.com, localhost.*.weixin.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, music.163.com, *.music.163.com, *.126.net, musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, *.xiami.com, *.music.migu.cn, music.migu.cn, proxy.golang.org, *.mcdn.bilivideo.cn, *.cmpassport.com, id6.me, open.e.189.cn, mdn.open.wo.cn, opencloud.wostore.cn, auth.wosms.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, pool.ntp.org, *.pool.ntp.org, ntp.*.com, time.*.com, ntp?.*.com, time?.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*
 
 [Rule]
+
+DOMAIN-SUFFIX,vercel.app,Proxy // Sub-Store 的 Web 页面
+IP-ASN,4134,DIRECT,no-resolve // China Telecom
+
+# 新增内置策略 NO-HYBRID，等价为 NO-HYBRID = direct, hybrid=off
+DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID // 部分服务会校验请求的来源 IP，在开启 hybrid 时有可能因为请求IP变化导致无法正常登录和使用（如招商银行），可使用 NO-HYBRID 对特定请求单独关闭 All Hybrid
+# HTTP3/QUIC 协议基于 UDP，部分地区 ISP 或线路 UDP 容易受到干扰或限速，屏蔽掉以阻止 HTTP 3 流量的 UDP 流量，强制回退到 TCP。
+# REJECT-NO-DROP 表示不使用默认的自动丢包逻辑，这样 Surge 每次都会返回 ICMP Port Unreachable，应用会立刻回退而不是等超时。
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
+
 # 番茄小说
 DOMAIN, p6-ad-sign.byteimg.com,REJECT
 DOMAIN, p9-ad-sign.byteimg.com,REJECT
