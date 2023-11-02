@@ -372,6 +372,9 @@ https://zone.guiderank-app.com/guiderank-web/app/ad/listLaunchADByCity.do - reje
 ^https:\/\/api-ad-product\.huxiu\.com\/Api\/Product\/SDK\/Advert\/Query\/queryAdvertListInfo - reject
 # 黄油相机
 ^https?:\/\/api4\.bybutter\.com\/v\d\/app\/placements\/\d\/advertisements - reject
+# --------- I ---------
+# IT之家
+^https:\/\/img\.ithome\.com\/app\/editor\/ithome_editor_v2\.06\.zip\?platform - reject
 # --------- J ---------
 # 驾考宝典
 ^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ - reject
