@@ -18,7 +18,7 @@
 # 当然，这种用户也确实是个蠢货。有这种钱你买正版得了，别跟我说太贵，你出去跟朋友吃一顿好点的饭200起步，大部分好软件正版才不到100块钱。抽包烟软中煊赫门起步，面对19.9年费会员时却面露难色，好像杀了你的🐎一样。相信我，你也并不是真的需要这些软件，只是人云亦云盲目从众罢了。
 # 我认为，共享精神不应该建立在物质上，我深刻的理解金钱对人的吸引和动力，但这种精神本身就超越了物质。
 
-[RULE]
+[Rule]
 DOMAIN-SUFFIX,vercel.app,PROXY // Sub-Store 的 Web 页面
 IP-ASN,4134,DIRECT,no-resolve // China Telecom
 # 新增内置策略 NO-HYBRID，等价为 NO-HYBRID = direct, hybrid=off
