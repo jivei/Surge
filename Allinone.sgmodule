@@ -1370,7 +1370,7 @@ B612咔叽会员 = type=http-response,pattern=https://user-kaji-api.b612kaji.com
 滴滴净化 = type=http-response, pattern=^https?:\/\/guard\.sec\.xiaojukeji\.com\/api\/guard\/psg\/v2\/getShieldStatus, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js, timeout=60, script-update-interval=0
 滴滴净化 = type=http-response, pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/me\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/PersonPage.js, timeout=60, script-update-interval=0
 # --------- E --------- 
-Emby会员 = type=http-response,pattern=^https:\/\/mb3admin\.com\/admin\/service(\/registration\/validateDevice|\/appstore\/register|\/registration\/validate|\/registration\/getStatus|\/supporter\/retrievekey),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/emby/unlock2.js
+Emby会员 = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/rartv/SurgeScript/main/EmbyPremiere/EmbyPremiere.js
 Enpass会员 = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v1\/subscription\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/enpass.js
 EMS小程序净化 = type=http-response,pattern=^https:\/\/ump\.ems\.com\.cn\/new-generation-extend\/redis\/pageInfoByChannel,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/scripts/ems.js
 # --------- G --------- 
