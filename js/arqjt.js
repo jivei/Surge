@@ -54,7 +54,6 @@ if ($request.url.indexOf(vipa) != -1){
 
 if ($request.url.indexOf(vipb) != -1){
   chxm1023.data = {
-    $notification.post("傲软会员 已激活", "", "");
     "group_expired_at" : 0,
     "is_tried" : 0,
     "max_devices" : 1,
