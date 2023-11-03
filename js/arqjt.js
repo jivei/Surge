@@ -43,7 +43,6 @@ const vipb = '/vips';
 
 
 if ($request.url.indexOf(vipa) != -1){
-  $notification.post("傲软会员 已激活", "", "");
   chxm1023.data.is_activated = 1;
   chxm1023.data.remain_days = 999999999;
   chxm1023.data.expire_time = "2099-09-09 09:09:09";
