@@ -1,8 +1,7 @@
-#!name=工信部唯一指定模块2023.11.02更新
+#!name=工信部唯一指定模块2023.11.04更新
 #!desc=所有内容来自互联网,请认真逐条查看注释
 
 [General]
-# 测试模拟自动更新
 #此模块建议搭配配置文件一起食用请长按复制链接👇
 #https://raw.githubusercontent.com/jivei/Surge/main/nssurge.conf
 #每日自动签到模块请长按复制链接自行添加在线模块👇
@@ -30,7 +29,7 @@
 # --------- 净化(APP,小程序,开屏) ---------
 # 常用APP小程序开屏，12306，58同城，AMDC，阿里巴巴1688，爱思助手，爱回收，Acfan，阿里云盘，爱优腾芒四大毒瘤，爱企查，贝壳找房，必胜客，百度全家桶，哔哩哔哩，CliCli，车来了，CSDN，超星学习通，财经杂志，刺猬猫阅读，彩云天气，菜鸟，当当，电视家，懂球帝，东方财富，大麦，斗鱼，丁香园，叮咚买菜，滴滴，毒奶推广，大师兄影视，饿了么，EMS，番茄小说，樊登读书，飞客茶馆，飞猪，盖得排行，广汽本田，光大系列，工商系列，国家地理系列，高德地图，海尔智家，华住会，虎牙，好奇心日报，虎嗅，黄油相机，京东系列，今日头条，驾考宝典，建设银行，交管12123，航旅纵横，肯德基，快看，看理想，看天下，快手，快影，Keep，酷安，IT之家，拦截100，懒人听书，流利说，米游社，慢慢买，美团全家桶，美柚，马卡龙玩图，脉脉，麦当劳，蜜雪冰城，猫眼电影，摩托范，猫耳FM，秒拍，蘑菇租房，美味不用等，漫画人，马蜂窝，MIX，买单吧，蜜友社，南方航空，农业银行，One，Oray，浦发银行，平安银行，PikPak，票根，仆仆，拼多多，澎湃新闻，七猫小说，去哪儿，球迷报，全家，起点读书，汽车之家，全民K歌，瑞幸咖啡，人民日报，三联中读，少数派，苏宁，山姆，首旅瑞家，苏e行，苏周到，四川航空，四川电信，搜狐搜狗全家桶，顺丰系列，识货，SOUL，腾讯全家桶，淘宝天猫系列，天性金融，天翼云盘，淘票票，天天基金，Topwidget，太平洋，同花顺，唯品会，网上国网，网易全家桶，威锋，微信公众号，微信阅读，微博，Weico，完美世界电竞，WPS，蜗牛睡眠，无他相机，贴吧，喜马拉雅，小红书，兴业银行，迅雷，迅游，向日葵，熊猫直播，讯飞，小米全家桶，下厨房，希尔顿，携程，新浪全家桶，咸鱼，印象笔记，央视全家桶，易捷加油，猿辅导，中国银行，移动联通电信广电，住这儿，掌上生活，作业帮，浙里办，指点天下，掌上英雄联盟，中油好客，知乎
 # --------- 破解会员 ---------
-# 傲软全家桶，B612咔叽，百度网盘倍速，百度文库，长相思，彩云天气，Emby，EnpassPasswordManager，Wink，蛋啵，潮自拍，海报工厂，美颜相机，美图系列，美图秀秀，MIX，Notability，Nicegram，奈飞评分，剪映，驾考宝典，京东比价，酷我音乐，克拉壁纸，泼辣修图，Picsart美易，RainViewer，Spotify，Serverbee，扫描全能王，VSCO，微信跳转限制，Xmind思维导图，西窗烛，WPS，WPS稻壳，一言，一甜相机，易截图水印，用药助手
+# AdobeLightRoom，傲软全家桶，B612咔叽，百度网盘倍速，百度文库，长相思，彩云天气，Emby，EnpassPasswordManager，Wink，蛋啵，潮自拍，海报工厂，美颜相机，美图系列，美图秀秀，MIX，Notability，Nicegram，奈飞评分，剪映，驾考宝典，京东比价，酷我音乐，克拉壁纸，泼辣修图，Picsart美易，RainViewer，Spotify，Serverbee，扫描全能王，VSCO，微信跳转限制，Xmind思维导图，西窗烛，WPS，WPS稻壳，一言，一甜相机，易截图水印，用药助手
 # --------- 系统增强 ---------
 # Boxjs，Sub-Store，Script Hub，薯条模块：阻止常见的 HTTPDNS 服务器，域名按所属DNS进行分流解析，路由器地址使用系统DNS进行解析，特殊地址使用规范DNS进行解析，添加跳过代理部分段内容，添加返回真实IP段内容，添加不可MitM的域名，防止打断
 # 强制 HTTP 引擎处理请求
@@ -41,16 +40,13 @@ force-http-engine-hosts = %APPEND% <ip-address>,<ip-address>:49155,*.tc.qq.com,a
 always-real-ip = %INSERT% *.lan, *.direct, cable.auth.com, *.msftconnecttest.com, *.msftncsi.com, network-test.debian.org, detectportal.firefox.com, resolver1.opendns.com, *.srv.nintendo.net, *.stun.playstation.net, xbox.*.microsoft.com, *.xboxlive.com, stun.*, global.turn.twilio.com, global.stun.twilio.com, app.yinxiang.com, injections.adguard.org, local.adguard.org, cable.auth.com, localhost.*.qq.com, localhost.*.weixin.qq.com, *.logon.battlenet.com.cn, *.logon.battle.net, *.blzstatic.cn, music.163.com, *.music.163.com, *.126.net, musicapi.taihe.com, music.taihe.com, songsearch.kugou.com, trackercdn.kugou.com, *.kuwo.cn, api-jooxtt.sanook.com, api.joox.com, joox.com, y.qq.com, *.y.qq.com, streamoc.music.tc.qq.com, mobileoc.music.tc.qq.com, isure.stream.qqmusic.qq.com, dl.stream.qqmusic.qq.com, aqqmusic.tc.qq.com, amobile.music.tc.qq.com, *.xiami.com, *.music.migu.cn, music.migu.cn, proxy.golang.org, *.mcdn.bilivideo.cn, *.cmpassport.com, id6.me, open.e.189.cn, mdn.open.wo.cn, opencloud.wostore.cn, auth.wosms.cn, *.jegotrip.com.cn, *.icitymobile.mobi, *.pingan.com.cn, *.cmbchina.com, pool.ntp.org, *.pool.ntp.org, ntp.*.com, time.*.com, ntp?.*.com, time?.*.com, time.*.gov, time.*.edu.cn, *.ntp.org.cn, PDC._msDCS.*.*, DC._msDCS.*.*, GC._msDCS.*.*
 
 [Rule]
-
 DOMAIN-SUFFIX,vercel.app,Proxy // Sub-Store 的 Web 页面
 IP-ASN,4134,DIRECT,no-resolve // China Telecom
-
 # 新增内置策略 NO-HYBRID，等价为 NO-HYBRID = direct, hybrid=off
 DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID // 部分服务会校验请求的来源 IP，在开启 hybrid 时有可能因为请求IP变化导致无法正常登录和使用（如招商银行），可使用 NO-HYBRID 对特定请求单独关闭 All Hybrid
 # HTTP3/QUIC 协议基于 UDP，部分地区 ISP 或线路 UDP 容易受到干扰或限速，屏蔽掉以阻止 HTTP 3 流量的 UDP 流量，强制回退到 TCP。
 # REJECT-NO-DROP 表示不使用默认的自动丢包逻辑，这样 Surge 每次都会返回 ICMP Port Unreachable，应用会立刻回退而不是等超时。
 AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
-
 # 番茄小说
 DOMAIN, p6-ad-sign.byteimg.com,REJECT
 DOMAIN, p9-ad-sign.byteimg.com,REJECT
@@ -1336,6 +1332,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 12306净化 = type=http-response,pattern=^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js
 555净化= type=http-response, pattern="^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}:\d+\/api\/v\d\/movie\/index_recommend", script-path=https://github.com/ddgksf2013/Scripts/raw/master/555Ad.js, requires-body=true, max-size=3145728, timeout=30
 # --------- A ---------
+AdobeLightRoom=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/lightroom.js
 AMDC净化 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com, script-path=https://github.com/ddgksf2013/Scripts/raw/master/amdc.js, requires-body=true, max-size=3145728, timeout=30
 阿里巴巴净化 = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
 爱思助手净化 = type=http-response,pattern=^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/aisi.js
