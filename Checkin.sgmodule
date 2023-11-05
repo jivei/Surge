@@ -2,7 +2,7 @@
 #!desc=每日0点1分开始自动执行签到任务
 
 [Script]
-##天翼云盘签到 = type=cron, cronexp="1 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ty.js, timeout=60, wake-system=1
+#天翼云盘签到 = type=cron, cronexp="1 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ty.js, timeout=60, wake-system=1
 阿里云盘签到 = type=cron, cronexp="2 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/aliYunPanCheckIn.js, timeout=60, wake-system=1
 高德打车签到 = type=cron, cronexp="3 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, wake-system=1
 亚朵酒店签到 = type=cron, cronexp="4 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=60, wake-system=1
@@ -13,7 +13,7 @@
 途虎养车签到 = type=cron, cronexp="9 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Tuhyche.js, timeout=60,wake-system=1
 哔哩每日任务 = type=cron, cronexp="10 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js, timeout=60,wake-system=1
 建行生活签到 = type=cron, cronexp="11 0 * * *", script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, timeout=60, wake-system=1
-达美披萨签到 = type=cron, cronexp="12 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/dlm.js, timeout=60, wake-system=1
+#达美披萨签到 = type=cron, cronexp="12 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/dlm.js, timeout=60, wake-system=1
 托迈酷客签到 = type=cron, cronexp="13 0 * * *", script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,timeout=60,, wake-system=1
 
 [MITM]
