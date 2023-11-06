@@ -82,37 +82,6 @@ DOMAIN,pagead2.googlesyndication.com
 DOMAIN,pubads.g.doubleclick.net
 DOMAIN,www.googleadservices.com
 DOMAIN-KEYWORD,adservice.google.com.
-# 番茄小说
-DOMAIN,p6-ad-sign.byteimg.com
-DOMAIN,p9-ad-sign.byteimg.com
-DOMAIN,i.snssdk.com
-DOMAIN,i-lq.snssdk.com
-DOMAIN,dig.bdurl.net
-#DOMAIN-KEYWORD,zijieapi
-DOMAIN,activity-ag.awemeughun.com
-DOMAIN,mcs.snssdk.com
-DOMAIN,tnc3-alisc1.snssdk.com
-DOMAIN,security-lq.snssdk.com
-DOMAIN,tnc3-aliec2.snssdk.com
-DOMAIN,is.snssdk.com
-DOMAIN,i.snssdk.com
-DOMAIN,v6-novelapp.ixigua.com
-DOMAIN,*novelapp.ixigua.com
-DOMAIN,*default.ixigua.com
-DOMAIN,msync-im1-vip6-std.easemob.com
-DOMAIN,apd-pcdnwxlogin.teg.tencent-cloud.net
-DOMAIN,api.iegadp.qq.com
-DOMAIN,sf3-ttcdn-tos.pstatp.com
-DOMAIN-SUFFIX,pglstatp-toutiao.com
-DOMAIN-SUFFIX,byteorge.com
-DOMAIN-SUFFIX,bytegoofy.com
-DOMAIN-SUFFIX,bytedance.com
-IP-CIDR,49.71.37.101/32,no-resolve
-IP-CIDR,117.71.105.23/32,no-resolve
-IP-CIDR,218.94.207.205/32,no-resolve
-IP-CIDR,117.92.229.188/32,no-resolve
-IP-CIDR,101.36.166.16/32,no-resolve
-IP-CIDR,180.96.2.114/32,no-resolve
 
 # ======= G ======= #
 # 高德地图
