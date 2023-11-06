@@ -43,38 +43,6 @@ DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID // 部分服务会校验请求的来源 IP�
 # HTTP3/QUIC 协议基于 UDP，部分地区 ISP 或线路 UDP 容易受到干扰或限速，屏蔽掉以阻止 HTTP 3 流量的 UDP 流量，强制回退到 TCP。
 # REJECT-NO-DROP 表示不使用默认的自动丢包逻辑，这样 Surge 每次都会返回 ICMP Port Unreachable，应用会立刻回退而不是等超时。
 AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
-# 番茄小说
-DOMAIN, p6-ad-sign.byteimg.com,REJECT
-DOMAIN, p9-ad-sign.byteimg.com,REJECT
-DOMAIN-SUFFIX, byteimg.com, DIRECT
-DOMAIN, i.snssdk.com,REJECT
-DOMAIN, i-lq.snssdk.com,REJECT
-DOMAIN, dig.bdurl.net,REJECT
-#DOMAIN-KEYWORD, zijieapi,REJECT
-DOMAIN, activity-ag.awemeughun.com,REJECT
-DOMAIN, mcs.snssdk.com,REJECT
-DOMAIN, tnc3-alisc1.snssdk.com,REJECT
-DOMAIN, security-lq.snssdk.com,REJECT
-DOMAIN, tnc3-aliec2.snssdk.com,REJECT
-DOMAIN, is.snssdk.com,REJECT
-DOMAIN, i.snssdk.com,REJECT
-DOMAIN, v6-novelapp.ixigua.com,REJECT
-DOMAIN, *novelapp.ixigua.com,REJECT
-DOMAIN, *default.ixigua.com,REJECT
-DOMAIN, msync-im1-vip6-std.easemob.com,REJECT
-DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net,REJECT
-DOMAIN, api.iegadp.qq.com,REJECT
-DOMAIN, sf3-ttcdn-tos.pstatp.com,REJECT
-DOMAIN-SUFFIX, pglstatp-toutiao.com,REJECT
-DOMAIN-SUFFIX, byteorge.com,REJECT
-DOMAIN-SUFFIX, bytegoofy.com,REJECT
-DOMAIN-SUFFIX, bytedance.com,REJECT
-IP-CIDR, 49.71.37.101/32,REJECT
-IP-CIDR, 117.71.105.23/32,REJECT
-IP-CIDR, 218.94.207.205/32,REJECT
-IP-CIDR, 117.92.229.188/32,REJECT
-IP-CIDR, 101.36.166.16/32,REJECT
-IP-CIDR, 180.96.2.114/32,REJECT
 # 七猫小说
 URL-REGEX, ^https:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ,REJECT
 URL-REGEX, ^https:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads,REJECT
