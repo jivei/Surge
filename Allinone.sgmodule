@@ -828,7 +828,8 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 # 票根
 ^https?:\/\/pss\.txffp\.com\/piaogen\/images\/launchScreen/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # --------- Q ---------
-^https:\/\/kde\.qq\.com\/getAds data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json
+# QQ浏览器
+^https:\/\/kde\.qq\.com\/getAds data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 去哪儿
 ^https:\/\/qde\.qunar\.com\/preload data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 起点读书
