@@ -4,7 +4,7 @@
 
 
 
-AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
+
 IP-CIDR,203.107.1.0/24,no-resolve
 IP-CIDR,186.76.76.200/32,no-resolve
 IP-CIDR,101.124.19.122/32,no-resolve
@@ -70,7 +70,6 @@ DOMAIN,mobads.baidu.com
 DOMAIN,sf3-fe-tos.pglstatp-toutiao.com
 # 百度贴吧
 IP-CIDR,180.76.76.200/32,no-resolve
-RULE-SET,https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad.list-DROP
 # 哔哩哔哩
 DOMAIN,httpdns.bilivideo.com
 # ======= C ======= #
@@ -87,8 +86,6 @@ DOMAIN,collector.clue.run
 DOMAIN,images.ctfassets.net
 DOMAIN,mapi.apptimize.com
 DOMAIN,md-i-s.apptimize.com
-# 菜鸟
-AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amdc|\d).+\/amdc\/mobileDispatch$))-DROP
 # ======= D ======= #
 # 豆瓣
 AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
@@ -257,9 +254,6 @@ URL-REGEX, ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.vid
 URL-REGEX, ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+
 URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+
 URL-REGEX, ^http:\/\/[0-9.]+(\:80)?\/amdc\/mobileDispatch$
-# 腾讯视频
-AND,((PROTOCOL,HTTPS), (DOMAIN,iacc.qq.com))-NO-DROP
-OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve))))-DROP
 # TubeMax
 DOMAIN-SUFFIX,adjust.com
 DOMAIN-SUFFIX,applvn.com
