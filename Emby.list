@@ -173,5 +173,4 @@ DOMAIN,cc.ccemby.tk
 DOMAIN,direct.nebula-emby.com
 
 # > 坦克
-DOMAIN,tank99.top
-DOMAIN,tank88.top
+DOMAIN-SUFFIX,tank99.top
