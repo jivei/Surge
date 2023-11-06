@@ -659,7 +659,7 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 # --------- A --------- 
 # 阿里云盘 
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-# 阿里巴巴 //acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+# 阿里巴巴 
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
@@ -784,11 +784,11 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https?:\/\/p\d.meituan.net\/movie\/.*?\?may_covertWebp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/wmapi\.meituan\.com\/api\/v7\/startpicture data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/img\.meituan\.net\/bizad\/.*.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# 美柚 微信小程序净化 //wxproj.seeyouyima.com
+# 美柚 微信小程序净化 
 ^https:\/\/wxproj\.seeyouyima\.com\/data\/today_tips data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-# 蜜雪冰城 微信小程序净化 //mxsa.mxbc.net
+# 蜜雪冰城 微信小程序净化
 ^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
-# 猫眼电影小程序 //ad.maoyan.com, wx.maoyan.com, vod-movie.maoyan.com, api.maoyan.com
+# 猫眼电影小程序 
 ^https:\/\/ad\.maoyan\.com\/api\/position\/detail data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/wx\.maoyan\.com\/maoyansh\/api\/mobile\/(hotMatchList|eSportsIps) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/vod-movie\.maoyan\.com\/vod\/video\/onlineMovies\.json data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
@@ -1067,8 +1067,8 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 ^https?:\/\/zt-app\.go189\.cn\/zt-app\/welcome\/.*?Animation data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 # 掌上生活
 ^https:\/\/res\.cc\.cmbimg\.com\/fsp\/File\/AdPlatformPublic\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec url reject
-^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec url reject
+^https?:\/\/az1mbasecc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.clientface\.clientservice\.api\.advertiseService\/preCacheAdvertiseSec data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https?:\/\/intellicc\.bas\.cmbchina\.com\/Edge\/api\/mlife\.intelli\.render\.api\.render\/getDynamicDataSec data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 中油好客e站小程序
 ^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getPopAdData data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getIndexAdData data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
