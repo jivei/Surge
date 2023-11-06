@@ -317,9 +317,6 @@ https?://res\.xiaojukeji\.com\/resapi\/activity\/mget - reject
 https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) - reject
 # 得物
 ^https:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement - reject
-# 叮咚买菜
-^https:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd\?ad_id data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # --------- E ---------
 # 饿了么 //elemecdn.com,fuss10.elemecdn.com
 ^https:\/\/elemecdn.com\/.+\/sitemap - reject
@@ -933,6 +930,9 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^http:\/\/apphw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 得物
 ^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# 叮咚买菜
+^https:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd\?ad_id data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # --------- F --------- 
 # 飞猪
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
