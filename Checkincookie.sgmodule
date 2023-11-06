@@ -37,9 +37,6 @@ IT之家获取cookie   = type=http-response, pattern=^https:\/\/my\.ruanmei\.com
 # BoxJS订阅地址长按复制：https://raw.githubusercontent.com/FoKit/Scripts/main/boxjs/fokit.boxjs.json
 建行生活获取cookie = type=http-request,pattern=^https:\/\/yunbusiness\.ccb\.com\/(clp_coupon|clp_service)\/txCtrl\?txcode=(A3341A038|autoLogin),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js
 # ---------------------------
-# 达乐美披萨公众号->优惠｜咨询->有奖游戏->手动完成一次游戏
-达乐美披萨获取token = type=http-request, pattern=^https:\/\/game\.dominos\.com\.cn\/gold\/game\/gameDone, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/dlm.js, requires-body=true, max-size=3145728, timeout=30
-# ---------------------------
 # 复游度假生活微信小程序->登录
 托迈酷客获取Cookie = type=http-request,pattern=^https:\/\/apis\.folidaymall\.com\/online\/capi\/uc\/getCount,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js
 
@@ -51,4 +48,7 @@ IT之家获取cookie   = type=http-response, pattern=^https:\/\/my\.ruanmei\.com
 # cookie 过期太快已弃用
 # 天翼云盘APP->我的->每日签到->签到
 天翼云盘APP获取cookie = type=http-request, pattern=^https:\/\/api\.cloud\.189\.cn\/mkt\/userSign\.action?, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ty.cookie.js, timeout=60, script-update-interval=0
+# ---------------------------
+# 达乐美披萨公众号->优惠｜咨询->有奖游戏->手动完成一次游戏
+达乐美披萨获取token = type=http-request, pattern=^https:\/\/game\.dominos\.com\.cn\/gold\/game\/gameDone, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/dlm.js, requires-body=true, max-size=3145728, timeout=30
 
