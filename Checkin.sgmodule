@@ -19,6 +19,6 @@ hostname= %APPEND% apis.folidaymall.com,game.dominos.com.cn,yunbusiness.ccb.com,
 
 
 
-
+#cookie 过期太快已弃用
 #天翼云盘签到 = type=cron, cronexp="1 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ty.js, timeout=60, wake-system=1
 #达美披萨签到 = type=cron, cronexp="12 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/dlm.js, timeout=60, wake-system=1
