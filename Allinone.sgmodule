@@ -2,6 +2,11 @@
 #!desc=所有内容来自互联网,请认真逐条查看注释
 
 [General]
+#更新日志每周清空添加至下方功能列表，注意事项常驻：
+#所有功能测试可用但随着版本更替非永久具有时效性且用且珍惜
+#净化功能大多数APP需要先启动Surge或卸载重装或两者都需要
+#破解会员大多数APP需要登录自己账户或恢复订阅或两者都需要
+#11.07 增加QQ浏览器看小说净化
 #此模块建议搭配配置文件一起食用请长按复制链接👇
 #https://raw.githubusercontent.com/jivei/Surge/main/nssurge.conf
 #每日自动签到模块请长按复制链接自行添加在线模块👇
@@ -10,10 +15,6 @@
 #https://raw.githubusercontent.com/jivei/Surge/main/Checkincookie.sgmodule
 #MacOS专用模块，具体功能看注释👇
 #https://raw.githubusercontent.com/jivei/Surge/main/AllinoneforMac.sgmodule
-#更新日志每周清空添加至下方功能列表，注意事项常驻：
-#所有功能测试可用但随着版本更替非永久具有时效性且用且珍惜
-#净化功能大多数APP需要先启动Surge或卸载重装或两者都需要
-#破解会员大多数APP需要登录自己账户或恢复订阅或两者都需要
 #TF账户管理+跨区，如有需要，请自行添加在线模块👇
 #https://raw.githubusercontent.com/jivei/Surge/main/TFA.sgmodule
 #Youtube净化，如有需要，请自行添加在线模块👇
