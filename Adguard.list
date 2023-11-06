@@ -1,13 +1,28 @@
 #!name = 分流 & 广告拦截合集
 #!desc = 分流广告拦截合集
-#!date = 2023-10-29 10:00
-#!author = RuCu6 Keywos
+#!date = 2023-11-06 10:00
 
 
 
+
+IP-CIDR,203.107.1.0/24,no-resolve
+IP-CIDR,186.76.76.200/32,no-resolve
+IP-CIDR,101.124.19.122/32,no-resolve
+IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
+IP-CIDR,103.224.222.208/32,no-resolve
+IP-CIDR,59.111.239.61/32,no-resolve
+IP-CIDR,59.111.239.62/32,no-resolve
+IP-CIDR,115.236.121.51/32,no-resolve
+IP-CIDR,115.236.121.195/32,no-resolve
+IP-CIDR,119.29.29.98/32,no-resolve
+IP-CIDR,119.29.29.99/32,no-resolve
 # ======= A ======= #
+# 阿里巴巴
+DOMAIN,httpdns.alicdn.com
 # 阿里云盘
 IP-CIDR,203.107.1.1/24,no-resolve
+DOMAIN,httpdns-api.aliyuncs.com
+DOMAIN,httpdns-sc.aliyuncs.com
 # 爱奇艺
 DOMAIN,api.iqiyi.com
 # Apple
@@ -42,7 +57,10 @@ DOMAIN-SUFFIX,u3.ucweb.com
 # ======= B ======= #
 # 百度
 DOMAIN-SUFFIX,pos.baidu.com
+
 # 百度地图
+DOMAIN,httpsdns.baidu.com
+DOMAIN,httpdns.baidu.com
 DOMAIN,afd.baidu.com
 DOMAIN,afdconf.baidu.com
 DOMAIN,httpdns.baidubce.com
@@ -52,8 +70,8 @@ DOMAIN,mobads.baidu.com
 DOMAIN,sf3-fe-tos.pglstatp-toutiao.com
 # 百度贴吧
 IP-CIDR,180.76.76.200/32,no-resolve
-
-
+# 哔哩哔哩
+DOMAIN,httpdns.bilivideo.com
 # ======= C ======= #
 # 彩云天气
 DOMAIN,ad.cyapi.cn
@@ -68,7 +86,6 @@ DOMAIN,collector.clue.run
 DOMAIN,images.ctfassets.net
 DOMAIN,mapi.apptimize.com
 DOMAIN,md-i-s.apptimize.com
-
 # ======= D ======= #
 # 豆瓣
 AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
@@ -103,7 +120,10 @@ DOMAIN-SUFFIX,pangolin.snssdk.com
 # ======= H ======= #
 # 海尔智家
 DOMAIN-SUFFIX,ehaier.com
-
+# 航旅纵横
+URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native
+# 华为
+DOMAIN,httpdns.c.cdnhwc2.com
 # ======= J ======= #
 # 建设银行
 DOMAIN,adv.ccb.com
@@ -114,7 +134,6 @@ DOMAIN,policy.jd.com
 DOMAIN,dns.jd.com
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
-
 # ======= K ======= #
 # 酷我音乐
 DOMAIN,ad.tencentmusic.com
@@ -149,6 +168,7 @@ DOMAIN,babel-statistics-android.d.meituan.net
 DOMAIN,maplocatesdksnapshot.d.meituan.net
 DOMAIN,metrics-picture.d.meituan.net
 DOMAIN,route-stats.d.meituan.net
+DOMAIN,httpdns.meituan.com
 # 美颜相机
 DOMAIN,aaid.uyunad.com
 DOMAIN,adui.tg.meitu.com
@@ -158,7 +178,8 @@ DOMAIN,adui.tg.meitu.com
 DOMAIN,acdn.adnxs.com
 DOMAIN,mediation.adnxs.com
 DOMAIN,sin3-ib.adnxs.com
-
+# OPPO
+DOMAIN,httpdns.push.oppomobile.com
 # ======= Q ======= #
 # qq音乐
 DOMAIN,adstats.tencentmusic.com
@@ -196,7 +217,13 @@ DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN,qzs.gdtimg.com
 DOMAIN,mobads-pre-config.cdn.bcebos.com
 DOMAIN,pgdt.ugdtimg.com
-
+URL-REGEX, ^https:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ
+URL-REGEX, ^https:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads
+URL-REGEX, ^https:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad
+URL-REGEX, ^https:\/\/dsp\-x\.jd\.com\/adx\/sdk
+URL-REGEX, ^https:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation)
+URL-REGEX, ^https:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo
+URL-REGEX, ^https:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad
 # ======= S ======= #
 # 什么值得买
 DOMAIN,api.zuihuimai.com
@@ -205,22 +232,28 @@ DOMAIN-SUFFIX,shuzilm.cn
 
 # ======= T ======= #
 # 腾讯
-DOMAIN,adsmind.gdtimg.com
-DOMAIN,btrace.qq.com
-DOMAIN,btrace.video.qq.com
-DOMAIN,info4.video.qq.com
-DOMAIN,info6.video.qq.com
-DOMAIN,ios.video.mpush.qq.com
-DOMAIN,mtrace.qq.com
-DOMAIN,otheve.beacon.qq.com
-DOMAIN,p.l.qq.com
-DOMAIN,pgdt.gtimg.cn
-DOMAIN,rpt.gdt.qq.com
-DOMAIN,tpns.qq.com
-DOMAIN,tytx.m.cn.miaozhen.com
-DOMAIN,vv6.video.qq.com
-DOMAIN-SUFFIX,trace.qq.com
 IP-CIDR,47.110.187.87/32,no-resolve
+DOMAIN, adsmind.gdtimg.com
+DOMAIN, btrace.qq.com
+DOMAIN, btrace.video.qq.com
+DOMAIN, info4.video.qq.com
+DOMAIN, info6.video.qq.com
+DOMAIN, ios.video.mpush.qq.com
+DOMAIN, mtrace.qq.com
+DOMAIN, otheve.beacon.qq.com
+DOMAIN, p.l.qq.com
+DOMAIN, pgdt.gtimg.cn
+DOMAIN, rpt.gdt.qq.com
+DOMAIN, tpns.qq.com
+DOMAIN, tytx.m.cn.miaozhen.com
+DOMAIN, vv6.video.qq.com
+DOMAIN, config.ab.qq.com
+DOMAIN, httpdns.volcengineapi.com
+DOMAIN-SUFFIX, trace.qq.com
+URL-REGEX, ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+
+URL-REGEX, ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+
+URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+
+URL-REGEX, ^http:\/\/[0-9.]+(\:80)?\/amdc\/mobileDispatch$
 # TubeMax
 DOMAIN-SUFFIX,adjust.com
 DOMAIN-SUFFIX,applvn.com
@@ -241,21 +274,36 @@ DOMAIN,iadmatapk.nosdn.127.net
 DOMAIN,iadmusicmat.music.126.net
 DOMAIN,iadmusicmatvideo.music.126.net
 DOMAIN-SUFFIX,163jiasu.com
+DOMAIN,music.httpdns.c.163.com
+DOMAIN,lofter.httpdns.c.163.com
 # 微博 开屏广告
 DOMAIN,adstrategy.biz.weibo.com
 DOMAIN,kadmimage.biz.weibo.com
 DOMAIN,sdkaction.biz.weibo.com
 DOMAIN,sdkclick.biz.weibo.com
 DOMAIN,sdkmonitor.biz.weibo.com
+DOMAIN,dns.weibo.cn
+IP-CIDR,39.97.128.148/32,no-resolve
+IP-CIDR,39.97.130.51/32,no-resolve
+DOMAIN,dns.weixin.qq.com
+DOMAIN,dns.weixin.qq.com.cn
+IP-CIDR,42.81.232.18/32,no-resolve
+IP-CIDR,42.187.182.106/32,no-resolve
+IP-CIDR,42.187.182.123/32,no-resolve
+IP-CIDR,42.187.184.154/32,no-resolve
+IP-CIDR,123.151.54.50/32,no-resolve
+IP-CIDR6,2402:4e00:1900:1700:0:9554:1ad9:c3a/128,no-resolve
+IP-CIDR6,240e:928:1400:10::25/128,no-resolve
 # 微信小程序
 DOMAIN,wxsnsdy.wxs.qq.com
 DOMAIN,wxsmsdy.video.qq.com
 DOMAIN,wxsnsdythumb.wxs.qq.com
-
+# Wework
+IP-CIDR,182.254.116.117/32,no-resolve
+IP-CIDR,182.254.118.119/32,no-resolve
 # ======= X ======= #
 # 小米
 DOMAIN,sdkconfig.ad.xiaomi.com
-
 # ======= Y ======= #
 # 优酷 & 菜鸟
 DOMAIN,acs4baichuan.m.taobao.com
@@ -296,5 +344,6 @@ IP-CIDR,103.41.167.237/32,no-resolve
 IP-CIDR,118.89.204.198/32,no-resolve
 IP-CIDR6,2402:4e00:1200:ed00:0:9089:6dac:96b6/128,no-resolve
 # 字节跳动
-#DOMAIN,ad.zijieapi.com
 DOMAIN-KEYWORD,-ad-sign.byteimg.com
+# 中国联通
+DOMAIN-SUFFIX,m1.ad.10010.com
