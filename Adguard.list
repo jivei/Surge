@@ -4,6 +4,12 @@
 
 
 
+AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
+DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID
+RULE-SET,https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad.list,REJECT-DROP
+AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amdc|\d).+\/amdc\/mobileDispatch$)),REJECT-DROP
+AND,((PROTOCOL,HTTPS), (DOMAIN,iacc.qq.com)),REJECT-NO-DROP
+OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
 
 IP-CIDR,203.107.1.0/24,no-resolve
 IP-CIDR,186.76.76.200/32,no-resolve
