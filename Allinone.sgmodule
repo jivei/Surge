@@ -1276,9 +1276,9 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 ^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/api\.zhihu\.com\/root\/window data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/api\.zhihu\.com\/me\/guides data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
-^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card url reject
+^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/api\.zhihu\.com\/search\/preset_words data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
-^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? 
+^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(article|answer)\/\d+ data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/api\.zhihu\.com\/comment_v5\/(articles|answers)\/\d+\/list-headers data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
 ^https:\/\/api\.zhihu\.com\/prague\/related_suggestion_native\/feed\? data="https://github.com/Keywos/rule/raw/main/mocks/reject-dict.json"
