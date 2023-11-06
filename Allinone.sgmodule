@@ -54,9 +54,9 @@ always-real-ip= %INSERT% *.lan,*.direct,cable.auth.com,*.msftconnecttest.com,*.m
 # 500
 ^https?:\/\/evs\.500\.com\/esinfo\/loading\/loading - reject
 # --------- A ---------
-# 爱回收 //gw.aihuishou.com
+# 爱回收
 ^https:\/\/gw.aihuishou.com\/app-portal\/home\/getadvertisement - reject
-# 爱思助手 //list-app-m.i4.cn
+# 爱思助手 
 ^https:\/\/list-app-m\.i4\.cn\/(adclickcb|getHotSearchList|getopfstadinfo)\.xhtml - reject
 #^https?:\/\/list-app-m\.i4\.cn\/getopfstadinfo\.xhtml - reject
 # acfun
@@ -140,21 +140,6 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 ^https:\/\/elemecdn.com\/.+\/sitemap - reject
 ^https:\/\/fuss10.elemecdn.com\/.+\.mp4 - reject
 # --------- F ---------
-# 番茄小说去章末广告
-^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ - reject
-^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 - reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ - reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ - reject
-^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer - reject
-^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package - reject
-^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg - reject
-^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad - reject
-^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track_log\/src\/.+ - reject
-^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 - reject
-^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ - reject
-^http:\/\/.+\.byteimg\.com\/ad-app-package - reject
-^http:\/\/.+\.byteimg\.com\/web\.business\.image - reject
-^https?:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ - reject
 # 樊登读书
 ^https?:\/\/gateway-api\.dushu365\.com\/chief-orch\/config\/config\/v100\/appConfig - reject
 # 飞猪
@@ -196,7 +181,7 @@ https://zone.guiderank-app.com/guiderank-web/app/ad/listLaunchADByCity.do - reje
 # --------- J ---------
 # 驾考宝典
 ^https?:\/\/\w+\.kakamobi\.cn\/api\/open\/v\d\/advert-sdk\/ - reject
-# 建设银行 //image1.ccb.com
+# 建设银行 
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png - reject
 # 京东
 ^https?:\/\/m15\.360buyimg\.com\/mobilecms\/jfs\/t1\/202220\/24\/21575\/134711\/625b821bE5d642d73\/77636692989bd2be\.jpg - reject
@@ -354,7 +339,7 @@ https://access.mypikpak.com/access_controller/v1/area_accessible - reject
 # 起点读书
 ^https?:\/\/magev\d\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen - reject
 # --------- R ---------
-# 瑞幸咖啡 倒计时可能还在 感谢@豆豆分享
+# 瑞幸咖啡 
 ^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew - reject
 ^https:\/\/(ec|c)api\.lkcoffee\.com\/resource\/m\/eorder\/product\/popAppTagProductList - reject
 ^https?:\/\/(api|api-bk\d+)\.tv\.sohu\.com\/agg\/api\/app\/config\/bootstrap - reject
@@ -724,7 +709,7 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https:\/\/yongche\.baidu\.com\/gomarketing\/api\/popup\/getentrancecordovaurl data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/baseinfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # --------- C --------- 
-# 彩云天气 //api.caiyunapp.com, biz.cyapi.cn, wrapper.cyapi.cn
+# 彩云天气 
 ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/RuCu6/QuanX/main/Mocks/caiyun.json"
 ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/RuCu6/QuanX/main/Mocks/caiyun.json"
@@ -859,7 +844,7 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg\?posid= data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https?:\/\/img0[1-9]{1}\.luckincoffeecdn\.com\/group\d/M00/[A-Z0-9]{2}/[A-Z0-9]{2}/[a-zA-Z0-9]{29}\.(jpg|jpeg)_\.webp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # --------- S ---------
-# 四川电信 微信小程序净化 //sctel10000.cn
+# 四川电信 微信小程序净化 
 ^https:\/\/sctel10000\.cn\/config\/ads\/adsInfo data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https:\/\/sctel10000\.cn\/config\/myZoneConfig\/getMyHomeMenus data="https://raw.githubusercontent.com/axcsz/Collect/master/Script/sichuandianxinshouye.json"
 # 苏e行开屏广告 
