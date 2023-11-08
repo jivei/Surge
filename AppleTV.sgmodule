@@ -2,6 +2,6 @@
 #!desc = 用于解决开启Surge无法DLNA投屏
 
 [General]
-
-# 投屏
-tun-excluded-routes = 239.255.255.250/32
+# VIF Included Routes
+# 默认情况下，Surge VIF 接口会声明自己是默认路由。但是，由于 Wi-Fi 接口的路由较小，有些流量可能不会通过 Surge VIF 接口。使用此选项可以添加一条较小的路由。
+tun-included-routes = 239.255.255.250/32
