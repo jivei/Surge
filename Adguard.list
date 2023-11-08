@@ -283,6 +283,8 @@ IP-CIDR,182.254.118.119/32,no-resolve
 # --------- X --------- 
 # 小米
 DOMAIN,sdkconfig.ad.xiaomi.com
+# 向日葵
+DOMAIN,client-api-v2.oray.com
 # --------- Y --------- 
 # 优酷 & 菜鸟
 DOMAIN,acs4baichuan.m.taobao.com
