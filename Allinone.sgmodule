@@ -31,8 +31,8 @@
 //--------- 破解会员 ---------
 //AdobeLightRoom，傲软全家桶，B612咔叽，百度网盘倍速，百度文库，长相思，彩云天气，Emby，EnpassPasswordManager，Wink，蛋啵，潮自拍，海报工厂，美颜相机，美图系列，美图秀秀，MIX，Notability，Nicegram，奈飞评分，剪映，驾考宝典，京东比价，克拉壁纸，泼辣修图，Picsart美易，RainViewer，Spotify，Serverbee，扫描全能王，VSCO，微信跳转限制，Xmind思维导图，星题库会员及课程解锁，西窗烛，WPS，WPS稻壳，一言，一甜相机，易截图水印，佐糖
 //--------- 系统增强 ---------
-//Boxjs，Sub-Store，Script Hub，薯条
-//SurgeVIF处理DNS问题时，返回真IP地址
+//Boxjs，Sub-Store，Script Hub
+//SurgeVIF处理DNS问题时，返回真实IP地址
 always-real-ip= %INSERT% *.lan,*.direct,cable.auth.com,*.msftconnecttest.com,*.msftncsi.com,network-test.debian.org,detectportal.firefox.com,resolver1.opendns.com,*.srv.nintendo.net,*.stun.playstation.net,xbox.*.microsoft.com,*.xboxlive.com,stun.*,global.turn.twilio.com,global.stun.twilio.com,app.yinxiang.com,injections.adguard.org,local.adguard.org,cable.auth.com,localhost.*.qq.com,localhost.*.weixin.qq.com,*.logon.battlenet.com.cn,*.logon.battle.net,*.blzstatic.cn,music.163.com,*.music.163.com,*.126.net,musicapi.taihe.com,music.taihe.com,songsearch.kugou.com,trackercdn.kugou.com,api-jooxtt.sanook.com,api.joox.com,joox.com,y.qq.com,*.y.qq.com,streamoc.music.tc.qq.com,mobileoc.music.tc.qq.com,isure.stream.qqmusic.qq.com,dl.stream.qqmusic.qq.com,aqqmusic.tc.qq.com,amobile.music.tc.qq.com,*.xiami.com,*.music.migu.cn,music.migu.cn,proxy.golang.org,*.mcdn.bilivideo.cn,*.cmpassport.com,id6.me,open.e.189.cn,mdn.open.wo.cn,opencloud.wostore.cn,auth.wosms.cn,*.jegotrip.com.cn,*.icitymobile.mobi,*.pingan.com.cn,*.cmbchina.com,pool.ntp.org,*.pool.ntp.org,ntp.*.com,time.*.com,ntp?.*.com,time?.*.com,time.*.gov,time.*.edu.cn,*.ntp.org.cn,PDC._msDCS.*.*,DC._msDCS.*.*,GC._msDCS.*.*
 
 [Rule]
