@@ -74,6 +74,8 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # --------- D --------- 
 # 豆瓣
 AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
+DOMAIN-SUFFIX,360buyimg.com
+DOMAIN-SUFFIX,doubannio.com
 # --------- F --------- 
 # Foreca & Google
 DOMAIN,adservice.google.com
