@@ -1,5 +1,5 @@
 //广告拦截合集
-//2023-11-06更新
+//2023-11-10更新
 # --------- A --------- 
 # 阿里巴巴
 DOMAIN,httpdns.alicdn.com
@@ -75,7 +75,6 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # 豆瓣
 AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
 DOMAIN-SUFFIX,360buyimg.com
-DOMAIN-SUFFIX,doubannio.com
 # --------- F --------- 
 # Foreca & Google
 DOMAIN,adservice.google.com
