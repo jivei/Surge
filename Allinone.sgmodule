@@ -38,7 +38,6 @@
 # Boxjs，Sub-Store，Script Hub
 
 [URL Rewrite]
-# --------- 0 ---------
 # 58同城 
 ^https:\/\/app\.58\.com\/api\/home\/(advertising|appadv) - reject
 ^https:\/\/app\.58\.com\/api\/home\/invite\/popupAdv - reject
