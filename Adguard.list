@@ -82,7 +82,6 @@ DOMAIN,googleads.g.doubleclick.net
 DOMAIN,pagead2.googlesyndication.com
 DOMAIN,pubads.g.doubleclick.net
 DOMAIN,www.googleadservices.com
-DOMAIN-KEYWORD,adservice.google.com.
 # --------- G --------- 
 # 高德地图
 DOMAIN,amap-aos-info-nogw.amap.com
@@ -329,7 +328,7 @@ DOMAIN-KEYWORD,-ad-sign.byteimg.com
 DOMAIN-SUFFIX,m1.ad.10010.com
 DOMAIN-SUFFIX,cmbchina.com,NO-HYBRID
 AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
-IP-CIDR,203.107.1.0/24,no-resolve
+#IP-CIDR,203.107.1.0/24,no-resolve
 IP-CIDR,186.76.76.200/32,no-resolve
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR,103.224.222.208/32,no-resolve
