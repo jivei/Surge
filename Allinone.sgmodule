@@ -16,7 +16,7 @@
 # 此模块建议搭配配置文件一起食用请长按复制链接👇
 # https://raw.githubusercontent.com/jivei/Surge/main/nssurge.conf
 # 如果已有适合自己的配置文件
-# 请务必添加此去广告规则配合使用，策略为REJECT👇
+# 请务必添加此去广告分流规则配合使用，策略为REJECT👇
 # https://raw.githubusercontent.com/jivei/Surge/main/Adguard.list
 # 每日自动签到模块请长按复制链接自行添加在线模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/Checkin.sgmodule
