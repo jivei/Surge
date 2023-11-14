@@ -4,8 +4,6 @@
 [General]
 # 11/15 更新酷安净化
 # 11/13 更新京东净化
-# 11/13 增加哔哩哔哩番剧换区，添加Boxjs订阅以配置换区节点
-# https://github.com/BiliUniverse/BoxJs/raw/main/BiliBili.boxjs.json
 # 11/12 更新微博/国际版，小红书，喜马拉雅净化
 # 11/12 增加万兴喵影会员
 # 11/12 增加iTunes解锁系列，启用模块会导致Appstore无法登录，目前仅添加万源阅读会员，后续陆续添加app，如有需要，请自行添加在线模块👇
@@ -1146,10 +1144,6 @@ AMDC净化 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com, script-
 爱思助手净化 = type=http-response,pattern=^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/aisi.js
 傲软抠图傲软扫描傲软PDF转换傲软PDF编辑傲软投屏咖映轻闪PDF乃糖小组件佐糖照片会员 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/arqjt.js
 # --------- B --------- 
-BiliBili.Enhanced.x.resource.show.tab.v2 = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/resource\/show\/tab\/v2\?, requires-body=1, script-path=https://raw.githubusercontent.com/BiliUniverse/Enhanced/main/js/BiliBili.Enhanced.response.js, argument=
-BiliBili.Enhanced.x.v2.account.mine = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/account\/mine(\/ipad)?\?, requires-body=1, script-path=https://raw.githubusercontent.com/BiliUniverse/Enhanced/main/js/BiliBili.Enhanced.response.js, argument=
-BiliBili.Enhanced.x.v2.region.index = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/region\/index\?, requires-body=1, script-path=https://raw.githubusercontent.com/BiliUniverse/Enhanced/main/js/BiliBili.Enhanced.response.js, argument=
-BiliBili.Enhanced.x.v2.channel.region.list = type=http-response, pattern=^https?:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/channel\/region\/list\?, requires-body=1, script-path=https://raw.githubusercontent.com/BiliUniverse/Enhanced/main/js/BiliBili.Enhanced.response.js, argument=
 开屏广告推荐页banner我的页面1080P热搜标签栏下发皮肤 = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index|account\/(mine(\/ipad)?|myinfo\?)|search\/square)|resource\/show\/(tab\/v2|skin\?)),requires-body=1,script-update-interval=-1,script-path=https://github.com/Keywos/rule/raw/main/JS/bjson.js
 直播间推广 = type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,requires-body=1,script-update-interval=-1,script-path=https://github.com/Keywos/rule/raw/main/JS/bjson.js
 番剧页观影页广告 = type=http-response,pattern=^https?:\/\/api\.bilibili\.com\/pgc\/page\/(bangumi|cinema\/tab\?),requires-body=1,script-update-interval=-1,script-path=https://github.com/Keywos/rule/raw/main/JS/bjson.js
