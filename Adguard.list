@@ -285,8 +285,8 @@ DOMAIN,sdkconfig.ad.xiaomi.com
 # 向日葵
 DOMAIN,client-api-v2.oray.com
 # X1hub
-DOMAIN, adserver.juicyads.com
-DOMAIN-SUFFIX, poweredby.jads.co
+DOMAIN,adserver.juicyads.com
+DOMAIN-SUFFIX,poweredby.jads.co
 # --------- Y --------- 
 # 优酷 & 菜鸟
 DOMAIN,acs4baichuan.m.taobao.com
