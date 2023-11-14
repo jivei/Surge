@@ -2,6 +2,7 @@
 #!desc=我小时候不懂,以为那是雪花.
 
 [General]
+# 11/15 更新酷安净化
 # 11/13 更新京东净化
 # 11/13 替换B站净化为哔哩哔哩万象番剧，添加Boxjs订阅以配置
 # https://github.com/BiliUniverse/BoxJs/raw/main/BiliBili.boxjs.json
