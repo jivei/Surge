@@ -227,6 +227,11 @@ URL-REGEX, ^https:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad
 DOMAIN,api.zuihuimai.com
 # 数字联盟
 DOMAIN-SUFFIX,shuzilm.cn
+# SOUL
+IP-CIDR,47.110.187.87/32,REJECT,no-resolve
+IP-CIDR,47.96.15.52/32,REJECT,no-resolve
+IP-CIDR,116.62.220.39/32,REJECT,no-resolve
+DOMAIN,ssp.soulapp.cn,REJECT
 # --------- T --------- 
 # 腾讯
 IP-CIDR,47.110.187.87/32,no-resolve
