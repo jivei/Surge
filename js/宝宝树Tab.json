@@ -1,0 +1,43 @@
+{
+  "message": "",
+  "data": {
+	"selected_list": [
+	  {
+		"icon_click": "http:\/\/aimg.babytreeimg.com\/group1\/M00\/03\/CA\/003273cb8145412caad9cbe32738fc2a.png",
+		"icon_webp": "",
+		"material_id": "45667",
+		"disappear_ts": "0",
+		"tab_type": "12",
+		"icon_special_shaped": "",
+		"refresh_name": "回顶部",
+		"be": "ABtest3=_$adv_region_id=1668$adv_material_id=45667$ABtest=362_237242",
+		"icon": "http:\/\/aimg.babytreeimg.com\/group1\/M00\/2D\/40\/0f732ddf1f4840ef8f2b2186a30298bd.png",
+		"name": "首页"
+	  },
+	  {
+		"icon_click": "http:\/\/pic09.babytreeimg.com\/knowledge\/2023\/0327\/FpJuZRZDhSRYjmHIdcZPK1qFuvIu",
+		"icon_webp": "http:\/\/pic06.babytreeimg.com\/knowledge\/2023\/0328\/FqjOp09Sj4oyKJjwI45czkJXaFdO",
+		"seat_id": "1671",
+		"disappear_ts": "0",
+		"tab_type": "16",
+		"icon_special_shaped": "",
+		"be": "ABtest=362_237242",
+		"icon": "http:\/\/pic07.babytreeimg.com\/knowledge\/2023\/0327\/FpHJF8kMc6NLIImiYSY0B1xX--tb",
+		"name": "消息"
+	  },
+	  {
+		"icon_click": "http:\/\/aimg.babytreeimg.com\/group1\/M00\/35\/BB\/cf62ec0bbf0d43579851e10a31dadf2e.png",
+		"icon_webp": "http:\/\/aimg.babytreeimg.com\/group1\/M00\/22\/2F\/5f188279570542f29922f333595b86e5.webp",
+		"material_id": "45741",
+		"disappear_ts": "0",
+		"tab_type": "9",
+		"icon_special_shaped": "",
+		"refresh_name": "我",
+		"be": "ABtest3=_$adv_region_id=1672$adv_material_id=45741$ABtest=362_237242",
+		"icon": "http:\/\/aimg.babytreeimg.com\/group1\/M00\/82\/01\/c167bc51018341588568327a44827ef8.png",
+		"name": "我"
+	  }
+	]
+  },
+  "status": "success"
+}
