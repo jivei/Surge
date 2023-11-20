@@ -32,7 +32,7 @@
 # --------- 净化(APP,小程序,开屏) ---------
 # 常用APP小程序开屏，12306，58同城，AMDC，阿里巴巴1688，爱思助手，爱阅书香，爱回收，Acfan，阿里云盘，爱优腾芒四大毒瘤，爱企查，贝壳找房，必胜客，百度全家桶，哔哩哔哩，CliCli，车来了，CSDN，超星学习通，财经杂志，刺猬猫阅读，彩云天气，菜鸟，当当，电视家，懂球帝，东方财富，大麦，斗鱼，丁香园，叮咚买菜，滴滴，滴答，毒奶推广，大师兄影视，饿了么，番茄小说，樊登读书，丰巢，飞客茶馆，飞猪，盖得排行，广汽本田，光大系列，工商系列，国家医保服务平台，国家地理系列，高德地图，海尔智家，韩剧TV，华住会，虎牙，好奇心日报，虎嗅，黄油相机，京东系列，今日头条，驾考宝典，建设银行，交管12123，航旅纵横，肯德基，快看，看理想，看天下，快手，快影，Keep，酷安，IT之家，拦截100，懒人听书，流利说，米游社，慢慢买，美团全家桶，美柚，马卡龙玩图，脉脉，麦当劳，蜜雪冰城，猫眼电影，摩托范，猫耳FM，秒拍，蘑菇租房，美味不用等，漫画人，马蜂窝，MIX，买单吧，蜜友社，南方航空，农业银行，One，Oray，浦发银行，平安银行，PikPak，票根，仆仆，拼多多，澎湃新闻，QQ浏览器看小说，七猫小说，去哪儿，球迷报，全家，起点读书，汽车之家，全民K歌，瑞幸咖啡，人民日报，三联中读，少数派，苏宁，山姆，首旅瑞家，苏e行，苏周到，四川航空，四川电信，搜狐搜狗全家桶，顺丰系列，识货，SOUL，腾讯全家桶，淘宝天猫系列，天性金融，天翼云盘，淘票票，天天基金，Topwidget，太平洋，同花顺，唯品会，网上国网，网易全家桶，威锋，微信公众号，微信阅读，微博，Weico，完美世界电竞，WPS，蜗牛睡眠，无他相机，贴吧，喜马拉雅，小红书，兴业银行，迅雷，迅游，向日葵，熊猫直播，讯飞，小米全家桶，下厨房，希尔顿，携程，新浪全家桶，咸鱼，印象笔记，央视全家桶，易捷加油，猿辅导，中国银行，移动联通电信广电，住这儿，掌上生活，作业帮，浙里办，指点天下，掌上英雄联盟，中油好客，知乎
 # --------- 破解会员 ---------
-# AdobeLightRoom，1Blocker，傲软全家桶，B612咔叽，百度网盘倍速，百度文库，长相思，CAD快速看图，彩云天气，DailyArt，Emby，EnpassPasswordManager，Documents，蛋啵，潮自拍，海报工厂，美颜相机，美图系列，美图秀秀，MIX，Notability，Nicegram，奈飞评分，剪映，驾考宝典，京东比价，克拉壁纸，泼辣修图，Picsart美易，RainViewer，Replica，Spark，Spotify，Serverbee，扫描全能王，VSCO，微信跳转限制，Xmind思维导图，星题库会员及课程解锁，西窗烛，Wink，万兴喵影，我的桌面iscreen，一言，一甜相机，易截图水印，用药助手，佐糖
+# AdobeLightRoom，1Blocker，傲软全家桶，B612咔叽，百度网盘倍速，百度文库，长相思，CAD快速看图，彩云天气，Emby，EnpassPasswordManager，Documents，蛋啵，潮自拍，海报工厂，美颜相机，美图系列，美图秀秀，MIX，Notability，Nicegram，奈飞评分，剪映，驾考宝典，京东比价，克拉壁纸，泼辣修图，Picsart美易，RainViewer，Replica，Spark，Spotify，Serverbee，扫描全能王，VSCO，微信跳转限制，Xmind思维导图，星题库会员及课程解锁，西窗烛，Wink，万兴喵影，我的桌面iscreen，一言，一甜相机，易截图水印，用药助手，佐糖
 # --------- 通用增强 ---------
 # Boxjs，Sub-Store，Script Hub
 
@@ -138,8 +138,6 @@
 # 滴滴
 ^https?:\/\/img-ys011\.didistatic\.com\/static\/ad_oss\/.*.jpg - reject
 ^https?:\/\/hd\.xiaojukeji\.com - reject
-https?://res\.xiaojukeji\.com\/resapi\/activity\/mget - reject
-https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) - reject
 # 嘀嗒出行
 ^https:\/\/capis(-\d)?\.didapinche\.com\/adbase - reject
 ^https?:\/\/capis(-\d)?\.didapinche\.com\/ad\/ - reject
@@ -592,10 +590,6 @@ https://support.you.163.com/appversync/check.do - reject
 ^https?:\/\/app-api\.niu\.com\/v\d\/advertisement\/ - reject
 # 新片场
 ^https?:\/\/app\.xinpianchang\.com\/open_screen\? - reject
-# 小桔科技
-^https?:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds - reject
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) - reject
-^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget - reject
 # 小米
 ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start - reject
 # 小米有品
@@ -809,7 +803,6 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https?:\/\/omgup[0-9]{1}\.xiaojukeji\.com\/api data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/omgup*\.xiaojukeji\.com\/api data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 滴滴
-https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https?:\/\/www\.didapinche\.com\/app\/adstat\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
@@ -1257,7 +1250,7 @@ AdobeLightRoom=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/acco
 AMDC净化 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com, script-path=https://github.com/ddgksf2013/Scripts/raw/master/amdc.js, requires-body=true, max-size=3145728, timeout=30
 阿里巴巴净化 = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
 爱思助手净化 = type=http-response,pattern=^https?:\/\/(search|list)-app-m\.i4\.cn\/(getHotSearchList|getAppList)\.xhtml,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/aisi.js
-傲软抠图傲软扫描傲软PDF转换傲软PDF编辑傲软投屏咖映轻闪PDF乃糖小组件佐糖照片会员 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/arqjt.js
+傲软抠图傲软扫描傲软PDF转换傲软PDF编辑傲软投屏咖映轻闪PDF乃糖小组件佐糖照片会员 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/arqjt.js
 # --------- B --------- 
 开屏广告推荐页banner我的页面1080P热搜标签栏下发皮肤 = type=http-response,pattern=^https?:\/\/app\.bilibili\.com\/x\/(v2\/(splash\/(list|show)|feed\/index|account\/(mine(\/ipad)?|myinfo\?)|search\/square)|resource\/show\/(tab\/v2|skin\?)),requires-body=1,script-update-interval=-1,script-path=https://github.com/Keywos/rule/raw/main/JS/bjson.js
 直播间推广 = type=http-response,pattern=^https?:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom,requires-body=1,script-update-interval=-1,script-path=https://github.com/Keywos/rule/raw/main/JS/bjson.js
@@ -1265,26 +1258,25 @@ AMDC净化 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com, script-
 视频播放页后台播放限制青少年 = type=http-response, pattern=^https?:\/\/grpc\.biliapi\.net\/bilibili\.app\.((view|viewunite)\.v1\.View\/(View|TFInfo)$|dynamic\.v2\.Dynamic\/Dyn(All|Video)$|playurl\.v1\.PlayURL\/PlayView$|interface\.v1\.Teenagers\/ModeStatus), requires-body=1, binary-body-mode=1, script-path=https://github.com/Keywos/rule/raw/main/JS/bproto.js
 弹幕评论列表广告去除 = type=http-response, pattern=^https?:\/\/grpc\.biliapi\.net\/bilibili\.(community\.service\.dm\.v1\.DM\/(DmView|DmSegMobile)|main\.community\.reply\.v1\.Reply\/MainList), requires-body=1, binary-body-mode=1, script-path=https://github.com/Keywos/rule/raw/main/JS/bproto.js
 BoxJs = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
-百度云倍速 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/BaiDuCloudProCrack.js, timeout=60, script-update-interval=0
-B612咔叽会员 = type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://github.com/deezertidal/private/raw/master/js-backup/Crack/612.js
-百度文库会员= type=http-response, pattern=^https:\/\/appwk\.baidu\.com\/naapi\/(user\/getinfo|doc\/getdocdownloadcopywriter), script-path=https://gitlab.com/isous/loonresource/-/raw/main/Script/BaiduWenku/BaiduWenku_crack.js, requires-body=true, max-size=3145728, timeout=30
+百度云倍速 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BaiDuCloudProCrack.js, timeout=60, script-update-interval=0
+B612咔叽会员 = type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/612.js
+百度文库会员= type=http-response, pattern=^https:\/\/appwk\.baidu\.com\/naapi\/(user\/getinfo|doc\/getdocdownloadcopywriter), script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BaiduWenku_crack.js, requires-body=true, max-size=3145728, timeout=30
 百度输入法净化 = type=http-response,pattern=^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)),requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/JS/bdsrf.js
 百度地图净化 = type=http-response, pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/imap\/dl\/s\/UpdateInfo\.php\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/map.js, timeout=60, script-update-interval=0
 百度地图我的页面净化 = type=http-response, pattern=^https:\/\/newclient\.map\.baidu\.com\/client\/usersystem\/mine\/page\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/map.js, timeout=60, script-update-interval=0
 # --------- C --------- 
 CAD快速看图会员 = type=http-response,pattern=^https?:\/\/cad\.glodon\.com\/(account|authorize\/query|alipay\/auth),script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/cad2.js,requires-body=1,max-size=0
-长相思会员 = type=http-response, pattern=https://poetry.nanxiani.cn/api/User/loginUserInfo, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/changxiangsi.js, timeout=60, script-update-interval=0
-彩云天气会员 = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js
+长相思会员 = type=http-response, pattern=https://poetry.nanxiani.cn/api/User/loginUserInfo, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/changxiangsi.js, timeout=60, script-update-interval=0
+彩云天气会员 = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/caiyun.js
 菜鸟裹裹其他净化 = type=http-response,pattern=^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch,requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js
 菜鸟裹裹首页净化  = type=http-response,pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn,requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
 菜鸟裹裹好物推荐商品推广净化 = type=http-response,pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn,requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
 菜鸟裹裹消息中心净化 = type=http-response,pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn,requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
 菜鸟裹裹小程序净化 = type=http-response,pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow,requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
-移除文章底部广告 = type=http-response, pattern=^https:\/\/gateway\.caixin\.com\/api\/app-api\/caixinapp\/appinfo, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=true, max-size=3145728, timeout=30
-移除开屏广告和文章顶部横幅 = type=http-response, pattern=^https:\/\/gg\.caixin\.com\/s\?z=caixin&op=1, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=true, max-size=3145728, timeout=30
-移除文章中间推广 = type=http-response, pattern=^https:\/\/mappsv5\.caixin\.com\/(channelv5\/list|index_page_v5), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=true, max-size=3145728, timeout=30
+财新移除文章底部广告 = type=http-response, pattern=^https:\/\/gateway\.caixin\.com\/api\/app-api\/caixinapp\/appinfo, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=true, max-size=3145728, timeout=30
+财新移除开屏广告和文章顶部横幅 = type=http-response, pattern=^https:\/\/gg\.caixin\.com\/s\?z=caixin&op=1, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=true, max-size=3145728, timeout=30
+财新移除文章中间推广 = type=http-response, pattern=^https:\/\/mappsv5\.caixin\.com\/(channelv5\/list|index_page_v5), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=true, max-size=3145728, timeout=30
 # --------- D ---------
-DailyArt会员 = type=http-response, pattern=https:\/\/api\.getdailyart\.com\/api\/check-logged, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/da.js, timeout=60, script-update-interval=0
 Documents会员 = type=http-request,pattern=^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Documents.js
 滴滴净化 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js, timeout=60, script-update-interval=0
 滴滴净化 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/page.js, timeout=60, script-update-interval=0
@@ -1292,7 +1284,7 @@ Documents会员 = type=http-request,pattern=^https:\/\/license\.pdfexpert\.com\/
 滴滴净化 = type=http-response, pattern=^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js, timeout=60, script-update-interval=0
 滴滴净化 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/nav\/widget\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js, timeout=60, script-update-interval=0
 滴滴净化 = type=http-response, pattern=^https?:\/\/guard\.sec\.xiaojukeji\.com\/api\/guard\/psg\/v2\/getShieldStatus, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js, timeout=60, script-update-interval=0
-滴滴净化 = type=http-response, pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/me\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/PersonPage.js, timeout=60, script-update-interval=0
+滴滴净化 = type=http-response, pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/me\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/PersonPage.js, timeout=60, script-update-interval=0
 # --------- E --------- 
 Emby会员 = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/EmbyPremiere.js
 Enpass会员 = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v1\/subscription\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/enpass.js
