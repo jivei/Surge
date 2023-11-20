@@ -779,11 +779,14 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https?:\/\/api\.douban\.com\/v2\/app_ads\/splash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https?:\/\/api\.douban\.com\/b.*\/common_ads\?.* data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https?:\/\/api\.douban\.com\/v\d\/app_ads\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# 滴滴打车
-^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-# 干掉毒奶导航
+# 滴滴
+#^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# 嘀嗒
+^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/www\.didapinche\.com\/app\/adstat\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# 毒奶导航
 ^https:\/\/limbopro\.com\/Adguard\/Adblock4limbo\.function\.js data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-# 大师兄 //sdk.alibaba.com.ailbaba.me
+# 大师兄 
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|app_config|search_hot|version|advert\?position=[^2]+) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 盯盯拍
 ^http:\/\/apphw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
@@ -795,9 +798,7 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 # 叮嗒出行
 ^https?:\/\/img\.admobile\.top\/admobile-adRequest\/.*.(jpg|png) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/webcdn\.m\.qq\.com\/qiantu\/upload\/202[0-9]{5}\/.*.(jpg|png) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# 滴滴
-^https?:\/\/capis(-?\w*)?\.didapinche\.com\/publish\/api\/upgrade data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https?:\/\/www\.didapinche\.com\/app\/adstat\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# 斗鱼
 ^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/capi\.douyucdn\.cn\/api\/ios_app\/check_update data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/capi\.douyucdn\.cn\/api\/v1\/getStartSend?client_sys=ios data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
@@ -1271,11 +1272,11 @@ CAD快速看图会员 = type=http-response,pattern=^https?:\/\/cad\.glodon\.com\
 财新移除文章中间推广 = type=http-response, pattern=^https:\/\/mappsv5\.caixin\.com\/(channelv5\/list|index_page_v5), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=true, max-size=3145728, timeout=30
 # --------- D ---------
 Documents会员 = type=http-request,pattern=^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Documents.js
-滴滴净化 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js, timeout=60, script-update-interval=0
-滴滴净化 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/page.js, timeout=60, script-update-interval=0
-滴滴净化 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js, timeout=60, script-update-interval=0
-滴滴净化 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/nav\/widget\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js, timeout=60, script-update-interval=0
-滴滴净化 = type=http-response, pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/me\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/PersonPage.js, timeout=60, script-update-interval=0
+滴滴净化1 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/dynamic\/, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js, timeout=60, script-update-interval=0
+滴滴净化2 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/page.js, timeout=60, script-update-interval=0
+滴滴净化3 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js, timeout=60, script-update-interval=0
+滴滴净化4 = type=http-response, pattern=^https?:\/\/conf\.diditaxi\.com\.cn\/nav\/widget\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/dynamic.js, timeout=60, script-update-interval=0
+滴滴净化5 = type=http-response, pattern=^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/me\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/linuszlx/JS/main/DiDi/PersonPage.js, timeout=60, script-update-interval=0
 # --------- E --------- 
 Emby会员 = type=http-response,pattern=^https?:\/\/mb3admin.com\/admin\/service\/registration\/validateDevice,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/EmbyPremiere.js
 Enpass会员 = type=http-response,pattern=^https:\/\/license\.enpass\.io\/api\/v1\/subscription\/me,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/enpass.js
