@@ -2,6 +2,7 @@
 #!desc=我小时候不懂,以为那是雪花.
 
 [General]
+# 11/20 增加财新净化
 # iTunes解锁系列，启用模块会导致Appstore无法登录，目前仅添加万源阅读会员，后续陆续添加app，如有需要，请自行添加在线模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/AllFuckiTunes.sgmodule
 # 更新日志每周清空添加至下方功能列表，注意事项常驻：
@@ -757,6 +758,11 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https:\/\/yongche\.baidu\.com\/gomarketing\/api\/popup\/getentrancecordovaurl data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/baseinfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # --------- C --------- 
+# 财新
+^https:\/\/gateway\.caixin\.com\/api\/app-api\/cxAdInfo\/selectIndexAdInfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/mappsv5\.caixin\.com\/channelv5\/article_ad_ios_info data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/gg\.caixin\.com\/s\?z=caixin&slot data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/msgapi\.caixin\.com\/msg_api\/annmsg\/annlist data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 彩云天气 
 ^https:\/\/api\.caiyunapp\.com\/v1\/activity\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/wrapper\.cyapi\.cn\/v1\/activity\? data="https://raw.githubusercontent.com/RuCu6/QuanX/main/Mocks/caiyun.json"
@@ -1269,6 +1275,9 @@ CAD快速看图会员 = type=http-response,pattern=^https?:\/\/cad\.glodon\.com\
 菜鸟裹裹好物推荐商品推广净化 = type=http-response,pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn,requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
 菜鸟裹裹消息中心净化 = type=http-response,pattern=^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn,requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
 菜鸟裹裹小程序净化 = type=http-response,pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow,requires-body=1,max-size=0,script-update-interval=-1,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js
+移除文章底部广告 = type=http-response, pattern=^https:\/\/gateway\.caixin\.com\/api\/app-api\/caixinapp\/appinfo, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=true, max-size=3145728, timeout=30
+移除开屏广告和文章顶部横幅 = type=http-response, pattern=^https:\/\/gg\.caixin\.com\/s\?z=caixin&op=1, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=true, max-size=3145728, timeout=30
+移除文章中间推广 = type=http-response, pattern=^https:\/\/mappsv5\.caixin\.com\/(channelv5\/list|index_page_v5), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caixin.js, requires-body=true, max-size=3145728, timeout=30
 # --------- D ---------
 DailyArt会员 = type=http-response, pattern=https:\/\/api\.getdailyart\.com\/api\/check-logged, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/xiaomaoJT/QxScript/main/rewrite/boxJS/source/da.js, timeout=60, script-update-interval=0
 Documents会员 = type=http-request,pattern=^https:\/\/license\.pdfexpert\.com\/api\/2\.0\/documents\/subscription\/refresh,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Documents.js
