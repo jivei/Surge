@@ -13,12 +13,12 @@ let $ = nobyda();
 let run = EnvInfo();
 
 async function SwitchRegion(title, url, body) {
-	const Group = $.read('BiliArea_Policy') || '港台番剧'; //Your blibli policy group name.
-	const CN = $.read('BiliArea_CN') || 'DIRECT'; //Your China sub-policy name.
-	const TW = $.read('BiliArea_TW') || '台湾节点'; //Your Taiwan sub-policy name.
-	const HK = $.read('BiliArea_HK') || '香港节点'; //Your HongKong sub-policy name.
-	const DF = $.read('BiliArea_DF') || '🏁 sub-policy'; //Sub-policy name used after region is blocked(e.g. url 404)
-	const off = $.read('BiliArea_disabled') || ''; //WiFi blacklist(disable region change), separated by commas.
+	const Group = $.read('BiliArea_Policy') || 'Books'; //哔哩哔哩分流
+	const CN = $.read('BiliArea_CN') || 'DIRECT'; //直连策略名称
+	const TW = $.read('BiliArea_TW') || 'Taiwan'; //台湾策略名称
+	const HK = $.read('BiliArea_HK') || 'Hongkong'; //香港策略名称
+	const DF = $.read('BiliArea_DF') || 'DIRECT'; //区域受阻后使用的子策略名称（如 url 404）
+	const off = $.read('BiliArea_disabled') || 'Xiaomi'; //WiFi 黑名单（禁用区域更改），用逗号分隔。
 	const current = await $.getPolicy(Group);
 	const area = (() => {
 		let select = {};
