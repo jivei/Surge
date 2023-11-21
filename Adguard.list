@@ -38,6 +38,10 @@ DOMAIN,vs6.bj2ct.u3.ucweb.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,u3.ucweb.com
 # --------- B --------- 
+#霸王茶姬 小程序净化
+URL-REGEX,^https:\/\/webapi\.qmai.cn\/web\/catering\/advertising
+URL-REGEX,^https:\/\/webapi\.qmai.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach$
+DOMAIN,logger.qmai.cn
 # 百度
 DOMAIN-SUFFIX,pos.baidu.com
 # 百度地图
@@ -89,8 +93,13 @@ DOMAIN,md-i-s.apptimize.com
 # 菜鸟
 AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amdc|\d).+\/amdc\/mobileDispatch$)),REJECT-DROP
 # --------- D --------- 
+#多点
+URL-REGEX,^https:\/\/flow\.dmall\.com\/app\/home\/pops
 # 豆瓣
 AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
+# --------- E --------- 
+#EMS小程序
+URL-REGEX,^https:\/\/ump\.ems\.com\.cn\/mailAd$
 # --------- F --------- 
 # Foreca & Google
 DOMAIN,adservice.google.com
@@ -99,6 +108,9 @@ DOMAIN,googleads.g.doubleclick.net
 DOMAIN,pagead2.googlesyndication.com
 DOMAIN,pubads.g.doubleclick.net
 DOMAIN,www.googleadservices.com
+#丰巢 微信小程序净化
+URL-REGEX,^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage
+URL-REGEX,^https:\/\/dsp\.fcbox\.com 
 # --------- G --------- 
 # 高德地图
 DOMAIN,amap-aos-info-nogw.amap.com
@@ -122,6 +134,11 @@ DOMAIN-SUFFIX,ehaier.com
 URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native
 # 华为
 DOMAIN,httpdns.c.cdnhwc2.com
+# 货拉拉 微信小程序净化
+URL-REGEX,^https:\/\/qapi\.huolala\.cn\/ads
+URL-REGEX,^https:\/\/appuser-static\.huolala\.cn\/imgs
+URL-REGEX,^https:\/\/qapi\.huolala\.cn\/home_new_user
+URL-REGEX,^https:\/\/qapi\.huolala\.cn\/get_service_list
 # --------- J --------- 
 # 建设银行
 DOMAIN,adv.ccb.com
@@ -132,6 +149,8 @@ DOMAIN,policy.jd.com
 DOMAIN,dns.jd.com
 IP-CIDR,101.124.19.122/32,no-resolve
 IP-CIDR6,2402:db40:5100:1011::5/128,no-resolve
+# 交通银行小程序开屏广告
+URL-REGEX,^https:\/\/creditcardapp\.bankcomm\.com\/cnsvPmpaMdbcardWeb\/page\/getGuidePageAds 
 # --------- K --------- 
 # 酷我音乐
 DOMAIN,ad.tencentmusic.com
@@ -140,10 +159,19 @@ DOMAIN,mobilead.kuwo.cn
 DOMAIN,rich.kuwo.cn
 DOMAIN,tmead.y.qq.com
 DOMAIN,tmeadcomm.y.qq.com
+#肯德基 微信小程序净化
+URL-REGEX,^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/coupon
+URL-REGEX,^https:\/\/dynamicad\.kfc\.com\.cn\/api
+URL-REGEX,^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/custom_v2\/wxapp
+URL-REGEX,^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/activity
 # --------- L --------- 
 # 蓝奏云
 DOMAIN,statics.woozooo.com
 # --------- M --------- 
+#蜜雪冰城 @是豆豆呀 mxsa.mxbc.net
+URL-REGEX,^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query
+#麦当劳 微信小程序净化
+URL-REGEX,^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity
 # 芒果TV
 DOMAIN,credits.bz.mgtv.com
 DOMAIN,credits2.bz.mgtv.com
@@ -168,6 +196,24 @@ DOMAIN,httpdns.meituan.com
 # 美颜相机
 DOMAIN,aaid.uyunad.com
 DOMAIN,adui.tg.meitu.com
+#猫眼电影小程序
+DOMAIN,ad.maoyan.com
+#电竞赛事+热门赛事
+URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/api\/mobile\/(hotMatchList|eSportsIps)
+#猫眼放映厅
+URL-REGEX,^https:\/\/vod-movie\.maoyan\.com\/vod\/video\/onlineMovies\.json
+#精彩演出
+URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/movie\/wonderShow
+#七日精选 
+URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/performances\/calendar\/0
+#今日必抢
+URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/performances\/rob\/main
+#大咖新动态
+URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/celebrityBasicList\/query
+#为你推荐 
+URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/recommend\/performances
+#首页底部推荐  
+URL-REGEX,^https:\/\/api\.maoyan\.com\/sns\/common\/feed\/channel\/v2\/list\.json
 # --------- O --------- 
 # Outlook
 DOMAIN,acdn.adnxs.com
@@ -224,7 +270,17 @@ URL-REGEX, ^https:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad
 DOMAIN,api.zuihuimai.com
 # 数字联盟
 DOMAIN-SUFFIX,shuzilm.cn
+# 闪送 微信小程序净化
+URL-REGEX,^https:\/\/miniprogram\.ishansong\.com\/cms\/faq\/query
+URL-REGEX,^https:\/\/ads\.ishansong\.com\/advert
+# 申通快递 微信小程序净化
+URL-REGEX,^https:\/\/customer-app\.sto\.cn\/api\/app\/banner\/banner
+URL-REGEX,^https:\/\/sto-customer-app\.oss-cn-shanghai\.aliyuncs\.com\/images
+#顺丰速运小程序 弹窗广告其他乱七八糟的广告
+URL-REGEX,^https?:\/\/ucmp\.sf-express\.com\/cx-wechat-query\/query\/info-flow\/reconsitution-list
 # --------- T --------- 
+# 途虎养车小程序 @张军
+URL-REGEX,^https:\/\/mkt-gateway\.tuhu\.cn\/mkt-scene-marketing-service\/api\/scene\/queryScheme
 # 腾讯
 IP-CIDR,47.110.187.87/32,no-resolve
 DOMAIN, adsmind.gdtimg.com
@@ -333,6 +389,11 @@ DOMAIN,switch.cup.com.cn
 DOMAIN,tysdk.95516.com
 # Yandex
 DOMAIN,yandexmetrica.com
+#永辉
+URL-REGEX,^https:\/\/api\.yonghuivip\.com\/api\/fp\/homepage\/pop
+URL-REGEX,^https:\/\/activity\.yonghuivip\.com\/api\/app\/fp\/homepage\/pop
+URL-REGEX,^https:\/\/activity\.yonghuivip\.com\/api\/\/web\/shensuan\/ad
+URL-REGEX,^https:\/\/sauron-report\.yonghuivip\.com\/collect
 # --------- Z --------- 
 # 知乎
 DOMAIN,appcloud.zhihu.com
@@ -358,6 +419,15 @@ IP-CIDR,115.236.121.51/32,no-resolve
 IP-CIDR,115.236.121.195/32,no-resolve
 IP-CIDR,119.29.29.98/32,no-resolve
 IP-CIDR,119.29.29.99/32,no-resolve
-
-#AND,((PROTOCOL,UDP),(DEST-PORT,443)),REJECT-NO-DROP
-
+# 中通快递 @是豆豆呀 fscdn.zto.com, hdgateway.zto.com
+URL-REGEX,^https:\/\/hdgateway\.zto\.com\/getApolloConfig
+URL-REGEX,^https:\/\/hdgateway\.zto\.com\/track
+URL-REGEX,^https:\/\/hdgateway\.zto\.com\/getAdInfo
+URL-REGEX,^https:\/\/hdgateway\.zto\.com\/listJumperShow
+URL-REGEX,^https:\/\/fscdn\.zto\.com\/fs1
+# 中国石油去广告
+URL-REGEX,^https?:\/\/app\.95504\.net\/app\/json\/page_ad\/initPageAd\?ver= // 中石油去开屏广告发现
+URL-REGEX,^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getPopAdData // 中油好客e站小程序弹窗广告
+URL-REGEX,^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getIndexAdData // 中油好客e站小程序底部横幅广告
+# 招行首页横幅广告
+URL-REGEX,^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic
