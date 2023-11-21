@@ -59,6 +59,7 @@ IP-CIDR,180.76.76.200/32,no-resolve
 RULE-SET,https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad.list,REJECT-DROP
 # 哔哩哔哩
 DOMAIN,httpdns.bilivideo.com
+URL-REGEX,^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH
 # 宝宝树
 URL-REGEX,^http:\/\/go\.babytree\.com\/go_tool\/api\/feeding_record\/get_home_banner_info
 URL-REGEX,^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/feeds
