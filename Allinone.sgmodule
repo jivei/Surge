@@ -729,7 +729,8 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"# 百度云
+^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+# 百度云
 ^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|rest\/2\.0\/pcs\/adx)\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https?:\/\/update\.pan\.baidu\.com\/statistics\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 百度纯净搜索
