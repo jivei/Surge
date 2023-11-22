@@ -16,6 +16,8 @@
 # 如果已有适合自己的配置文件
 # 请务必添加此分流规则配合使用，策略为REJECT👇
 # https://raw.githubusercontent.com/jivei/Surge/main/Adguard.list
+# Boxjs，ScriptHub，SubStore三合一👇
+# https://raw.githubusercontent.com/jivei/Surge/main/SystemPlus.sgmodule
 # 毒奶网页去广告👇
 # https://raw.githubusercontent.com/jivei/Adblock/main/Adblock4limbo.sgmodule
 # 每日自动签到模块👇
@@ -38,7 +40,7 @@
 # --------- 破解会员 ---------
 # AdobeLightRoom，1Blocker，傲软全家桶，B612咔叽，百度网盘倍速，百度文库，长相思，CAD快速看图，彩云天气，Emby，EnpassPasswordManager，Documents，蛋啵，潮自拍，海报工厂，美颜相机，美图系列，美图秀秀，MIX，墨迹天气，Notability，Nicegram，奈飞评分，剪映，驾考宝典，京东比价，克拉壁纸，泼辣修图，Picsart美易，RainViewer，Replica，Spark，Spotify，Serverbee，扫描全能王，VSCO，微信跳转限制，Xmind思维导图，星题库会员及课程解锁，西窗烛，Wink，万兴喵影，我的桌面iscreen，一言，一甜相机，易截图水印，用药助手，佐糖
 # --------- 通用增强 ---------
-# Boxjs，Script Hub
+# Boxjs，ScriptHub，SubStore
 
 [URL Rewrite]
 # 58同城 
@@ -1265,7 +1267,6 @@ AMDC净化 = type=http-response, pattern=^http:\/\/amdc\.m\.taobao\.com, script-
 移除皮肤推送 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
 精简我的页面 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine\?|mine\/ipad\?), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
 画质解锁 = type=http-response, pattern=^https:\/\/app\.bilibili\.com\/x\/v2\/account\/myinfo\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Bilibili/Bilibili_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
-BoxJs = type=http-request,pattern=^https?:\/\/(.+\.)?boxjs\.(com|net),script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body=true, timeout=120
 百度云倍速 = type=http-response, pattern=^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BaiDuCloudProCrack.js, timeout=60, script-update-interval=0
 B612咔叽会员 = type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/612.js
 百度文库会员= type=http-response, pattern=^https:\/\/appwk\.baidu\.com\/naapi\/(user\/getinfo|doc\/getdocdownloadcopywriter), script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BaiduWenku_crack.js, requires-body=true, max-size=3145728, timeout=30
@@ -1348,12 +1349,6 @@ Spotify员不能超高音质  = type=http-response,pattern=^https:\/\/spclient\.
 Serverbee会 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/serverbee.js, timeout=60, script-update-interval=0
 Serverbee员 = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/serverbee.js, timeout=60, script-update-interval=0
 扫描全能王会员 = type=http-response, pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/camscanner.js,requires-body=1, max-size=0, script-update-interval=0 
-Script Hub: 前端 = type=http-request,pattern=^https?:\/\/script\.hub\/($|edit\/|reload), requires-body=0, max-size=0,script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js, timeout=120
-Script Hub: QX 转换 Surge = type=http-request, pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=qx-rewrite, requires-body=0, max-size=0, script-path=https://github.com/Script-Hub-Org/Script-Hub/raw/main/QX-Rewrite-Parser.js, timeout=120
-Script Hub: Loon 转换 Surge = type=http-request, pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=loon-plugin, requires-body=0, max-size=0, script-path=https://github.com/Script-Hub-Org/Script-Hub/raw/main/Loon-Rewrite-Parser.js, timeout=120
-Script Hub: Surge 模块控制器 = type=http-request, pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=surge-module, requires-body=0, max-size=0, script-path=https://github.com/Script-Hub-Org/Script-Hub/raw/main/Surge-Rewrite-Parser.js, timeout=120
-Script Hub: 规则集转换 = type=http-request, pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=rule-set, requires-body=0, max-size=0, script-path=https://github.com/Script-Hub-Org/Script-Hub/raw/main/rule-parser.js, timeout=120
-Script Hub: 脚本转换 = type=http-request, pattern=^https?:\/\/script\.hub\/convert\/, requires-body=0, max-size=0, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-converter.js, timeout=120
 # --------- T --------- 
 贴吧净化1 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
 贴吧净化2 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)\?cmd,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js
