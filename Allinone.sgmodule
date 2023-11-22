@@ -16,6 +16,8 @@
 # 如果已有适合自己的配置文件
 # 请务必添加此分流规则配合使用，策略为REJECT👇
 # https://raw.githubusercontent.com/jivei/Surge/main/Adguard.list
+# 毒奶的网页去广告请长按复制链接自行添加在线模块👇
+# https://raw.githubusercontent.com/jivei/Adblock/main/Adblock4limbo.sgmodule
 # 每日自动签到模块请长按复制链接自行添加在线模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/Checkin.sgmodule
 # 每日自动签到获取cookie模块请自行添加在线模块👇
