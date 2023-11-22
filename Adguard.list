@@ -60,23 +60,6 @@ RULE-SET,https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad.
 # 哔哩哔哩
 DOMAIN,httpdns.bilivideo.com
 URL-REGEX,^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH
-# 宝宝树
-URL-REGEX,^http:\/\/go\.babytree\.com\/go_tool\/api\/feeding_record\/get_home_banner_info
-URL-REGEX,^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/feeds
-URL-REGEX,^http:\/\/api\.babytree\.com\/api\/advertising
-URL-REGEX,^http:\/\/api\.babytree\.com\/api\/mobile_activity
-URL-REGEX,^http:\/\/api\.babytree\.com\/preg_intf\/index_content\/index_banner
-URL-REGEX,^http:\/\/go\.babytree\.com\/go_tool\/api\/tools\/get_third_privacy_msgbox_list
-URL-REGEX,^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/app_index\/get_ceramic_chip_area
-URL-REGEX,^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/index_activity
-URL-REGEX,^http:\/\/go\.babytree\.com\/go_pregnancy\/api\/cms_second_tab\/topic_tab_list
-DOMAIN,m.meitun.com
-DOMAIN,adx.babytree.com
-DOMAIN,adx-backend.babytree.com
-DOMAIN,ads.babytree.com
-DOMAIN,bbtads.babytree.com
-DOMAIN,tracking.babytree.com
-DOMAIN,mobads-pre-config.cdn.bcebos.com
 # --------- C ---------
 # 彩云天气
 DOMAIN,ad.cyapi.cn
