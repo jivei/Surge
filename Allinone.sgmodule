@@ -38,7 +38,7 @@
 # --------- 破解会员 ---------
 # AdobeLightRoom，1Blocker，傲软全家桶，B612咔叽，百度网盘倍速，百度文库，长相思，CAD快速看图，彩云天气，Emby，EnpassPasswordManager，Documents，蛋啵，潮自拍，海报工厂，美颜相机，美图系列，美图秀秀，MIX，墨迹天气，Notability，Nicegram，奈飞评分，剪映，驾考宝典，京东比价，克拉壁纸，泼辣修图，Picsart美易，RainViewer，Replica，Spark，Spotify，Serverbee，扫描全能王，VSCO，微信跳转限制，Xmind思维导图，星题库会员及课程解锁，西窗烛，Wink，万兴喵影，我的桌面iscreen，一言，一甜相机，易截图水印，用药助手，佐糖
 # --------- 通用增强 ---------
-# Boxjs，Sub-Store，Script Hub
+# Boxjs，Script Hub
 
 [URL Rewrite]
 # 58同城 
@@ -1348,9 +1348,7 @@ Spotify员不能超高音质  = type=http-response,pattern=^https:\/\/spclient\.
 Serverbee会 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/serverbee.js, timeout=60, script-update-interval=0
 Serverbee员 = type=http-request, pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/serverbee.js, timeout=60, script-update-interval=0
 扫描全能王会员 = type=http-response, pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/camscanner.js,requires-body=1, max-size=0, script-update-interval=0 
-Sub-Store Core=type=http-request,pattern=^https?:\/\/sub\.store\/((download)|api\/(preview|sync|(utils\/node-info))),script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-1.min.js,requires-body=true,timeout=120
-Sub-Store Simple=type=http-request,pattern=^https?:\/\/sub\.store,script-path=https://github.com/sub-store-org/Sub-Store/releases/latest/download/sub-store-0.min.js,requires-body=true
-cript Hub: 前端 = type=http-request,pattern=^https?:\/\/script\.hub\/($|edit\/|reload), requires-body=0, max-size=0,script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js, timeout=120
+Script Hub: 前端 = type=http-request,pattern=^https?:\/\/script\.hub\/($|edit\/|reload), requires-body=0, max-size=0,script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/script-hub.js, timeout=120
 Script Hub: QX 转换 Surge = type=http-request, pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=qx-rewrite, requires-body=0, max-size=0, script-path=https://github.com/Script-Hub-Org/Script-Hub/raw/main/QX-Rewrite-Parser.js, timeout=120
 Script Hub: Loon 转换 Surge = type=http-request, pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=loon-plugin, requires-body=0, max-size=0, script-path=https://github.com/Script-Hub-Org/Script-Hub/raw/main/Loon-Rewrite-Parser.js, timeout=120
 Script Hub: Surge 模块控制器 = type=http-request, pattern=^https?:\/\/script\.hub\/file\/_start_\/.+type=surge-module, requires-body=0, max-size=0, script-path=https://github.com/Script-Hub-Org/Script-Hub/raw/main/Surge-Rewrite-Parser.js, timeout=120
