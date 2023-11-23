@@ -3,7 +3,6 @@
 
 [Script]
 托迈酷客签到 = type=cron, cronexp="1 0 * * *",  script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,timeout=60,, wake-system=1
-喜马拉雅签到 = type=cron, cronexp="2 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/xmly.js,timeout=60, wake-system=1
 高德打车签到 = type=cron, cronexp="3 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, wake-system=1
 亚朵酒店签到 = type=cron, cronexp="4 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=60, wake-system=1
 霸王茶姬签到 = type=cron, cronexp="5 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/bwcj.js, timeout=60, wake-system=1
