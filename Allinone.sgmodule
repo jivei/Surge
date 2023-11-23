@@ -796,7 +796,7 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 # 大师兄 
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|app_config|search_hot|version|advert\?position=[^2]+) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 盯盯拍
-^http:\/\/apphw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^http:\/\/apphw\.ddpai\.com\/onroad\/api\/v1\/ad\/list data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 得物
 ^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 叮咚买菜
