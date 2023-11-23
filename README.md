@@ -7,6 +7,8 @@
 
 秋城，毒奶，墨鱼，K佬，小一佬，可莉，wala，Baby，叮当猫等等不再一一致谢(°∀°)ﾉ
 
+点击进入直播间:
+
 https://t.me/zhetengsha
 
 https://t.me/h5683577
