@@ -1,8 +1,0 @@
-#!name=签到1&哔哩哔哩
-#!desc=B站自动签到
-
-[Script]
-B站每日任务 = type=cron,cronexp="1 0 * * *",script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
-
-[MITM]
-hostname= %APPEND% app.bilibili.com, m.bilibili.com
