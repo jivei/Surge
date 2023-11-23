@@ -299,8 +299,6 @@ DOMAIN-SUFFIX,applovin.com
 DOMAIN-SUFFIX,appier.net
 DOMAIN-SUFFIX,adsmoloco.com
 DOMAIN-SUFFIX,adcanvas.com
-# 阻止电报请求风暴
-AND,((PROCESS-NAME,Telegram), (OR,((IP-CIDR,0.0.0.0/8), (IP-CIDR,224.0.0.0/4))))
 # --------- W --------- 
 # 网易云音乐
 DOMAIN,gdt.qq.com
