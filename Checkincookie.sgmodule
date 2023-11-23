@@ -2,7 +2,6 @@
 #!desc=全部获取之后关闭此模块避免不必要的MitM若cookie过期再次开启获取即可
 
 [Script]
-喜马拉雅APP获取cookie = type=http-request,pattern=^https?:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/,script-path=htthttps://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/xmly.js,requires-body=0
 # 阿里云盘APP->登录
 阿里云盘APP获取cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/aliYunPanCheckIn.js
 # ---------------------------
