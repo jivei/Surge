@@ -1,0 +1,26 @@
+# OpenAI ChatGPT 分流
+DOMAIN, chat.openai.com
+DOMAIN, cdn.openai.com
+DOMAIN-SUFFIX.com
+DOMAIN-SUFFIX, ai.com
+DOMAIN-SUFFIXapi-site.azureedge.net
+DOMAIN-SUFFIX, identrust.com
+DOMAIN-SUFFIX, auth0.com
+DOMAIN-SUFFIXapi-site.azureedge.net
+DOMAIN-SUFFIXcom.imgix.net
+DOMAIN-SUFFIXcomproductionae4b.blob.core.windows.net
+DOMAIN-SUFFIXcom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN-KEYWORD,openai
+# Other associated domains
+DOMAIN-SUFFIX, challenges.cloudflare.com
+DOMAIN-SUFFIX, client-api.arkoselabs.com
+DOMAIN-SUFFIX, events.statsigapi.net
+DOMAIN-SUFFIX, featuregates.org
+DOMAIN-SUFFIX, oaiusercontent.com
+DOMAIN-SUFFIX, oaistatic.com
+DOMAIN-SUFFIX, segment.io
+DOMAIN-SUFFIX, intercom.io
+DOMAIN-SUFFIX, intercomcdn.com
+DOMAIN-SUFFIX, poe.com
+DOMAIN-SUFFIX, sentry.io
+DOMAIN-SUFFIX, launchdarkly.com
