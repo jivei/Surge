@@ -42,9 +42,8 @@ hostname= %APPEND% apis.folidaymall.com,game.dominos.com.cn,yunbusiness.ccb.com,
 达乐美披萨获取token = type=http-request, pattern=^https:\/\/game\.dominos\.com\.cn\/gold\/game\/gameDone, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/dlm.js, requires-body=true, max-size=3145728, timeout=30
 # ---------------------------
 # 百度贴吧APP，网页任意->登录
-贴吧_获取cookie  = type=http-request,pattern=^https?:\/\/(c\.tieba\.baidu\.com|180\.97\.\d+\.\d+)\/c\/s\/login,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/tieba_signin.js
-贴吧_获取cookie  = type=http-request,pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/s\/channelIconConfig,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/tieba_signin.js
-贴吧_获取cookie  = type=http-request,pattern=^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/tieba_signin.js
+贴吧_获取cookie 1 = type=http-request,pattern=^https?:\/\/tiebac\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/TieBa.js,requires-body=0
+贴吧_获取cookie 2 = type=http-request,pattern=^https?:\/\/c\.tieba\.baidu\.com\/c\/u\/follow\/getFoldedMessageUserInfo,script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/TieBa.js,requires-body=0
 # ---------------------------
 # 哔哩哔哩APP，网页->登录
 哔哩哔哩获取Cookie = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
