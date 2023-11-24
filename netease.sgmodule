@@ -1,7 +1,0 @@
-#!name=解锁网易云黑胶音乐试听
-#!desc=白嫖才能有音乐的力量
-#!author= qiuxiuya TEXAS
-
-[Script]
-#解锁黑椒音乐
-wyy = type=http-request, pattern=^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/), script-path=https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout=30
