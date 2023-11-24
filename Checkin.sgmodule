@@ -2,14 +2,14 @@
 #!desc=每日0点1分开始自动执行签到任务
 
 [Script]
-托迈酷客签到 = type=cron, cronexp="1 0 * * *",  script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,timeout=60,, wake-system=1
-高德打车签到 = type=cron, cronexp="3 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, wake-system=1
-亚朵酒店签到 = type=cron, cronexp="4 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=60, wake-system=1
-霸王茶姬签到 = type=cron, cronexp="5 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/bwcj.js, timeout=60, wake-system=1
-华住签到任务 = type=cron, cronexp="6 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/hzh.js, timeout=60, wake-system=1
-之家签到任务 = type=cron, cronexp="7 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ithome.js, timeout=60, wake-system=1
-途虎养车签到 = type=cron, cronexp="9 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Tuhyche.js, timeout=60,wake-system=1
-建行生活签到 = type=cron, cronexp="11 0 * * *", script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, timeout=60, wake-system=1
+托迈酷客签到 = type=cron, cronexp="1 0 * * *",  script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js,timeout=120,, wake-system=1
+高德打车签到 = type=cron, cronexp="3 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=120, wake-system=1
+亚朵酒店签到 = type=cron, cronexp="4 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=120, wake-system=1
+霸王茶姬签到 = type=cron, cronexp="5 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/bwcj.js, timeout=120, wake-system=1
+华住签到任务 = type=cron, cronexp="6 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/hzh.js, timeout=120, wake-system=1
+之家签到任务 = type=cron, cronexp="7 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ithome.js, timeout=120, wake-system=1
+途虎养车签到 = type=cron, cronexp="9 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Tuhyche.js, timeout=120,wake-system=1
+建行生活签到 = type=cron, cronexp="11 0 * * *", script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/jhsh_checkIn.js, timeout=120, wake-system=1
 #下面的默认禁用，建议使用久违助手等网站签到，稳定且功能繁多
 #天翼云盘签到 = type=cron, cronexp="1 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ty.js, timeout=60, wake-system=1
 #达美披萨签到 = type=cron, cronexp="12 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/dlm.js, timeout=60, wake-system=1
