@@ -13,6 +13,6 @@
 #下面的默认禁用，建议使用久违助手等网站签到，稳定且功能繁多
 #天翼云盘签到 = type=cron, cronexp="1 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ty.js, timeout=60, wake-system=1
 #达美披萨签到 = type=cron, cronexp="12 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/dlm.js, timeout=60, wake-system=1
-#贴吧每日签到 = type=cron, cronexp="8 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/tieba_signin.js, timeout=60,wake-system=1
+#贴吧每日签到 = type=cron,cronexp="9 0 * * *", script-path=https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/Task/TieBa.js,wake-system=1,timeout=60
 #哔哩每日任务 = type=cron, cronexp="10 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js, timeout=60,wake-system=1
 #阿里云盘签到 = type=cron, cronexp="2 0 * * *",  script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/aliYunPanCheckIn.js, timeout=60, wake-system=1
