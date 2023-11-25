@@ -25,14 +25,14 @@
         document.body.appendChild(rawButton);
         // 添加QX→Surge按钮
         const scriptHubButton = createButton(
-          "QX→Surge",
+          "QX脚本→Surge",
           openScriptHubLink
         );
         document.body.appendChild(scriptHubButton);
 
         // 添加QX→Loon按钮
         const firstButton = createButton(
-           "QX→Loon", 
+           "QX脚本→Loon", 
            firstButtonClickHandler
         );
         document.body.appendChild(firstButton);
@@ -64,13 +64,13 @@
       }
 
       // 将 QX→Surge 按钮放在左侧
-      if (text === "QX→Surge") {
+      if (text === "QX脚本→Surge") {
         button.style.left = "20px";
         button.style.bottom = "50px"; 
       }
 
       // 将 QX→Loon 按钮放在左侧
-      if (text === "QX→Loon") {
+      if (text === "QX脚本→Loon") {
         button.style.left = "20px";
         button.style.bottom = "100px"; 
       }
