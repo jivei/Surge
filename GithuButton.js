@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         GithuButton
-// @namespace    九微
+// @namespace    ios151
 // @version      2.7
 // @description  在Github页面增加Raw以及ScrioHub一键转换按钮
-// @author       修改自Baby
+// @author       九微
 // @match        https://raw.githubusercontent.com/Yu9191/Rewrite/main/Github_Open_Raw.js
 // ==/UserScript==
 
