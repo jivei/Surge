@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         GitHub
+// @name         GithuButton
 // @namespace    ios151
 // @version      2.6
-// @description  GitHub增强
+// @description  在Github页面增加Raw以及ScrioHub按钮
 // @author       修改自Baby
 // @match        https://github.com/*
 // ==/UserScript==
