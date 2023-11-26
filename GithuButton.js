@@ -3,7 +3,7 @@
 // @namespace    https://raw.githubusercontent.com/Yu9191/Rewrite/main/Github_Open_Raw.js
 // @version      2.8
 // @description  在Github页面增加Raw以及ScrioHub一键转换按钮
-// @author       九微
+// @author       自用
 // @match        https://github.com/*
 // ==/UserScript==
 
