@@ -2,7 +2,6 @@
 #!desc=没有，没有，没有。
 
 [General]
-# 11/27 增加StreesWatch会员
 # iTunes解锁系列，启用模块会导致Appstore无法登录，目前仅添加万源阅读会员，后续陆续添加app，如有需要，请自行添加在线模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/AllFuckiTunes.sgmodule
 # 更新日志每周清空添加至下方功能列表，注意事项常驻：
@@ -1343,8 +1342,6 @@ Spark会员 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/
 Spotify会不能超高音质  = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
 Spotify员不能超高音质  = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
 扫描全能王会员 = type=http-response, pattern=https:\/\/(api|api-cs)\.intsig\.net\/purchase\/cs\/query_property\?, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/camscanner.js,requires-body=1, max-size=0, script-update-interval=0 
-StressWatch会员 = type=http-response, pattern=https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/StreesWatch.js, timeout=60, script-update-interval=0
-StressWatch会员 = type=http-response, pattern=https:\/\/api\.revenuecat\.com\/v1\/(subscribers|receipts), script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/StreesWatch.js, timeout=60, script-update-interval=0
 # --------- T --------- 
 贴吧净化1 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
 贴吧净化2 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)\?cmd,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js
