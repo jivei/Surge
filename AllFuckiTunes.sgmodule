@@ -1,8 +1,0 @@
-#!name=Fuck iTunes
-#!desc=随用随关，开启该模块影响AppStore登录
-
-[Script]
-万源阅读会员= type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/wanyuanyuedu.js, timeout=60, script-update-interval=0
-
-[MITM]
-hostname = %APPEND% buy.itunes.apple.com
