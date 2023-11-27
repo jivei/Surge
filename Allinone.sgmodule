@@ -2,8 +2,10 @@
 #!desc=净化模块将和会员模块独立分开
 
 [General]
-# ------------------
+# --------净化模块----------
 # https://raw.githubusercontent.com/jivei/Surge/main/PurifyAllInOne.sgmodule
+# --------独立会员模块----------
+# https://github.com/jivei/Surge/tree/main/Crack
 # ------------------
 # iTunes解锁系列，启用模块会导致Appstore无法登录，目前仅添加万源阅读会员，后续陆续添加app，如有需要，请自行添加在线模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/AllFuckiTunes.sgmodule
