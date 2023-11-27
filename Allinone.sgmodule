@@ -1354,8 +1354,6 @@ Spotify员不能超高音质  = type=http-response,pattern=^https:\/\/spclient\.
 淘宝开净化 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script//Taobao/Taobao_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
 淘宝屏净化 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script//Taobao/Taobao_remove_ads.js, requires-body=true, max-size=3145728, timeout=30
 # --------- V --------- 
-Vision会 = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/Vision.js
-Vision员 = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/Vision.js
 VSCO会员 = type=http-response, pattern=^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/vsco.js, timeout=60, script-update-interval=0
 微信跳过微信中转页面,解除被封禁链接 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
 # --------- X --------- 
