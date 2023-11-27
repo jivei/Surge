@@ -1,0 +1,9 @@
+#!name=Crack.用药助手
+#!desc=一次性解锁，开启模块进入软件即可，如果无效按[恢复购买]进行恢复！一次性解锁完成即可关闭模块。
+
+[Script]
+用药助手会 = type=http-request, pattern=^https://newdrugs.dxy.cn, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/yyzscook.js, timeout=60, script-update-interval=0
+用药助手员 = type=http-response, pattern=https://newdrugs.dxy.cn/app/user/pro/stat?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/yyzs2.js, timeout=60, script-update-interval=0
+
+[MITM]
+hostname = %APPEND% newdrugs.dxy.cn

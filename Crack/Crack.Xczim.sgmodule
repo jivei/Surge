@@ -1,0 +1,8 @@
+#!name=Crack.西窗烛
+#!desc=一次性解锁，开启模块进入软件即可，如果无效按[恢复购买]进行恢复！一次性解锁完成即可关闭模块。
+
+[Script]
+西窗烛会员 = type=http-response, pattern=https://lchttpapi.xczim.com/*, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/XiChuangZhuProCrack.js, timeout=60, script-update-interval=0
+
+[MITM]
+hostname = %APPEND% lchttpapi.xczim.com

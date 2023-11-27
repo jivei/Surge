@@ -1,0 +1,8 @@
+#!name=Crack.Lightroom
+#!desc=一次性解锁，开启模块进入软件即可，如果无效按[恢复购买]进行恢复！一次性解锁完成即可关闭模块。
+
+[Script]
+Lightroom会员=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/lightroom.js
+
+[MITM]
+hostname = %APPEND% photos.adobe.io

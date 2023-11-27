@@ -1,0 +1,8 @@
+#!name=Crack.一言
+#!desc=一次性解锁，开启模块进入软件即可，如果无效按[恢复购买]进行恢复！一次性解锁完成即可关闭模块。
+
+[Script]
+一言会员 = type=http-response, pattern=^https:\/\/app\.yiyan\.art\/yiyan\/, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/YiYanProCrack.js, timeout=60, script-update-interval=0
+
+[MITM]
+hostname = %APPEND% app.yiyan.art

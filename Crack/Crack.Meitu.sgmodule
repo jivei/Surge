@@ -1,0 +1,10 @@
+#!name=Crack.美图系列
+#!desc=一次性解锁，开启模块进入软件即可，如果无效按[恢复购买]进行恢复！一次性解锁完成即可关闭模块。
+
+[Script]
+美图系列会员 = type=http-response,pattern=^https?:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/mtxl.js
+美图秀秀AI会员 = type=http-response,pattern=^https?:\/\/api\.posters\.meitu\.com\/matting\/znxc\.json,requires-body=1,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/meituxiuxiu.js
+美图秀秀会员 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/mtxx.js
+
+[MITM]
+hostname = %APPEND% *.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com,api-*.meitu.com
