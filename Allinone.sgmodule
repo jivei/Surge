@@ -2,6 +2,8 @@
 #!desc=没有，没有，没有。
 
 [General]
+# 本模块不再更新，以后更新净化模块👇
+# https://raw.githubusercontent.com/jivei/Surge/main/PurifyAllInOne.sgmodule
 # iTunes解锁系列，启用模块会导致Appstore无法登录，目前仅添加万源阅读会员，后续陆续添加app，如有需要，请自行添加在线模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/AllFuckiTunes.sgmodule
 # 更新日志每周清空添加至下方功能列表，注意事项常驻：
