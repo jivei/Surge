@@ -1,0 +1,5 @@
+#!name=Crack.Vision
+#!desc=Vision永久订阅
+[Script]
+Vision会 = type=http-response,pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/Vision.js
+Vision员 = type=http-request,pattern=^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$),requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/Vision.js
