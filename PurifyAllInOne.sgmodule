@@ -10,19 +10,19 @@
 # 如果已有适合自己的配置文件
 # 请务必添加此分流规则配合使用，策略为REJECT👇
 # https://raw.githubusercontent.com/jivei/Surge/main/Adguard.list
-# Boxjs，ScriptHub，SubStore三合一👇
+# Boxjs，ScriptHub，SubStore三合一模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/SystemPlus.sgmodule
-# 毒奶网页去广告👇
+# 毒奶网页去广告模块👇
 # https://raw.githubusercontent.com/jivei/Adblock/main/Adblock4limbo.sgmodule
-# 每日自动签到👇
+# 每日自动签到模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/Checkin.sgmodule
-# 每日自动签到获取cookie👇
+# 每日自动签到获取cookie模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/Checkincookie.sgmodule
-# TF账户管理+跨区👇
+# TF账户管理+跨区模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/TFA.sgmodule
-# Youtube净化👇
+# Youtube净化模块👇
 # https://yfamily.vercel.app/module/YouTubeAd.sgmodule
-# 网抑云黑胶Vip👇
+# 网抑云黑胶Vip模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/netease.sgmodule
 # 屏蔽系统更新如有需要使用Safari打开👇
 # https://d-updater.i4.cn/web/mobileconfig/iOS16.mobileconfig
