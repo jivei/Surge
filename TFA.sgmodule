@@ -1,4 +1,4 @@
-#!name=TestFlight账户管理
+#!name=Tools.TestFlight账户管理
 #!desc=自动存储/合并多个TestFlight账户列表, 并可导出/分享TestFlight App。
 #!system=ios
 #!author=NobyDa
