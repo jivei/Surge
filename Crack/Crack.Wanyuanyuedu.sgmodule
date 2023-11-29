@@ -1,5 +1,5 @@
 #!name=Crack.万源阅读
-#!desc=随用随关，开启该模块影响AppStore登录
+#!desc=解锁万源阅读会员
 
 [Script]
 万源阅读会员= type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/wanyuanyuedu.js, timeout=60, script-update-interval=0

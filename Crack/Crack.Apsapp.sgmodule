@@ -1,5 +1,5 @@
 #!name=Crack.傲软系列
-#!desc=一次性解锁，开启模块进入软件即可，如果无效按[恢复购买]进行恢复！一次性解锁完成即可关闭模块。
+#!desc=解锁傲软系列会员
 
 [Script]
 傲软抠图傲软扫描傲软PDF转换傲软PDF编辑傲软投屏咖映轻闪PDF乃糖小组件佐糖照片会员 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/arqjt.js

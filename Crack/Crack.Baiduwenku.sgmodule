@@ -1,5 +1,5 @@
 #!name=Crack.百度文库
-#!desc=一次性解锁，开启模块进入软件即可，如果无效按[恢复购买]进行恢复！一次性解锁完成即可关闭模块。
+#!desc=解锁百度文库会员
 
 [Script]
 百度文库会员= type=http-response, pattern=^https:\/\/appwk\.baidu\.com\/naapi\/(user\/getinfo|doc\/getdocdownloadcopywriter), script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BaiduWenku_crack.js, requires-body=true, max-size=3145728, timeout=30

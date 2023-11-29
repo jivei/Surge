@@ -1,5 +1,5 @@
 #!name=Crack.一甜相机
-#!desc=一次性解锁，开启模块进入软件即可，如果无效按[恢复购买]进行恢复！一次性解锁完成即可关闭模块。
+#!desc=解锁一甜相机会员
 
 [Script]
 一甜相机会员 = type=http-response, pattern=^https?:\/\/m2u-api\.getkwai\.com\/api-server\/api\/v2\/vip\/vipUserInfo, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/1TianCamVipCrack.js, requires-body=true, max-size=3145728, timeout=30

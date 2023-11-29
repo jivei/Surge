@@ -1,5 +1,5 @@
 #!name=Crack.墨迹天气
-#!desc=一次性解锁，开启模块进入软件即可，如果无效按[恢复购买]进行恢复！一次性解锁完成即可关闭模块。
+#!desc=解锁墨迹天气会员
 
 [Script]
 墨迹天气 = type=http-response, pattern=^https?:\/\/.*\.api\.moji\.com\/(sns\/json\/profile\/get_info_.+|json\/member_new\/homepage_info.+|user\/personal\/json\/profile_.+|flycard\/novice|shortvideo\/.+), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/mojitianqi.js, timeout=60, script-update-interval=0

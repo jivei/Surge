@@ -1,5 +1,5 @@
 #!name=Crack.Replica
-#!desc=一次性解锁，开启模块进入软件即可，如果无效按[恢复购买]进行恢复！一次性解锁完成即可关闭模块。
+#!desc=解锁Replica会员
 
 [Script]
 Replica会员 = type=http-response, pattern=^https?:\/\/api\.apphud\.com\/v1\/subscriptions, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/replica.js, timeout=60, script-update-interval=0
