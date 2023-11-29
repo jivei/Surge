@@ -130,7 +130,8 @@ Keep-Course净化 = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/a
 # --------- I --------- 
 IT之家净化 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
 # --------- P --------- 
-移除皮皮虾水印 = type=http-response, pattern=^https?:\/\/.*\.pipix\.com\/bds\/(feed\/stream|comment\/cell_reply|cell\/cell_comment|cell\/detail|ward\/list|user\/favorite|user\/cell_coment|user\/cell_userfeed|user\/publish_list), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/pipixia.adblock.js, timeout=60, script-update-interval=0
+起点我的界面 = type=http-response, pattern=^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v3\/user\/getaccountpage, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Qidian_my.js, timeout=60, script-update-interval=0
+皮皮虾水印 = type=http-response, pattern=^https?:\/\/.*\.pipix\.com\/bds\/(feed\/stream|comment\/cell_reply|cell\/cell_comment|cell\/detail|ward\/list|user\/favorite|user\/cell_coment|user\/cell_userfeed|user\/publish_list), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/pipixia.adblock.js, timeout=60, script-update-interval=0
 # --------- T --------- 
 贴吧净化1 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js
 贴吧净化2 = type=http-response,pattern=^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)\?cmd,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js
@@ -535,6 +536,7 @@ https://access.mypikpak.com/access_controller/v1/area_accessible - reject
 ^https?:\/\/app2.autoimg.cn\/appdfs\/ - reject
 # 起点读书
 ^https?:\/\/magev\d\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen - reject
+^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch - reject
 # --------- R ---------
 # 瑞幸咖啡 
 ^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew - reject
@@ -1091,6 +1093,8 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 # 起点读书
 ^https?:\/\/qidian\.qpic\.cn\/qidian_common data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/mage\.if\.qidian\.com\/Atom\.axd\/Api\/Client\/GetConfIOS data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/adv\/getadvlistbatch data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 汽车之家
 ^https?:\/\/adproxy\.autohome\.com\.cn\/AdvertiseService\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/app2\.autoimg\.cn\/apppdfs\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
