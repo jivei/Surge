@@ -451,7 +451,7 @@ https://open3.vistastory.com/v3/api.*get_popup - reject
 ^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ - reject
 # 快影
 ^https?:\/\/api\.kmovie\.gifshow\.com\/rest\/n\/kmovie\/app\/(resource|banner) - reject
-# KeepStyle
+# Keep
 ^https?:\/\/api\.gotokeep\.com\/kprime\/v\d\/popups\/primeGuide - reject
 ^https?:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v\d\/ad - reject
 ^https?:\/\/api.gotokeep.com/cauchy/growth/init - reject
