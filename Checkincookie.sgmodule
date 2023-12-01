@@ -29,8 +29,8 @@ IT之家获取cookie   = type=http-response, pattern=^https:\/\/my\.ruanmei\.com
 托迈酷客获取Cookie = type=http-request,pattern=^https:\/\/apis\.folidaymall\.com\/online\/capi\/uc\/getCount,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js
 # ---------------------------
 # 哔哩哔哩APP，网页->登录
-#哔哩哔哩获取Cookie = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
-#哔哩哔哩获取Cookie = type=http-request,pattern=^https:\/\/m.bilibili.com/$,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
+哔哩哔哩获取Cookie = type=http-request,pattern=^https:\/\/app\.bilibili\.com\/x\/resource\/domain\?,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
+哔哩哔哩获取Cookie = type=http-request,pattern=^https:\/\/m.bilibili.com/$,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BiliBili.js
 
 [MITM]
 hostname= %APPEND% apis.folidaymall.com,game.dominos.com.cn,yunbusiness.ccb.com,app.bilibili.com,m.bilibili.com,api.cloud.189.cn,api.tuhu.cn,auth.alipan.com,*.amap.com,miniapp.yaduo.com,webapi.qmai.cn,*.huazhu.com,my.ruanmei.com,c.tieba.baidu.com,tiebac.baidu.com
