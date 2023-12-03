@@ -6,7 +6,7 @@
 阿里云盘APP获取cookie = requires-body=1,type=http-response,pattern=https:\/\/auth.(aliyundrive|alipan).com\/v2\/account\/token,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/aliYunPanCheckIn.js
 # ---------------------------
 # 高德地图APP，微信小程序，支付宝->高德打车->福利中心
-高德打车APP获取cookie = type=http-response, pattern=^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=), requires-body=true, max-size=3145728, script-path= https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, script-update-interval=0
+高德打车APP获取cookie = type=http-response, pattern=^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, script-update-interval=0
 # ---------------------------
 # 亚朵APP->会员->每日签到->签到
 亚朵酒店获取cookie  = type=http-request, pattern=^https:\/\/miniapp\.yaduo\.com\/atourlife\/signIn\/signIn.+, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=30
