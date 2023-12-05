@@ -1,0 +1,24 @@
+#!name=Crack.常驻会员
+#!desc=B612咔叽,Lightroom,Spotify,Xmind,一言,傲软系列,彩云天气,用药助手,百度文库,美图美颜系列,西窗烛
+
+[Script]
+B612咔叽会员 = type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/612.js
+Lightroom会员=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/lightroom.js
+Spotify会不能超高音质  = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
+Spotify员不能超高音质  = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
+Xmind思维导图会员 = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn|net|app)\/.+\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js
+一言会员 = type=http-response, pattern=^https:\/\/app\.yiyan\.art\/yiyan\/, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/YiYanProCrack.js, timeout=60, script-update-interval=0
+傲软抠图傲软扫描傲软PDF转换傲软PDF编辑傲软投屏咖映轻闪PDF乃糖小组件佐糖照片会员 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/arqjt.js
+彩云天气会员 = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/caiyun.js
+用药助手会 = type=http-request, pattern=^https://newdrugs.dxy.cn, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/yyzscook.js, timeout=60, script-update-interval=0
+用药助手员 = type=http-response, pattern=https://newdrugs.dxy.cn/app/user/pro/stat?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/yyzs2.js, timeout=60, script-update-interval=0
+百度文库会员= type=http-response, pattern=^https:\/\/appwk\.baidu\.com\/naapi\/(user\/getinfo|doc\/getdocdownloadcopywriter), script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BaiduWenku_crack.js, requires-body=true, max-size=3145728, timeout=30
+美图系列会员 = type=http-response,pattern=^https?:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/mtxl.js
+美图秀秀AI会员 = type=http-response,pattern=^https?:\/\/api\.posters\.meitu\.com\/matting\/znxc\.json,requires-body=1,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/meituxiuxiu.js
+美图秀秀会员 = type=http-response,pattern=^https?:\/\/((h5|api)\.xiuxiu|api-sub|api\.posters)\.meitu\.com\/.+\/(vip|user|h\d|center|home),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/mtxx.js
+美颜相机会员 = type=http-response,pattern=^https?:\/\/(api|community)\.meiyan\.com\/(vip|v\d)\/(user_center|user_info|user\/(.*?)),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/myxj.js
+西窗烛会员 = type=http-response, pattern=https://lchttpapi.xczim.com/*, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/XiChuangZhuProCrack.js, timeout=60, script-update-interval=0
+
+
+[MITM]
+hostname = %APPEND% user-kaji-api.b612kaji.com,photos.adobe.io,spclient.wg.spotify.com,*xmind.*,app.yiyan.art,*.aoscdn.com, *.apsapp.cn,biz.cyapi.cn,newdrugs.dxy.cn,appwk.baidu.com,*.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com,api-*.meitu.com,*.meiyan.com,lchttpapi.xczim.com
