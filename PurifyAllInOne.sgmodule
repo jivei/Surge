@@ -1252,6 +1252,8 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 # 腾讯视频 
 ^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # --------- W --------- 
+# 无忧行
+^http:\/\/oss\.jegotrip\.com\.cn\/\/\/\/\/appSyncimage\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 网上国网 
 ^https:\/\/(csc-service|osg-base)\.sgcc\.com\.cn:\d+\/dtportal-app\/app_api\/selectExhibition data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 微信移除公众号中的推广内容
