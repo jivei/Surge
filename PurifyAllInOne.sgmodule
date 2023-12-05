@@ -7,7 +7,7 @@
 # 此模块建议和配置文件一起食用请长按复制链接从URL导入配置文件👇
 # https://raw.githubusercontent.com/jivei/Surge/main/nssurge.conf
 # 如果已有适合自己的配置文件
-# 请务必添加此分流规则配合使用，策略为REJECT👇
+# IOS Surge请务必添加此分流规则配合使用，策略为REJECT👇
 # https://raw.githubusercontent.com/jivei/Surge/main/Adguard.list
 # Boxjs，ScriptHub，SubStore三合一模块👇
 # https://raw.githubusercontent.com/jivei/Surge/main/SystemPlus.sgmodule
