@@ -2,6 +2,7 @@
 #!desc=解锁Spark会员
 
 [Script]
+SparkMailProCrack = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(receipts|subscribers\/.{36}|subscribers\/\w{14})$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/yqc007/QuantumultX/master/SparkMailProCrack.js, timeout=60, script-update-interval=0
 Spark会员 = type=http-response, pattern=^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/spark.js, timeout=60, script-update-interval=0
 
 [MITM]
