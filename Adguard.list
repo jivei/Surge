@@ -54,9 +54,10 @@ DOMAIN,lc.map.baidu.com
 # 百度网盘
 DOMAIN,mobads.baidu.com
 DOMAIN,sf3-fe-tos.pglstatp-toutiao.com
-# 百度贴吧
+# 贴吧屏蔽域名dns查询
+DOMAIN,180.76.76.200
 IP-CIDR,180.76.76.200/32,no-resolve
-RULE-SET,https://raw.githubusercontent.com/app2smile/rules/master/rule/tieba-ad.list,REJECT-DROP
+IP-CIDR,180.76.76.200/32,no-resolve
 # 哔哩哔哩
 DOMAIN,httpdns.bilivideo.com
 URL-REGEX,^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH
