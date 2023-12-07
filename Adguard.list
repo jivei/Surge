@@ -57,7 +57,6 @@ DOMAIN,sf3-fe-tos.pglstatp-toutiao.com
 # 贴吧屏蔽域名dns查询
 DOMAIN,180.76.76.200
 IP-CIDR,180.76.76.200/32,no-resolve
-IP-CIDR,180.76.76.200/32,no-resolve
 # 哔哩哔哩
 DOMAIN,httpdns.bilivideo.com
 URL-REGEX,^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH
