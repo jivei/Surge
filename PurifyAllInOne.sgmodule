@@ -1069,6 +1069,8 @@ https:\/\/api5-normal-lq\.dcarapi\.com\/motor\/selection\/v2\/card_list data="ht
 # 和风天气
 ^https:\/\/hfapp-service\.qweather\.net\/v2\.0\/app\/ad\/list\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # --------- J --------- 
+# 建行生活
+^https:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A009 data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 京东系列
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-array.json"
