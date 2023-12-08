@@ -24,8 +24,6 @@
 ^https:\/\/limbopro\.com\/Adguard\/Adblock4limbo\.function\.js data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 
 [Script]
-# 百度纯净搜索测试更新
-^https?:\/\/(www|m)\.baidu\.com\/?($|\?(from=\w{8,9}|tn=&from=)) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/baidu.html" header="Content-Type: text/html; charset=utf-8"
 Paddle1 = type=http-request,pattern=^https://v3.paddleapi.com/3.2/license/verify,requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/paddle_act.js
 Paddle2 = type=http-request,pattern=^https://v3.paddleapi.com/3.2/license/activate,requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/paddle_act.js
 elpass = type=http-request,pattern=^https://api.elpass.app/device/management,requires-body=1,max-size=0,debug=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/paddle_act.js
