@@ -524,7 +524,7 @@ https://tagit.hyhuo.com/recover/list - reject
 # MIX
 ^https?:\/\/dispatcher\.camera360\.com\/api\/v1\/list$ - reject
 ^https?:\/\/mix-api\.camera360\.com\/v\d\/operational-positions - reject
-#马卡龙
+# 马卡龙
 ^https:\/\/app\.api\.versa-ai\.com\/launch\/ads\? - reject
 # 买单吧
 ^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do - reject
@@ -1126,7 +1126,7 @@ https:\/\/api5-normal-lq\.dcarapi\.com\/motor\/selection\/v2\/card_list data="ht
 # 麦当劳
 ^https?:\/\/api\.mcd\.cn\/bff\/portal\/home\/splash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 农业银行
-^https:\/\/midc\.cdn-static\.abchina\.com\.cn\/distributecenterimg\/file\/download\/(bdfb4|86fb9) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/midc\.cdn-static\.abchina\.com\.cn\/distributecenterimg\/file\/download\/(bdfb4|86fb9|7aa68) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/(9ce31|1bf6e) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[7-9]{1}[A-Z0-9]{1}\/[A-Z0-9]{2}\/rBsZ.+\.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/6bd18.*? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
