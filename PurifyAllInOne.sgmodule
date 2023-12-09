@@ -107,7 +107,6 @@ B站移除皮肤推送 = type=http-response, pattern=^https:\/\/app\.bilibili\.c
 高德地图打车页红点角标弹窗净化 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 高德地图天气图标推广卡片净化 = type=http-response,pattern=^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js
 # --------- H ---------
-航旅纵横净化 = type=http-response, pattern=^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Umetrip_remove_ads.js, timeout=30
 # --------- M --------- 
 米家净化 = type=http-response, pattern=https:\/\/home\.mi\.com\/cgi-op\/api\/v1\/recommendation\/myTab, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/mijia.js, timeout=60, script-update-interval=0
 慢慢买净化 = type=http-response, pattern=^https?:\/\/apapia-sqk\.manmanbuy\.com\/index_json\.ashx, script-path=https://raw.githubusercontent.com/Script-Hub-Org/Script-Hub/main/scripts/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument="splashAD->ddgksf2013"
@@ -378,6 +377,8 @@ https://zone.guiderank-app.com/guiderank-web/app/ad/listLaunchADByCity.do - reje
 # 国家医保服务平台
 ^https:\/\/fuwu\.nhsa\.gov\.cn\/ebus\/fuwu\/api\/base\/cms\/iep\/web\/cms\/hmpgcfg\/queryAppHmpgCfgByApp - reject
 # --------- H ---------
+# 航旅纵横
+^https?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native - reject
 # 韩剧TV
 ^https?:\/\/gfp\.veta\.naver\.com\/adcall\? - reject
 ^https?:\/\/api\.hanju\.koudaibaobao\.com\/api\/carp\/kp\? - reject
