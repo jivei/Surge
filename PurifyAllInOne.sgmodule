@@ -221,9 +221,9 @@ Soul净化 = type=http-response, pattern=^https:\/\/ssp\.soulapp\.cn\/api\/q, re
 # 宝宝树
 ^http:\/\/pic08\.babytreeimg\.com\/knowledge\/2022\/0923\/\w+ - reject
 # 哔哩哔哩
-^https?:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ - reject
-^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords - reject
-^https:\/\/app\.bilibili\.com\/x\/resource\/ip - reject
+^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 百度系列
 ^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo - reject
 ^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement - reject
