@@ -585,9 +585,6 @@ https://access.mypikpak.com/access_controller/v1/area_accessible - reject
 # 汽车之家
 ^https?:\/\/adproxy.autohome.com.cn\/AdvertiseService\/ - reject
 ^https?:\/\/app2.autoimg.cn\/appdfs\/ - reject
-# 起点读书
-#^https?:\/\/magev\d\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen - reject
-#^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch - rejec
 # --------- R ---------
 # 瑞幸咖啡 
 ^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew - reject
@@ -1202,14 +1199,6 @@ https?://res\.xiaojukeji\.com\/resapi\/activity\/mget data="https://raw.githubus
 ^https:\/\/novel\.html5\.qq\.com\/qbread\/api data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 去哪儿
 ^https:\/\/qde\.qunar\.com\/preload data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-# 起点读书
-#^https?:\/\/qidian\.qpic\.cn\/qidian_common data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
-#^https?:\/\/mage\.if\.qidian\.com\/Atom\.axd\/Api\/Client\/GetConfIOS data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
-#^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-#^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-#^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/refresh data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-#^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-#^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/adv\/getadvlistbatch data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 汽车之家
 ^https?:\/\/adproxy\.autohome\.com\.cn\/AdvertiseService\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/app2\.autoimg\.cn\/apppdfs\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
