@@ -118,7 +118,7 @@ Keep-Basic净化 = type=http-response,pattern=https:\/\/api\.gotokeep\.com\/conf
 Keep-Ad净化 = type= http-response,pattern=https:\/\/kad\.gotokeep\.com\/op-engine-webapp\/v1\/ad,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Keep/kad.js
 Keep-Course净化 = type=http-response,pattern=^https?:\/\/api\.gotokeep\.com\/athena\/v7\/people\/course\/(practiced|general),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/Maasea/surgeModule/master/Script/Keep/course.js
 IT之家净化 = type=http-response,pattern=^https:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js
-起点我的界面 = type=http-response, pattern=^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v3\/user\/getaccountpage, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/Qidian_my.js, timeout=60, script-update-interval=0
+起点读书净化 = type=http-response, pattern=^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/(v4\/client\/getsplashscreen|v2\/deeplink\/geturl|v1\/(client\/getconf|bookshelf\/getHoverAdv|adv\/getadvlistbatch\?positions=iOS_tab|dailyrecommend\/getdailyrecommend)), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/qidian.js, timeout=60, script-update-interval=0
 皮皮虾水印 = type=http-response, pattern=^https?:\/\/.*\.pipix\.com\/bds\/(feed\/stream|comment\/cell_reply|cell\/cell_comment|cell\/detail|ward\/list|user\/favorite|user\/cell_coment|user\/cell_userfeed|user\/publish_list), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/pipixia.adblock.js, timeout=60, script-update-interval=0
 Soul净化 = type=http-response, pattern=^https:\/\/ssp\.soulapp\.cn\/api\/q, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/soul/soul_ads.js, timeout=60, script-update-interval=0
 什么值得买_搜索结果去广告 = type=http-response,requires-body=1,max-size=0,pattern=^https?:\/\/s-api\.smzdm\.com\/sou\/list_v10,script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_remove_ads.js
@@ -586,8 +586,8 @@ https://access.mypikpak.com/access_controller/v1/area_accessible - reject
 ^https?:\/\/adproxy.autohome.com.cn\/AdvertiseService\/ - reject
 ^https?:\/\/app2.autoimg.cn\/appdfs\/ - reject
 # 起点读书
-^https?:\/\/magev\d\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen - reject
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch - reject
+#^https?:\/\/magev\d\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen - reject
+#^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch - rejec
 # --------- R ---------
 # 瑞幸咖啡 
 ^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew - reject
@@ -709,10 +709,6 @@ https://top-widgets-api.xiaozujian.com/api/ad/config - reject
 ^https:\/\/rescdn\.qqmail\.com\/qqmail\/images\/.+\.(png|jpg)$ - reject
 ^https?:\/\/119\.29\.29\.29\/d - reject
 ^https?:\/\/m\.qianbao\.qq\.com\/pages\/walletHome\?invisible - reject
-^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen - reject
-^https://magev6.if.qidian.com/argus/api/v1/client/iosad - reject
-^https://magev6.if.qidian.com/argus/api/v1/bookshelf/getad - reject
-^https://magev6.if.qidian.com/argus/api/v4/client/getsplashscreen? - reject
 ^https?:\/\/open\.qyer\.com\/qyer\/config\/get - reject
 ^https?:\/\/media\.qyer\.com\/ad\/ - reject
 # 腾讯视频 
@@ -1207,13 +1203,13 @@ https?://res\.xiaojukeji\.com\/resapi\/activity\/mget data="https://raw.githubus
 # 去哪儿
 ^https:\/\/qde\.qunar\.com\/preload data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 起点读书
-^https?:\/\/qidian\.qpic\.cn\/qidian_common data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
-^https?:\/\/mage\.if\.qidian\.com\/Atom\.axd\/Api\/Client\/GetConfIOS data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/refresh data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/adv\/getadvlistbatch data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+#^https?:\/\/qidian\.qpic\.cn\/qidian_common data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+#^https?:\/\/mage\.if\.qidian\.com\/Atom\.axd\/Api\/Client\/GetConfIOS data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
+#^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+#^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+#^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/refresh data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+#^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+#^https:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/adv\/getadvlistbatch data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 汽车之家
 ^https?:\/\/adproxy\.autohome\.com\.cn\/AdvertiseService\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
 ^https?:\/\/app2\.autoimg\.cn\/apppdfs\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-img.gif"
