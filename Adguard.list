@@ -182,21 +182,13 @@ DOMAIN,aaid.uyunad.com
 DOMAIN,adui.tg.meitu.com
 #猫眼电影小程序
 DOMAIN,ad.maoyan.com
-#电竞赛事+热门赛事
 URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/api\/mobile\/(hotMatchList|eSportsIps)
-#猫眼放映厅
 URL-REGEX,^https:\/\/vod-movie\.maoyan\.com\/vod\/video\/onlineMovies\.json
-#精彩演出
 URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/movie\/wonderShow
-#七日精选 
 URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/performances\/calendar\/0
-#今日必抢
 URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/performances\/rob\/main
-#大咖新动态
 URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/celebrityBasicList\/query
-#为你推荐 
 URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/myshow\/ajax\/recommend\/performances
-#首页底部推荐  
 URL-REGEX,^https:\/\/api\.maoyan\.com\/sns\/common\/feed\/channel\/v2\/list\.json
 # --------- O --------- 
 # Outlook
