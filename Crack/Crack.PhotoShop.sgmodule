@@ -1,0 +1,11 @@
+#!name=Crack.PhotoShop
+#!desc=local
+
+[Script]
+
+PSExpress = type=http-response, pattern=https://lcs-mobile-cops.adobe.io/mobiles/access_profile/v3, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/PSExpress.js, timeout=60, script-update-interval=0
+
+[MITM]
+
+hostname = %APPEND% lcs-mobile-cops.adobe.io
+
