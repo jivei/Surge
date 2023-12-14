@@ -5,7 +5,7 @@
 
 引用包括但不限于：
 
-Baby，秋城，Keywos，毒奶，墨鱼，小一，可莉，RuCu6，叮当猫，app2smile，Maasea，kokoryh，小帽，等等不再一一致谢(°∀°)ﾉ
+Baby，秋城，毒奶，墨鱼，小一，可莉，RuCu6，叮当猫，app2smile，Maasea，kokoryh，小帽，等等不再一一致谢(°∀°)ﾉ
 
 点击进入直播间:
 
