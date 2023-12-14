@@ -1,5 +1,7 @@
 //广告拦截合集
 //2023-11-10更新
+# 443端口
+AND,((DEST-PORT,443), (PROTOCOL,UDP)),REJECT-NO-DROP
 # --------- A --------- 
 # 阿里巴巴
 DOMAIN,httpdns.alicdn.com
