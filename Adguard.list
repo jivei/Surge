@@ -79,6 +79,8 @@ DOMAIN,md-i-s.apptimize.com
 # 菜鸟
 AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amdc|\d).+\/amdc\/mobileDispatch$)),REJECT-DROP
 # --------- D --------- 
+# 滴滴
+DOMAIN,gwp.xiaojukeji.com
 #多点
 URL-REGEX,^https:\/\/flow\.dmall\.com\/app\/home\/pops
 # 豆瓣
