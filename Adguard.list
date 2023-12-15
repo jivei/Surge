@@ -1,5 +1,5 @@
-//广告拦截合集
-//2023-11-10更新
+#!name=广告拦截分流规则
+#!author=RuCu6 dgksf2021 fmz200 lodepuly
 # 443端口
 AND,((DEST-PORT,443), (PROTOCOL,UDP)),REJECT-NO-DROP
 # --------- A --------- 
@@ -40,7 +40,7 @@ DOMAIN,vs6.bj2ct.u3.ucweb.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,u3.ucweb.com
 # --------- B --------- 
-#霸王茶姬 小程序净化
+#霸王茶姬
 URL-REGEX,^https:\/\/webapi\.qmai.cn\/web\/catering\/advertising
 URL-REGEX,^https:\/\/webapi\.qmai.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach$
 DOMAIN,logger.qmai.cn
@@ -154,7 +154,7 @@ URL-REGEX,^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/activity
 # 蓝奏云
 DOMAIN,statics.woozooo.com
 # --------- M --------- 
-#蜜雪冰城 @是豆豆呀 mxsa.mxbc.net
+#蜜雪冰城
 URL-REGEX,^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query
 #麦当劳 微信小程序净化
 URL-REGEX,^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity
