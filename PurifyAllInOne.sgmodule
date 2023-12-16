@@ -354,9 +354,6 @@ https://zone.guiderank-app.com/guiderank-web/app/ad/listLaunchADByCity.do - reje
 # 高德地图
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ - reject
 ^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ - reject
-# Google重定向
-^(http|https):\/\/(www.)?(g|google)\.cn https://www.google.com 302
-^https?://(www.)?(g|google).cn https://www.google.com 302
 # 国家医保服务平台
 ^https:\/\/fuwu\.nhsa\.gov\.cn\/ebus\/fuwu\/api\/base\/cms\/iep\/web\/cms\/hmpgcfg\/queryAppHmpgCfgByApp - reject
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ - reject
