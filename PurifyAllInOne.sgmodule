@@ -27,6 +27,10 @@
 # 全面移除破解会员功能，改为独立模块，如有需要，请自行查看按需添加或者下载Github库Crack整个zip本地使用👇
 # https://github.com/jivei/Surge/tree/main/Crack
 
+[Header Rewrite]
+# 网易云音乐version8.9.20以下
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/batch header-replace-regex cookie appver=.+$ appver=2333
+
 [Script]
 # --------- 爱奇艺净化 --------- 
 首页信息流广告 = type=http-response, pattern=^http:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, timeout=60, script-update-interval=0
@@ -736,7 +740,7 @@ https://mapi.appvipshop.com/vips-mobile/rest/activity/advertisement/get - reject
 https://support.you.163.com/appversync/check.do - reject
 ^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json - reject
 ^https?:\/\/m\.you\.163\.com\/activity\/popWindow - reject
-# ^https?:\/\/yanxuan.nosdn.127.net\/(static-union\/)?.*\.gif - reject
+^https?:\/\/yanxuan.nosdn.127.net\/(static-union\/)?.*\.gif - reject
 ^https?:\/\/yanxuan\.nosdn\.127\.net\/.*\.mp4 - reject
 # 威锋
 ^https?:\/\/api\.wfdata\.club\/v2\/yesfeng\/(infoCenterAd|yesList) - reject
@@ -938,10 +942,6 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend - reject
 # 智行火车票
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/scjson\/tripAds - reject
-
-[Header Rewrite]
-# 网易云音乐
-^https?:\/\/interface3?\.music\.163\.com\/eapi\/batch header-replace-regex cookie appver=.+$ appver=2333
 
 [Map Local]
 # --------- A --------- 
