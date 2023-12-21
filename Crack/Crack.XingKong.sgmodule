@@ -1,0 +1,10 @@
+#!name=Crack.XingKong
+#!desc=解锁星空订阅
+
+[Script]
+
+星空 = type=http-response, pattern=^https:\/\/buy\.itunes\.apple\.com\/verifyReceipt, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/Yu9191/Rewrite/main/itunes/Xk.js, timeout=60, script-update-interval=0
+
+[MITM]
+
+hostname = %APPEND% buy.itunes.apple.com
