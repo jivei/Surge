@@ -1,4 +1,4 @@
-#!name=签到任务(获取cookie)
+#!name=签到任务获取cookie
 #!desc=全部获取之后关闭此模块避免不必要的MitM若cookie过期再次开启获取即可
 
 [Script]
