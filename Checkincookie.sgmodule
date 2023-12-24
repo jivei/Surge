@@ -1,5 +1,5 @@
-#!name=签到任务获取cookie
-#!desc=全部获取之后关闭此模块避免不必要的MitM若cookie过期再次开启获取即可
+#!name=Checkincookie
+#!desc=Cookie全部获取之后关闭此模块避免不必要的MitM若cookie过期再次开启获取即可
 
 [Script]
 # 高德地图APP，微信小程序，支付宝->高德打车->福利中心
