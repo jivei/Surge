@@ -1,4 +1,4 @@
-#!name=签到任务
+#!name=Checkin
 #!desc=每日0点1分开始自动执行签到任务
 
 [Script]
