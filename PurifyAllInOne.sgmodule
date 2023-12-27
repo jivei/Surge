@@ -232,15 +232,6 @@ Soul净化 = type=http-response, pattern=^https:\/\/ssp\.soulapp\.cn\/api\/q, re
 # --------- B ---------
 # 宝宝树
 ^http:\/\/pic08\.babytreeimg\.com\/knowledge\/2022\/0923\/\w+ - reject
-# 哔哩哔哩
-^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/api\.bilibili\.com\/x\/v2\/dm\/qoe\/show\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/app\.bilibili\.com\/x\/resource\/ip data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 百度系列
 ^https?:\/\/mime\.baidu\.com\/v\d\/IosStart\/getStartInfo - reject
 ^https?:\/\/mime\.baidu\.com\/v\d\/activity\/advertisement - reject
@@ -977,14 +968,14 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^http:\/\/m\.meitun\.com\/newapi\/router\/topic\/hometptf\/feedRecommend data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^http:\/\/plough\.babytree\.com\/plough\.do data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 哔哩哔哩
-^https?:\/\/api\.vc\.bilibili\.com\/search_svr\/v\d\/Search\/recommend_words data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https?:\/\/api\.vc\.bilibili\.com\/topic_svr\/v1\/topic_svr data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https?:\/\/api\.vc\.bilibili\.com\/dynamic_svr\/v1\/dynamic_svr\/mix_uplist data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https?:\/\/api\.bili(bili\.com|api\.net)\/pgc\/season\/app\/related\/recommend\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/Flash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
+^https:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/api\.bilibili\.com\/x\/v2\/dm\/qoe\/show\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/app\.bilibili\.com\/x\/resource\/ip data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 百度云
 ^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|rest\/2\.0\/pcs\/adx)\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 ^https?:\/\/update\.pan\.baidu\.com\/statistics\? data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
