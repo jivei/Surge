@@ -1,5 +1,7 @@
 #!name=广告拦截分流规则
 #!author=RuCu6 dgksf2021 fmz200 lodepuly
+DOMAIN,mall.bilibili.com
+DOMAIN,passport.bilibili.com
 # --------- A --------- 
 # 阿里巴巴
 DOMAIN,httpdns.alicdn.com
