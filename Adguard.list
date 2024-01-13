@@ -391,5 +391,3 @@ URL-REGEX,^https:\/\/fscdn\.zto\.com\/fs1
 URL-REGEX,^https?:\/\/app\.95504\.net\/app\/json\/page_ad\/initPageAd\?ver= // 中石油去开屏广告发现
 URL-REGEX,^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getPopAdData // 中油好客e站小程序弹窗广告
 URL-REGEX,^https:\/\/minipro\.95504\.net\/app\/json\/ad\/getIndexAdData // 中油好客e站小程序底部横幅广告
-# 招行首页横幅广告
-URL-REGEX,^https:\/\/mbmodule-openapi\.paas\.cmbchina\.com\/graphic\/v2\/module\/graphic
