@@ -104,8 +104,6 @@ URL-REGEX,^https:\/\/dsp\.fcbox\.com
 DOMAIN,amap-aos-info-nogw.amap.com
 DOMAIN,awaken.amap.com
 DOMAIN,free-aos-cdn-image.amap.com
-# 工商银行 开屏广告
-DOMAIN,pageviewp.icbc.com.cn
 # 广告联盟
 DOMAIN,is.snssdk.com
 DOMAIN,mi.gdt.qq.com
