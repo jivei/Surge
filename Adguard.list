@@ -236,13 +236,13 @@ DOMAIN-SUFFIX,gdt.qq.com
 DOMAIN,qzs.gdtimg.com
 DOMAIN,mobads-pre-config.cdn.bcebos.com
 DOMAIN,pgdt.ugdtimg.com
-URL-REGEX, ^https:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ
-URL-REGEX, ^https:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads
-URL-REGEX, ^https:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad
-URL-REGEX, ^https:\/\/dsp\-x\.jd\.com\/adx\/sdk
-URL-REGEX, ^https:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation)
-URL-REGEX, ^https:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo
-URL-REGEX, ^https:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad
+URL-REGEX,^https:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ
+URL-REGEX,^https:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads
+URL-REGEX,^https:\/\/api-access\.(pangolin-sdk-toutiao|pangolin-sdk-toutiao1)\.com\/api\/ad
+URL-REGEX,^https:\/\/dsp\-x\.jd\.com\/adx\/sdk
+URL-REGEX,^https:\/\/api\-cfg\.wtzw\.com\/v1\/(adv|reward|operation)
+URL-REGEX,^https:\/\/p1\-lm\.adukwai\.com\/bs2\/adUnionVideo
+URL-REGEX,^https:\/\/lf\-cdn\-tos\.bytescm\.com\/obj\/static\/ad
 # --------- S --------- 
 # 什么值得买
 DOMAIN,api.zuihuimai.com
