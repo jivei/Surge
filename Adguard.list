@@ -1,6 +1,6 @@
 #!name=广告拦截分流规则
 #!author=RuCu6 dgksf2021 fmz200 lodepuly
-# 哔哩哔哩防失效
+# 哔哩哔哩
 DOMAIN,mall.bilibili.com
 DOMAIN,passport.bilibili.com
 # --------- A --------- 
