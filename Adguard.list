@@ -41,7 +41,7 @@ DOMAIN,vs6.bj2ct.u3.ucweb.com
 DOMAIN-SUFFIX,safebrowsing.apple
 DOMAIN-SUFFIX,u3.ucweb.com
 # --------- B --------- 
-#霸王茶姬
+# 霸王茶姬
 URL-REGEX,^https:\/\/webapi\.qmai.cn\/web\/catering\/advertising
 URL-REGEX,^https:\/\/webapi\.qmai.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach$
 DOMAIN,logger.qmai.cn
@@ -82,12 +82,12 @@ AND,((OR,((USER-AGENT,Cainiao*), (USER-AGENT,AMap*))), (URL-REGEX,^http:\/\/(amd
 # --------- D --------- 
 # 滴滴
 DOMAIN,gwp.xiaojukeji.com
-#多点
+# 多点
 URL-REGEX,^https:\/\/flow\.dmall\.com\/app\/home\/pops
 # 豆瓣
 AND,((USER-AGENT,Frodo*),(DOMAIN,119.29.29.29))
 # --------- E --------- 
-#EMS小程序
+# EMS小程序
 URL-REGEX,^https:\/\/ump\.ems\.com\.cn\/mailAd$
 # --------- F --------- 
 # Foreca & Google
@@ -97,7 +97,7 @@ DOMAIN,googleads.g.doubleclick.net
 DOMAIN,pagead2.googlesyndication.com
 DOMAIN,pubads.g.doubleclick.net
 DOMAIN,www.googleadservices.com
-#丰巢 微信小程序净化
+# 丰巢微信小程序净化
 URL-REGEX,^https:\/\/webchatapp\.fcbox\.com\/fcboxactivityweb\/api\/v2\/clientPage
 URL-REGEX,^https:\/\/dsp\.fcbox\.com 
 # --------- G --------- 
@@ -117,10 +117,10 @@ DOMAIN-SUFFIX,pangolin.snssdk.com
 # 海尔智家
 DOMAIN-SUFFIX,ehaier.com
 # 航旅纵横
-URL-REGEX, ^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native
+URL-REGEX,^http?:\/\/(discardrp|startup)\.umetrip\.com\/gateway\/api\/umetrip\/native
 # 华为
 DOMAIN,httpdns.c.cdnhwc2.com
-# 货拉拉 微信小程序净化
+# 货拉拉微信小程序净化
 URL-REGEX,^https:\/\/qapi\.huolala\.cn\/ads
 URL-REGEX,^https:\/\/appuser-static\.huolala\.cn\/imgs
 URL-REGEX,^https:\/\/qapi\.huolala\.cn\/home_new_user
@@ -145,7 +145,7 @@ DOMAIN,mobilead.kuwo.cn
 DOMAIN,rich.kuwo.cn
 DOMAIN,tmead.y.qq.com
 DOMAIN,tmeadcomm.y.qq.com
-#肯德基 微信小程序净化
+# 肯德基微信小程序净化
 URL-REGEX,^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/coupon
 URL-REGEX,^https:\/\/dynamicad\.kfc\.com\.cn\/api
 URL-REGEX,^https:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/custom_v2\/wxapp
@@ -154,9 +154,9 @@ URL-REGEX,^https:\/\/orders\.kfc\.com\.cn\/preorder-portal\/api\/v2\/activity
 # 蓝奏云
 DOMAIN,statics.woozooo.com
 # --------- M --------- 
-#蜜雪冰城
+# 蜜雪冰城
 URL-REGEX,^https:\/\/mxsa\.mxbc\.net\/api\/v1\/adinfo\/adplace\/query
-#麦当劳 微信小程序净化
+# 麦当劳微信小程序净化
 URL-REGEX,^https:\/\/api\.mcd\.cn\/bff\/portal\/home\/hotActivity
 # 芒果TV
 DOMAIN,credits.bz.mgtv.com
@@ -182,7 +182,7 @@ DOMAIN,httpdns.meituan.com
 # 美颜相机
 DOMAIN,aaid.uyunad.com
 DOMAIN,adui.tg.meitu.com
-#猫眼电影小程序
+# 猫眼电影小程序
 DOMAIN,ad.maoyan.com
 URL-REGEX,^https:\/\/wx\.maoyan\.com\/maoyansh\/api\/mobile\/(hotMatchList|eSportsIps)
 URL-REGEX,^https:\/\/vod-movie\.maoyan\.com\/vod\/video\/onlineMovies\.json
@@ -254,36 +254,36 @@ URL-REGEX,^https:\/\/ads\.ishansong\.com\/advert
 # 申通快递 微信小程序净化
 URL-REGEX,^https:\/\/customer-app\.sto\.cn\/api\/app\/banner\/banner
 URL-REGEX,^https:\/\/sto-customer-app\.oss-cn-shanghai\.aliyuncs\.com\/images
-#顺丰速运小程序 弹窗广告其他乱七八糟的广告
+# 顺丰速运小程序 弹窗广告其他乱七八糟的广告
 URL-REGEX,^https?:\/\/ucmp\.sf-express\.com\/cx-wechat-query\/query\/info-flow\/reconsitution-list
 # --------- T --------- 
 # 途虎养车小程序 @张军
 URL-REGEX,^https:\/\/mkt-gateway\.tuhu\.cn\/mkt-scene-marketing-service\/api\/scene\/queryScheme
 # 腾讯
 IP-CIDR,47.110.187.87/32,no-resolve
-DOMAIN, adsmind.gdtimg.com
-DOMAIN, btrace.qq.com
-DOMAIN, btrace.video.qq.com
-DOMAIN, info4.video.qq.com
-DOMAIN, info6.video.qq.com
-DOMAIN, ios.video.mpush.qq.com
-DOMAIN, mtrace.qq.com
-DOMAIN, otheve.beacon.qq.com
-DOMAIN, p.l.qq.com
-DOMAIN, pgdt.gtimg.cn
-DOMAIN, rpt.gdt.qq.com
-DOMAIN, tpns.qq.com
-DOMAIN, tytx.m.cn.miaozhen.com
-DOMAIN, vv6.video.qq.com
-DOMAIN, config.ab.qq.com
-DOMAIN, httpdns.volcengineapi.com
-DOMAIN-SUFFIX, trace.qq.com
-URL-REGEX, ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+
-URL-REGEX, ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+
-URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+
-URL-REGEX, ^http:\/\/[0-9.]+(\:80)?\/amdc\/mobileDispatch$
-AND,((PROTOCOL,HTTPS), (DOMAIN,iacc.qq.com)),REJECT-NO-DROP
-OR,((DOMAIN,pgdt.gtimg.cn), (AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
+DOMAIN,adsmind.gdtimg.com
+DOMAIN,btrace.qq.com
+DOMAIN,btrace.video.qq.com
+DOMAIN,info4.video.qq.com
+DOMAIN,info6.video.qq.com
+DOMAIN,ios.video.mpush.qq.com
+DOMAIN,mtrace.qq.com
+DOMAIN,otheve.beacon.qq.com
+DOMAIN,p.l.qq.com
+DOMAIN,pgdt.gtimg.cn
+DOMAIN,rpt.gdt.qq.com
+DOMAIN,tpns.qq.com
+DOMAIN,tytx.m.cn.miaozhen.com
+DOMAIN,vv6.video.qq.com
+DOMAIN,config.ab.qq.com
+DOMAIN,httpdns.volcengineapi.com
+DOMAIN-SUFFIX,trace.qq.com
+URL-REGEX,^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+
+URL-REGEX,^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+
+URL-REGEX,^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+
+URL-REGEX,^http:\/\/[0-9.]+(\:80)?\/amdc\/mobileDispatch$
+AND,((PROTOCOL,HTTPS),(DOMAIN,iacc.qq.com)),REJECT-NO-DROP
+OR,((DOMAIN,pgdt.gtimg.cn),(AND,((USER-AGENT,live4iphoneRel*), (IP-CIDR,0.0.0.0/0,no-resolve)))),REJECT-DROP
 # TubeMax
 DOMAIN-SUFFIX,adjust.com
 DOMAIN-SUFFIX,applvn.com
@@ -347,7 +347,7 @@ DOMAIN,switch.cup.com.cn
 DOMAIN,tysdk.95516.com
 # Yandex
 DOMAIN,yandexmetrica.com
-#永辉
+# 永辉
 URL-REGEX,^https:\/\/api\.yonghuivip\.com\/api\/fp\/homepage\/pop
 URL-REGEX,^https:\/\/activity\.yonghuivip\.com\/api\/app\/fp\/homepage\/pop
 URL-REGEX,^https:\/\/activity\.yonghuivip\.com\/api\/\/web\/shensuan\/ad
