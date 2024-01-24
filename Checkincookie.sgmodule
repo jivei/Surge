@@ -2,6 +2,8 @@
 #!desc=Cookie全部获取之后关闭此模块避免不必要的MitM若cookie过期再次开启获取即可
 
 [Script]
+# 网易云音乐音乐人获取cookie
+网易云音乐音乐人获取cookie = type=http-request, pattern=^https:\/\/interface\.music\.163\.com\/weapi\/nmusician\/, script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js, timeout=30
 # 高德地图APP，微信小程序，支付宝->高德打车->福利中心
 高德打车APP获取cookie = type=http-response, pattern=^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=), requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=60, script-update-interval=0
 # ---------------------------
@@ -34,4 +36,4 @@ IT之家获取cookie   = type=http-response, pattern=^https:\/\/my\.ruanmei\.com
 什么值得买获取cookie = script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js,type=http-request,requires-body=false,pattern=^https?:\/\/user-api\.smzdm\.com\/checkin$
 
 [MITM]
-hostname= %APPEND% user-api.smzdm.com,apis.folidaymall.com,game.dominos.com.cn,yunbusiness.ccb.com,app.bilibili.com,m.bilibili.com,api.cloud.189.cn,api.tuhu.cn,auth.alipan.com,*.amap.com,miniapp.yaduo.com,webapi.qmai.cn,*.huazhu.com,my.ruanmei.com,c.tieba.baidu.com,tiebac.baidu.com
+hostname= %APPEND% interface.music.163.com,user-api.smzdm.com,apis.folidaymall.com,game.dominos.com.cn,yunbusiness.ccb.com,app.bilibili.com,m.bilibili.com,api.cloud.189.cn,api.tuhu.cn,auth.alipan.com,*.amap.com,miniapp.yaduo.com,webapi.qmai.cn,*.huazhu.com,my.ruanmei.com,c.tieba.baidu.com,tiebac.baidu.com
