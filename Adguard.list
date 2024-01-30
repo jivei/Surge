@@ -114,6 +114,9 @@ DOMAIN-SUFFIX,pangolin-sdk-toutiao.com
 DOMAIN-SUFFIX,pangolin-sdk-toutiao1.com
 DOMAIN-SUFFIX,pangolin.snssdk.com
 # --------- H --------- 
+#虎牙直播
+DOMAIN-SUFFIX,v1d.szbdyd.com
+URL-REGEX,^http:\/\/cdn\.wup\.huya\.com\/launch\/queryHttpDns$
 # 海尔智家
 DOMAIN-SUFFIX,ehaier.com
 # 航旅纵横
