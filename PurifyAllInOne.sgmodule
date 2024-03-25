@@ -27,10 +27,6 @@
 # 全面移除破解会员功能，改为独立模块，如有需要，请自行查看按需添加或者下载Github库Crack整个zip本地使用👇
 # https://github.com/jivei/Surge/tree/main/Crack
 
-[Header Rewrite]
-# 网易云音乐version8.9.20以下
-^https?:\/\/interface3?\.music\.163\.com\/eapi\/batch header-replace-regex cookie appver=.+$ appver=2333
-
 [Script]
 # --------- 爱奇艺净化 --------- 
 首页信息流广告 = type=http-response, pattern=^http:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, timeout=60, script-update-interval=0
@@ -209,7 +205,13 @@ wyres_11 = type=http-response, pattern=^https:\/\/interface3?\.music\.163\.com\/
 知乎服务器推送配置净化 = type=http-response, pattern=^https:\/\/www\.zhihu\.com\/api\/v4\/(articles|answers)\/\d+\/recommendations?\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
 知乎首页配置净化 = type=http-response, pattern=^https:\/\/appcloud2\.zhihu\.com\/v3\/config, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
 知乎净化 = type=http-response, pattern=^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, timeout=60, script-update-interval=0
-
+网易云音乐mian = type=http-response,pattern=^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get),requires-body=1,max-size=0,timeout=20,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
+网易云音乐_tab = type=http-response,pattern=^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab,requires-body=1,max-size=0,timeout=20,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, argument="{"MY":"{{{漫游}}}","DT":"{{{动态}}}","TJ":"{{{推荐}}}","FX":"{{{发现}}}"}"
+网易云音乐home = type=http-response,pattern=^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)),requires-body=1,max-size=0,timeout=20,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, argument="{"PRGG":"{{{问候语}}}","PRDRD":"{{{每日推荐}}}","PRSCVPT":"{{{推荐歌单}}}","PRST":"{{{最近常听}}}","HMPR":"{{{音乐合伙人}}}","PRRR":"{{{雷达歌单}}}","PRRK":"{{{排行榜}}}","PRMST":"{{{推荐专属歌单}}}","PRCN":"{{{你的专属歌单}}}"}"
+网易云音乐fx = type=http-response,pattern=^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show,requires-body=1,max-size=0,timeout=20,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
+网易云音乐_effect = type=http-response,pattern=^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d,requires-body=1,max-size=0,timeout=20,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
+网易云音乐mybarad = type=http-response,pattern=^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/position\/show\/resource,requires-body=1,max-size=0,timeout=20,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
+网易云音乐_foll = type=http-response,pattern=^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get,requires-body=1,max-size=0,timeout=20,binary-body-mode=1,script-path=https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js
 [URL Rewrite]
 # 58同城 
 ^https:\/\/app\.58\.com\/api\/home\/(advertising|appadv) - reject
@@ -743,6 +745,9 @@ https://support.you.163.com/appversync/check.do - reject
 ^https?:\/\/m\.you\.163\.com\/activity\/popWindow - reject
 ^https?:\/\/yanxuan.nosdn.127.net\/(static-union\/)?.*\.gif - reject
 ^https?:\/\/yanxuan\.nosdn\.127\.net\/.*\.mp4 - reject
+# 网易云音乐
+^https?:\/\/httpdns.n\.netease\.com - reject
+^https?:\/\/httpdns\.music\.163\.com - reject
 # 威锋
 ^https?:\/\/api\.wfdata\.club\/v2\/yesfeng\/(infoCenterAd|yesList) - reject
 # Weico
@@ -1324,17 +1329,16 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do data="htt
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 # 网易云
-# 播放页,多余图标,各种小提示
-^https:\/\/interface3?\.music\.163\.com\/eapi\/(ios\/version|mlivestream\/entrance\/playpage\/|link\/position\/show\/strategy|link\/scene\/show\/resource|v1\/content\/exposure\/comment\/banner\/) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/interface3?\.music\.163\.com\/eapi\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-# 播放页 歌名下方 乐迷团｜关注｜播放页提示｜音乐应用红点｜播放提示
-^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/|mine\/applet\/redpoint|music\/songshare\/text\/recommend\/|resniche\/position\/play\/new\/|resource\/comments?\/musiciansaid\/|user\/sub\/artist) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/(ipv4|interface3?)\.music\.163.com\/e?api\/ad data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/eapiad.json"
 # 今日运势 商城 Beat专区 音乐收藏家 | type:ACTIVITY | 低至5.2折
-^https?:\/\/interface3?\.music\.163\.com\/eapi\/(delivery\/(batch-deliver|deliver)|moment\/tab\/info\/|side-bar\/mini-program\/music-service\/account|yunbei\/account\/entrance\/) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-# 开屏广告
-^https?:\/\/interface3?\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-# 搜索页 搜索词 热搜卡片 猜你喜欢 我的应用下方提醒
-^https?:\/\/interface3?\.music\.163\.com\/w?eapi\/(activity\/bonus\/playpage\/time\/query|resource-exposure\/|search\/(chart\/|default\/|rcmd\/keyword\/|specialkeyword\/)) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https?:\/\/interface3?\.music\.163\.com\/w?e?api\/(?:side-bar\/mini-program\/music-service\/account|delivery\/(batch-deliver|deliver)|moment\/tab\/info\/get|yunbei\/account\/entrance\/get) data-type=text data="{}"
+# 播放页歌名下方∶乐迷团｜关注｜播放页提示｜音乐应用红点｜播放提示?
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(?:resource\/comments?\/musiciansaid|community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist|music\/songshare\/text\/recommend\/get|mine\/applet\/redpoint|resniche\/position\/play\/new\/get) data-type=text data="{}"
+# 搜索词
+^https?:\/\/interface3?\.music\.163.com\/w?e?api\/search\/default data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/keyword.json"
+# 搜索页热搜卡片｜猜你喜欢｜我的应用下方提醒
+^https?:\/\/interface3?\.music\.163.com\/w?e?api\/(?:search\/(chart|rcmd\/keyword|specialkeyword)|resource-exposure\/|activity\/bonus\/playpage\/time\/query) data-type=text data="{}"
+^https?:\/\/interface3?\.music\.163.com\/eapi\/(?:mlivestream\/entrance\/playpage|link\/(position\/show\/strategy|scene\/show)|ios\/version|v\d\/content\/exposure\/comment\/banner) data-type=text data="{}"
 # 无他相机
 ^https?:\/\/api-release\.wuta-cam\.com\/ad_tree data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 ^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
