@@ -2,8 +2,7 @@
 #!desc=每日0点1分开始自动执行签到任务
 
 [Script]
-托迈酷客签到 = type=cron, cronexp="1 0 * * *", script-path=https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/ThomasCook.js, wake-system=1,timeout=120
-高德打车签到 = type=cron, cronexp="3 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ampDache.js, timeout=120, wake-system=1
+
 亚朵酒店签到 = type=cron, cronexp="4 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=120, wake-system=1
 霸王茶姬签到 = type=cron, cronexp="5 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/bwcj.js, timeout=120, wake-system=1
 华住签到任务 = type=cron, cronexp="6 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/hzh.js, timeout=120, wake-system=1
