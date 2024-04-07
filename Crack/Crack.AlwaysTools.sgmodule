@@ -12,8 +12,6 @@ Xmind思维导图会员 = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn
 一言会员 = type=http-response, pattern=^https:\/\/app\.yiyan\.art\/yiyan\/, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/dev/raw/main/YiYanProCrack.js, timeout=60, script-update-interval=0
 傲软抠图扫描PDF转换PDF编辑投屏咖映轻闪PDF乃糖小组件佐糖照片会员 = type=http-response,pattern= ^https?:\/\/.*\.(aoscdn\.com|apsapp\.cn),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/arqjt.js
 彩云天气会员 = type=http-response,pattern=^https:\/\/biz\.cyapi\.cn\/(p\/v1\/vip_info|v2\/user),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/caiyun.js
-用药助手会 = type=http-request, pattern=^https://newdrugs.dxy.cn, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/yyzscook.js, timeout=60, script-update-interval=0
-用药助手员 = type=http-response, pattern=https://newdrugs.dxy.cn/app/user/pro/stat?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/yyzs2.js, timeout=60, script-update-interval=0
 百度文库会员= type=http-response, pattern=^https:\/\/appwk\.baidu\.com\/naapi\/(user\/getinfo|doc\/getdocdownloadcopywriter), script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/BaiduWenku_crack.js, requires-body=true, max-size=3145728, timeout=30
 美图系列会员 = type=http-response,pattern=^https?:\/\/api-.*\.meitu\.com\/(.+\/user\/vip_info|user\/show),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/mtxl.js
 美图秀秀AI会员 = type=http-response,pattern=^https?:\/\/api\.posters\.meitu\.com\/matting\/znxc\.json,requires-body=1,max-size=0,timeout=30,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/meituxiuxiu.js
