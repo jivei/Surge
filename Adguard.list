@@ -57,8 +57,8 @@ DOMAIN,afdconf.baidu.com
 DOMAIN,httpdns.baidubce.com
 DOMAIN,lc.map.baidu.com
 # 百度网盘
-DOMAIN,mobads.baidu.com
-DOMAIN,sf3-fe-tos.pglstatp-toutiao.com
+IP-CIDR,180.76.76.112/32,REJECT
+IP-CIDR,180.76.76.200/32,REJECT
 # 贴吧屏蔽域名dns查询
 DOMAIN,180.76.76.200
 IP-CIDR,180.76.76.200/32,no-resolve
