@@ -27,6 +27,9 @@
 # 全面移除破解会员功能，改为独立模块，如有需要，请自行查看按需添加或者下载Github库Crack整个zip本地使用👇
 # https://github.com/jivei/Surge/tree/main/Crack
 
+[Rule]
+AND,((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)),REJECT
+
 [Script]
 # --------- 爱奇艺净化 --------- 
 首页信息流广告 = type=http-response, pattern=^http:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, timeout=60, script-update-interval=0
@@ -149,17 +152,32 @@ Soul净化 = type=http-response, pattern=^https:\/\/ssp\.soulapp\.cn\/api\/q, re
 淘宝屏净化 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=3145728, timeout=30
 微信跳过微信中转页面,解除被封禁链接 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
 小米商城净化 = type=http-response,pattern=^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView|product\/productView),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
-小红书净化图片水印 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(v2\/note\/feed|v3\/note\/videofeed)\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
-小红书净化视频水印 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/live_photo\/save, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
-小红书净化live水印 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/followfeed\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
-小红书净化photo水印 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
-小红书净化详情页 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/note\/widgets, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
-小红书净化小部件 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/(banner|hot)_list, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
-小红书净化搜索页 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/(hint|trending)\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
-小红书净化我的页面 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
-小红书净化开屏广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\?, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
-小红书净化主页广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config$, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/xiaohongshu.js, timeout=60, script-update-interval=0
-喜马拉雅首页直播净化 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js, timeout=60, script-update-interval=0
+移除详情页小部件 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/(note\/widgets|user\/followings\/followfeed), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true
+
+# 搜索页
+移除搜索页广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(banner|hot)_list, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true
+
+移除搜索页广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/(hint|trending)\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true
+
+移除搜索页广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/search\/notes\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true
+
+# 开屏广告
+移除开屏广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/config\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true
+
+移除开屏广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/system_service\/splash_config, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true
+
+# 信息流、详情页感兴趣的人
+移除信息流广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/followfeed\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true
+
+移除详情页感兴趣的人 = type=http-response, pattern=https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/recommend\/user\/follow_recommend\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true
+
+移除信息流广告 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/homefeed\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true
+
+# 移除图片和视频水印
+移除图片和视频水印 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/(note\/feed|note\/videofeed)\?, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true
+
+# 移除图片和实况照片水印
+移除图片和实况照片水印 = type=http-response, pattern=https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/(imagefeed|live_photo\/save), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true喜马拉雅首页直播净化 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js, timeout=60, script-update-interval=0
 喜马拉雅首页横幅净化 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js, timeout=60, script-update-interval=0
 喜马拉雅首页动态净化 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js, timeout=60, script-update-interval=0
 喜马拉雅Tab页滚动净化 = type=http-response, pattern=^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category, requires-body=true, max-size=3145728, script-path=https://github.com/ddgksf2013/Scripts/raw/master/ximalaya_json.js, timeout=60, script-update-interval=0
@@ -965,6 +983,8 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https:\/\/www\.zhihu\.com\/api\/v4/(answers|questions)\/\d+/related-readings - reject
 ^https:\/\/www\.zhihu\.com\/commercial_api\/banners_v3\/mobile_banner - reject
 ^https:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation - reject
+
+
 [Map Local]
 # --------- A --------- 
 # 阿里云盘 
@@ -1414,10 +1434,10 @@ https:\/\/hd\.mina\.mi\.com\/splashscreen\/alert data="https://raw.githubusercon
 # 新浪新闻
 ^https?:\/\/edit\.sinaapp\.com\/ua\?t=adv data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 小红书
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(get_style|open|submit_action) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/note\/guide\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/surprisebox\/(get_style|open|submit_action) data-type=text data="{}" status-code=200
+^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? data-type=text data="{}" status-code=200
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/note\/guide\? data-type=text data="{}" status-code=200
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d+\/(ads\/resource|hey\/\w+\/hey_gallery) data-type=text data="{}" status-code=200
 # 小猿口算
 ^https:\/\/xyks\.yuanfudao\.com\/leo-reward\/iphone\/task\/hp\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/xyks\.yuanfudao\.com\/leo-mis\/iphone\/splashes\/types\/4\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
