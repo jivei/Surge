@@ -151,8 +151,9 @@ Soul净化 = type=http-response, pattern=^https:\/\/ssp\.soulapp\.cn\/api\/q, re
 贴吧净化5 = type=http-response,pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/(s\/sync|f\/(frs\/(page|threadlist|generalTabList)|pb\/(pic)?page|excellent\/personalized))$|tiebaads\/commonbatch\?),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js,script-update-interval=0
 贴吧净化6 = type=http-response,pattern=^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js,script-update-interval=0
 腾讯视频净化 = type=http-request, pattern=^https?:\/\/vv\.video\.qq\.com\/getvinfo, script-path=https://raw.githubusercontent.com/mieqq/mieqq/master/replace-body.js, requires-body=true, max-size=3145728, timeout=30, argument = "&sppreviewtype=\d(.*)&spsrt=\d->&sppreviewtype=0$1&spsrt=0"
-淘宝开净化 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=3145728, timeout=30
-淘宝屏净化 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body=true, max-size=3145728, timeout=30
+移除淘宝开屏广告 = type=http-response, pattern=^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Taobao/Taobao_remove_ads.js, requires-body=true
+
+移除淘宝开屏广告 = type=http-response, pattern=^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json, script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Taobao/Taobao_remove_ads.js, requires-body=true
 微信跳过微信中转页面,解除被封禁链接 = type=http-response,pattern=^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\?,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js
 小米商城净化 = type=http-response,pattern=^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView|product\/productView),requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js
 移除详情页小部件 = type=http-response, pattern=^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d+\/(note\/widgets|user\/followings\/followfeed), script-path=https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body=true
@@ -997,16 +998,28 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 # 阿里巴巴 
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 阿里巴巴 
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+# 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) data-type=text data="{}" status-code=200
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv data-type=text data="{}" status-code=200
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise data-type=text data="{}" status-code=200
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit data-type=text data="{}" status-code=200
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash data-type=text data="{}" status-code=200
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise data-type=text data="{}" status-code=200
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get data-type=text data="{}" status-code=200
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome data-type=text data="{}" status-code=200
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources data-type=text data="{}" status-code=200
+
+^https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(octopus|tps-1125-1602|tps-1080-1920)\.(jp|pn)g_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q[59]0 data-type=text data="{}" status-code=200
+
+^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) data-type=text data="{}" status-code=200
 # 爱企查去广告
 ^https:\/\/b2baifanfan\.baidu\.com\/crm\/web\/b2b\/im\/common\/getConfigByDeviceNum data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 爱奇艺播放页开通会员提示播放页多余动效播放页升级白金会员按钮青少年弹窗
