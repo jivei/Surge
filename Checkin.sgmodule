@@ -4,8 +4,6 @@
 [Script]
 
 亚朵酒店签到 = type=cron, cronexp="4 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/atour.js, timeout=120, wake-system=1
-霸王茶姬签到 = type=cron, cronexp="5 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/bwcj.js, timeout=120, wake-system=1
-华住签到任务 = type=cron, cronexp="6 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/hzh.js, timeout=120, wake-system=1
 之家签到任务 = type=cron, cronexp="7 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/ithome.js, timeout=120, wake-system=1
 什么值得买签 = type=cron, cronexp="8 0 * * *", script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/smzdm/smzdm_daily.js,timeout=120,wake-system=1
 贴吧每日签到 = type=cron, cronexp="9 0 * * *", script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js,wake-system=1,timeout=360
