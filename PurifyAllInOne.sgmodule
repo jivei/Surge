@@ -1052,6 +1052,8 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser - reject
 ^https:\/\/yongche\.baidu\.com\/gomarketing\/api\/activity\/talos\/activitycard\? data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/yongche\.baidu\.com\/gomarketing\/api\/popup\/getentrancecordovaurl data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
 ^https:\/\/yongche\.baidu\.com\/goorder\/passenger\/baseinfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
+#百度网盘
+^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|act\/v2\/|rest\/2\.0\/pcs\/ad) data-type=text data="{}" status-code=200
 # --------- C --------- 
 # 财新
 ^https:\/\/gateway\.caixin\.com\/api\/app-api\/cxAdInfo\/selectIndexAdInfo data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
