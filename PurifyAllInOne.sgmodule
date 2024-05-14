@@ -27,8 +27,6 @@
 # 全面移除破解会员功能，改为独立模块，如有需要，请自行查看按需添加或者下载Github库Crack整个zip本地使用👇
 # https://github.com/jivei/Surge/tree/main/Crack
 
-[Rule]
-AND,((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)),REJECT
 
 [Script]
 # --------- 爱奇艺净化 --------- 
