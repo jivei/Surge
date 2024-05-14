@@ -1123,7 +1123,9 @@ https:\/\/api5-normal-lq\.dcarapi\.com\/motor\/selection\/v2\/card_list data="ht
 
 ^http:\/\/appgw\.ddpai\.com:18080\/market\/api\/v1\/ware\/getWareDetail data-type=text data="{}" status-code=200
 
-^http:\/\/appgw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list data-type=text data="{}" status-code=200# 得物
+^http:\/\/appgw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list data-type=text data="{}" status-code=200
+
+# 得物
 ^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
 # 叮咚买菜
 ^https:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd\?ad_id data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-dict.json"
