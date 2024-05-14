@@ -1105,25 +1105,6 @@ https:\/\/api5-normal-lq\.dcarapi\.com\/motor\/selection\/v2\/card_list data="ht
 # 大师兄 
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|app_config|search_hot|version|advert\?position=[^2]+) data="https://raw.githubusercontent.com/Keywos/rule/main/mocks/reject-dict.json"
 # 盯盯拍
-^http:\/\/app\.ddpai\.com\/onroad\/api\/v1\/news\/list data-type=text data="{}" status-code=200
-
-^http:\/\/app\.ddpai\.com\/onroad\/api\/v2\/activity\/list data-type=text data="{}" status-code=200
-
-^http:\/\/app\.ddpai\.com\/onroad\/api\/v1\/activity\/list data-type=text data="{}" status-code=200
-
-^http:\/\/app\.ddpai\.com\/d\/api\/v1\/grade\/privilege data-type=text data="{}" status-code=200
-
-^http:\/\/app\.ddpai\.com\/bigdata\/api\/v1\/data\/upload data-type=text data="{}" status-code=200
-
-^http:\/\/app\.ddpai\.com\/onroad\/api\/v2\/banner\/list data-type=text data="{}" status-code=200
-
-^http:\/\/app\.ddpai\.com\/onroad\/api\/v1\/story\/list data-type=text data="{}" status-code=200
-
-^http:\/\/appgw\.ddpai\.com:18080\/ddpai\/api\/v2\/quality\/card\/list data-type=text data="{}" status-code=200
-
-^http:\/\/appgw\.ddpai\.com:18080\/market\/api\/v1\/ware\/getWareDetail data-type=text data="{}" status-code=200
-
-^http:\/\/appgw\.ddpai\.com:18080\/onroad\/api\/v1\/ad\/list data-type=text data="{}" status-code=200
 
 # 得物
 ^https?:\/\/cdn\.poizon\.com\/node-common\/.*.jpg data="https://raw.githubusercontent.com/mieqq/mieqq/master/reject-200.txt"
