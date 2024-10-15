@@ -2,6 +2,6 @@
 #!desc=每日0点1分开始自动执行签到任务
 
 [Script]
-华住签到任务 = type=cron, cronexp="31 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/hzh.js, timeout=120
+华住签到任务 = type=cron, cronexp="1 0 * * *", script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/hzh.js, timeout=120
 
-贴吧每日签到 = type=cron, cronexp="27 0 * * *", script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js,wake-system=1,timeout=360
+贴吧每日签到 = type=cron, cronexp="2 0 * * *", script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/tieba/tieba_signin.js,wake-system=1,timeout=360
