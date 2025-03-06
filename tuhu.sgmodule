@@ -1,0 +1,13 @@
+#!name=途虎每日签到
+#!desc=每日定时签到，模块参数可调整签到时间。
+#!arguments=定时签到:40 8 * * *,禁用脚本:华住会每日签到[Cookie],禁用MITM:hostname
+#!arguments-desc=定时签到：Cron表达式，默认每天早上 08:40 执行。\n\n禁用脚本：禁用获取Cookie脚本，输入 # 表示禁用。\n\n禁用MITM：禁用MITM主机名，输入 # 表示禁用。
+
+
+[Script]
+途虎每日签到 = type=cron,cronexp="{{{定时签到}}}",wake-system=1,script-update-interval=0,timeout=600,script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/tuhu.js
+
+{{{禁用脚本}}} = type=http-request, pattern=https:\/\/api\.tuhu\.cn\/User\/GetInternalCenterInfo,requires-body=0,max-size=0,script-path=https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/tuhu.js
+
+[MITM]
+{{{禁用MITM}}} = %APPEND% api.tuhu.cn
