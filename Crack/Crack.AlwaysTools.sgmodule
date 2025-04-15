@@ -1,11 +1,9 @@
 #!name=Crack.常驻会员
-#!desc=B612咔叽,LR,PS,Spotify,Xmind,一言,傲软系列,百度文库,美图美颜系列,西窗烛
+#!desc=B612咔叽,Spotify,Xmind,一言,傲软系列,百度文库,美图美颜系列,西窗烛
 
 [Script]
 
 B612咔叽会员 = type=http-response,pattern=https://user-kaji-api.b612kaji.com/v1/purchase/subscription/subscriber/status,requires-body=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/612.js
-Lightroom会员=type=http-response,pattern=^https:\/\/photos\.adobe\.io\/v2\/accounts*,requires-body=1,script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/lightroom.js
-PSExpress = type=http-response, pattern=https://lcs-mobile-cops.adobe.io/mobiles/access_profile/v3, requires-body=true, max-size=3145728, script-path=https://raw.githubusercontent.com/jivei/Surge/main/js/PSExpress.js, timeout=60, script-update-interval=0
 Spotify会不能超高音质  = type=http-request,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/,requires-body=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js
 Spotify员不能超高音质  = type=http-response,pattern=^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$,requires-body=1,binary-body-mode=1,max-size=0,script-path=https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js,script-update-interval=0
 Xmind思维导图会员 = type=http-response,pattern=^https?:\/\/www\.xmind\.(cn|net|app)\/.+\/devices,requires-body=1,max-size=0,script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Xmind.js
