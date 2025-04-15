@@ -17,4 +17,4 @@ Spotify员不能超高音质  = type=http-response,pattern=^https:\/\/spclient\.
 
 
 [MITM]
-hostname = %APPEND% lcs-mobile-cops.adobe.io,api*.faceu.mobi, api3-lq.faceu.mobi, commerce-api-lf.faceu.mobi, commerce-api-lq.faceu.mobi, lv-api-lq.ulikecam.com, lv-api-hl.ulikecam.com,user-kaji-api.b612kaji.com,photos.adobe.io,spclient.wg.spotify.com,*xmind.*,app.yiyan.art,*.aoscdn.com, *.apsapp.cn,biz.cyapi.cn,newdrugs.dxy.cn,appwk.baidu.com,*.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com,api-*.meitu.com,*.meiyan.com,lchttpapi.xczim.com
+hostname = %APPEND% api*.faceu.mobi, api3-lq.faceu.mobi, commerce-api-lf.faceu.mobi, commerce-api-lq.faceu.mobi, lv-api-lq.ulikecam.com, lv-api-hl.ulikecam.com,user-kaji-api.b612kaji.com, spclient.wg.spotify.com, app.yiyan.art, newdrugs.dxy.cn,appwk.baidu.com,*.xiuxiu.meitu.com, api.posters.meitu.com, api-sub.meitu.com,api-*.meitu.com,*.meiyan.com,lchttpapi.xczim.com
