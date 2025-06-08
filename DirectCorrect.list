@@ -8,3 +8,4 @@ DOMAIN-SUFFIX, apps.apple.com //商店内容，如 App、图书和音乐
 DOMAIN-SUFFIX, mzstatic.com //商店内容，如 App、图书和音乐
 DOMAIN, itunes.apple.com
 DOMAIN, ppq.apple.com //企业 App 验证
+DOMAIN, easyemby.com
