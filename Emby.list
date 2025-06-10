@@ -1,13 +1,2 @@
 # 自用Emby
-# 树状图
-DOMAIN-SUFFIX,123456.al
-# 坦克
-#DOMAIN-SUFFIX,tank99.top
-# 电报服
-DOMAIN-SUFFIX,imetyou.top
-# MisakaF
-#DOMAIN-SUFFIX,misakaf.org
-#DOMAIN-SUFFIX,porn.aca.best
-# 哔哩哔哩
-DOMAIN,mall.bilibili.com
-DOMAIN,passport.bilibili.com
+DOMAIN,easyemby.com
