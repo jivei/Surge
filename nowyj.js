@@ -1,9 +1,26 @@
-const url = "https://www.autohome.com.cn/oil/420100.html";
-const cacheKey = "WuhanOilCache";
+
+const args = {};
+
+if (typeof $argument === "string") {
+    $argument.split("&").forEach(item => {
+        const index = item.indexOf("=");
+        if (index > 0) {
+            const key = item.slice(0, index);
+            const value = item.slice(index + 1);
+            args[key] = decodeURIComponent(value);
+        }
+    });
+}
+
+const city = (args.city || "武汉").trim();
+const code = (args.code || "420100").trim();
+
+const url = `https://www.autohome.com.cn/oil/${code}.html`;
+const cacheKey = `OilPriceCache_${code}`;
 
 function show(content, color = "#34C759") {
     $done({
-        title: "武汉今日油价",
+        title: `${city}今日油价`,
         content: content,
         icon: "fuelpump.fill",
         "icon-color": color
@@ -42,9 +59,13 @@ $httpClient.get({
             .replace(/&#35;/g, "#")
             .replace(/\s+/g, " ");
 
+        const safeCity = city
+            .replace(/市$/, "")
+            .replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+
         function getPrice(grade, fuel) {
             const regex = new RegExp(
-                "武汉\\s*" + grade +
+                safeCity + "(?:市)?\\s*" + grade +
                 "\\s*(?:号|#)?\\s*" + fuel +
                 "\\s*(?:为|：|:)?\\s*(\\d+\\.\\d{1,2})"
             );
