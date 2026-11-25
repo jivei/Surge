@@ -1,52 +1,83 @@
 
+/**
+ * Surge 直连与代理测速
+ * Version: 2.0.0
+ *
+ * 多路并发、自适应下载测速
+ * DIRECT 与代理严格串行
+ * 无需 API Key
+ */
+
+const VERSION = "2.0.0";
+
 const args = (
     typeof $argument === "string"
         ? $argument
-        : "PROXY|5|500"
+        : "PROXY|10|1000"
 ).split("|");
 
-const policy = (args[0] || "PROXY").trim() || "PROXY";
-
-function clamp(value, min, max) {
-    return Math.min(max, Math.max(min, value));
-}
-
-const targetSeconds = clamp(
-    Number(args[1]) || 5, 3, 10
-);
-
-const maxMB = clamp(
-    Number(args[2]) || 500, 20, 1000
-);
+const POLICY = (args[0] || "PROXY").trim() || "PROXY";
 
 const MB = 1000000;
-const maxBytes = maxMB * MB;
-const chunkLimit = 2 * MB;
-const warmupSize = 1 * MB;
-const baseURL = "https://speed.cloudflare.com";
-const barLength = 15;
+const BASE_URL = "https://speed.cloudflare.com";
+
+function clamp(n, min, max) {
+    return Math.min(max, Math.max(min, n));
+}
+
+const TARGET_TIME = clamp(
+    Number(args[1]) || 10, 5, 15
+) * 1000;
+
+const MAX_BYTES = Math.floor(
+    clamp(Number(args[2]) || 1000, 20, 2000) * MB
+);
+
+const MIN_CHUNK = 128000;
+const MAX_CHUNK = 4 * MB;
+const INITIAL_CHUNK = 512000;
+
+const INITIAL_CONCURRENCY = 4;
+const MAX_CONCURRENCY = 8;
+
+const BAR_LENGTH = 15;
 
 function bold(value) {
     const digits = [..."𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵"];
 
     return String(value).replace(
-        /\d/g, n => digits[Number(n)]
+        /\d/g,
+        n => digits[Number(n)]
     );
 }
 
-function testURL(bytes) {
-    return `${baseURL}/__down?bytes=${bytes}` +
-        `&t=${Date.now()}${Math.random()}`;
+function median(values) {
+    if (!values.length) return null;
+
+    const sorted = [...values].sort(
+        (a, b) => a - b
+    );
+
+    const mid = Math.floor(sorted.length / 2);
+
+    return sorted.length % 2
+        ? sorted[mid]
+        : (sorted[mid - 1] + sorted[mid]) / 2;
 }
 
-// HTTP请求，保留真实错误信息
-function request(bytes, route, timeout = 10) {
-    return new Promise((resolve, reject) => {
+function testURL(bytes) {
+    return `${BASE_URL}/__down?bytes=${bytes}` +
+        `&t=${Date.now()}_${Math.random()}`;
+}
+
+// HTTP 下载请求
+function request(bytes, policy, timeout = 10) {
+    return new Promise(resolve => {
         const start = Date.now();
 
         $httpClient.get({
             url: testURL(bytes),
-            policy: route,
+            policy: policy,
             timeout: timeout,
             "binary-mode": true,
             headers: {
@@ -59,146 +90,248 @@ function request(bytes, route, timeout = 10) {
                 Date.now() - start, 1
             );
 
-            if (error || !response) {
-                return reject(new Error(
-                    error
-                        ? String(error.message || error)
-                        : "服务器无响应"
-                ));
-            }
-
-            if (Number(response.status) !== 200) {
-                return reject(new Error(
-                    `HTTP ${response.status}`
-                ));
-            }
-
             const received = data
                 ? (data.byteLength || data.length || 0)
                 : 0;
 
+            if (error || !response) {
+                return resolve({
+                    ok: false,
+                    bytes: 0,
+                    elapsed: elapsed,
+                    error: error
+                        ? String(error.message || error)
+                        : "服务器无响应"
+                });
+            }
+
+            const status = Number(response.status);
+
+            if (status !== 200) {
+                return resolve({
+                    ok: false,
+                    bytes: 0,
+                    elapsed: elapsed,
+                    error: `HTTP ${status}`
+                });
+            }
+
             if (bytes > 0 && received !== bytes) {
-                return reject(new Error(
-                    `数据不完整：${received}/${bytes} B`
-                ));
+                return resolve({
+                    ok: false,
+                    bytes: received,
+                    elapsed: elapsed,
+                    error: `数据不完整 ${received}/${bytes} B`
+                });
             }
 
             resolve({
+                ok: true,
                 bytes: received,
-                elapsed: elapsed
+                elapsed: elapsed,
+                error: ""
             });
         });
     });
 }
 
-// 延迟测试：连续3次，取中位数
-async function testLatency(route) {
+// 延迟及抖动测试
+async function testLatency(policy) {
     const samples = [];
 
-    for (let i = 0; i < 3; i++) {
-        try {
-            const r = await request(0, route, 3);
+    for (let i = 0; i < 5; i++) {
+        const r = await request(0, policy, 3);
+
+        if (r.ok) {
             samples.push(r.elapsed);
-        } catch (e) {}
+        }
     }
 
-    if (!samples.length) return null;
-
-    samples.sort((a, b) => a - b);
-
-    const mid = Math.floor(samples.length / 2);
-
-    return samples.length % 2
-        ? samples[mid]
-        : Math.round(
-            (samples[mid - 1] + samples[mid]) / 2
-        );
-}
-
-// 自适应下载测速
-async function adaptiveDownload(route) {
-    let totalBytes = 0;
-    let measuredBytes = 0;
-    let measuredTime = 0;
-    let samples = 0;
-    let estimatedRate = 0;
-    let warning = "";
-
-    // 第一阶段：1MB预测速
-    let warmup;
-
-    try {
-        warmup = await request(
-            warmupSize, route, 30
-        );
-    } catch (e) {
+    if (!samples.length) {
         return {
-            speed: null,
-            bytes: null,
-            duration: 0,
-            samples: 0,
-            warning: "预测速失败：" + e.message
+            latency: null,
+            jitter: null
         };
     }
 
-    totalBytes += warmup.bytes;
+    const differences = [];
 
-    estimatedRate =
-        warmup.bytes / warmup.elapsed;
+    for (let i = 1; i < samples.length; i++) {
+        differences.push(
+            Math.abs(samples[i] - samples[i - 1])
+        );
+    }
 
-    // 第二阶段：自适应正式测速
-    const targetMS = targetSeconds * 1000;
+    const jitter = differences.length
+        ? differences.reduce((a, b) => a + b, 0) /
+          differences.length
+        : null;
+
+    return {
+        latency: Math.round(median(samples)),
+        jitter: jitter === null
+            ? null
+            : Math.round(jitter)
+    };
+}
+
+// 多路并发自适应下载测速
+async function testDownload(policy) {
+    let chunk = INITIAL_CHUNK;
+    let concurrency = INITIAL_CONCURRENCY;
+
+    let requestedBytes = 0;
+    let receivedBytes = 0;
+    let measuredBytes = 0;
+    let measuredTime = 0;
+
+    let rounds = 0;
+    let failedRounds = 0;
+    let lastError = "";
+    let warning = "";
+
+    let peakConcurrency = concurrency;
+    let peakChunk = chunk;
+
     const start = Date.now();
 
     while (
-        measuredTime < targetMS &&
-        totalBytes < maxBytes &&
-        Date.now() - start < targetMS + 5000
+        measuredTime < TARGET_TIME &&
+        requestedBytes < MAX_BYTES &&
+        Date.now() - start < TARGET_TIME + 20000
     ) {
-        const remainingTime = Math.max(
-            250, targetMS - measuredTime
-        );
+        const jobs = [];
 
-        const segmentTime = Math.min(
-            1000, remainingTime
-        );
+        // 创建同一线路的并发请求
+        for (let i = 0; i < concurrency; i++) {
+            const remaining =
+                MAX_BYTES - requestedBytes;
 
-        let nextBytes = Math.round(
-            estimatedRate * segmentTime
-        );
+            if (remaining <= 0) break;
 
-        nextBytes = clamp(
-            nextBytes, 128000, chunkLimit
-        );
-
-        nextBytes = Math.min(
-            nextBytes,
-            maxBytes - totalBytes
-        );
-
-        if (nextBytes <= 0) break;
-
-        try {
-            // 严格串行下载
-            const r = await request(
-                nextBytes, route, 10
+            const size = Math.floor(
+                Math.min(chunk, remaining)
             );
 
-            totalBytes += r.bytes;
-            measuredBytes += r.bytes;
-            measuredTime += r.elapsed;
-            samples++;
+            if (size <= 0) break;
 
-            const currentRate =
-                r.bytes / r.elapsed;
+            // 请求前预留流量，失败也计入上限
+            requestedBytes += size;
 
-            estimatedRate =
-                estimatedRate * 0.4 +
-                currentRate * 0.6;
+            jobs.push(size);
+        }
 
-        } catch (e) {
-            warning = "测速中断：" + e.message;
-            break;
+        if (!jobs.length) break;
+
+        const roundStart = Date.now();
+
+        const results = await Promise.all(
+            jobs.map(size =>
+                request(size, policy, 10)
+            )
+        );
+
+        const roundTime = Math.max(
+            Date.now() - roundStart, 1
+        );
+
+        const successful = results.filter(
+            r => r.ok
+        );
+
+        const failed = results.filter(
+            r => !r.ok
+        );
+
+        const roundBytes = successful.reduce(
+            (sum, r) => sum + r.bytes, 0
+        );
+
+        receivedBytes += results.reduce(
+            (sum, r) => sum + r.bytes, 0
+        );
+
+        peakConcurrency = Math.max(
+            peakConcurrency, jobs.length
+        );
+
+        peakChunk = Math.max(
+            peakChunk, chunk
+        );
+
+        if (failed.length) {
+            lastError = failed[0].error;
+
+            // 请求失败时自动降低内存压力
+            chunk = Math.max(
+                MIN_CHUNK,
+                Math.floor(chunk / 2)
+            );
+
+            concurrency = Math.max(
+                1, Math.floor(concurrency / 2)
+            );
+        }
+
+        if (!successful.length) {
+            failedRounds++;
+
+            // 防止持续失败时无限重试
+            if (failedRounds >= 3) {
+                warning = lastError;
+                break;
+            }
+
+            // 已进入正式测速后，失败耗时也计入
+            if (rounds > 0) {
+                measuredTime += roundTime;
+            }
+
+            continue;
+        }
+
+        failedRounds = 0;
+
+        const roundSpeed =
+            roundBytes * 8 / roundTime / 1000;
+
+        // 第一轮作为预热，不计入正式测速
+        if (rounds > 0) {
+            measuredBytes += roundBytes;
+            measuredTime += roundTime;
+        }
+
+        rounds++;
+
+        // 动态调整分段大小与并发数
+        if (!failed.length) {
+            if (roundTime < 1000) {
+                chunk = Math.min(
+                    MAX_CHUNK,
+                    Math.floor(chunk * 2)
+                );
+            } else if (roundTime > 2500) {
+                chunk = Math.max(
+                    MIN_CHUNK,
+                    Math.floor(chunk * 0.7)
+                );
+            }
+
+            if (
+                roundSpeed > 100 &&
+                chunk >= 2 * MB
+            ) {
+                concurrency = Math.min(
+                    MAX_CONCURRENCY,
+                    concurrency + 1
+                );
+            }
+
+            if (roundSpeed < 10) {
+                concurrency = Math.max(
+                    1, concurrency - 1
+                );
+            }
         }
     }
 
@@ -208,58 +341,68 @@ async function adaptiveDownload(route) {
     ) {
         return {
             speed: null,
-            bytes: totalBytes,
+            bytes: receivedBytes,
             duration: 0,
-            samples: 0,
-            warning: warning || "正式测速失败"
+            concurrency: peakConcurrency,
+            chunk: peakChunk,
+            warning: warning ||
+                lastError ||
+                "有效测速数据不足"
         };
     }
 
+    // 总有效字节数 ÷ 实际并发批次耗时
     const speed =
         measuredBytes * 8 /
-        (measuredTime / 1000) /
-        1000000;
+        measuredTime / 1000;
 
-    if (measuredTime < targetMS && !warning) {
-        warning = totalBytes >= maxBytes
-            ? "已达流量上限"
-            : "已达测速时间限制";
+    if (measuredTime < TARGET_TIME) {
+        warning = warning || (
+            requestedBytes >= MAX_BYTES
+                ? "已达流量上限"
+                : "测速提前结束"
+        );
+    }
+
+    if (lastError && !warning) {
+        warning = "部分请求失败，已自动降级";
     }
 
     return {
         speed: speed,
-        bytes: totalBytes,
+        bytes: receivedBytes,
         duration: measuredTime / 1000,
-        samples: samples,
+        concurrency: peakConcurrency,
+        chunk: peakChunk,
         warning: warning
     };
 }
 
-// 单条线路完整测速
-async function testRoute(route) {
-    const latency = await testLatency(route);
-    const download = await adaptiveDownload(route);
+// 单条线路完整测试
+async function testRoute(policy) {
+    const latency = await testLatency(policy);
+    const download = await testDownload(policy);
 
     return {
-        latency: latency,
+        ...latency,
         ...download
     };
 }
 
-// 优化后的进度条
+// 相对速度进度条
 function progressBar(speed, maxSpeed) {
     if (speed === null || maxSpeed <= 0) {
-        return "┄".repeat(barLength);
+        return "┄".repeat(BAR_LENGTH);
     }
 
     const filled = clamp(
-        Math.round(speed / maxSpeed * barLength),
+        Math.round(speed / maxSpeed * BAR_LENGTH),
         0,
-        barLength
+        BAR_LENGTH
     );
 
     return "━".repeat(filled) +
-        "┄".repeat(barLength - filled);
+        "┄".repeat(BAR_LENGTH - filled);
 }
 
 function formatSpeed(speed) {
@@ -268,16 +411,18 @@ function formatSpeed(speed) {
         : `${bold(speed.toFixed(2))} Mbps`;
 }
 
-function formatLatency(latency) {
-    return latency === null
-        ? "检测失败"
-        : `${bold(latency)} ms`;
+function formatMS(value) {
+    return value === null
+        ? "未知"
+        : `${bold(value)} ms`;
 }
 
 function formatTraffic(bytes) {
-    return bytes === null
-        ? "未知"
-        : `${(bytes / MB).toFixed(2)} MB`;
+    if (bytes >= 1000 * MB) {
+        return `${(bytes / MB / 1000).toFixed(2)} GB`;
+    }
+
+    return `${(bytes / MB).toFixed(2)} MB`;
 }
 
 function routeContent(name, result, maxSpeed) {
@@ -285,8 +430,9 @@ function routeContent(name, result, maxSpeed) {
         name,
         formatSpeed(result.speed),
         progressBar(result.speed, maxSpeed),
-        `延迟：${formatLatency(result.latency)}`,
-        `耗时：${result.duration.toFixed(2)} 秒`,
+        `延迟：${formatMS(result.latency)}`,
+        `抖动：${formatMS(result.jitter)}`,
+        `耗时：${result.duration.toFixed(1)} 秒`,
         `流量：${formatTraffic(result.bytes)}`,
         ...(result.warning
             ? [`提示：${result.warning}`]
@@ -296,11 +442,12 @@ function routeContent(name, result, maxSpeed) {
 
 async function main() {
     try {
-        // 第一阶段：直连完整测速
+        // 第一阶段：DIRECT
         const direct = await testRoute("DIRECT");
 
-        // 第二阶段：代理完整测速
-        const proxy = await testRoute(policy);
+        // 第二阶段：指定策略或节点
+        // DIRECT 全部完成后才开始
+        const proxy = await testRoute(POLICY);
 
         const maxSpeed = Math.max(
             direct.speed || 0,
@@ -310,6 +457,7 @@ async function main() {
         let retention = "无法计算";
         let loss = "无法计算";
         let extraLatency = "无法计算";
+
         let color = "#8E8E93";
 
         if (
@@ -358,12 +506,7 @@ async function main() {
         }
 
         const totalTraffic =
-            direct.bytes === null ||
-            proxy.bytes === null
-                ? "未知"
-                : formatTraffic(
-                    direct.bytes + proxy.bytes
-                );
+            direct.bytes + proxy.bytes;
 
         const time = new Date(
             Date.now() + 8 * 3600000
@@ -381,19 +524,21 @@ async function main() {
             "",
 
             ...routeContent(
-                `🚀 ${policy}`,
+                `🚀 ${POLICY}`,
                 proxy,
                 maxSpeed
             ),
 
-            "━━━━━━━━━━━━",
+            "━━━━━━━━━━━━━━━",
             `速度保留：${retention}`,
             `速度损耗：${loss}`,
             `额外延迟：${extraLatency}`,
-            "━━━━━━━━━━━━",
-            `总下载量：${totalTraffic}`,
-            `测速模式：自适应 ${targetSeconds} 秒`,
-            "来源：Cloudflare",
+            "━━━━━━━━━━━━━━━",
+            `总下载量：${formatTraffic(totalTraffic)}`,
+            `峰值并发：${direct.concurrency}/${proxy.concurrency} 路`,
+            `测速模式：自适应 ${TARGET_TIME / 1000} 秒`,
+            "测速来源：Cloudflare",
+            `脚本版本：${VERSION}`,
             `刷新：${time}`
         ].join("\n");
 
@@ -407,7 +552,10 @@ async function main() {
     } catch (e) {
         $done({
             title: "直连与代理测速",
-            content: `测速失败：${e.message}`,
+            content: [
+                `测速失败：${e.message}`,
+                `脚本版本：${VERSION}`
+            ].join("\n"),
             icon: "speedometer",
             "icon-color": "#FF3B30"
         });
