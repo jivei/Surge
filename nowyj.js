@@ -18,6 +18,13 @@ const code = (args.code || "420100").trim();
 const url = `https://www.autohome.com.cn/oil/${code}.html`;
 const cacheKey = `OilPriceCache_${code}`;
 
+function boldPrice(price) {
+    const digits = [..."𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵"];
+    return String(price).replace(
+        /\d/g, n => digits[Number(n)]
+    );
+}
+
 function show(content, color = "#34C759") {
     $done({
         title: `${city}今日油价`,
@@ -31,7 +38,10 @@ function fail(reason) {
     const cache = $persistentStore.read(cacheKey);
 
     if (cache) {
-        show(cache + "\n⚠️ 刷新失败，以上为缓存", "#FF9500");
+        show(
+            cache + "\n⚠️ 刷新失败，以上为缓存",
+            "#FF9500"
+        );
     } else {
         show("获取油价失败\n" + reason, "#FF3B30");
     }
@@ -92,10 +102,10 @@ $httpClient.get({
             .replace("T", " ");
 
         const content = [
-            `92# 汽油：¥${p92}/L`,
-            `95# 汽油：¥${p95}/L`,
-            `98# 汽油：¥${p98}/L`,
-            `  0# 柴油：¥${p0}/L`,
+            `92# 汽油：¥${boldPrice(p92)}/L`,
+            `95# 汽油：¥${boldPrice(p95)}/L`,
+            `98# 汽油：¥${boldPrice(p98)}/L`,
+            `\u20070# 柴油：¥${boldPrice(p0)}/L`,
             `━━━━━━━━━━━━`,
             `刷新：${time}`,
             `来源：汽车之家`
