@@ -1,12 +1,12 @@
 #!name=直连与代理测速
-#!desc=自适应动态测速，串行对比直连与指定代理的下载速度及延迟。
+#!desc=多路并发自适应下载测速，支持指定策略组或节点。
 #!category=信息面板
 #!author=ChatGPT
-#!arguments=代理策略:PROXY,测速时长:5,流量上限:500
-#!arguments-desc=代理策略填写策略组或节点完整名称；测速时长单位为秒；流量上限单位为MB。
+#!arguments=代理策略:PROXY,测速时长:10,流量上限:1000
+#!arguments-desc=代理策略填写策略组或节点完整名称；测速时长单位为秒；流量上限为单条线路最大请求数据量，单位MB。
 
 [Panel]
 SpeedCompare = script-name=SpeedCompare, update-interval=86400
 
 [Script]
-SpeedCompare = type=generic, timeout=120, script-path=https://raw.githubusercontent.com/jivei/Surge/refs/heads/main/SpeedCompare.js?v=202611260147, argument={{{代理策略}}}|{{{测速时长}}}|{{{流量上限}}}
+SpeedCompare = type=generic, timeout=180, script-path=https://raw.githubusercontent.com/jivei/Surge/refs/heads/main/SpeedCompare.js?v=2.0.0, argument={{{代理策略}}}|{{{测速时长}}}|{{{流量上限}}}
