@@ -21,9 +21,10 @@ const maxMB = clamp(
 
 const MB = 1000000;
 const maxBytes = maxMB * MB;
-const chunkLimit = 10 * MB;
+const chunkLimit = 2 * MB;
+const warmupSize = 1 * MB;
 const baseURL = "https://speed.cloudflare.com";
-const barLength = 20;
+const barLength = 15;
 
 function bold(value) {
     const digits = [..."𝟬𝟭𝟮𝟯𝟰𝟱𝟲𝟳𝟴𝟵"];
@@ -38,7 +39,7 @@ function testURL(bytes) {
         `&t=${Date.now()}${Math.random()}`;
 }
 
-// HTTP请求
+// HTTP请求，保留真实错误信息
 function request(bytes, route, timeout = 10) {
     return new Promise((resolve, reject) => {
         const start = Date.now();
@@ -59,15 +60,17 @@ function request(bytes, route, timeout = 10) {
             );
 
             if (error || !response) {
-                return reject(
-                    new Error("请求失败或超时")
-                );
+                return reject(new Error(
+                    error
+                        ? String(error.message || error)
+                        : "服务器无响应"
+                ));
             }
 
             if (Number(response.status) !== 200) {
-                return reject(
-                    new Error(`HTTP ${response.status}`)
-                );
+                return reject(new Error(
+                    `HTTP ${response.status}`
+                ));
             }
 
             const received = data
@@ -75,9 +78,9 @@ function request(bytes, route, timeout = 10) {
                 : 0;
 
             if (bytes > 0 && received !== bytes) {
-                return reject(
-                    new Error("下载数据不完整")
-                );
+                return reject(new Error(
+                    `数据不完整：${received}/${bytes} B`
+                ));
             }
 
             resolve({
@@ -121,14 +124,12 @@ async function adaptiveDownload(route) {
     let estimatedRate = 0;
     let warning = "";
 
-    // 第一阶段：10MB预测速
-    const warmupSize = 10 * MB;
-
+    // 第一阶段：1MB预测速
     let warmup;
 
     try {
         warmup = await request(
-            warmupSize, route, 15
+            warmupSize, route, 30
         );
     } catch (e) {
         return {
@@ -142,7 +143,6 @@ async function adaptiveDownload(route) {
 
     totalBytes += warmup.bytes;
 
-    // 每毫秒下载字节数
     estimatedRate =
         warmup.bytes / warmup.elapsed;
 
@@ -153,13 +153,12 @@ async function adaptiveDownload(route) {
     while (
         measuredTime < targetMS &&
         totalBytes < maxBytes &&
-        Date.now() - start < targetMS + 10000
+        Date.now() - start < targetMS + 5000
     ) {
         const remainingTime = Math.max(
             250, targetMS - measuredTime
         );
 
-        // 每段目标持续约1秒
         const segmentTime = Math.min(
             1000, remainingTime
         );
@@ -169,7 +168,7 @@ async function adaptiveDownload(route) {
         );
 
         nextBytes = clamp(
-            nextBytes, 256000, chunkLimit
+            nextBytes, 128000, chunkLimit
         );
 
         nextBytes = Math.min(
@@ -180,7 +179,7 @@ async function adaptiveDownload(route) {
         if (nextBytes <= 0) break;
 
         try {
-            // 所有下载严格串行
+            // 严格串行下载
             const r = await request(
                 nextBytes, route, 10
             );
@@ -193,20 +192,20 @@ async function adaptiveDownload(route) {
             const currentRate =
                 r.bytes / r.elapsed;
 
-            // 平滑调整下一分段大小
             estimatedRate =
                 estimatedRate * 0.4 +
                 currentRate * 0.6;
 
         } catch (e) {
-            warning = "部分测速中断：" + e.message;
+            warning = "测速中断：" + e.message;
             break;
         }
     }
 
-    if (measuredBytes <= 0 ||
-        measuredTime <= 0) {
-
+    if (
+        measuredBytes <= 0 ||
+        measuredTime <= 0
+    ) {
         return {
             speed: null,
             bytes: totalBytes,
@@ -216,7 +215,6 @@ async function adaptiveDownload(route) {
         };
     }
 
-    // 正式测速的加权平均吞吐量
     const speed =
         measuredBytes * 8 /
         (measuredTime / 1000) /
@@ -248,10 +246,10 @@ async function testRoute(route) {
     };
 }
 
-// 相对速度进度条
+// 优化后的进度条
 function progressBar(speed, maxSpeed) {
     if (speed === null || maxSpeed <= 0) {
-        return "░".repeat(barLength);
+        return "┄".repeat(barLength);
     }
 
     const filled = clamp(
@@ -260,8 +258,8 @@ function progressBar(speed, maxSpeed) {
         barLength
     );
 
-    return "█".repeat(filled) +
-        "░".repeat(barLength - filled);
+    return "━".repeat(filled) +
+        "┄".repeat(barLength - filled);
 }
 
 function formatSpeed(speed) {
@@ -298,11 +296,10 @@ function routeContent(name, result, maxSpeed) {
 
 async function main() {
     try {
-        // 第一阶段：DIRECT直连
+        // 第一阶段：直连完整测速
         const direct = await testRoute("DIRECT");
 
-        // 第二阶段：指定代理策略
-        // 等待直连全部结束后才执行
+        // 第二阶段：代理完整测速
         const proxy = await testRoute(policy);
 
         const maxSpeed = Math.max(
