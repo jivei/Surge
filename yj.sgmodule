@@ -1,10 +1,12 @@
-#!name=武汉实时油价
-#!desc=实时查询武汉市92、95、98号汽油及0号柴油价格，支持手动刷新。
+#!name=实时油价
+#!desc=实时查询指定城市92、95、98号汽油及0号柴油价格，支持手动刷新。
 #!category=信息面板
 #!author=ChatGPT
+#!arguments=城市名称:武汉,城市代码:420100
+#!arguments-desc=填写城市名称及对应的行政区划代码。
 
 [Panel]
-WuhanOil = script-name=WuhanOil, title="武汉今日油价", content="点击刷新获取油价", update-interval=3600
+OilPrice = script-name=OilPrice, update-interval=3600
 
 [Script]
-WuhanOil = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/jivei/Surge/refs/heads/main/nowyj.js
+OilPrice = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/jivei/Surge/refs/heads/main/nowyj.js, argument=city={{{城市名称}}}&code={{{城市代码}}}
