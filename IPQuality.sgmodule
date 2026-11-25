@@ -1,0 +1,12 @@
+#!name=IP纯净度检测
+#!desc=免API密钥检测出口IP、住宅属性、代理属性、欺诈评分及风险评分。
+#!category=信息面板
+#!author=ChatGPT
+#!arguments=策略组:PROXY
+#!arguments-desc=填写需要检测的Surge代理策略组名称，填写DIRECT则检测直连IP。
+
+[Panel]
+IPQuality = script-name=IPQuality, update-interval=3600
+
+[Script]
+IPQuality = type=generic, timeout=30, script-path=https://raw.githubusercontent.com/jivei/Surge/refs/heads/main/IPQuality.js, argument={{{策略组}}}
