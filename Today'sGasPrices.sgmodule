@@ -9,4 +9,4 @@
 OilPrice = script-name=OilPrice, update-interval=3600
 
 [Script]
-OilPrice = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/jivei/Surge/refs/heads/main/nowyj.js?v=1.1.0, argument=city={{{城市名称}}}&code={{{城市代码}}}&version=1.1.0
+OilPrice = type=generic, timeout=15, script-path=https://raw.githubusercontent.com/jivei/Surge/refs/heads/main/Today'sGasPrices.js?v=1.1.0, argument=city={{{城市名称}}}&code={{{城市代码}}}&version=1.1.0
